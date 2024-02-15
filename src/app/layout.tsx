@@ -25,12 +25,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={press_start.className}>
         <div className="fixed w-full p-4">
-          <nav className={`${inter.className} px-12 bg-zinc-900 rounded-lg`}>
+          <nav className={`${inter.className} px-12 bg-zinc rounded-lg`}>
             <ul className="list-none flex">
               <li className="">
                 <Image
                   className="relative"
-                  src="/assets/logos/Black logo - no background.png"
+                  src="/Black logo - no background.png"
                   alt="Panko Logo Mono"
                   width={70}
                   height={79}
