@@ -24,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={press_start.className}>
-        <div className="fixed w-full p-4">
-          <nav className={`${inter.className} px-12 bg-zinc rounded-lg`}>
+        <div className="fixed p-4">
+          <nav className={`${press_start.className} px-12 bg-zinc`}>
             <ul className="list-none flex">
               <li className="">
                 <Image
@@ -38,12 +38,12 @@ export default function RootLayout({
                 />
               </li>
               <li className="flex mx-4 items-center h-100">
-                <a className="text-white" href="/">
+                <a className="text-black" href="/">
                   Home
                 </a>
               </li>
               <li className="flex mx-4 items-center h-100">
-                <a className="text-white" href="/about">
+                <a className="text-black" href="/about">
                   About
                 </a>
               </li>
