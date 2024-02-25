@@ -14,6 +14,7 @@ import BMW from "../../public/BMW-Logo.png";
 import Sportsyear from "../../public/Sportsyear-logo-lod@2x.png";
 import Mini from "../../public/mini-logo-06.jpg";
 import RevitCourse from "../../public/autodesk-revit-course-logo@2x.png";
+import BBC from "../../public/BBC_Logo_2021.svg";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
@@ -36,6 +37,11 @@ export default function Home() {
       t: "RevitCourse: Booking System",
       i: RevitCourse,
       c: "invert grayscale opacity-60 scale-75",
+    },
+    {
+      t: "BBC: E-Learning Games",
+      i: BBC,
+      c: undefined,
     },
   ];
 
@@ -64,11 +70,8 @@ export default function Home() {
           priority
         />
       </section>
-      <div>
-        <p>Panko Digital.</p>
-      </div>
-      <section className="h-screen bg-white my-12 px-8 md:px-24 min-h-52 text-slate-800">
-        <div className="grid grid-cols-3 gap-4 my-12">
+      <section className="bg-white px-8 md:px-24 text-slate-800">
+        <div className="grid grid-cols-3 gap-y-12 my-24">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
@@ -86,6 +89,9 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
+      <section className="h-screen bg-black px-8 md:p-24 min-h-52 text-white">
+        <p>Play your ace.</p>
       </section>
     </main>
   );
