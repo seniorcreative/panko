@@ -1,16 +1,17 @@
 "use client";
 
-import waves from "../../../public/waves.svg";
+import waves from "../../../public/wave-haikei.svg";
 
 export default function Waves() {
   return (
     <section>
       <div
-        className="min-h-56 invert"
+        className="min-h-48"
         style={{
           backgroundImage: `url(${waves.src})`,
+          backgroundPositionY: "bottom",
+          backgroundSize: "100% auto",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
         }}
       ></div>
     </section>

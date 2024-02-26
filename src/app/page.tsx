@@ -6,6 +6,7 @@ import anime from "animejs";
 
 import Waves from "./components/waves";
 
+import PankoLogoSVG from "../../public/Black logo - no swirl.svg";
 import NineLogo from "../../public/Nine-Network-Logo.png";
 import BankFirst from "../../public/bankfirst.png";
 import Buildxact from "../../public/Buildxact-Logo-SVG.svg";
@@ -55,30 +56,96 @@ export default function Home() {
     // Animation using Anime.js
     anime({
       targets: "#logo-img",
-      scale: [0, 1],
+      scale: [0, 1.25],
       opacity: [0, 1],
       easing: "easeInOutElastic",
-      duration: 1000,
-      delay: 500,
+      duration: 1500,
+      delay: 0,
+    });
+
+    let container = document.querySelector(".anime-container");
+
+    var a = 3.3;
+    var l = 90;
+
+    for (var i = 10; i <= l; i += 1) {
+      var angle = 0.2 * i;
+      var x = a * angle * Math.cos(angle) + window.innerWidth / 2;
+      var y = a * angle * Math.sin(angle) + window.innerHeight / 2;
+
+      var n = 24;
+
+      for (var j = 0; j < n; j++) {
+        var dot = document.createElement("div");
+        dot.classList.add("dot");
+        container?.appendChild(dot);
+
+        var size = anime.random(4, 12);
+
+        dot.style.width = size + "px";
+        dot.style.height = size + "px";
+
+        dot.style.left = x + anime.random(-15, 15) + "px";
+        dot.style.top = y + anime.random(-15, 15) + "px";
+
+        dot.style.opacity = "0";
+      }
+    }
+
+    anime({
+      loop: true,
+      easing: "linear",
+      opacity: [
+        { value: 1, duration: 50, delay: anime.stagger(2) },
+        {
+          value: 0,
+          duration: function () {
+            return anime.random(500, 1500);
+          },
+        },
+      ],
+      width: { value: 2, duration: 500, delay: anime.stagger(2) },
+      height: { value: 2, duration: 500, delay: anime.stagger(2) },
+
+      targets: document.querySelectorAll(".dot"),
+
+      translateX: {
+        value: function () {
+          return anime.random(-30, 30);
+        },
+        duration: 1500,
+        delay: anime.stagger(2),
+      },
+      translateY: {
+        value: function () {
+          return anime.random(-30, 30);
+        },
+        duration: 1500,
+        delay: anime.stagger(2),
+      },
     });
   }, []);
 
   return (
     <main className="flex min-h-screen flex-col">
-      <section className="h-screen w-full flex items-center justify-center">
+      <section
+        className="w-full flex items-center justify-center"
+        style={{ height: "75vh" }}
+      >
         <Image
           className="flex"
           id="logo-img"
-          src="/Black logo - no background.png"
+          src={PankoLogoSVG.src}
           alt="Panko Logo"
           width={281}
           height={317}
           priority
         />
+        <div className="anime-container">{/* particles */}</div>
       </section>
       <Waves></Waves>
       <section className="bg-white px-8 md:px-24 text-slate-800">
-        <div className="grid grid-cols-3 gap-y-12 my-24">
+        <div className="grid grid-cols-3 gap-y-12 mb-24">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
@@ -97,7 +164,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="h-screen bg-black px-8 md:p-24 min-h-52 text-white">
+      <section className="h-screen bg-black px-8 md:p-12 min-h-52 text-white">
         <p>Play your ace.</p>
       </section>
     </main>
