@@ -4,6 +4,8 @@ import Image, { StaticImageData } from "next/image";
 import { useEffect } from "react";
 import anime from "animejs";
 
+import Waves from "./components/waves";
+
 import NineLogo from "../../public/Nine-Network-Logo.png";
 import BankFirst from "../../public/bankfirst.png";
 import Buildxact from "../../public/Buildxact-Logo-SVG.svg";
@@ -20,9 +22,13 @@ export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
 export default function Home() {
   const Logos: LogoObj[] = [
-    { t: "Nine Network: Graphics", i: NineLogo, c: undefined },
+    { t: "Nine Network: Video Graphics Software", i: NineLogo, c: undefined },
     { t: "BankFirst: Finance Application", i: BankFirst, c: undefined },
-    { t: "Buildxact: Building Project Estimation", i: Buildxact, c: undefined },
+    {
+      t: "Buildxact: Building Project Estimation",
+      i: Buildxact,
+      c: "grayscale scale-125 opacity-75",
+    },
     { t: "Telstra: Resume Generator", i: Telstra, c: undefined },
     { t: "Australian Sports Museum: Touchscreen", i: ASM, c: undefined },
     { t: "Worksafe: Pilot App", i: Worksafe, c: undefined },
@@ -70,6 +76,7 @@ export default function Home() {
           priority
         />
       </section>
+      <Waves></Waves>
       <section className="bg-white px-8 md:px-24 text-slate-800">
         <div className="grid grid-cols-3 gap-y-12 my-24">
           {Logos.map((logo: LogoObj) => (
