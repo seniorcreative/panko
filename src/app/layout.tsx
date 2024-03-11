@@ -14,11 +14,6 @@ const press_start = Press_Start_2P({
   weight: "400",
   style: "normal",
 });
-const roboto_slab = Roboto_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: "normal",
-});
 
 export const metadata: Metadata = {
   title: "Panko Digital",
@@ -35,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={press_start.className}>
         <div className="fixed p-4">
-          <nav className={`${roboto_slab.className} px-12 bg-zinc`}>
+          <nav className="px-12 bg-zinc">
             <ul className="list-none flex">
               <li className="mr-8">
                 <Image
@@ -46,11 +41,6 @@ export default function RootLayout({
                   height={79}
                   priority
                 />
-              </li>
-              <li className="flex mx-4 items-center h-100">
-                <a className="text-black uppercase" href="/">
-                  Home
-                </a>
               </li>
               <li className="flex mx-4 items-center h-100">
                 <a className="text-black uppercase" href="/about">

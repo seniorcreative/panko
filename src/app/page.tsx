@@ -1,10 +1,11 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import anime from "animejs";
 
 import Waves from "./components/waves";
+import { WindupChildren } from "windups";
 
 import PankoLogoSVG from "../../public/Black logo - no swirl.svg";
 import NineLogo from "../../public/Nine-Network-Logo.png";
@@ -51,6 +52,8 @@ export default function Home() {
       c: undefined,
     },
   ];
+
+  const [folioSelected, setFolioSelected] = useState(false);
 
   useEffect(() => {
     // Animation using Anime.js
@@ -126,6 +129,18 @@ export default function Home() {
     });
   }, []);
 
+  const onKeypress = (e: KeyboardEvent) => {
+    switch (e.key) {
+      case "1":
+        setFolioSelected(true);
+        break;
+      default:
+        setFolioSelected(false);
+    }
+  };
+
+  window.addEventListener("keydown", onKeypress);
+
   return (
     <main className="flex min-h-screen flex-col">
       <section
@@ -165,7 +180,57 @@ export default function Home() {
         </div>
       </section>
       <section className="h-screen bg-black px-8 md:p-12 min-h-52 text-white">
-        <p>Play your ace.</p>
+        <WindupChildren>
+          {!folioSelected ? (
+            <p>
+              &gt; Play your ace. Hire an engineer.
+              <br />
+              Choose
+              <br />
+              <a
+                onClick={() => setFolioSelected(true)}
+                className="underline cursor-pointer"
+              >
+                1
+              </a>{" "}
+              View Folio
+              <br />
+              <a className="underline cursor-pointer">2</a> Contact
+            </p>
+          ) : (
+            <p>
+              <a className="me-4" onClick={() => setFolioSelected(false)}>
+                &lt;
+              </a>
+              Choose a category
+              <br />
+              <ul>
+                <li>
+                  <a className="underline cursor-pointer">1</a> E-Commerce
+                </li>
+                <li>
+                  <a className="underline cursor-pointer">2</a> Marketing
+                </li>
+                <li>
+                  <a className="underline cursor-pointer">3</a> Signage
+                </li>
+                <li>
+                  <a className="underline cursor-pointer">4</a> Video
+                </li>
+                <li>
+                  <a className="underline cursor-pointer">5</a> Real Estate
+                </li>
+                <li>
+                  <a className="underline cursor-pointer">6</a> Business Systems
+                </li>
+                <li>
+                  <a className="underline cursor-pointer">7</a> Games (Galaga
+                  (2009) Game of Life (2021))
+                </li>
+              </ul>
+            </p>
+          )}
+        </WindupChildren>
       </section>
     </main>
   );
