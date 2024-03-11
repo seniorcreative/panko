@@ -54,3 +54,22 @@ body {
   min-width: 2px;
   min-height: 2px;
 }
+
+.logo-flip {
+  -webkit-perspective: 800;
+  perspective: 800;
+  position: relative;
+  -webkit-transform: rotatey(0);
+  transform: rotatey(0);
+  -webkit-transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.logo-flip:hover {
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}

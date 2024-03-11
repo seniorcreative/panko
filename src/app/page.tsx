@@ -66,6 +66,8 @@ export default function Home() {
       delay: 0,
     });
 
+    window.addEventListener("keydown", onKeypress);
+
     let container = document.querySelector(".anime-container");
 
     var a = 3.3;
@@ -138,8 +140,6 @@ export default function Home() {
         setFolioSelected(false);
     }
   };
-
-  window.addEventListener("keydown", onKeypress);
 
   return (
     <main className="flex min-h-screen flex-col">

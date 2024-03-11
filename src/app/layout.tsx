@@ -32,15 +32,17 @@ export default function RootLayout({
         <div className="fixed p-4">
           <nav className="px-12 bg-zinc">
             <ul className="list-none flex">
-              <li className="mr-8">
-                <Image
-                  className="relative"
-                  src="/Black logo - no background.png"
-                  alt="Panko Logo Mono"
-                  width={70}
-                  height={79}
-                  priority
-                />
+              <li className="mr-8 logo-flip">
+                <a href="/">
+                  <Image
+                    className="relative"
+                    src="/Black logo - no background.png"
+                    alt="Panko Logo Mono"
+                    width={70}
+                    height={79}
+                    priority
+                  />
+                </a>
               </li>
               <li className="flex mx-4 items-center h-100">
                 <a className="text-black uppercase" href="/about">
