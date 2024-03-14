@@ -185,7 +185,7 @@ export default function Home() {
         <div className="container mx-auto">
           <ul>
             {Object.keys(folioCategories).map((key) => (
-              <li key="key" className="cat-link py-4">
+              <li key="key" className="cat-link py-4 cursor-pointer">
                 <a href={`/folio/${key}`}>{key}</a>
               </li>
             ))}
