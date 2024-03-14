@@ -43,7 +43,7 @@ export default function Page() {
         <div className="mx-auto mt-10 border-t border-gray-200 pt-10">
           {posts.map((post) => (
             <article key={post.id} className="">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {post.author.imageUrl.map((img) => (
                   <div key={img}>
                     <Image

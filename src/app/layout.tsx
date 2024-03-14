@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={press_start.className}>
-        <nav className="fixed top-0 left-0 p4 w-full px-12 bg-emerald-500 shadow-md shadow-emerald-500 bg-opacity-50 backdrop-blur">
+        <nav className="fixed top-0 left-0 p4 w-full px-12 bg-emerald-500 shadow-md shadow-emerald-500 shadow-opacity-50 bg-opacity-50 backdrop-blur">
           <ul className="list-none flex">
             <li className="mr-8">
               <a href="/">
