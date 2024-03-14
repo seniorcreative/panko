@@ -19,6 +19,7 @@ import Sportsyear from "../../public/Sportsyear-logo-lod@2x.png";
 import Mini from "../../public/mini-logo-06.jpg";
 import RevitCourse from "../../public/autodesk-revit-course-logo@2x.png";
 import BBC from "../../public/BBC_Logo_2021.svg";
+import { relative } from "path";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
@@ -53,6 +54,16 @@ export default function Home() {
     },
   ];
 
+  const folioCategories = {
+    "E-Commerce": [],
+    Marketing: [],
+    Signage: [],
+    Video: [],
+    "Real Estate": [],
+    "Business Systems": [],
+    Games: ["Galaga (2009)", "Game of Life (2021)"],
+  };
+
   const [folioSelected, setFolioSelected] = useState(false);
 
   useEffect(() => {
@@ -63,10 +74,8 @@ export default function Home() {
       opacity: [0, 1],
       easing: "easeInOutElastic",
       duration: 1500,
-      delay: 0,
+      delay: 1500,
     });
-
-    window.addEventListener("keydown", onKeypress);
 
     let container = document.querySelector(".anime-container");
 
@@ -131,24 +140,14 @@ export default function Home() {
     });
   }, []);
 
-  const onKeypress = (e: KeyboardEvent) => {
-    switch (e.key) {
-      case "1":
-        setFolioSelected(true);
-        break;
-      default:
-        setFolioSelected(false);
-    }
-  };
-
   return (
-    <main className="flex min-h-screen flex-col">
+    <>
       <section
         className="w-full flex items-center justify-center"
-        style={{ height: "75vh" }}
+        style={{ height: "75vh", position: "relative", top: "12.5vh" }}
       >
         <Image
-          className="flex"
+          className="opacity-100 flex"
           id="logo-img"
           src={PankoLogoSVG.src}
           alt="Panko Logo"
@@ -158,9 +157,9 @@ export default function Home() {
         />
         <div className="anime-container">{/* particles */}</div>
       </section>
-      <Waves></Waves>
+      <Waves inverted={false} />
       <section className="bg-white px-8 md:px-24 text-slate-800">
-        <div className="grid grid-cols-3 gap-y-12 mb-24">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-12 mb-48">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
@@ -179,59 +178,20 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="h-screen bg-black px-8 md:p-12 min-h-52 text-white">
-        <WindupChildren>
-          {!folioSelected ? (
-            <p>
-              &gt; Play your ace. Hire an engineer.
-              <br />
-              Choose
-              <br />
-              <a
-                onClick={() => setFolioSelected(true)}
-                className="underline cursor-pointer"
-              >
-                1
-              </a>{" "}
-              View Folio
-              <br />
-              <a className="underline cursor-pointer">2</a> Contact
-            </p>
-          ) : (
-            <p>
-              <a className="me-4" onClick={() => setFolioSelected(false)}>
-                &lt;
-              </a>
-              Choose a category
-              <br />
-              <ul>
-                <li>
-                  <a className="underline cursor-pointer">1</a> E-Commerce
-                </li>
-                <li>
-                  <a className="underline cursor-pointer">2</a> Marketing
-                </li>
-                <li>
-                  <a className="underline cursor-pointer">3</a> Signage
-                </li>
-                <li>
-                  <a className="underline cursor-pointer">4</a> Video
-                </li>
-                <li>
-                  <a className="underline cursor-pointer">5</a> Real Estate
-                </li>
-                <li>
-                  <a className="underline cursor-pointer">6</a> Business Systems
-                </li>
-                <li>
-                  <a className="underline cursor-pointer">7</a> Games (Galaga
-                  (2009) Game of Life (2021))
-                </li>
-              </ul>
-            </p>
-          )}
-        </WindupChildren>
+      <div className="-mt-48">
+        <Waves inverted={true} />
+      </div>
+      <section className="h-screen bg-black px-8 md:p-12 min-h-52 text-white -mt-2">
+        <div className="container mx-auto">
+          <ul>
+            {Object.keys(folioCategories).map((key) => (
+              <li key="key" className="cat-link py-4">
+                <a href={`/folio/${key}`}>{key}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
-    </main>
+    </>
   );
 }

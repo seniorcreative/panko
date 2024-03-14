@@ -29,7 +29,11 @@ export default function Page() {
     <main className="h-screen flex items-center justify-center text-red-500 leading-8">
       {/* <h1>{pageData.content}</h1> */}
       {/* <div className="animate-logo">Move this.</div> */}
-      <div id="intro-content" className="w-1/3" ref={pageIntroElement}></div>
+      <div
+        id="intro-content"
+        className="w-3/4 md:w-1/3"
+        ref={pageIntroElement}
+      ></div>
     </main>
   );
 }

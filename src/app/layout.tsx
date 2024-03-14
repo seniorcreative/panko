@@ -29,30 +29,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={press_start.className}>
-        <div className="fixed p-4">
-          <nav className="px-12 bg-zinc">
-            <ul className="list-none flex">
-              <li className="mr-8 logo-flip">
-                <a href="/">
-                  <Image
-                    className="relative"
-                    src="/Black logo - no background.png"
-                    alt="Panko Logo Mono"
-                    width={70}
-                    height={79}
-                    priority
-                  />
-                </a>
-              </li>
-              <li className="flex mx-4 items-center h-100">
-                <a className="text-black uppercase" href="/about">
-                  About
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div>{children}</div>
+        <nav className="fixed p4 w-full px-12 bg-zinc">
+          <ul className="list-none flex">
+            <li className="mr-8">
+              <a href="/">
+                <Image
+                  className="relative"
+                  src="/Black logo - no background.png"
+                  alt="Panko Logo Mono"
+                  width={70}
+                  height={79}
+                  priority
+                />
+              </a>
+            </li>
+            <li className="flex mx-4 items-center h-100">
+              <a className="text-black uppercase" href="/about">
+                About
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <main className="flex min-h-screen flex-col w-full">{children}</main>
       </body>
     </html>
   );
