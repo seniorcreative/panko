@@ -4,42 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import React from "react";
 
-const posts = [
-  {
-    id: 1,
-    title: "Carlton Natural Blonde",
-    href: "#",
-    description:
-      "Retro Galaga. I can remember having a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. I was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and I later hosted it seperately with it's own scoreboard API.",
-    date: "2010",
-    category: { title: "Marketing", href: "#" },
-    meta: {
-      client: "Emote Digital Melbourne",
-      category: "Marketing Agency",
-      href: "#",
-      imageUrl: [
-        "/work/carltonnaturalblonde~4~1.jpg",
-        "/work/carltonnaturalblonde~4~4.jpg",
-      ],
-    },
-  },
-  {
-    id: 2,
-    title: "SLSA Surf Lifesaving Squad",
-    href: "#",
-    description:
-      "Teamed up with this cool Sydney agency, and went to what is arguably the best office in Australia, the HQ of SLSA at Bondi Beach. When I made these games I decided to focus on some more hardcore software engineering principles. So I read a lot about MVC design patterns and that was fully utilised throughout the codebase. I think as the project code scaled it paid dividends even though it felt slower at first.",
-    date: "2012",
-    category: { title: "Marketing", href: "#" },
-    meta: {
-      client: "Ink Project Sydney",
-      category: "Marketing Agency",
-      href: "#",
-      imageUrl: ["/work/slsa_games~10~1.jpg", "/work/slsa_games~10~3.jpg"],
-    },
-  },
-  // More posts...
-];
+const content = require("../../data/content.json");
 
 export default function Page() {
   const pathname = usePathname();
@@ -55,7 +20,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      {posts.map((post) => (
+      {content.en.work.map((post: any) => (
         <div
           key={post.id}
           className="rounded-lg my-4  bg-white mx-auto max-w-7xl p-12 lg:p-16"
