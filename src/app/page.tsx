@@ -19,6 +19,7 @@ import Sportsyear from "../../public/Sportsyear-logo-lod@2x.png";
 import Mini from "../../public/mini-logo-06.jpg";
 import RevitCourse from "../../public/autodesk-revit-course-logo@2x.png";
 import BBC from "../../public/BBC_Logo_2021.svg";
+import IsoBg from "../../public/Panko-Iso-Bg-Tile.png";
 import { relative } from "path";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
@@ -192,6 +193,15 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      <section
+        style={{
+          backgroundImage: `url(${IsoBg.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+        }}
+        className="min-h-96 py-96"
+      ></section>
     </>
   );
 }
