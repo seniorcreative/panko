@@ -3,6 +3,7 @@ import Image from "next/image";
 import {
   Inter,
   Press_Start_2P,
+  Nunito_Sans,
   Roboto_Serif,
   Roboto_Slab,
 } from "next/font/google";
@@ -10,6 +11,11 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const press_start = Press_Start_2P({
+  subsets: ["latin"],
+  weight: "400",
+  style: "normal",
+});
+const nunito = Nunito_Sans({
   subsets: ["latin"],
   weight: "400",
   style: "normal",
@@ -28,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={press_start.className}>
+      <body className={nunito.className}>
         <nav className="fixed top-0 left-0 p4 w-full px-12 bg-emerald-500 shadow-md shadow-emerald-500 shadow-opacity-50 bg-opacity-50 backdrop-blur">
           <ul className="list-none flex">
             <li className="mr-8">

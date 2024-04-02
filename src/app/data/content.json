@@ -44,6 +44,61 @@
           "client": "Panko",
           "imageUrl": ["/work/organisms-2~2.png", "/work/organisms-1~2.png"]
         }
+      },
+      {
+        "id": 4,
+        "title": "FLUX Clothing",
+        "href": "",
+        "description": "My first e-commerce site - which took paypal and eWay credit card payments. Can remember that hallelujah moment when the gateway was all wired up correctly. Shopify didn't exist when I was doing this. Had some rad fun animating components for the FLUX crew.",
+        "date": "2010",
+        "category": ["E-commerce"],
+        "meta": {
+          "client": "FLUX Clothing",
+          "imageUrl": ["/work/flux~4~1.jpg", "/work/flux~4~2.jpg"]
+        }
+      },
+      {
+        "id": 5,
+        "title": "MCG Club Songs",
+        "href": "",
+        "description": "Started to work more on kiosk and touch screen systems. Was commissioned to add a new club song to this installation at the Australian Sports Museum. Early IOT / Electronic messaging gateway work.",
+        "date": "2011",
+        "category": ["Signage", "Touchscreen"],
+        "meta": {
+          "client": "FLUX Clothing",
+          "imageUrl": ["/work/clubSongs~2~1.jpg", "/work/clubSongs~2~2.jpg"]
+        }
+      },
+      {
+        "id": 6,
+        "title": "MCG AFL Scoreboard System",
+        "href": "",
+        "description": "It's not every day you're asked to build an interactive scoring system which generates video signals to show the scores for crowds of 100,000. Large application.",
+        "date": "2007",
+        "category": ["Signage", "Video"],
+        "meta": {
+          "client": "Visual Jazz Isobar",
+          "imageUrl": [
+            "/work/mcg_screen~5~1.jpg",
+            "/work/mcg_screen~5~3.jpg",
+            "/work/mcg_screen~5~5.jpg"
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "title": "Michael Klim Milk Skincare",
+        "href": "",
+        "description": "My second e-commerce site helped to launch this start up. Lesson I learned from doing this project are still with me to this day.",
+        "date": "2011",
+        "category": ["E-commerce"],
+        "meta": {
+          "client": "Michael Klim",
+          "imageUrl": [
+            "/work/milkskincare~3~2.jpg",
+            "/work/milkskincare~3~3.jpg"
+          ]
+        }
       }
     ]
   }
