@@ -22,6 +22,24 @@
         }
       },
       {
+        "id": 9,
+        "title": "Bridge Alert (React Native)",
+        "href": "#",
+        "description": "Firebase storage, Geofencing, Map based routing, Push notifications. Had a lot of fun prototyping, building and testing this React Native app. Launched in 2017 and gained some popularity around Australia.",
+        "date": "2016-2019",
+        "category": ["React Native", "Mobile"],
+        "meta": {
+          "client": "Panko",
+          "imageUrl": [
+            "/work/bridge-alert~1~5.png",
+            "/work/bridge-alert~2~5.png",
+            "/work/bridge-alert~3~5.png",
+            "/work/bridge-alert~4~5.png",
+            "/work/bridge-alert~5~5.png"
+          ]
+        }
+      },
+      {
         "id": 2,
         "title": "SLSA Surf Lifesaving Squad",
         "href": "#",
