@@ -24,6 +24,9 @@ export default function Page() {
               <h3 className="text-xl font-semibold leading-6 text-center text-slate-900">
                 {post.title}
               </h3>
+              <h3 className="text-xl font-semibold leading-6 text-center text-slate-900">
+                {post.href}
+              </h3>
               <div className="my-4">
                 <CarouselReactComponent images={post.meta.imageUrl} />
               </div>
