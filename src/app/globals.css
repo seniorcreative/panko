@@ -24,7 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  background: rgb(64, 137, 139);
+  /* background: rgb(64, 137, 139); */
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
