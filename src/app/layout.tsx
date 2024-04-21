@@ -36,22 +36,25 @@ export default function RootLayout({
     <html lang="en">
       <body className={nunito.className}>
         <nav className="fixed top-0 left-0 p4 w-full px-12 shadow-opacity-50 bg-opacity-50 backdrop-blur">
-          <ul className="list-none flex">
-            <li className="mr-8">
-              <a href="/">
-                <Image
-                  className="relative"
-                  src="/Black logo - no background.png"
-                  alt="Panko Logo Mono"
-                  width={70}
-                  height={79}
-                  priority
-                />
+          <ul className="list-none flex py-5">
+            <li className="flex mx-4 items-center h-100">
+              <a className="text-black uppercase" href="/">
+                Work
               </a>
             </li>
             <li className="flex mx-4 items-center h-100">
               <a className="text-black uppercase" href="/about">
                 About
+              </a>
+            </li>
+            <li className="flex mx-4 items-center h-100">
+              <a className="text-black uppercase" href="/about">
+                AI Statement
+              </a>
+            </li>
+            <li className="flex mx-4 items-center h-100">
+              <a className="text-black uppercase" href="/about">
+                Quantum
               </a>
             </li>
           </ul>
