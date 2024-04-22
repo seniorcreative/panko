@@ -40,6 +40,22 @@
         }
       },
       {
+        "id": 10,
+        "title": "WorkSafe Victoria",
+        "href": "",
+        "description": "Innovation centre was a very educational experience, to go into as a software engineer. Teamed up with service designers and researchers. Interviewed injured workers. Learned the power of the double-diamond, and design workshop synthesis as part of systems thinking. Developed various tools and web apps. This one had a passwordless sign-in, and was piloted by the Victorian government, helping the incapacitated in many ways. Had fun learning Tailwind CSS on this one.",
+        "date": "2021",
+        "category": ["Public Sector"],
+        "meta": {
+          "client": "WorkSafe Victoria",
+          "imageUrl": [
+            "/work/worksafe~1~3.png",
+            "/work/worksafe~2~3.png",
+            "/work/worksafe~3~3.png"
+          ]
+        }
+      },
+      {
         "id": 2,
         "title": "SLSA Surf Lifesaving Squad",
         "href": "",
@@ -91,7 +107,7 @@
         "id": 6,
         "title": "MCG AFL Scoreboard System",
         "href": "",
-        "description": "It's not every day you're asked to build an interactive scoring system which generates video signals to show the scores for crowds of 100,000. Large application.",
+        "description": "It's not every day you're asked to build an interactive scoring system which generates video signals to show the scores for large sports stadium crowds. Huge application.",
         "date": "2007",
         "category": ["Signage", "Video"],
         "meta": {
@@ -107,7 +123,7 @@
         "id": 7,
         "title": "Michael Klim Milk Skincare",
         "href": "",
-        "description": "My second e-commerce site helped to launch this start up. Lesson I learned from doing this project are still with me to this day.",
+        "description": "My second e-commerce site helped to launch this start up. Lessons learned from doing this project are still with me to this day. Test Coverage anyone?",
         "date": "2011",
         "category": ["E-commerce"],
         "meta": {

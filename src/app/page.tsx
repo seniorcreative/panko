@@ -182,6 +182,20 @@ export default function Home() {
       <div className="-mt-48">
         <Waves inverted={true} />
       </div>
+      <section className="h-screen bg-black px-8 md:p-12 min-h-52 -mt-2">
+        <div className="container mx-auto">
+          <ul>
+            {Object.keys(folioCategories).map((key) => (
+              <li
+                key="key"
+                className="cat-link py-4 cursor-pointer text-orange-300 text-lg"
+              >
+                <a href={`/folio/${key}`}>{key}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <section
         style={{
           backgroundImage: `url(${IsoBg.src})`,
@@ -191,17 +205,6 @@ export default function Home() {
         }}
         className="min-h-96 py-96"
       ></section>
-      <section className="h-screen bg-white px-8 md:p-12 min-h-52 text-white -mt-2">
-        <div className="container mx-auto">
-          <ul>
-            {Object.keys(folioCategories).map((key) => (
-              <li key="key" className="cat-link py-4 cursor-pointer text-black">
-                <a href={`/folio/${key}`}>{key}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
     </>
   );
 }

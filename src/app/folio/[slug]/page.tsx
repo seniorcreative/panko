@@ -45,7 +45,7 @@ export default function Page() {
                 </p>
               </section>
               <small className="text-slate-900 text-sm">
-                Client&nbsp;<strong>{post.meta.client}</strong>
+                For&nbsp;<strong>{post.meta.client}</strong>
               </small>
             </div>
           </div>
