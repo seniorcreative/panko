@@ -7,7 +7,7 @@ export default function Gallery({ images }: { images: string[] }) {
   return (
     <section className="relative p-10 overflow-auto">
       <div
-        className="w-full h-96 blur-lg opacity-80"
+        className="h-96 blur-lg opacity-80 flex-grow flex"
         style={{ backgroundImage: `url(${images[0]})` }}
       ></div>
       <div className="flex absolute top-10">

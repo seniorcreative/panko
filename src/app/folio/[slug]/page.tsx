@@ -43,8 +43,8 @@ export default function Page() {
 
           <Gallery images={post.meta.imageUrl} />
 
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-4 align-middle">
-            <section className="w-full mt-8 col-span-2">
+          <div className="grid grid-cols-3 gap-4 align-middle">
+            <section className="w-full mt-8 col-span-3 md:col-span-2">
               <p className="m-4 text-md leading-6 border-t-2 border-slate-300 pt-4  text-slate-900">
                 {post.description}
               </p>
