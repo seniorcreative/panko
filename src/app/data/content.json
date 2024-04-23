@@ -29,7 +29,7 @@
         "date": "2016-2019",
         "category": ["React Native", "Mobile"],
         "meta": {
-          "client": "Panko",
+          "client": "Panko Digital",
           "imageUrl": [
             "/work/bridge-alert~1~5.png",
             "/work/bridge-alert~2~5.png",
@@ -75,7 +75,7 @@
         "date": "2021",
         "category": ["Games"],
         "meta": {
-          "client": "Panko",
+          "client": "Panko Digital",
           "imageUrl": ["/work/organisms-2~2.png", "/work/organisms-1~2.png"]
         }
       },
@@ -99,7 +99,7 @@
         "date": "2011",
         "category": ["Signage", "Touchscreen"],
         "meta": {
-          "client": "FLUX Clothing",
+          "client": "Mental Media / Australian Sports Museum",
           "imageUrl": ["/work/clubSongs~2~1.jpg", "/work/clubSongs~2~2.jpg"]
         }
       },
@@ -107,7 +107,7 @@
         "id": 6,
         "title": "MCG AFL Scoreboard System",
         "href": "",
-        "description": "It's not every day you're asked to build an interactive scoring system which generates video signals to show the scores for large sports stadium crowds. Huge application.",
+        "description": "It's not every day you're hired to build a timed interactive scoring system which generates video signals to show large sports stadium crowds. Huge application.",
         "date": "2007",
         "category": ["Signage", "Video"],
         "meta": {
@@ -123,7 +123,7 @@
         "id": 7,
         "title": "Michael Klim Milk Skincare",
         "href": "",
-        "description": "My second e-commerce site helped to launch this start up. Lessons learned from doing this project are still with me to this day. Test Coverage anyone?",
+        "description": "Yes I hand-rolled my own e-commerce system made with my own CMS called Popcorn. Pre-shopify. As my second e-commerce site, it helped to launch this start up. Lessons learned from doing this project are still with me to this day. Test Coverage anyone?",
         "date": "2011",
         "category": ["E-commerce"],
         "meta": {

@@ -3,7 +3,8 @@
 import { usePathname } from "next/navigation";
 import React from "react";
 
-import CarouselReactComponent from "../../components/carouselreact";
+// import CarouselReactComponent from "../../components/carouselreact"
+import Gallery from "../../components/gallery";
 const content = require("../../data/content.json");
 
 export default function Page() {
@@ -19,35 +20,38 @@ export default function Page() {
 
       {content.en.work.map((post: any) => (
         <article key={post.id} className="mb-4 p-4">
-          <div className="grid grid-cols-6 md:grid-cols-6 gap-4 my-4 align-middle">
-            <div className="col-start-0 col-span-6 md:col-start-2 md:col-span-4">
-              <h3 className="text-xl font-semibold leading-6 text-center text-slate-900">
+          <div className="my-4 align-middle">
+            <div className="">
+              <h3 className="text-xl font-semibold leading-6 text-slate-900">
                 {post.title}
               </h3>
               {post.href && (
-                <div className="w-full text-center my-2">
+                <div className="w-full my-2">
+                  Launch this
                   <a
                     href={`/${post.href}`}
                     role="Button"
-                    className="button border-2 border-black rounded-md text-center bg-slate-300 p-2"
+                    className="ps-2 text underline"
                     title={`View ${post.title} in a new window`}
                   >
-                    View {post.href}
+                    {post.href}
                   </a>
                 </div>
               )}
-              <div className="my-4">
-                <CarouselReactComponent images={post.meta.imageUrl} />
-              </div>
-              <section className="w-full mb-4">
-                <p className="mt-2 line-clamp-5 text-sm leading-6 text-slate-900">
-                  {post.description}
-                </p>
-              </section>
-              <small className="text-slate-900 text-sm">
+            </div>
+          </div>
+
+          <Gallery images={post.meta.imageUrl} />
+
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-4 align-middle">
+            <section className="w-full mt-8 col-span-2">
+              <p className="m-4 text-md leading-6 border-t-2 border-slate-300 pt-4  text-slate-900">
+                {post.description}
+              </p>
+              <small className="text-slate-900 text-sm ms-4 ps-4 border-s-2 border-slate-300">
                 For&nbsp;<strong>{post.meta.client}</strong>
               </small>
-            </div>
+            </section>
           </div>
         </article>
       ))}
