@@ -20,37 +20,13 @@ export default function Page() {
 
       {content.en.work.map((post: any) => (
         <article key={post.id} className="w-full">
-          <div className="my-4 ps-4 align-middle">
-            <h3 className="text-xl font-semibold leading-6 text-slate-900">
-              {post.title}
-            </h3>
-            <small className="text-slate-900 text-sm ps-2 border-s-2 border-slate-300">
-              For&nbsp;<strong>{post.meta.client}</strong>
-            </small>
-            {post.href && (
-              <div className="w-full my-2">
-                Launch this
-                <a
-                  href={`/${post.href}`}
-                  role="Button"
-                  className="ps-2 text underline"
-                  title={`View ${post.title} in a new window`}
-                >
-                  {post.href}
-                </a>
-              </div>
-            )}
-          </div>
-
-          <Gallery images={post.meta.imageUrl} description={post.description} />
-
-          {/* <div className="grid grid-cols-3 gap-4 align-middle">
-            <section className="w-full col-span-3 md:col-span-2">
-              <p className="m-4 text-md leading-6 text-slate-900">
-                {post.description}
-              </p>
-            </section>
-          </div> */}
+          <Gallery
+            images={post.meta.imageUrl}
+            description={post.description}
+            title={post.title}
+            client={post.meta.client}
+            href={post.href}
+          />
         </article>
       ))}
     </div>

@@ -7,6 +7,18 @@
     },
     "work": [
       {
+        "id": 12,
+        "title": "Reconnaitre",
+        "href": "",
+        "description": "Rapid front-end build. Bootstrap 5. Responsive goodness for drone start-up.",
+        "date": "2024",
+        "category": ["E-commerce"],
+        "meta": {
+          "client": "Emote Digital Melbourne",
+          "imageUrl": ["/work/reconnaitre~1~2.png", "/work/reconnaitre~2~2.png"]
+        }
+      },
+      {
         "id": 1,
         "title": "Carlton Natural Blonde",
         "href": "",
@@ -41,7 +53,7 @@
       },
       {
         "id": 10,
-        "title": "WorkSafe Victoria",
+        "title": "WorkSafe Projects",
         "href": "",
         "description": "Innovation centre was a very educational experience, to go into as a software engineer. Teamed up with service designers and researchers. Interviewed injured workers. Learned the power of the double-diamond, and design workshop synthesis as part of systems thinking. Developed various tools and web apps. This one had a passwordless sign-in, and was piloted by the Victorian government, helping the incapacitated in many ways. Had fun learning Tailwind CSS on this one.",
         "date": "2021",
@@ -137,7 +149,7 @@
       },
       {
         "id": 7,
-        "title": "Michael Klim Milk Skincare",
+        "title": "Milk Skincare",
         "href": "",
         "description": "For the swimming legend Michael's Milk Skincare start up I was there at the outset, hand-rolled my own e-commerce system made with my Popcorn CMS. Pre-shopify. As my second e-commerce site, it helped to launch this start up. Lessons learned from doing this project are still with me to this day. Test Coverage anyone?",
         "date": "2011",

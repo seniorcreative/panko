@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import {
-  Inter,
-  Press_Start_2P,
-  Nunito_Sans,
-  Roboto_Serif,
-  Roboto_Slab,
-} from "next/font/google";
+// import Image from "next/image";
+import { Nunito_Sans, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"], weight: "400", style: "normal" });
 const press_start = Press_Start_2P({
   subsets: ["latin"],
   weight: "400",
@@ -20,6 +14,9 @@ const nunito = Nunito_Sans({
   weight: "400",
   style: "normal",
 });
+// const shareTech = Share_Tech({
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Panko Digital",
