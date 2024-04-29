@@ -32,29 +32,34 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <nav className="fixed top-0 left-0 z-10 p-4 w-full px-12 shadow-opacity-50 bg-orange-500 bg-opacity-50 backdrop-blur">
-          <ul className="list-none flex py-5">
-            <li className="flex mx-4 items-center h-100">
-              <a className="text-black uppercase" href="/">
-                Work
-              </a>
-            </li>
-            <li className="flex mx-4 items-center h-100">
-              <a className="text-black uppercase" href="/about">
-                About
-              </a>
-            </li>
-            <li className="flex mx-4 items-center h-100">
-              <a className="text-black uppercase" href="/about">
-                AI Statement
-              </a>
-            </li>
-            <li className="flex mx-4 items-center h-100">
-              <a className="text-black uppercase" href="/about">
-                Quantum
-              </a>
-            </li>
-          </ul>
+        <nav className="fixed top-0 left-0 z-10 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white  bg-opacity-25 backdrop-blur">
+          <div className="flex justify-between items-center">
+            <a href="/" className="text-black font-bold">
+              Panko
+            </a>
+            <ul className="list-none flex py-2">
+              <li className="flex mx-4 items-center h-100">
+                <a className="text-black" href="/">
+                  Work
+                </a>
+              </li>
+              <li className="flex mx-4 items-center h-100">
+                <a className="text-black" href="/about">
+                  About
+                </a>
+              </li>
+              <li className="flex mx-4 items-center h-100">
+                <a className="text-black" href="/about">
+                  AI Statement
+                </a>
+              </li>
+              <li className="flex mx-4 items-center h-100">
+                <a className="text-black" href="/about">
+                  Quantum
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
         <main className="flex min-h-screen flex-col w-full">{children}</main>
       </body>

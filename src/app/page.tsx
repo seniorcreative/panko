@@ -55,15 +55,13 @@ export default function Home() {
     },
   ];
 
-  const folioCategories = {
-    "E-Commerce": [],
-    Marketing: [],
-    Signage: [],
-    Video: [],
-    "Real Estate": [],
-    "Business Systems": [],
-    Games: ["Galaga (2009)", "Game of Life (2021)"],
-  };
+  const content = require("./data/content.json");
+  const folioCategories = new Set<string>();
+  content.en.work.forEach((workItem: any) => {
+    workItem.category.forEach((cat: string) => {
+      folioCategories.add(cat);
+    });
+  });
 
   const [folioSelected, setFolioSelected] = useState(false);
 
@@ -182,20 +180,22 @@ export default function Home() {
       <div className="-mt-48">
         <Waves inverted={true} />
       </div>
-      <section className="h-screen bg-black px-8 md:p-12 min-h-52 -mt-2">
+      {/* Categories list */}
+      <section className=" bg-black px-8 md:p-12 min-h-12 -mt-2">
         <div className="container mx-auto">
-          <ul>
-            {Object.keys(folioCategories).map((key) => (
+          <ul className="list-none flex justify-between py-2">
+            {Array.from(folioCategories).map((cat: string) => (
               <li
-                key="key"
-                className="cat-link py-4 cursor-pointer text-orange-300 text-lg"
+                key={cat}
+                className="cat-link py-4 cursor-pointer text-white text-sm"
               >
-                <a href={`/folio/${key}`}>{key}</a>
+                <a href={`/folio/${cat}`}>{cat}</a>
               </li>
             ))}
           </ul>
         </div>
       </section>
+      {/* End categories list */}
       <section
         style={{
           backgroundImage: `url(${IsoBg.src})`,
