@@ -159,9 +159,10 @@ export default function Home() {
       <Waves inverted={false} />
       <section className="bg-orange p-8 md:p-24 text-slate-900 text-center">
         <h3>Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong</h3>
-        <h4>Rapid, Affordable, Freelance Service</h4>
+        <h4>Efficient, Affordable, Freelance Service</h4>
         <p>
-          Digital Software maintenance and development for web, stores, apps.
+          Industry standard digital software maintenance and development for
+          web, stores, apps.
         </p>
         <h1 className="hidden">
           Melbourne freelance web developer and app developer.
