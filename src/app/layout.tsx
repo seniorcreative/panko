@@ -39,8 +39,8 @@ export default function RootLayout({
             </a>
             <ul className="list-none flex py-2">
               <li className="flex mx-4 items-center h-100">
-                <a className="text-black" href="/">
-                  Work
+                <a className="text-black" href="/folio">
+                  Retrospective
                 </a>
               </li>
               <li className="flex mx-4 items-center h-100">
@@ -62,6 +62,22 @@ export default function RootLayout({
           </div>
         </nav>
         <main className="flex min-h-screen flex-col w-full">{children}</main>
+        <footer className="py-12 px-8 bg-black text-white">
+          <div className="container">
+            <div className="grid">
+              <div className="row-span-3">
+                <h3>
+                  <strong>Contact</strong>
+                </h3>
+                <ul className="list-none">
+                  <li>
+                    <a href="#">Email us at Panko</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

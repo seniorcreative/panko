@@ -58,7 +58,7 @@ export default function Gallery({
         style={{ height: "320px", top: "80px", left: "20px" }}
       >
         <div
-          className="inline-flex flex-nowrap text-xs ms-2 first:ms-0 bg-white p-4"
+          className="inline-flex flex-nowrap text-sm ms-2 first:ms-0 bg-white text-slate-900 p-4"
           style={{ minWidth: "320px", width: "320px", height: "320px" }}
         >
           {description}
@@ -66,7 +66,7 @@ export default function Gallery({
         {images.map((image: string) => (
           <div
             key={image}
-            className="inline-flex flex-nowrap ms-2 first:ms-0"
+            className="inline-flex flex-nowrap ms-1 first:ms-0"
             style={{ height: "320px" }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
