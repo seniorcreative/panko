@@ -143,7 +143,7 @@ export default function Home() {
     <>
       <section
         className="w-full flex items-center justify-center"
-        style={{ height: "75vh", position: "relative", top: "12.5vh" }}
+        style={{ height: "50vh", position: "relative", top: "12.5vh" }}
       >
         <Image
           className="opacity-100 flex"
@@ -157,6 +157,16 @@ export default function Home() {
         <div className="anime-container">{/* particles */}</div>
       </section>
       <Waves inverted={false} />
+      <section className="bg-orange p-8 md:p-24 text-slate-900 text-center">
+        <h3>Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong</h3>
+        <h4>Rapid, Affordable, Freelance Service</h4>
+        <p>
+          Digital Software maintenance and development for web, stores, apps.
+        </p>
+        <h1 className="hidden">
+          Melbourne freelance web developer and app developer.
+        </h1>
+      </section>
       <section className="bg-white px-8 md:px-24 text-slate-800">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-12 mb-48">
           {Logos.map((logo: LogoObj) => (
@@ -178,7 +188,7 @@ export default function Home() {
         </div>
       </section>
       <div className="-mt-48">
-        <Waves inverted={true} />
+        <Waves inverted />
       </div>
       {/* Categories list */}
       <section className=" bg-black px-8 md:p-12 min-h-12 -mt-2">
@@ -196,6 +206,9 @@ export default function Home() {
         </div>
       </section>
       {/* End categories list */}
+      <div className="-mb-48">
+        <Waves inverted={false} />
+      </div>
       <section
         style={{
           backgroundImage: `url(${IsoBg.src})`,
