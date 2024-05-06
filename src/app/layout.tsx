@@ -37,7 +37,7 @@ export default function RootLayout({
             <a href="/" className="text-black font-bold">
               Panko
             </a>
-            <ul className="list-none flex py-2">
+            <ul className="list-none md:flex py-2">
               <li className="flex mx-4 items-center h-100">
                 <a className="text-black" href="/folio">
                   Retrospective
@@ -46,16 +46,6 @@ export default function RootLayout({
               <li className="flex mx-4 items-center h-100">
                 <a className="text-black" href="/about">
                   About
-                </a>
-              </li>
-              <li className="flex mx-4 items-center h-100">
-                <a className="text-black" href="/about">
-                  AI Statement
-                </a>
-              </li>
-              <li className="flex mx-4 items-center h-100">
-                <a className="text-black" href="/about">
-                  Quantum
                 </a>
               </li>
             </ul>

@@ -7,7 +7,7 @@ import anime from "animejs";
 import Waves from "./components/waves";
 import { WindupChildren } from "windups";
 
-import PankoLogoSVG from "../../public/Black logo - no swirl.svg";
+import PankoLogoSVG from "../../public/Black logo - no background.svg";
 import NineLogo from "../../public/Nine-Network-Logo.png";
 import BankFirst from "../../public/bankfirst.png";
 import Buildxact from "../../public/Buildxact-Logo-SVG.svg";
@@ -51,7 +51,7 @@ export default function Home() {
     {
       t: "BBC: E-Learning Games",
       i: BBC,
-      c: undefined,
+      c: "grayscale opacity-60 scale-75",
     },
   ];
 
@@ -67,26 +67,26 @@ export default function Home() {
 
   useEffect(() => {
     // Animation using Anime.js
-    anime({
-      targets: "#logo-img",
-      scale: [0, 1.25],
-      opacity: [0, 1],
-      easing: "easeInOutElastic",
-      duration: 1500,
-      delay: 1500,
-    });
+    // anime({
+    //   targets: "#logo-img",
+    //   scale: [0, 1.25],
+    //   opacity: [0, 1],
+    //   easing: "easeInOutElastic",
+    //   duration: 1500,
+    //   delay: 1500,
+    // });
 
     let container = document.querySelector(".anime-container");
 
     var a = 3.3;
-    var l = 90;
+    var l = 250;
 
     for (var i = 10; i <= l; i += 1) {
       var angle = 0.2 * i;
       var x = a * angle * Math.cos(angle) + window.innerWidth / 2;
       var y = a * angle * Math.sin(angle) + window.innerHeight / 2;
 
-      var n = 24;
+      var n = 19;
 
       for (var j = 0; j < n; j++) {
         var dot = document.createElement("div");
@@ -97,9 +97,10 @@ export default function Home() {
 
         dot.style.width = size + "px";
         dot.style.height = size + "px";
+        dot.style.backgroundColor = "#000000";
 
-        dot.style.left = x + anime.random(-15, 15) + "px";
-        dot.style.top = y + anime.random(-15, 15) + "px";
+        dot.style.left = x + anime.random(-25, 25) + "px";
+        dot.style.top = y - 80 + anime.random(-25, 25) + "px";
 
         dot.style.opacity = "0";
       }
@@ -143,38 +144,42 @@ export default function Home() {
     <>
       <section
         className="w-full flex items-center justify-center"
-        style={{ height: "50vh", position: "relative", top: "12.5vh" }}
+        style={{ height: "30vh", position: "relative", top: "20vh" }}
       >
+        <div className="anime-container">{/* particles */}</div>
         <Image
           className="opacity-100 flex"
           id="logo-img"
           src={PankoLogoSVG.src}
           alt="Panko Logo"
-          width={281}
-          height={317}
+          width={281 * 0.75}
+          height={317 * 0.75}
           priority
         />
-        <div className="anime-container">{/* particles */}</div>
       </section>
       <Waves inverted={false} />
       <section className="bg-orange p-8 md:p-24 text-slate-900 text-center">
-        <h3>Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong</h3>
-        <h4>Efficient, Affordable, Freelance Service</h4>
-        <p>
+        <h3 className="text-lg">
+          Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong
+        </h3>
+        <h4 className="text-xl">
+          Efficient, Affordable, Freelance Web Services
+        </h4>
+        <p className="lg:w-1/3 lg:mx-auto my-3">
           Industry standard digital software maintenance and development for
-          web, stores, apps.
+          web, stores, apps &amp; business systems.
         </p>
         <h1 className="hidden">
-          Melbourne freelance web developer and app developer.
+          Melbourne freelance e-commerce, web and mobile application developer.
         </h1>
       </section>
-      <section className="bg-white px-8 md:px-24 text-slate-800">
+      <section className="bg-white px-8 md:px-24 text-slate-800 bg-slate-100 pt-12">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-12 mb-48">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
               title={logo.t}
-              className={logo.c || "grayscale opacity-60"}
+              className={`${logo.c} grayscale opacity-60 bg-blend-multiply scale-75 hover:scale-125 transition-all`}
               style={{
                 backgroundImage: `url(${logo.i.src})`,
                 backgroundSize: "contain",
@@ -194,11 +199,11 @@ export default function Home() {
       {/* Categories list */}
       <section className=" bg-black px-8 md:p-12 min-h-12 -mt-2">
         <div className="container mx-auto">
-          <ul className="list-none flex justify-between py-2">
+          <ul className="list-none lg:flex lg:justify-between py-2">
             {Array.from(folioCategories).map((cat: string) => (
               <li
                 key={cat}
-                className="cat-link py-4 cursor-pointer text-white text-sm"
+                className="cat-link py-1 cursor-pointer text-white text-sm"
               >
                 <a href={`/folio/${cat}`}>{cat}</a>
               </li>
@@ -207,17 +212,18 @@ export default function Home() {
         </div>
       </section>
       {/* End categories list */}
-      <div className="-mb-48">
+      {/* <div className="">
         <Waves inverted={false} />
-      </div>
+      </div> */}
       <section
         style={{
           backgroundImage: `url(${IsoBg.src})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
+          height: "100vh",
         }}
-        className="min-h-96 py-96"
+        className="hover:animate-pulse"
       ></section>
     </>
   );
