@@ -14,6 +14,7 @@ export default function Page() {
     anime({
       targets: "#intro-content",
       translateX: [-100, 0],
+      rotateX: [-10, 10],
       opacity: [0, 1],
       easing: "easeInOutQuad",
       duration: 1000,
@@ -22,13 +23,11 @@ export default function Page() {
 
     if (pageIntroElement === null) return;
     (pageIntroElement.current as unknown as HTMLDivElement).innerHTML =
-      content.en.home.sections.intro;
+      content.en.home.sections.about;
   }, []);
 
   return (
     <main className="h-screen flex items-center justify-center text-red-500 leading-8">
-      {/* <h1>{pageData.content}</h1> */}
-      {/* <div className="animate-logo">Move this.</div> */}
       <div
         id="intro-content"
         className="w-3/4 md:w-1/3"
