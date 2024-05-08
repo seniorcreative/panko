@@ -7,33 +7,6 @@
     },
     "work": [
       {
-        "id": 12,
-        "title": "Reconnaitre",
-        "href": "",
-        "description": "Rapid front-end build. Bootstrap 5. Responsive goodness for Aussie Drone start-up.",
-        "date": "2024",
-        "category": ["E-commerce"],
-        "meta": {
-          "client": "Reconnaitre / Nick Lowman",
-          "imageUrl": ["/work/reconnaitre~1~2.png", "/work/reconnaitre~2~2.png"]
-        }
-      },
-      {
-        "id": 1,
-        "title": "Carlton Natural Blonde",
-        "href": "",
-        "description": "Retro Galaga. I can remember having a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. I was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and I later hosted it separately with it's own scoreboard API.",
-        "date": "2010",
-        "category": ["Marketing Agency", "Games"],
-        "meta": {
-          "client": "Emote Digital Melbourne",
-          "imageUrl": [
-            "/work/carltonnaturalblonde~4~1.jpg",
-            "/work/carltonnaturalblonde~4~4.jpg"
-          ]
-        }
-      },
-      {
         "id": 9,
         "title": "Bridge Alert",
         "href": "",
@@ -108,6 +81,21 @@
         }
       },
       {
+        "id": 1,
+        "title": "Carlton Natural Blonde",
+        "href": "",
+        "description": "Retro Galaga. I can remember having a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. I was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and I later hosted it separately with it's own scoreboard API.",
+        "date": "2010",
+        "category": ["Marketing Agency", "Games"],
+        "meta": {
+          "client": "Emote Digital Melbourne",
+          "imageUrl": [
+            "/work/carltonnaturalblonde~4~1.jpg",
+            "/work/carltonnaturalblonde~4~4.jpg"
+          ]
+        }
+      },
+      {
         "id": 4,
         "title": "FLUX Clothing",
         "href": "",
@@ -165,3 +153,4 @@
     ]
   }
 }
+

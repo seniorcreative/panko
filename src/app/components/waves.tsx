@@ -3,14 +3,14 @@
 import waves from "../../../public/wave-haikei.svg";
 
 export type wavesProps = {
-  inverted: boolean;
+  lighten?: boolean;
 };
 
-export default function Waves({ inverted }: wavesProps) {
+export default function Waves({ lighten }: wavesProps) {
   return (
     <section>
       <div
-        className={`min-h-48 ${inverted ? "invert" : ""}`}
+        className={`min-h-48 ${lighten ? "invert opacity-10" : "invert"}`}
         style={{
           backgroundImage: `url(${waves.src})`,
           backgroundPositionY: "bottom",

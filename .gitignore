@@ -40,3 +40,6 @@ yarn-error.log*
 # images
 public/next.svg
 public/vercel.svg
+
+#backups
+*.archive

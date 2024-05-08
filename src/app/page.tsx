@@ -1,11 +1,8 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useEffect, useState } from "react";
-import anime from "animejs";
-
+import { useState, useEffect } from "react";
 import Waves from "./components/waves";
-import { WindupChildren } from "windups";
 
 import PankoLogoSVG from "../../public/Black logo - no background.svg";
 import NineLogo from "../../public/Nine-Network-Logo.png";
@@ -66,78 +63,34 @@ export default function Home() {
   const [folioSelected, setFolioSelected] = useState(false);
 
   useEffect(() => {
-    // Animation using Anime.js
-    // anime({
-    //   targets: "#logo-img",
-    //   scale: [0, 1.25],
-    //   opacity: [0, 1],
-    //   easing: "easeInOutElastic",
-    //   duration: 1500,
-    //   delay: 1500,
-    // });
+    const max = 24;
+    const min = 4;
+    const count = 120;
 
-    let container = document.querySelector(".anime-container");
+    const canvas = document.querySelector("#campus-stellae");
 
-    var a = 3.3;
-    var l = 250;
+    const estrellae = () => {
+      const campusEstrellae = document.createElement("div");
+      campusEstrellae.id = "estrella";
 
-    for (var i = 10; i <= l; i += 1) {
-      var angle = 0.2 * i;
-      var x = a * angle * Math.cos(angle) + window.innerWidth / 2;
-      var y = a * angle * Math.sin(angle) + window.innerHeight / 2;
+      for (let i = 0; i < count; i++) {
+        const direction = document.createElement("div");
+        direction.classList.add("estrella-angle");
+        direction.style.rotate = `${i * (360 / count)}deg`;
 
-      var n = 19;
+        const estrella = document.createElement("div");
+        const rdm = Math.random() * (max - min) + min;
+        estrella.classList.add("estrella");
+        estrella.style.animationDuration = `${rdm}s`;
 
-      for (var j = 0; j < n; j++) {
-        var dot = document.createElement("div");
-        dot.classList.add("dot");
-        container?.appendChild(dot);
-
-        var size = anime.random(4, 12);
-
-        dot.style.width = size + "px";
-        dot.style.height = size + "px";
-        dot.style.backgroundColor = "#000000";
-
-        dot.style.left = x + anime.random(-25, 25) + "px";
-        dot.style.top = y - 80 + anime.random(-25, 25) + "px";
-
-        dot.style.opacity = "0";
+        direction.appendChild(estrella);
+        campusEstrellae.appendChild(direction);
       }
-    }
 
-    anime({
-      loop: true,
-      easing: "linear",
-      opacity: [
-        { value: 1, duration: 50, delay: anime.stagger(2) },
-        {
-          value: 0,
-          duration: function () {
-            return anime.random(500, 1500);
-          },
-        },
-      ],
-      width: { value: 2, duration: 500, delay: anime.stagger(2) },
-      height: { value: 2, duration: 500, delay: anime.stagger(2) },
+      return campusEstrellae;
+    };
 
-      targets: document.querySelectorAll(".dot"),
-
-      translateX: {
-        value: function () {
-          return anime.random(-30, 30);
-        },
-        duration: 1500,
-        delay: anime.stagger(2),
-      },
-      translateY: {
-        value: function () {
-          return anime.random(-30, 30);
-        },
-        duration: 1500,
-        delay: anime.stagger(2),
-      },
-    });
+    canvas?.appendChild(estrellae());
   }, []);
 
   return (
@@ -146,19 +99,20 @@ export default function Home() {
         className="w-full flex items-center justify-center"
         style={{ height: "30vh", position: "relative", top: "20vh" }}
       >
-        <div className="anime-container">{/* particles */}</div>
+        <div
+          id="campus-stellae"
+          className="flex isolation-auto absolute justify-center items-center -z-10"
+        ></div>
         <Image
-          className="opacity-100 flex"
+          className="opacity-100 flex z-50"
           id="logo-img"
           src={PankoLogoSVG.src}
           alt="Panko Logo"
           width={281 * 0.75}
           height={317 * 0.75}
-          priority
         />
       </section>
-      <Waves inverted={false} />
-      <section className="bg-orange p-8 md:p-24 text-slate-900 text-center">
+      <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
         <h3 className="text-lg">
           Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong
         </h3>
@@ -173,7 +127,11 @@ export default function Home() {
           Melbourne freelance e-commerce, web and mobile application developer.
         </h1>
       </section>
-      <section className="bg-white px-8 md:px-24 text-slate-800 bg-slate-100 pt-12">
+      <Waves lighten />
+      <section
+        className="bg-white px-8 md:px-24 text-slate-800 pt-12"
+        style={{ background: `rgba(0,0,0,0.1)` }}
+      >
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-12 mb-48">
           {Logos.map((logo: LogoObj) => (
             <div
@@ -194,7 +152,7 @@ export default function Home() {
         </div>
       </section>
       <div className="-mt-48">
-        <Waves inverted />
+        <Waves />
       </div>
       {/* Categories list */}
       <section className=" bg-black px-8 md:p-12 min-h-12 -mt-2">

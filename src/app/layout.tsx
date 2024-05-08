@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 // import Image from "next/image";
-import { Nunito_Sans, Press_Start_2P } from "next/font/google";
+import { Nunito_Sans, Press_Start_2P, Varela_Round } from "next/font/google";
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"], weight: "400", style: "normal" });
@@ -10,6 +10,11 @@ const press_start = Press_Start_2P({
   style: "normal",
 });
 const nunito = Nunito_Sans({
+  subsets: ["latin"],
+  weight: "400",
+  style: "normal",
+});
+const varela = Varela_Round({
   subsets: ["latin"],
   weight: "400",
   style: "normal",
@@ -32,20 +37,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <nav className="fixed top-0 left-0 z-10 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white  bg-opacity-25 backdrop-blur">
+        <nav className="fixed top-0 left-0 z-10 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white bg-opacity-25 backdrop-blur">
           <div className="flex justify-between items-center">
-            <a href="/" className="text-black font-bold">
-              Panko
+            <a href="/" className={`${varela.className} text-black`}>
+              panko
             </a>
             <ul className="list-none md:flex py-2">
               <li className="flex mx-4 items-center h-100">
                 <a className="text-black" href="/folio">
-                  Retrospective
+                  Work
                 </a>
               </li>
               <li className="flex mx-4 items-center h-100">
                 <a className="text-black" href="/about">
                   About
+                </a>
+              </li>
+              <li className="flex mx-4 items-center h-100">
+                <a className="text-black" href="/services">
+                  Services
                 </a>
               </li>
             </ul>
@@ -61,7 +71,9 @@ export default function RootLayout({
                 </h3>
                 <ul className="list-none">
                   <li>
-                    <a href="#">Email us at Panko</a>
+                    <a href="mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry">
+                      Email us at Panko
+                    </a>
                   </li>
                 </ul>
               </div>
