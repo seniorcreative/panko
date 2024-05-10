@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import anime from "animejs";
 import React, { useRef } from "react";
 
-const pageData = { content: "Cooking on gas" };
 const content = require("../data/content.json");
 
 export default function Page() {
@@ -12,7 +11,7 @@ export default function Page() {
   useEffect(() => {
     // Animation using Anime.js
     anime({
-      targets: "#intro-content",
+      targets: "#content",
       translateX: [-100, 0],
       rotateX: [-10, 10],
       opacity: [0, 1],
@@ -28,11 +27,7 @@ export default function Page() {
 
   return (
     <main className="h-screen flex items-center justify-center text-red-500 leading-8">
-      <div
-        id="intro-content"
-        className="w-3/4 md:w-1/3"
-        ref={pageIntroElement}
-      ></div>
+      <div id="content" className="w-3/4 md:w-1/3" ref={pageIntroElement}></div>
     </main>
   );
 }

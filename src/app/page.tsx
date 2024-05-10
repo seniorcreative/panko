@@ -16,6 +16,8 @@ import Sportsyear from "../../public/Sportsyear-logo-lod@2x.png";
 import Mini from "../../public/mini-logo-06.jpg";
 import RevitCourse from "../../public/autodesk-revit-course-logo@2x.png";
 import BBC from "../../public/BBC_Logo_2021.svg";
+import About from "./components/about";
+import Services from "./components/services";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
@@ -118,11 +120,12 @@ export default function Home() {
           Efficient, Affordable, Freelance Web Services
         </h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">
-          Industry standard digital software maintenance and development for
-          web, stores, apps &amp; business systems.
+          Industry standard coding services for web, stores, apps &amp; business
+          systems.
         </p>
         <h1 className="hidden">
-          Melbourne freelance e-commerce, web and mobile application developer.
+          Melbourne freelance e-commerce, web and mobile software application
+          developer.
         </h1>
       </section>
       <Waves lighten />
@@ -155,7 +158,7 @@ export default function Home() {
       {/* Categories list */}
       <section className=" bg-black px-8 md:p-12 min-h-12 -mt-2">
         <div className="container mx-auto">
-          <ul className="list-none lg:flex lg:justify-between py-2">
+          <ul className="list-none lg:flex lg:justify-around py-2">
             {Array.from(folioCategories).map((cat: string) => (
               <li
                 key={cat}
@@ -167,6 +170,8 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      <About />
+      <Services />
     </>
   );
 }

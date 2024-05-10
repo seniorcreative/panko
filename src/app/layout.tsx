@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // import Image from "next/image";
 import { Nunito_Sans, Press_Start_2P, Varela_Round } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 // const inter = Inter({ subsets: ["latin"], weight: "400", style: "normal" });
 const press_start = Press_Start_2P({
@@ -36,27 +37,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={varela.className}>
         <nav className="fixed top-0 left-0 z-10 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white bg-opacity-25 backdrop-blur">
           <div className="flex justify-between items-center">
-            <a href="/" className={`${varela.className} text-black`}>
+            <a href="/" className={`${varela.className} text-black text-lg`}>
               panko
             </a>
             <ul className="list-none md:flex py-2">
               <li className="flex mx-4 items-center h-100">
-                <a className="text-black" href="/folio">
-                  Work
-                </a>
+                <Link
+                  className={`${varela.className} text-gray-800 text-sm`}
+                  href="/folio"
+                >
+                  work
+                </Link>
               </li>
               <li className="flex mx-4 items-center h-100">
-                <a className="text-black" href="/about">
-                  About
-                </a>
+                <Link
+                  className={`${varela.className} text-gray-800 text-sm`}
+                  href="#about"
+                >
+                  about
+                </Link>
               </li>
               <li className="flex mx-4 items-center h-100">
-                <a className="text-black" href="/services">
-                  Services
-                </a>
+                <Link
+                  className={`${varela.className} text-gray-800 text-sm`}
+                  href="#services"
+                >
+                  services
+                </Link>
               </li>
             </ul>
           </div>

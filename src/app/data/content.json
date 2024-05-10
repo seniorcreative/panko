@@ -3,13 +3,7 @@
     "home": {
       "sections": {
         "about": "<p>Our focus is at the intersection of real world products and cutting edge tech. We apply human craft and analysis, combined with AI tools and software engineering best practise, to achieve the optimum system for your business.</p><p>Make tech work for you. We have decades of experience in creating digital systems. With that comes the ability to engineer something that works, efficiently and cost effectively.</p><p>Panko is run by humans, for humans&hellip;</p>",
-        "services": [
-          "Build a store",
-          "Fix a bug",
-          "Change your theme",
-          "Consult with an expert",
-          "Launch an app"
-        ]
+        "services": "<ul><li>Build a store</li><li>Fix a bug</li><li>Change your theme</li><li>Consult with an expert</li><li>Launch an app</li></ul>"
       }
     },
     "work": [
