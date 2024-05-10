@@ -47,7 +47,7 @@ export default function RootLayout({
               <li className="flex mx-4 items-center h-100">
                 <Link
                   className={`${varela.className} text-gray-800 text-sm`}
-                  href="/folio"
+                  href="/folio/all"
                 >
                   work
                 </Link>
@@ -55,7 +55,7 @@ export default function RootLayout({
               <li className="flex mx-4 items-center h-100">
                 <Link
                   className={`${varela.className} text-gray-800 text-sm`}
-                  href="#about"
+                  href="/#about"
                 >
                   about
                 </Link>
@@ -63,7 +63,7 @@ export default function RootLayout({
               <li className="flex mx-4 items-center h-100">
                 <Link
                   className={`${varela.className} text-gray-800 text-sm`}
-                  href="#services"
+                  href="/#services"
                 >
                   services
                 </Link>
