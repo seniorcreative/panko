@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-// import Image from "next/image";
-import { Nunito_Sans, Press_Start_2P, Varela_Round } from "next/font/google";
+import { Nunito_Sans, Varela_Round } from "next/font/google";
+
 import "./globals.css";
+import "./globalIcons.css";
+
 import Link from "next/link";
 
-// const inter = Inter({ subsets: ["latin"], weight: "400", style: "normal" });
-const press_start = Press_Start_2P({
-  subsets: ["latin"],
-  weight: "400",
-  style: "normal",
-});
+import LanguageSwitcher from "../app/components/languageSwitcher";
+
 const nunito = Nunito_Sans({
   subsets: ["latin"],
   weight: "400",
@@ -20,14 +18,11 @@ const varela = Varela_Round({
   weight: "400",
   style: "normal",
 });
-// const shareTech = Share_Tech({
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Panko Digital",
   description:
-    "Precision digital engineering for software projects and systems.",
+    "Melbourne, Sydney, Geelong freelance e-commerce, web and mobile software application developer.",
 };
 
 export default function RootLayout({
@@ -67,6 +62,9 @@ export default function RootLayout({
                 >
                   services
                 </Link>
+              </li>
+              <li className="flex mx-4 items-center h-100">
+                <LanguageSwitcher></LanguageSwitcher>
               </li>
             </ul>
           </div>

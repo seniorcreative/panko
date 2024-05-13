@@ -124,7 +124,7 @@ export default function Home() {
           systems.
         </p>
         <h1 className="hidden">
-          Melbourne freelance e-commerce, web and mobile software application
+          Melbourne, Sydney, Geelong freelance e-commerce, web and mobile software application
           developer.
         </h1>
       </section>
