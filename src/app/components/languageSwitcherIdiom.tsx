@@ -5,7 +5,7 @@ import React from "react";
 type languageButtonType = {
   language: string;
   icon: string;
-  currentLanguage: string;
+  currentLanguage: string | undefined;
   changeMethod: (language: string) => {};
 };
 

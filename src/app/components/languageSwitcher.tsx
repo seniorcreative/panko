@@ -1,19 +1,25 @@
-"use server";
+"use client";
 
 import React from "react";
-import { cookies } from "next/headers";
-import Link from "next/link";
-
+import { useState, useEffect } from "react";
 import { setDefaultLocaleCookie, changeLanguageCookieValue } from "../actions";
 
 import LanguageSwitcherIdiom from "./languageSwitcherIdiom";
 
-const locales = ["en-US", "zh-CN", "fr", "es"];
+export default function LanguageSwitcher() {
+  const [currentLocaleFromCookie, setCurrentLocaleFromCookie] = useState<
+    string | undefined
+  >();
+  useEffect(() => {
+    const getLocale = async () => {
+      debugger;
+      const locale = await setDefaultLocaleCookie();
+      setCurrentLocaleFromCookie(locale);
+    };
+    getLocale();
+  }, []);
 
-export default async function LanguageSwitcher() {
-  //   setDefaultLocaleCookie();
-
-  const currentLocaleFromCookie = cookies().get("NEXT_LOCALE")?.value as string;
+  // const currentLocaleFromCookie = cookies().get("NEXT_LOCALE")?.value as string;
 
   const languageMap = [
     { lang: "en-US", icon: "language_us" },
