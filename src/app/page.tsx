@@ -18,15 +18,20 @@ import RevitCourse from "../../public/autodesk-revit-course-logo@2x.png";
 import BBC from "../../public/BBC_Logo_2021.svg";
 import About from "./components/about";
 import Services from "./components/services";
+import { getCurrentLocale } from "./actions";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
 export default function Home() {
+  const [currentLocale, setCurrentLocale] = useState("en-US");
+
+  const content = require("./data/content.json");
+
   const Logos: LogoObj[] = [
     { t: "Nine Network: Video Graphics Software", i: NineLogo, c: undefined },
     { t: "BankFirst: Finance Application", i: BankFirst, c: undefined },
     {
-      t: "Buildxact: Building Project Estimation",
+      t: "Buildxact: Building Quote Estimation Software",
       i: Buildxact,
       c: "grayscale scale-125 opacity-75",
     },
@@ -52,9 +57,9 @@ export default function Home() {
     },
   ];
 
-  const content = require("./data/content.json");
   const folioCategories = new Set<string>();
-  content.en.work.forEach((workItem: any) => {
+
+  content[currentLocale].work.forEach((workItem: any) => {
     workItem.category.forEach((cat: string) => {
       folioCategories.add(cat);
     });
@@ -93,11 +98,21 @@ export default function Home() {
     canvas?.appendChild(estrellae());
   }, []);
 
+  // Get the locale for translation.
+  useEffect(() => {
+    const getLocale = async () => {
+      const locale = await getCurrentLocale();
+      setCurrentLocale(locale);
+      console.log("Got your default language", locale);
+    };
+    getLocale();
+  }, []);
+
   return (
     <>
       <section
         className="w-full flex items-center justify-center"
-        style={{ height: "30vh", position: "relative", top: "20vh" }}
+        style={{ height: "400px", position: "relative", top: "100px" }}
       >
         <div
           id="campus-stellae"
@@ -114,18 +129,23 @@ export default function Home() {
       </section>
       <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
         <h3 className="text-lg">
-          Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong
+          {/* Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong */}
+          {content[currentLocale].home.sections.intro.one}
         </h3>
         <h4 className="text-xl">
-          Efficient, Affordable, Freelance Web Services
+          {/* Efficient, Affordable, Freelance Web Services */}
+          {content[currentLocale].home.sections.intro.two}
         </h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">
-          Industry standard coding services for web, stores, apps &amp; business
-          systems.
+          {/* Industry standard coding services for web, stores, apps &amp; business
+          systems. */}
+          {content[currentLocale].home.sections.intro.three}
         </p>
+        <a href="#">{content[currentLocale].home.sections.intro.contactBtn}</a>
         <h1 className="hidden">
-          Melbourne, Sydney, Geelong freelance e-commerce, web and mobile software application
-          developer.
+          {/* Melbourne, Sydney, Geelong freelance e-commerce, web and mobile
+          software application developer. */}
+          {content[currentLocale].home.sections.intro.four}
         </h1>
       </section>
       <Waves lighten />
@@ -170,8 +190,8 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <About />
-      <Services />
+      <About locale={currentLocale} />
+      <Services locale={currentLocale} />
     </>
   );
 }

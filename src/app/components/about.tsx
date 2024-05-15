@@ -6,7 +6,11 @@ import React, { useRef } from "react";
 
 const content = require("../data/content.json");
 
-export default function About() {
+export type aboutType = {
+  locale: string;
+};
+
+export default function About({ locale }: aboutType) {
   const pageContent = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
@@ -22,8 +26,8 @@ export default function About() {
 
     if (pageContent === null) return;
     (pageContent.current as unknown as HTMLDivElement).innerHTML =
-      content.en.home.sections.about;
-  }, []);
+      content[locale].home.sections.about;
+  }, [locale]);
 
   return (
     <section className="h-screen flex items-center justify-center text-red-500 leading-8">

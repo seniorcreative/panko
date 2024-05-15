@@ -3,10 +3,15 @@
 import { useEffect } from "react";
 import anime from "animejs";
 import React, { useRef } from "react";
+import { serverHooks } from "next/dist/server/app-render/entry-base";
 
 const content = require("../data/content.json");
 
-export default function Services() {
+export type servicesType = {
+  locale: string;
+};
+
+export default function Services({ locale }: servicesType) {
   const pageContent = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
@@ -22,7 +27,7 @@ export default function Services() {
 
     if (pageContent === null) return;
     (pageContent.current as unknown as HTMLDivElement).innerHTML =
-      content.en.home.sections.services;
+      content[locale].home.sections.services;
   }, []);
 
   return (

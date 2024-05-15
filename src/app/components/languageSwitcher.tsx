@@ -12,14 +12,11 @@ export default function LanguageSwitcher() {
   >();
   useEffect(() => {
     const getLocale = async () => {
-      debugger;
       const locale = await setDefaultLocaleCookie();
       setCurrentLocaleFromCookie(locale);
     };
     getLocale();
   }, []);
-
-  // const currentLocaleFromCookie = cookies().get("NEXT_LOCALE")?.value as string;
 
   const languageMap = [
     { lang: "en-US", icon: "language_us" },
@@ -32,9 +29,11 @@ export default function LanguageSwitcher() {
         <LanguageSwitcherIdiom
           key={lang}
           language={lang}
-          currentLanguage={currentLocaleFromCookie}
+          active={currentLocaleFromCookie === lang}
           icon={icon}
-          changeMethod={changeLanguageCookieValue}
+          changeMethod={(lang) => {
+            changeLanguageCookieValue(lang), setCurrentLocaleFromCookie(lang);
+          }}
         />
       ))}
     </>

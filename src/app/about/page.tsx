@@ -6,7 +6,11 @@ import React, { useRef } from "react";
 
 const content = require("../data/content.json");
 
-export default function Page() {
+export type pageType = {
+  locale: string
+}
+
+export default function Page({ locale } : pageType) {
   const pageIntroElement = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
@@ -22,7 +26,7 @@ export default function Page() {
 
     if (pageIntroElement === null) return;
     (pageIntroElement.current as unknown as HTMLDivElement).innerHTML =
-      content.en.home.sections.about;
+      content[locale].home.sections.about;
   }, []);
 
   return (

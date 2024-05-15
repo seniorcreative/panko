@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Varela_Round } from "next/font/google";
+import { Nunito_Sans, Varela, Aladin } from "next/font/google";
 
 import "./globals.css";
 import "./globalIcons.css";
@@ -9,15 +9,12 @@ import Link from "next/link";
 import LanguageSwitcher from "../app/components/languageSwitcher";
 
 const nunito = Nunito_Sans({
-  subsets: ["latin"],
   weight: "400",
   style: "normal",
-});
-const varela = Varela_Round({
   subsets: ["latin"],
-  weight: "400",
-  style: "normal",
 });
+const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
+const aladin = Aladin({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Panko Digital",
