@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import anime from "animejs";
 import React, { useRef } from "react";
-import { serverHooks } from "next/dist/server/app-render/entry-base";
 
 const content = require("../data/content.json");
 

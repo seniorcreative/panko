@@ -1,17 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
 import anime from "animejs";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { getCurrentLocale } from "../actions";
 
 const content = require("../data/content.json");
 
-export type pageType = {
-  locale: string
-}
-
-export default function Page({ locale } : pageType) {
+export default function Page() {
   const pageIntroElement = useRef<HTMLDivElement>(null);
+  const [currentLocale, setCurrentLocale] = useState("en-US");
+
   useEffect(() => {
     // Animation using Anime.js
     anime({
@@ -24,9 +22,19 @@ export default function Page({ locale } : pageType) {
       delay: 500,
     });
 
+    const getLocale = async () => {
+      const locale = await getCurrentLocale();
+      setCurrentLocale(locale);
+      console.log("Got your default language", locale);
+    };
+    getLocale();
+
+    // Way of setting innerHTML if you want to be using tags
     if (pageIntroElement === null) return;
+    if (!currentLocale) return;
+
     (pageIntroElement.current as unknown as HTMLDivElement).innerHTML =
-      content[locale].home.sections.about;
+      content[currentLocale].home.sections.about;
   }, []);
 
   return (

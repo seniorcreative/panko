@@ -3,6 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useState, useEffect } from "react";
 import Waves from "./components/waves";
+import Stellae from "./components/stellae";
 
 import PankoLogoSVG from "../../public/Black logo - no background.svg";
 import NineLogo from "../../public/Nine-Network-Logo.png";
@@ -18,6 +19,7 @@ import RevitCourse from "../../public/autodesk-revit-course-logo@2x.png";
 import BBC from "../../public/BBC_Logo_2021.svg";
 import About from "./components/about";
 import Services from "./components/services";
+
 import { getCurrentLocale } from "./actions";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
@@ -65,45 +67,11 @@ export default function Home() {
     });
   });
 
-  const [folioSelected, setFolioSelected] = useState(false);
-
-  useEffect(() => {
-    const max = 24;
-    const min = 4;
-    const count = 120;
-
-    const canvas = document.querySelector("#campus-stellae");
-
-    const estrellae = () => {
-      const campusEstrellae = document.createElement("div");
-      campusEstrellae.id = "estrella";
-
-      for (let i = 0; i < count; i++) {
-        const direction = document.createElement("div");
-        direction.classList.add("estrella-angle");
-        direction.style.rotate = `${i * (360 / count)}deg`;
-
-        const estrella = document.createElement("div");
-        const rdm = Math.random() * (max - min) + min;
-        estrella.classList.add("estrella");
-        estrella.style.animationDuration = `${rdm}s`;
-
-        direction.appendChild(estrella);
-        campusEstrellae.appendChild(direction);
-      }
-
-      return campusEstrellae;
-    };
-
-    canvas?.appendChild(estrellae());
-  }, []);
-
   // Get the locale for translation.
   useEffect(() => {
     const getLocale = async () => {
       const locale = await getCurrentLocale();
       setCurrentLocale(locale);
-      console.log("Got your default language", locale);
     };
     getLocale();
   }, []);
@@ -114,10 +82,7 @@ export default function Home() {
         className="w-full flex items-center justify-center"
         style={{ height: "400px", position: "relative", top: "100px" }}
       >
-        <div
-          id="campus-stellae"
-          className="flex isolation-auto absolute justify-center items-center -z-10"
-        ></div>
+        <Stellae />
         <Image
           className="opacity-100 flex z-50"
           id="logo-img"
@@ -129,22 +94,16 @@ export default function Home() {
       </section>
       <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
         <h3 className="text-lg">
-          {/* Melbourne&nbsp;&bull;&nbsp;Sydney&nbsp;&bull;&nbsp;Geelong */}
           {content[currentLocale].home.sections.intro.one}
         </h3>
         <h4 className="text-xl">
-          {/* Efficient, Affordable, Freelance Web Services */}
           {content[currentLocale].home.sections.intro.two}
         </h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">
-          {/* Industry standard coding services for web, stores, apps &amp; business
-          systems. */}
           {content[currentLocale].home.sections.intro.three}
         </p>
         <a href="#">{content[currentLocale].home.sections.intro.contactBtn}</a>
         <h1 className="hidden">
-          {/* Melbourne, Sydney, Geelong freelance e-commerce, web and mobile
-          software application developer. */}
           {content[currentLocale].home.sections.intro.four}
         </h1>
       </section>
