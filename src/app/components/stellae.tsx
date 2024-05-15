@@ -2,11 +2,13 @@
 
 import React, { useEffect } from "react";
 
+import "./stellae.css";
+
 export default function Stellae() {
   useEffect(() => {
-    const max = 24;
+    const max = 32;
     const min = 4;
-    const count = 120;
+    const count = 40;
 
     const canvas = document.querySelector("#campus-stellae");
 

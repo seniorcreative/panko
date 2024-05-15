@@ -180,7 +180,7 @@
         "id": 9,
         "title": "Bridge Alert",
         "href": "",
-        "description": "Firebase storage, Geofencing, Map based routing, Push notifications. Had a lot of fun prototyping, building and testing this React Native app. Launched in 2017 and gained some popularity around Australia.",
+        "description": "Firebase 存储、地理围栏、基于地图的路由、推送通知。有很多有趣的原型设计、构建和测试这个 React Native 应用程序。于 2017 年推出，并在澳大利亚各地获得了一定的知名度。",
         "date": "2016-2019",
         "category": ["Mobile"],
         "meta": {
@@ -198,7 +198,7 @@
         "id": 3,
         "title": "Game of life",
         "href": "https://organisms.vercel.app/",
-        "description": "Take home coding exercise which I got a bit carried away with.",
+        "description": "进行家庭编码练习，我从中获得了很多乐趣。",
         "date": "2021",
         "category": ["Games"],
         "meta": {

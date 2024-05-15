@@ -4,8 +4,6 @@ import { Nunito_Sans, Varela, Aladin } from "next/font/google";
 import "./globals.css";
 import "./globalIcons.css";
 
-import Link from "next/link";
-
 import LanguageSwitcher from "../app/components/languageSwitcher";
 
 const nunito = Nunito_Sans({
@@ -35,35 +33,8 @@ export default function RootLayout({
             <a href="/" className={`${varela.className} text-black text-lg`}>
               panko
             </a>
-            <ul className="list-none md:flex py-2">
-              <li className="flex mx-4 items-center h-100">
-                <Link
-                  className={`${varela.className} text-gray-800 text-sm`}
-                  href="/folio/all"
-                >
-                  work
-                </Link>
-              </li>
-              <li className="flex mx-4 items-center h-100">
-                <Link
-                  className={`${varela.className} text-gray-800 text-sm`}
-                  href="/#about"
-                >
-                  about
-                </Link>
-              </li>
-              <li className="flex mx-4 items-center h-100">
-                <Link
-                  className={`${varela.className} text-gray-800 text-sm`}
-                  href="/#services"
-                >
-                  services
-                </Link>
-              </li>
-              <li className="flex mx-4 items-center h-100">
-                <LanguageSwitcher></LanguageSwitcher>
-              </li>
-            </ul>
+
+            <LanguageSwitcher font={varela}></LanguageSwitcher>
           </div>
         </nav>
         <main className="flex min-h-screen flex-col w-full">{children}</main>

@@ -5,8 +5,9 @@ import { useState, useEffect } from "react";
 import { setDefaultLocaleCookie, changeLanguageCookieValue } from "../actions";
 
 import LanguageSwitcherIdiom from "./languageSwitcherIdiom";
+import Link from "next/link";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ font }: { font: any }) {
   const [currentLocaleFromCookie, setCurrentLocaleFromCookie] = useState<
     string | undefined
   >();
@@ -25,17 +26,46 @@ export default function LanguageSwitcher() {
 
   return (
     <>
-      {languageMap.map(({ lang, icon }) => (
-        <LanguageSwitcherIdiom
-          key={lang}
-          language={lang}
-          active={currentLocaleFromCookie === lang}
-          icon={icon}
-          changeMethod={(lang) => {
-            changeLanguageCookieValue(lang), setCurrentLocaleFromCookie(lang);
-          }}
-        />
-      ))}
+      <ul className="list-none md:flex py-2">
+        <li className="flex mx-4 items-center h-100">
+          <Link
+            className={`${font.className} text-gray-800 text-sm`}
+            href="/folio/all"
+          >
+            {currentLocaleFromCookie !== "zh-CN" ? "work" : "工作"}
+          </Link>
+        </li>
+        <li className="flex mx-4 items-center h-100">
+          <Link
+            className={`${font.className} text-gray-800 text-sm`}
+            href="/#about"
+          >
+            {currentLocaleFromCookie !== "zh-CN" ? "about" : "关于"}
+          </Link>
+        </li>
+        <li className="flex mx-4 items-center h-100">
+          <Link
+            className={`${font.className} text-gray-800 text-sm`}
+            href="/#services"
+          >
+            {currentLocaleFromCookie !== "zh-CN" ? "about" : "服务"}
+          </Link>
+        </li>
+        <li className="flex mx-4 items-center h-100">
+          {languageMap.map(({ lang, icon }) => (
+            <LanguageSwitcherIdiom
+              key={lang}
+              language={lang}
+              active={currentLocaleFromCookie === lang}
+              icon={icon}
+              changeMethod={(lang) => {
+                changeLanguageCookieValue(lang),
+                  setCurrentLocaleFromCookie(lang);
+              }}
+            />
+          ))}
+        </li>
+      </ul>
     </>
   );
 }
