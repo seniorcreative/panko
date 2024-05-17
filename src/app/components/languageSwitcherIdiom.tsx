@@ -16,14 +16,14 @@ export default function LanguageSwitcherIdiom({
   changeMethod,
 }: languageButtonType) {
   return (
-    <button
-      type="button"
-      className={`text-gray-800 text-sm mx-1 ${
+    <a
+      role="button"
+      className={`inline-flex items-center text-gray-800 text-xs mx-1 ${
         active ? "bg-black text-white" : ""
       }`}
       onClick={() => changeMethod(language)}
     >
       <span className="material-symbols-outlined">{icon}</span>
-    </button>
+    </a>
   );
 }

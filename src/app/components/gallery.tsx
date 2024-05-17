@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
+import "./gallery.css";
 
 export default function Gallery({
   images,
@@ -17,20 +17,16 @@ export default function Gallery({
   href: string;
 }) {
   return (
-    <section
-      className="relative"
-      style={{ height: "480px", paddingTop: "80px", paddingBottom: "80px" }}
-    >
+    <section className="relative h-auto gallerySection">
       <div
-        className="opacity-60 blur-md bl w-full flex absolute"
+        className="opacity-60 blur-md bl w-full flex absolute gallerySectionBg"
         style={{
           backgroundImage: `url(${images[0]})`,
-          height: "480px",
           top: "0",
         }}
       ></div>
 
-      <div className="absolute flex top-0 left-5 z-1 p-4 items-center bg-black text-white">
+      <div className="md:absolute grid md:flex top-0 left-5 z-1 p-4 items-center bg-black text-white">
         <div>
           <h3 className="text-xl font-semibold leading-6">{title}</h3>
           <small className="text-sm text-nowrap">
@@ -38,7 +34,7 @@ export default function Gallery({
           </small>
         </div>
         {href && (
-          <div className="h-fit ms-8">
+          <div className="h-fit md:ms-8">
             Launch
             <a
               href={`${href}`}
@@ -53,29 +49,17 @@ export default function Gallery({
         )}
       </div>
 
-      <div
-        className="absolute flex overflow-x-auto me-4"
-        style={{ height: "320px", top: "80px", left: "20px" }}
-      >
-        <div
-          className="inline-flex flex-nowrap text-sm ms-2 first:ms-0 bg-white text-slate-900 p-4"
-          style={{ minWidth: "320px", width: "320px", height: "320px" }}
-        >
+      <div className="md:absolute md:flex md:overflow-x-auto me-4 imagesWrapper">
+        <div className="md:inline-flex flex-nowrap text-sm ms-2 first:ms-0 bg-white text-slate-900 p-4 descWrapper">
           {description}
         </div>
         {images.map((image: string) => (
           <div
             key={image}
-            className="inline-flex flex-nowrap ms-1 first:ms-0"
-            style={{ height: "320px" }}
+            className="md:inline-flex md:flex-nowrap md:ms-1 first:ms-0 imgContainer"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={image}
-              style={{ width: "auto", height: "320px" }}
-              className="object-cover"
-              alt="..."
-            />
+            <img src={image} className="object-cover imgClass" alt="..." />
           </div>
         ))}
       </div>
