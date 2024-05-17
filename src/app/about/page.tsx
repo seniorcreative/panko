@@ -35,7 +35,7 @@ export default function Page() {
 
     (pageIntroElement.current as unknown as HTMLDivElement).innerHTML =
       content[currentLocale].home.sections.about;
-  }, []);
+  }, [currentLocale]);
 
   return (
     <main className="h-screen flex items-center justify-center text-red-500 leading-8">
