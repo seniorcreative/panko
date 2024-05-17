@@ -3,11 +3,9 @@
 import { cookies } from "next/headers";
 
 const cookieConfig = {
-  domain: "https://main--panko.netlify.app/",
-  expires: 1 / 86400,
+  expires: new Date().getTime() + 100 * 86400,
   secure: true,
   sameSite: true,
-  path: "/",
 };
 
 export async function setDefaultLocaleCookie() {
