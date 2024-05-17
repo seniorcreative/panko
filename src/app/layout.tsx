@@ -5,6 +5,7 @@ import "./globals.css";
 import "./globalIcons.css";
 
 import LanguageSwitcher from "../app/components/languageSwitcher";
+import Link from "next/link";
 
 const nunito = Nunito_Sans({
   weight: "400",
@@ -30,9 +31,13 @@ export default function RootLayout({
       <body className={varela.className}>
         <nav className="fixed top-0 left-0 z-10 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white bg-opacity-25 backdrop-blur">
           <div className="flex justify-between items-center">
-            <a href="/" className={`${varela.className} text-black text-lg`}>
-              panko
-            </a>
+            <Link
+              href="/"
+              className={`${varela.className} text-black text-lg`}
+              locale="zh-CN"
+            >
+              <strong>panko</strong>
+            </Link>
 
             <LanguageSwitcher font={varela}></LanguageSwitcher>
           </div>
