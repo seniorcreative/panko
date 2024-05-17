@@ -27,7 +27,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
 
   return (
     <>
-      <ul className="list-none w-3/4 flex basis-1 py-2">
+      <ul className="list-none flex py-2">
         <li className="flex mx-2 items-center h-100">
           <Link
             className={`${font.className} text-gray-800 text-sm`}
