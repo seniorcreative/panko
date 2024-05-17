@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <section>
       <p>
-        You&rsquo;re a bit short of the mark. Head on to a folio category eg{" "}
+        You&rsquo;re in the wrong place. Head on to a folio category eg{" "}
         <Link href={"/folio/E-commerce"}>E-commerce</Link>...
       </p>
     </section>

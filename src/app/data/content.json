@@ -169,7 +169,7 @@
           "two": "为创意人士提供高效、经济、自由的 Web 服务",
           "three": "适用于网络、商店、应用程序和业务系统的行业标准编码服务.",
           "four": "墨尔本、悉尼、吉朗自由电子商务、网络和移动软件应用程序开发人员.",
-          "contactBtn": "Hit me up"
+          "contactBtn": "联系我们"
         },
         "about": "<p>我们的重点是现实世界产品和尖端技术的交叉点。我们运用人工技术和分析，结合人工智能工具和软件工程最佳实践，为您的业务实现最佳系统。</p><p>让技术为您服务。我们在创建数字系统方面拥有数十年的经验。随之而来的是设计出有效、高效且具有成本效益的东西的能力。</p><p>Panko 由人类运营，为人类服务&hellip;</p>",
         "services": "<ul><li>Build a store</li><li>Fix a bug</li><li>Change your theme</li><li>Consult with an expert</li><li>Launch an app</li></ul>"
@@ -178,11 +178,11 @@
     "work": [
       {
         "id": 9,
-        "title": "Bridge Alert",
+        "title": "桥梁警报",
         "href": "",
         "description": "Firebase 存储、地理围栏、基于地图的路由、推送通知。有很多有趣的原型设计、构建和测试这个 React Native 应用程序。于 2017 年推出，并在澳大利亚各地获得了一定的知名度。",
         "date": "2016-2019",
-        "category": ["Mobile"],
+        "category": ["移动的"],
         "meta": {
           "client": "Panko Digital",
           "imageUrl": [
@@ -196,11 +196,11 @@
       },
       {
         "id": 3,
-        "title": "Game of life",
+        "title": "生命的游戏",
         "href": "https://organisms.vercel.app/",
         "description": "进行家庭编码练习，我从中获得了很多乐趣。",
         "date": "2021",
-        "category": ["Games"],
+        "category": ["游戏"],
         "meta": {
           "client": "Panko Digital",
           "imageUrl": ["/work/organisms-2~2.png", "/work/organisms-1~2.png"]

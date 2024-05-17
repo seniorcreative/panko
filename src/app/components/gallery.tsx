@@ -9,12 +9,14 @@ export default function Gallery({
   title,
   client,
   href,
+  locale,
 }: {
   images: string[];
   description: string;
   title: string;
   client: string;
   href: string;
+  locale: string;
 }) {
   return (
     <section className="relative h-auto gallerySection">
@@ -30,20 +32,23 @@ export default function Gallery({
         <div>
           <h3 className="text-xl font-semibold leading-6">{title}</h3>
           <small className="text-sm text-nowrap">
-            For&nbsp;<strong>{client}</strong>
+            {locale === "en-US" ? "For" : "为了"}&nbsp;<strong>{client}</strong>
           </small>
         </div>
         {href && (
-          <div className="h-fit md:ms-8">
-            Launch
+          <div className="h-fit md:ms-8 cat-link">
             <a
               href={`${href}`}
               target="_blank"
               role="Button"
               className="ps-2 text underline"
-              title={`View ${title} in a new window`}
+              title={
+                locale === "en-US"
+                  ? `View ${title} in a new window`
+                  : `在新窗口中查看 ${title}`
+              }
             >
-              {href}
+              {locale === "en-US" ? "Launch" : "发射"} {href}
             </a>
           </div>
         )}

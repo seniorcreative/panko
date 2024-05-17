@@ -34,6 +34,7 @@ export default function Page() {
             description={post.description}
             title={post.title}
             client={post.meta.client}
+            locale={currentLocale}
             href={post.href}
           />
         </article>

@@ -11,6 +11,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
   const [currentLocaleFromCookie, setCurrentLocaleFromCookie] = useState<
     string | undefined
   >();
+
   useEffect(() => {
     const getLocale = async () => {
       const locale = await setDefaultLocaleCookie();
@@ -59,8 +60,9 @@ export default function LanguageSwitcher({ font }: { font: any }) {
               active={currentLocaleFromCookie === lang}
               icon={icon}
               changeMethod={(lang) => {
-                changeLanguageCookieValue(lang),
-                  setCurrentLocaleFromCookie(lang);
+                changeLanguageCookieValue(lang);
+                setCurrentLocaleFromCookie(lang);
+                window.location.reload();
               }}
             />
           ))}
