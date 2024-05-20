@@ -13,14 +13,20 @@
 
 .estrella-angle {
   position: absolute;
-  height: 800px;
+  height: 50vw;
   width: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/* #estrella {
+  width: 50vw;
+  height: 20vh;
+  overflow: hidden;
+} */
 .estrella {
   position: absolute;
+  overflow: hidden;
   top: 10%;
   width: 1rem;
   height: 1rem;

@@ -32,19 +32,24 @@ export default function Services({ locale }: servicesType) {
   return (
     // Todo: Animate these across using AnimeJS
     <section className="h-screen flex items-center justify-center text-green-500 leading-8">
-      <a id="services"></a>
-      <div>
-        <h2>Services</h2>
-        <h3>Who are you?</h3>
-        <button>Techie</button>
-        <button>Creative</button>
+      <a id="services" className="absolute top-0"></a>
+      <div className="w-3/4 md:w-1/3">
+        <div>
+          <h2 className="text-lg">
+            {content[locale].home.sections.services.title}
+          </h2>
+          <h3>Who are you?</h3>
+          <div className="flex">
+            <button className="p-2 rounded-md me-2 border-2 border-dark border-green-700">
+              Techie
+            </button>
+            <button className="p-2 rounded-md me-2 border-2 border-dark border-green-700">
+              Creative
+            </button>
+          </div>
+        </div>
+        <div id="content" ref={pageContent}></div>
       </div>
-      <div id="content" className="w-3/4 md:w-1/3" ref={pageContent}></div>
-      {/* <ul>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
-      </ul> */}
     </section>
   );
 }

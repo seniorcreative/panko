@@ -1,7 +1,10 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+
+import LanguageContextProvider, { LanguageContext } from "./languageContext";
+
 import Waves from "./components/waves";
 import Stellae from "./components/stellae";
 
@@ -24,8 +27,17 @@ import { getCurrentLocale } from "./actions";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
-export default function Home({ params }: { params: { contactLink: string } }) {
+export default function Home() {
   const [currentLocale, setCurrentLocale] = useState("en-US");
+
+  // Get the locale for translation.
+  useEffect(() => {
+    const getLocale = async () => {
+      const locale = await getCurrentLocale();
+      setCurrentLocale(locale);
+    };
+    getLocale();
+  }, []);
 
   const content = require("./data/content.json");
 
@@ -60,21 +72,13 @@ export default function Home({ params }: { params: { contactLink: string } }) {
   ];
 
   const folioCategories = new Set<string>();
+  const { language, setLanguage } = useContext(LanguageContext);
 
-  content[currentLocale].work.forEach((workItem: any) => {
+  content[language].work.forEach((workItem: any) => {
     workItem.category.forEach((cat: string) => {
       folioCategories.add(cat);
     });
   });
-
-  // Get the locale for translation.
-  useEffect(() => {
-    const getLocale = async () => {
-      const locale = await getCurrentLocale();
-      setCurrentLocale(locale);
-    };
-    getLocale();
-  }, []);
 
   return (
     <>
@@ -94,20 +98,18 @@ export default function Home({ params }: { params: { contactLink: string } }) {
       </section>
       <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
         <h3 className="text-lg">
-          {content[currentLocale].home.sections.intro.one}
+          language:{language} currentLocale:{currentLocale}
+          <button onClick={() => setLanguage("zh-CN")}>Change to zh-CN</button>
+          {content[language].home.sections.intro.one}
         </h3>
-        <h4 className="text-xl">
-          {content[currentLocale].home.sections.intro.two}
-        </h4>
+        <h4 className="text-xl">{content[language].home.sections.intro.two}</h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">
-          {content[currentLocale].home.sections.intro.three}
+          {content[language].home.sections.intro.three}
         </p>
-        <a href={params.contactLink}>
-          {content[currentLocale].home.sections.intro.contactBtn}
+        <a href={content[language].home.sections.intro.contactLink}>
+          {content[language].home.sections.intro.contactBtn}
         </a>
-        <h1 className="hidden">
-          {content[currentLocale].home.sections.intro.four}
-        </h1>
+        <h1 className="hidden">{content[language].home.sections.intro.four}</h1>
       </section>
       <Waves lighten />
       <section
@@ -151,8 +153,8 @@ export default function Home({ params }: { params: { contactLink: string } }) {
           </ul>
         </div>
       </section>
-      <About locale={currentLocale} />
-      <Services locale={currentLocale} />
+      <About locale={language} />
+      <Services locale={language} />]{" "}
     </>
   );
 }

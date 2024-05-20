@@ -31,9 +31,11 @@ export default function About({ locale }: aboutType) {
 
   return (
     <section className="h-screen flex items-center justify-center text-red-500 leading-8">
-      <a id="about"></a>
-      <h2>About Panko</h2>
-      <div id="content" className="w-3/4 md:w-1/3" ref={pageContent}></div>
+      <a id="about" className="absolute top-0"></a>
+      <div className="w-3/4 md:w-1/3">
+        <h2 className="text-lg">{content[locale].home.sections.about.title}</h2>
+        <div id="content" ref={pageContent}></div>
+      </div>
     </section>
   );
 }

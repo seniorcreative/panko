@@ -8,7 +8,7 @@ export default function Stellae() {
   useEffect(() => {
     const max = 32;
     const min = 4;
-    const count = 40;
+    const count = 70;
 
     const canvas = document.querySelector("#campus-stellae");
 

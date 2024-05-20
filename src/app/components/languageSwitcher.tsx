@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { setDefaultLocaleCookie, changeLanguageCookieValue } from "../actions";
 
 import LanguageSwitcherIdiom from "./languageSwitcherIdiom";
 import Link from "next/link";
+import LanguageContextProvider, { LanguageContext } from "../languageContext";
 
 export default function LanguageSwitcher({ font }: { font: any }) {
   const [currentLocaleFromCookie, setCurrentLocaleFromCookie] = useState<
@@ -16,7 +16,6 @@ export default function LanguageSwitcher({ font }: { font: any }) {
     const getLocale = async () => {
       const locale = await setDefaultLocaleCookie();
       setCurrentLocaleFromCookie(locale);
-      console.log("set cookie to ", locale);
     };
     getLocale();
   }, []);
@@ -26,49 +25,50 @@ export default function LanguageSwitcher({ font }: { font: any }) {
     { lang: "zh-CN", icon: "language_chinese_quick" },
   ];
 
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return (
-    <>
-      <ul className="list-none flex py-2">
-        <li className="flex mx-2 items-center h-100">
-          <Link
-            className={`${font.className} text-gray-800 text-sm`}
-            href="/folio/all"
-          >
-            {currentLocaleFromCookie !== "zh-CN" ? "work" : "工作"}
-          </Link>
-        </li>
-        <li className="flex mx-2 items-center h-100">
-          <Link
-            className={`${font.className} text-gray-800 text-sm`}
-            href="/#about"
-          >
-            {currentLocaleFromCookie !== "zh-CN" ? "about" : "关于"}
-          </Link>
-        </li>
-        <li className="flex mx-2 items-center h-100">
-          <Link
-            className={`${font.className} text-gray-800 text-sm`}
-            href="/#services"
-          >
-            {currentLocaleFromCookie !== "zh-CN" ? "services" : "服务"}
-          </Link>
-        </li>
-        <li className="flex ms-2 items-center h-100">
-          {languageMap.map(({ lang, icon }) => (
-            <LanguageSwitcherIdiom
-              key={lang}
-              language={lang}
-              active={currentLocaleFromCookie === lang}
-              icon={icon}
-              changeMethod={(lang) => {
-                changeLanguageCookieValue(lang);
-                setCurrentLocaleFromCookie(lang);
-                window.location.reload();
-              }}
-            />
-          ))}
-        </li>
-      </ul>
-    </>
+    <ul className="list-none flex py-2">
+      <li className="flex mx-2 items-center h-100">
+        <Link
+          className={`${font.className} text-gray-800 text-sm`}
+          href="/folio/all"
+        >
+          {language !== "zh-CN" ? "work" : "工作"}
+        </Link>
+      </li>
+      <li className="flex mx-2 items-center h-100">
+        <Link
+          className={`${font.className} text-gray-800 text-sm`}
+          href="/#about"
+        >
+          {language !== "zh-CN" ? "about" : "关于"}
+        </Link>
+      </li>
+      <li className="flex mx-2 items-center h-100">
+        <Link
+          className={`${font.className} text-gray-800 text-sm`}
+          href="/#services"
+        >
+          {language !== "zh-CN" ? "services" : "服务"}
+        </Link>
+      </li>
+      <li className="flex ms-2 items-center h-100">
+        {languageMap.map(({ lang, icon }) => (
+          <LanguageSwitcherIdiom
+            key={lang}
+            language={lang}
+            active={language === lang}
+            icon={icon}
+            changeMethod={(lang) => {
+              changeLanguageCookieValue(lang);
+              // setCurrentLocaleFromCookie(lang);
+              setLanguage(lang);
+              // window.location.reload();
+            }}
+          />
+        ))}
+      </li>
+    </ul>
   );
 }
