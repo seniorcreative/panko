@@ -10,8 +10,14 @@
           "four": "Melbourne, Sydney, Geelong freelance e-commerce, web and mobile software application developer.",
           "contactBtn": "Hit me up"
         },
-        "about": "<p>Our focus is at the intersection of real world products and cutting edge tech. We apply human craft and analysis, combined with AI tools and software engineering best practise, to achieve the optimum system for your business.</p><p>Make tech work for you. We have decades of experience in creating digital systems. With that comes the ability to engineer something that works, efficiently and cost effectively.</p><p>Panko is run by humans, for humans&hellip;</p>",
-        "services": "<ul><li>Build a store</li><li>Fix a bug</li><li>Change your theme</li><li>Consult with an expert</li><li>Launch an app</li></ul>"
+        "about": {
+          "title": "About",
+          "body": "<p>Our focus is at the intersection of real world products and cutting edge tech. We apply human craft and analysis, combined with AI tools and software engineering best practise, to achieve the optimum system for your business.</p><p>Make tech work for you. We have decades of experience in creating digital systems. With that comes the ability to engineer something that works, efficiently and cost effectively.</p><p>Panko is run by humans, for humans&hellip;</p>"
+        },
+        "services": {
+          "title": "Services",
+          "body": "<ul><li>Build a store</li><li>Fix a bug</li><li>Change your theme</li><li>Consult with an expert</li><li>Launch an app</li></ul>"
+        }
       }
     },
     "work": [
@@ -171,8 +177,14 @@
           "four": "墨尔本、悉尼、吉朗自由电子商务、网络和移动软件应用程序开发人员.",
           "contactBtn": "联系我们"
         },
-        "about": "<p>我们的重点是现实世界产品和尖端技术的交叉点。我们运用人工技术和分析，结合人工智能工具和软件工程最佳实践，为您的业务实现最佳系统。</p><p>让技术为您服务。我们在创建数字系统方面拥有数十年的经验。随之而来的是设计出有效、高效且具有成本效益的东西的能力。</p><p>Panko 由人类运营，为人类服务&hellip;</p>",
-        "services": "<ul><li>Build a store</li><li>Fix a bug</li><li>Change your theme</li><li>Consult with an expert</li><li>Launch an app</li></ul>"
+        "about": {
+          "title": "关于",
+          "body": "<p>我们的重点是现实世界产品和尖端技术的交叉点。我们运用人工技术和分析，结合人工智能工具和软件工程最佳实践，为您的业务实现最佳系统。</p><p>让技术为您服务。我们在创建数字系统方面拥有数十年的经验。随之而来的是设计出有效、高效且具有成本效益的东西的能力。</p><p>Panko 由人类运营，为人类服务&hellip;</p>"
+        },
+        "services": {
+          "title": "服务",
+          "body": "<ul><li>建立一个商店</li><li>修复一个错误</li><li>改变你的主题</li><li>咨询专家</li><li>启动应用程序</li></ul>"
+        }
       }
     },
     "work": [

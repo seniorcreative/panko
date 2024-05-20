@@ -16,6 +16,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
     const getLocale = async () => {
       const locale = await setDefaultLocaleCookie();
       setCurrentLocaleFromCookie(locale);
+      console.log("set cookie to ", locale);
     };
     getLocale();
   }, []);

@@ -26,7 +26,7 @@ export default function Services({ locale }: servicesType) {
 
     if (pageContent === null) return;
     (pageContent.current as unknown as HTMLDivElement).innerHTML =
-      content[locale].home.sections.services;
+      content[locale].home.sections.services.body;
   }, [locale]);
 
   return (

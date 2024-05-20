@@ -3,9 +3,9 @@
 import { cookies } from "next/headers";
 
 const cookieConfig = {
-  expires: new Date().getTime() + 100 * 86400,
-  secure: true,
-  sameSite: true,
+  expires: new Date(new Date().getTime() + 100 * 24 * 60 * 60 * 1000),
+  // secure: true,
+  // sameSite: true,
 };
 
 export async function setDefaultLocaleCookie() {
@@ -14,7 +14,7 @@ export async function setDefaultLocaleCookie() {
 
   if (!hasLocaleCookie) {
     const defaultLocale = "en-US";
-    cookieStore.set("NEXT_LOCALE", defaultLocale, cookieConfig);
+    cookieStore.set("NEXT_LOCALE", defaultLocale); //, cookieConfig);
     return defaultLocale;
   } else {
     return cookieStore?.get("NEXT_LOCALE")?.value ?? "en-US";
@@ -27,5 +27,6 @@ export async function getCurrentLocale() {
 }
 
 export async function changeLanguageCookieValue(locale: string) {
-  cookies().set("NEXT_LOCALE", locale, cookieConfig);
+  const cookieStore = cookies();
+  cookieStore.set("NEXT_LOCALE", locale); // , cookieConfig);
 }

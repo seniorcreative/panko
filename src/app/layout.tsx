@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Varela, Aladin } from "next/font/google";
+import { Nunito_Sans, Varela } from "next/font/google";
 
 import "./globals.css";
 import "./globalIcons.css";
 
 import LanguageSwitcher from "../app/components/languageSwitcher";
+import Footer from "../app/components/footer";
 import Link from "next/link";
 
 const nunito = Nunito_Sans({
@@ -13,7 +14,8 @@ const nunito = Nunito_Sans({
   subsets: ["latin"],
 });
 const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
-const aladin = Aladin({ weight: "400", style: "normal", subsets: ["latin"] });
+
+const contactLink = "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry";
 
 export const metadata: Metadata = {
   title: "Panko Digital",
@@ -23,9 +25,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { contactLink: string };
 }>) {
+  params.contactLink = "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry";
+
   return (
     <html lang="en">
       <body className={varela.className}>
@@ -43,24 +49,7 @@ export default function RootLayout({
           </div>
         </nav>
         <main className="flex min-h-screen flex-col w-full">{children}</main>
-        <footer className="py-12 px-8 bg-black text-white">
-          <div className="container">
-            <div className="grid">
-              <div className="row-span-3">
-                <h3>
-                  <strong>Contact</strong>
-                </h3>
-                <ul className="list-none">
-                  <li>
-                    <a href="mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry">
-                      Email us at Panko
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer contactLink={contactLink}></Footer>
       </body>
     </html>
   );

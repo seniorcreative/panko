@@ -26,7 +26,7 @@ export default function About({ locale }: aboutType) {
 
     if (pageContent === null) return;
     (pageContent.current as unknown as HTMLDivElement).innerHTML =
-      content[locale].home.sections.about;
+      content[locale].home.sections.about.body;
   }, [locale]);
 
   return (

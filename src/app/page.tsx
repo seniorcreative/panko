@@ -24,7 +24,7 @@ import { getCurrentLocale } from "./actions";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
-export default function Home() {
+export default function Home({ params }: { params: { contactLink: string } }) {
   const [currentLocale, setCurrentLocale] = useState("en-US");
 
   const content = require("./data/content.json");
@@ -102,7 +102,9 @@ export default function Home() {
         <p className="lg:w-1/3 lg:mx-auto my-3">
           {content[currentLocale].home.sections.intro.three}
         </p>
-        <a href="#">{content[currentLocale].home.sections.intro.contactBtn}</a>
+        <a href={params.contactLink}>
+          {content[currentLocale].home.sections.intro.contactBtn}
+        </a>
         <h1 className="hidden">
           {content[currentLocale].home.sections.intro.four}
         </h1>
