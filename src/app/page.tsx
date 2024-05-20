@@ -80,6 +80,8 @@ export default function Home() {
     });
   });
 
+  const buttonStyle = "p-2 rounded-md me-2 border-2 border-dark";
+
   return (
     <>
       <section
@@ -97,16 +99,18 @@ export default function Home() {
         />
       </section>
       <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
-        <h3 className="text-lg">
+        <small>
           language:{language} currentLocale:{currentLocale}
-          <button onClick={() => setLanguage("zh-CN")}>Change to zh-CN</button>
-          {content[language].home.sections.intro.one}
-        </h3>
+        </small>
+        <h3 className="text-lg">{content[language].home.sections.intro.one}</h3>
         <h4 className="text-xl">{content[language].home.sections.intro.two}</h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">
           {content[language].home.sections.intro.three}
         </p>
-        <a href={content[language].home.sections.intro.contactLink}>
+        <a
+          className={buttonStyle}
+          href={content[language].home.sections.intro.contactLink}
+        >
           {content[language].home.sections.intro.contactBtn}
         </a>
         <h1 className="hidden">{content[language].home.sections.intro.four}</h1>
@@ -121,7 +125,7 @@ export default function Home() {
             <div
               key={logo.t}
               title={logo.t}
-              className={`${logo.c} grayscale opacity-60 bg-blend-multiply scale-75 hover:scale-125 transition-all`}
+              className={`${logo.c}rounded-full grayscale opacity-60 scale-75 hover:scale-125 transition-all`}
               style={{
                 backgroundImage: `url(${logo.i.src})`,
                 backgroundSize: "contain",
@@ -154,7 +158,7 @@ export default function Home() {
         </div>
       </section>
       <About locale={language} />
-      <Services locale={language} />]{" "}
+      <Services locale={language} />
     </>
   );
 }

@@ -29,9 +29,11 @@ export default function Services({ locale }: servicesType) {
       content[locale].home.sections.services.body;
   }, [locale]);
 
+  const buttonStyle = "p-2 rounded-md me-2 border-2 border-dark";
+
   return (
     // Todo: Animate these across using AnimeJS
-    <section className="h-screen flex items-center justify-center text-green-500 leading-8">
+    <section className="relative h-screen flex items-center justify-center text-green-500 leading-8">
       <a id="services" className="absolute top-0"></a>
       <div className="w-3/4 md:w-1/3">
         <div>
@@ -40,10 +42,10 @@ export default function Services({ locale }: servicesType) {
           </h2>
           <h3>Who are you?</h3>
           <div className="flex">
-            <button className="p-2 rounded-md me-2 border-2 border-dark border-green-700">
+            <button className={`${buttonStyle} border-green-700`}>
               Techie
             </button>
-            <button className="p-2 rounded-md me-2 border-2 border-dark border-green-700">
+            <button className={`${buttonStyle} border-green-700`}>
               Creative
             </button>
           </div>

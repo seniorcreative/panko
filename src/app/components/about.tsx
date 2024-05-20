@@ -30,7 +30,7 @@ export default function About({ locale }: aboutType) {
   }, [locale]);
 
   return (
-    <section className="h-screen flex items-center justify-center text-red-500 leading-8">
+    <section className="relative h-screen flex items-center justify-center text-red-500 leading-8">
       <a id="about" className="absolute top-0"></a>
       <div className="w-3/4 md:w-1/3">
         <h2 className="text-lg">{content[locale].home.sections.about.title}</h2>

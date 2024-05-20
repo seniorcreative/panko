@@ -33,7 +33,10 @@ export default function RootLayout({
     <LanguageContextProvider>
       <html lang="en">
         <body className={varela.className}>
-          <nav className="fixed top-0 left-0 z-10 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white bg-opacity-25 backdrop-blur">
+          <nav
+            style={{ zIndex: 9999 }}
+            className="fixed top-0 left-0 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white bg-opacity-50 backdrop-blur"
+          >
             <div className="flex justify-between items-center">
               <Link
                 href="/"
