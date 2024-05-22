@@ -7,6 +7,7 @@ import LanguageContextProvider, { LanguageContext } from "./languageContext";
 
 import Waves from "./components/waves";
 import Stellae from "./components/stellae";
+import Shuffler from "./components/shuffler";
 
 import PankoLogoSVG from "../../public/Black logo - no background.svg";
 import NineLogo from "../../public/Nine-Network-Logo.png";
@@ -158,6 +159,7 @@ export default function Home() {
         </div>
       </section>
       <About locale={language} />
+      <Shuffler></Shuffler>
       <Services locale={language} />
     </>
   );
