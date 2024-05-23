@@ -100,9 +100,9 @@ export default function Home() {
         />
       </section>
       <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
-        <small>
+        {/* <small>
           language:{language} currentLocale:{currentLocale}
-        </small>
+        </small> */}
         <h3 className="text-lg">{content[language].home.sections.intro.one}</h3>
         <h4 className="text-xl">{content[language].home.sections.intro.two}</h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">

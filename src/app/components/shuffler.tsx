@@ -24,7 +24,7 @@ export default function Shuffler() {
 
     const getRandomWord = () => {
       const wordArrayLen = words.length;
-      const wordIndex = Math.round(Math.random() * wordArrayLen) - 1;
+      const wordIndex = Math.round(Math.random() * wordArrayLen);
       console.log(wordArrayLen, wordIndex);
       const wordSelection = words[wordIndex];
       if (wordSelection) {
@@ -34,46 +34,38 @@ export default function Shuffler() {
       }
     };
 
+    const defaultAnimeProps = {
+      rotateX: [180, 0],
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 400,
+    };
+
     // Animation using Anime.js
     anime({
       targets: "#p",
-      translateY: [-40, 0],
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 1000,
-      delay: 2000,
+      delay: 200,
+      ...defaultAnimeProps,
     });
     anime({
       targets: "#a",
-      translateY: [40, 0],
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 1000,
-      delay: 2000,
+      delay: 300,
+      ...defaultAnimeProps,
     });
     anime({
       targets: "#n",
-      translateY: [-40, 0],
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 1000,
-      delay: 2000,
+      delay: 400,
+      ...defaultAnimeProps,
     });
     anime({
       targets: "#k",
-      translateY: [40, 0],
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 1000,
-      delay: 2000,
+      delay: 500,
+      ...defaultAnimeProps,
     });
     anime({
       targets: "#o",
-      translateY: [-40, 0],
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 1000,
-      delay: 2000,
+      delay: 600,
+      ...defaultAnimeProps,
     });
 
     const { letters, keyMap } = getRandomWord() || { letters: [], keyMap: [] };
@@ -84,24 +76,26 @@ export default function Shuffler() {
   if (!letters) return null;
 
   return (
-    <div className="flex container mx-auto">
+    <div className="md:flex container mx-auto px-4">
       {letters?.map((word, i) => {
         return (
           <div
             key={keyMap[i]}
             id={keyMap[i]}
-            className="border rounded-md p-2 me-2 text-emerald-900"
+            style={{ transform: "perspective(70px)" }}
+            className="border rounded-md p-2 me-2 w-1/2 text-emerald-900"
           >
-            {word}
+            <strong>{keyMap[i]}</strong>{" "}
+            {String(word).substring(1, String(word).length)}
           </div>
         );
       })}
       <button
         type="button"
-        className="text-emerald-900"
+        className="p-2 me-2 text-emerald-900"
         onClick={() => setShuffles(shuffles + 1)}
       >
-        Shuffle
+        <span className="material-symbols-outlined">refresh</span>
       </button>
     </div>
   );
