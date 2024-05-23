@@ -1,10 +1,10 @@
 "use client";
 
 import anime from "animejs";
-import React, { useRef, useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../languageContext";
 
-export default function Shuffler({ locale }: { locale: string }) {
+export default function Shuffler() {
   const [letters, setLetters] = useState([]);
   const [keyMap, setKeyMap] = useState([]);
   const [shuffles, setShuffles] = useState(0);

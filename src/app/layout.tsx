@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Varela } from "next/font/google";
+import { Varela, Pacifico, Raleway } from "next/font/google";
 
 import "./globals.css";
 import "./globalIcons.css";
@@ -9,14 +9,13 @@ import Footer from "../app/components/footer";
 import Link from "next/link";
 import LanguageContextProvider from "./languageContext";
 
-const nunito = Nunito_Sans({
+const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
+const pacifico = Pacifico({
   weight: "400",
   style: "normal",
   subsets: ["latin"],
 });
-const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
-
-const contactLink = "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry";
+const raleway = Raleway({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Panko Digital",
@@ -50,7 +49,7 @@ export default function RootLayout({
             </div>
           </nav>
           <main className="flex min-h-screen flex-col w-full">{children}</main>
-          <Footer></Footer>
+          <Footer fonts={[pacifico, raleway]}></Footer>
         </body>
       </html>
     </LanguageContextProvider>
