@@ -1,32 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import anime from "animejs";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState, useContext } from "react";
+import { LanguageContext } from "../languageContext";
 
-export default function Shuffler() {
+export default function Shuffler({ locale }: { locale: string }) {
   const [letters, setLetters] = useState([]);
   const [keyMap, setKeyMap] = useState([]);
   const [shuffles, setShuffles] = useState(0);
 
-  useEffect(() => {
-    const words = [
-      "Precision App Nouse Knockout Offerings",
-      "Press A New Key Object",
-      "Potential Activated Nurturing Knowhow Openly",
-      "Philosopher And Naturally Knowledgeable Ordinator",
-      "Pushing Against Normal Known Obstacles",
-      "Processing Actual Numbers Keeping Open-minded",
-      "Programming Advanced Nominal Keeping Open",
-      "Pursuing Adaptable New Knowledge Output",
-      "Providing A Nuanced Kind Organisation",
-    ];
+  const { language } = useContext(LanguageContext);
 
-    const getRandomWord = () => {
-      const wordArrayLen = words.length;
-      const wordIndex = Math.round(Math.random() * wordArrayLen);
-      console.log(wordArrayLen, wordIndex);
-      const wordSelection = words[wordIndex];
+  useEffect(() => {
+    const words: any = {
+      "en-US": [
+        "Precision App Nouse Knockout Offerings",
+        "Press A New Key Object",
+        "Potential Activated Nurturing Knowhow Openly",
+        "Philosophy And Natural Knowledge Ordinated",
+        "Pushing Against Normal Known Obstacles",
+        "Processing Actual Numbers Keeping Open-minded",
+        "Programming Advanced Nominal Keenly Organised",
+        "Pursuing Adaptable New Knowledgable Output",
+        "Providing A Nuanced, Kind Organisation",
+      ],
+      "zh-CN": ["按 一个 新的 钥匙 目的", "推动 反对 普通的 已知 障碍"],
+    };
+
+    const getRandomWord = (wordIndex: number) => {
+      let wordSelection = words[language][wordIndex];
+      if (!wordSelection) {
+        setShuffles(0);
+        wordSelection = words[language][0];
+      }
+
       if (wordSelection) {
         const ws: string[] = wordSelection.split(" ");
         const keys = ["p", "a", "n", "k", "o"];
@@ -68,10 +75,13 @@ export default function Shuffler() {
       ...defaultAnimeProps,
     });
 
-    const { letters, keyMap } = getRandomWord() || { letters: [], keyMap: [] };
+    const { letters, keyMap } = getRandomWord(shuffles) || {
+      letters: [],
+      keyMap: [],
+    };
     setLetters(letters as []);
     setKeyMap(keyMap as []);
-  }, [shuffles]);
+  }, [shuffles, language]);
 
   if (!letters) return null;
 
@@ -86,13 +96,16 @@ export default function Shuffler() {
             className="border rounded-md p-2 me-2 w-1/2 text-emerald-900"
           >
             <strong>{keyMap[i]}</strong>{" "}
-            {String(word).substring(1, String(word).length)}
+            {language === "en-US"
+              ? String(word).substring(1, String(word).length)
+              : word}
           </div>
         );
       })}
       <button
         type="button"
-        className="p-2 me-2 text-emerald-900"
+        style={{ lineHeight: 0 }}
+        className="p-2 me-2 mt-3 md:mt-0 bg-slate-300 text-emerald-900 text-center rounded-full"
         onClick={() => setShuffles(shuffles + 1)}
       >
         <span className="material-symbols-outlined">refresh</span>
