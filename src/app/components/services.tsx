@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import anime from "animejs";
-import React, { useRef } from "react";
 
 const content = require("../data/content.json");
 
@@ -11,7 +10,9 @@ export type servicesType = {
 };
 
 export default function Services({ locale }: servicesType) {
-  const pageContent = useRef<HTMLDivElement>(null);
+  const [visitorType, setVisitorType] = useState("creative");
+  const [servicesList, setServicesList] = useState<string[]>([]);
+  // const pageContent = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
     anime({
@@ -24,10 +25,8 @@ export default function Services({ locale }: servicesType) {
       delay: 500,
     });
 
-    if (pageContent === null) return;
-    (pageContent.current as unknown as HTMLDivElement).innerHTML =
-      content[locale].home.sections.services.body;
-  }, [locale]);
+    setServicesList(content[locale].home.sections.services.body[visitorType]);
+  }, [locale, visitorType]);
 
   const buttonStyle = "p-2 rounded-md me-2 border-2 border-dark";
 
@@ -38,19 +37,40 @@ export default function Services({ locale }: servicesType) {
       <div className="w-3/4 md:w-1/3">
         <div>
           <h2 className="text-lg">
-            {content[locale].home.sections.services.title}
+            <strong>{content[locale].home.sections.services.title}</strong>
           </h2>
           <h3>Who are you?</h3>
           <div className="flex">
-            <button className={`${buttonStyle} border-green-700`}>
-              Techie
-            </button>
-            <button className={`${buttonStyle} border-green-700`}>
+            <button
+              onClick={() => setVisitorType("creative")}
+              className={`${buttonStyle}  ${
+                visitorType === "creative"
+                  ? "border-green-800 bg-green-700 text-white"
+                  : " text-green-700 border-green-500"
+              }`}
+            >
               Creative
+            </button>
+            <button
+              onClick={() => setVisitorType("techie")}
+              className={`${buttonStyle}  ${
+                visitorType === "techie"
+                  ? "border-green-800 bg-green-700 text-white"
+                  : " text-green-700 border-green-500"
+              }`}
+            >
+              Techie
             </button>
           </div>
         </div>
-        <div id="content" ref={pageContent}></div>
+        <br />
+        <h3 className="text-md">Panko can help you with:</h3>
+        {/* <div id="content" ref={pageContent}></div> */}
+        <ul>
+          {servicesList.map((service: string) => (
+            <li key={service}>{service}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );

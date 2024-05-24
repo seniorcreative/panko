@@ -100,9 +100,6 @@ export default function Home() {
         />
       </section>
       <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
-        {/* <small>
-          language:{language} currentLocale:{currentLocale}
-        </small> */}
         <h3 className="text-lg">{content[language].home.sections.intro.one}</h3>
         <h4 className="text-xl">{content[language].home.sections.intro.two}</h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">
@@ -118,10 +115,10 @@ export default function Home() {
       </section>
       <Waves lighten />
       <section
-        className="bg-white px-8 md:px-24 text-slate-800 pt-12"
+        className="bg-white px-8 md:px-24 text-slate-800 pt-8 pb-12"
         style={{ background: `rgba(0,0,0,0.1)` }}
       >
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-12 mb-48">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 mb-48">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
@@ -134,7 +131,7 @@ export default function Home() {
                 backgroundPosition: "center center",
                 width: "100%",
                 height: "100%",
-                minHeight: "50px",
+                minHeight: "32px",
               }}
             />
           ))}
@@ -150,9 +147,11 @@ export default function Home() {
             {Array.from(folioCategories).map((cat: string) => (
               <li
                 key={cat}
-                className="cat-link py-1 cursor-pointer text-white text-sm"
+                className="cat-link p-2 rounded-md me-2 border-2 border-light py-1 cursor-pointer text-white text-sm"
               >
-                <a href={`/folio/${cat}`}>{cat}</a>
+                <a className="" href={`/folio/${cat}`}>
+                  {cat}
+                </a>
               </li>
             ))}
           </ul>

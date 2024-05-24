@@ -17,7 +17,16 @@
         },
         "services": {
           "title": "Services",
-          "body": "<ul><li>Build a store</li><li>Fix a bug</li><li>Change your theme</li><li>Consult with an expert</li><li>Launch an app</li></ul>"
+          "body": {
+            "creative": [
+              "Building a store",
+              "Fix a bug",
+              "Change your theme",
+              "Consult with an expert",
+              "Launch an app"
+            ],
+            "techie": ["TBC"]
+          }
         }
       }
     },
@@ -185,7 +194,16 @@
         },
         "services": {
           "title": "服务",
-          "body": "<ul><li>建立一个商店</li><li>修复一个错误</li><li>改变你的主题</li><li>咨询专家</li><li>启动应用程序</li></ul>"
+          "body": {
+            "creative": [
+              "建立一个商店",
+              "修复一个错误",
+              "改变你的主题",
+              "咨询专家",
+              "启动应用程序"
+            ],
+            "techie": ["TBC"]
+          }
         }
       }
     },
