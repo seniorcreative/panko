@@ -39,7 +39,7 @@ export default function Stellae() {
   return (
     <div
       id="campus-stellae"
-      className="flex isolation-auto absolute justify-center items-center -z-10"
+      className="flex isolation-auto absolute top-1/2 left-1/2 justify-center items-center -z-10"
     ></div>
   );
 }

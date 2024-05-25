@@ -86,20 +86,19 @@ export default function Home() {
   return (
     <>
       <section
-        className="w-full flex items-center justify-center"
-        style={{ height: "400px", position: "relative", top: "100px" }}
+        className="h-screen w-full flex-col items-center justify-center"
+        style={{ position: "relative"}}
       >
         <Stellae />
         <Image
-          className="opacity-100 flex z-50"
+          className="flex z-50 mx-auto mt-28"
           id="logo-img"
           src={PankoLogoSVG.src}
           alt="Panko Logo"
           width={281 * 0.75}
           height={317 * 0.75}
         />
-      </section>
-      <section className="mt-12 p-8 md:p-24 text-slate-900 text-center">
+      <div className="mt-12 p-8 md:p-24 text-slate-900 text-center">
         <h3 className="text-lg">{content[language].home.sections.intro.one}</h3>
         <h4 className="text-xl">{content[language].home.sections.intro.two}</h4>
         <p className="lg:w-1/3 lg:mx-auto my-3">
@@ -112,13 +111,14 @@ export default function Home() {
           {content[language].home.sections.intro.contactBtn}
         </a>
         <h1 className="hidden">{content[language].home.sections.intro.four}</h1>
+        </div>
       </section>
       <Waves lighten />
       <section
-        className="bg-white px-8 md:px-24 text-slate-800 pt-8 pb-12"
+        className="px-8 md:px-24 text-slate-800 pt-8 pb-4"
         style={{ background: `rgba(0,0,0,0.1)` }}
       >
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 mb-48">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 mb-24">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section>
       <div className="-mt-48">
-        <Waves />
+        <Waves flipped />
       </div>
       {/* Categories list */}
       <section className=" bg-black px-8 md:p-12 min-h-12 -mt-2">
