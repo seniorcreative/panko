@@ -30,6 +30,9 @@
         }
       }
     },
+    "categoryInfo": {
+      "Mobile": { "techie": "React native", "creative": "Build an app" }
+    },
     "work": [
       {
         "id": 9,
@@ -206,6 +209,9 @@
           }
         }
       }
+    },
+    "categoryInfo": {
+      "Mobile": { "techie": "React native", "creative": "Build an app" }
     },
     "work": [
       {
