@@ -26,10 +26,9 @@ export default function Stellae() {
         estrella.classList.add("estrella");
         estrella.style.animationDuration = `${rdm}s`;
         estrella.style.animationDelay = Math.random() * 10 + "s";
-
-        // estrella.style.animationRangeStart =
-        //   Math.round(Math.random() * 100) + "%";
-        console.log("style", estrella.style);
+        estrella.style.animationRangeStart =
+          Math.round(Math.random() * 100) + "%";
+        // console.log("style", estrella.style);
         direction.appendChild(estrella);
 
         campusEstrellae.appendChild(direction);

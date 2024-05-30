@@ -54,8 +54,8 @@ export default function Gallery({
         )}
       </div>
 
-      <div className="md:absolute md:flex md:overflow-x-auto mx-8 md:me-4 imagesWrapper">
-        <div className="md:inline-flex flex-nowrap text-sm ms-2 first:ms-0 bg-white text-slate-900 my-4 md:px-4 descWrapper">
+      <div className="md:absolute md:flex md:overflow-x-auto md:me-4 imagesWrapper">
+        <div className="md:inline-flex flex-nowrap text-sm first:ms-0 bg-white text-slate-900 py-4 md:px-4 descWrapper">
           {description}
         </div>
         {images.map((image: string) => (

@@ -91,7 +91,7 @@ export default function Home() {
   return (
     <>
       <section
-        className="h-screen w-full flex-col items-center justify-center"
+        className="min-h-96 w-full flex-col items-center justify-center"
         style={{ position: "relative" }}
       >
         <Stellae />

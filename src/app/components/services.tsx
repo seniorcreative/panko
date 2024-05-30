@@ -64,11 +64,11 @@ export default function Services({ locale }: servicesType) {
           </div>
         </div>
         <br />
-        <h3 className="text-md">Panko can help you with:</h3>
+        <h3 className="text-md font-bold mb-3">panko can help you with</h3>
         {/* <div id="content" ref={pageContent}></div> */}
         <ul>
           {servicesList.map((service: string) => (
-            <li key={service}>{service}</li>
+            <li key={service}>&bull;&nbsp;{service}</li>
           ))}
         </ul>
       </div>

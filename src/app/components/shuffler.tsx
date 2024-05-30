@@ -86,30 +86,36 @@ export default function Shuffler() {
   if (!letters) return null;
 
   return (
-    <div className="md:flex container mx-auto px-4">
+    <div className="md:flex container mx-auto px-4 justify-between">
       {letters?.map((word, i) => {
         return (
           <div
             key={keyMap[i]}
             id={keyMap[i]}
             style={{ transform: "perspective(70px)" }}
-            className="border rounded-md p-2 me-2 w-1/2 text-emerald-900 text-center"
+            className="border rounded-md md:w-48 p-2 me-2 text-emerald-900 text-center"
           >
-            <strong>{keyMap[i]}</strong>{" "}
+            {language === "en-US" ? (
+              <strong className="me-2">{keyMap[i]}</strong>
+            ) : (
+              ""
+            )}
             {language === "en-US"
               ? String(word).substring(1, String(word).length)
               : word}
           </div>
         );
       })}
-      <button
-        type="button"
-        style={{ lineHeight: 0 }}
-        className="p-2 me-2 mt-3 md:mt-0 bg-slate-300 text-emerald-900 text-center rounded-full"
-        onClick={() => setShuffles(shuffles + 1)}
-      >
-        <span className="material-symbols-outlined">refresh</span>
-      </button>
+      <div className="text-center">
+        <button
+          type="button"
+          style={{ lineHeight: 0 }}
+          className="p-2 mx-auto mt-3 md:mt-0 bg-slate-300 text-emerald-900 text-center rounded-full"
+          onClick={() => setShuffles(shuffles + 1)}
+        >
+          <span className="material-symbols-outlined">refresh</span>
+        </button>
+      </div>
     </div>
   );
 }
