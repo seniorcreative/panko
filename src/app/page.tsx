@@ -84,6 +84,8 @@ export default function Home() {
     });
   });
 
+  const catInfo = content[language].categoryInfo;
+
   const buttonStyle = "p-2 rounded-md me-2 border-2 border-dark";
 
   return (
@@ -127,7 +129,7 @@ export default function Home() {
         className="px-8 md:px-24 text-slate-800 pt-8 pb-4"
         style={{ background: `rgba(0,0,0,0.1)` }}
       >
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 mb-24">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 md:pb-32 mb-24">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
@@ -149,7 +151,11 @@ export default function Home() {
       <div className="-mt-48">
         <Waves flipped />
       </div>
-      <FolioCategories categories={folioCategories} locale={language} />
+      <FolioCategories
+        categories={folioCategories}
+        locale={language}
+        categoryInfo={catInfo}
+      />
       <About locale={language} />
       <Shuffler></Shuffler>
       <Services locale={language} />

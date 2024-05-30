@@ -211,7 +211,10 @@
       }
     },
     "categoryInfo": {
-      "Mobile": { "techie": "React native", "creative": "Build an app" }
+      "Mobile": {
+        "techie": "React native (CN)",
+        "creative": "Build an app (CN)"
+      }
     },
     "work": [
       {

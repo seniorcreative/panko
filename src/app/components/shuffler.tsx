@@ -93,7 +93,7 @@ export default function Shuffler() {
             key={keyMap[i]}
             id={keyMap[i]}
             style={{ transform: "perspective(70px)" }}
-            className="border rounded-md p-2 me-2 w-1/2 text-emerald-900"
+            className="border rounded-md p-2 me-2 w-1/2 text-emerald-900 text-center"
           >
             <strong>{keyMap[i]}</strong>{" "}
             {language === "en-US"
