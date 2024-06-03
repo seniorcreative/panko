@@ -2,7 +2,7 @@
 
 import anime from "animejs";
 import React, { useEffect, useState, useContext } from "react";
-import { LanguageContext } from "../languageContext";
+import { LanguageContext } from "../contexts/languageContext";
 
 export default function Shuffler() {
   const [letters, setLetters] = useState([]);

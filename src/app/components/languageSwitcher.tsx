@@ -6,7 +6,7 @@ import { setDefaultLocaleCookie, changeLanguageCookieValue } from "../actions";
 
 import LanguageSwitcherIdiom from "./languageSwitcherIdiom";
 import Link from "next/link";
-import { LanguageContext } from "../languageContext";
+import { LanguageContext } from "../contexts/languageContext";
 
 const getHash = () =>
   typeof window !== "undefined" ? window.location.hash : undefined;
@@ -21,6 +21,13 @@ export default function LanguageSwitcher({ font }: { font: any }) {
 
   const [hash, setHash] = useState(getHash());
 
+  const languageMap = [
+    { lang: "en-US", icon: "language_us" },
+    { lang: "zh-CN", icon: "language_chinese_quick" },
+  ];
+
+  const { language, setLanguage } = useContext(LanguageContext);
+
   useEffect(() => {
     setHash(getHash());
   }, [params]);
@@ -32,13 +39,6 @@ export default function LanguageSwitcher({ font }: { font: any }) {
     };
     getLocale();
   }, []);
-
-  const languageMap = [
-    { lang: "en-US", icon: "language_us" },
-    { lang: "zh-CN", icon: "language_chinese_quick" },
-  ];
-
-  const { language, setLanguage } = useContext(LanguageContext);
 
   return (
     <ul className="list-none flex py-2">

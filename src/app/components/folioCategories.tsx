@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import VisitorSelector from "./visitorSelector";
+import { VisitorContext } from "../contexts/visitorContext";
 
 export default function FolioCategories({
   categories,
@@ -10,6 +12,7 @@ export default function FolioCategories({
   categoryInfo: any;
 }): JSX.Element {
   const [selectedSection, setSelectedSection] = useState("");
+  const { visitorType, setVisitorType } = useContext(VisitorContext);
 
   return (
     <section className="bg-black px-8 md:p-12 min-h-12 -mt-2">
@@ -43,13 +46,9 @@ export default function FolioCategories({
             >
               <span className="material-symbols-outlined">close</span>
             </button>
-            <h3 className="font-bold">Techie</h3>
+            <VisitorSelector />
             <p className="text-white pb-4">
-              {categoryInfo[selectedSection]["techie"]}
-            </p>
-            <h3 className="font-bold">Creative</h3>
-            <p className="text-white pb-4">
-              {categoryInfo[selectedSection]["creative"]}
+              {categoryInfo[selectedSection][visitorType]}
             </p>
             <a
               type="button"

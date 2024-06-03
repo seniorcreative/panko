@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { getCurrentLocale } from "../../actions";
 
 import Gallery from "../../components/gallery";
-import { LanguageContext } from "../../languageContext";
+import { LanguageContext } from "../../contexts/languageContext";
 const content = require("../../data/content.json");
 
 export default function Page() {

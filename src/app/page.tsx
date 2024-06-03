@@ -3,7 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useState, useEffect, useContext } from "react";
 
-import { LanguageContext } from "./languageContext";
+import { LanguageContext } from "./contexts/languageContext";
 import { getCurrentLocale } from "./actions";
 
 // Components

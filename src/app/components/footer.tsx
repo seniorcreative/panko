@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { LanguageContext } from "../languageContext";
+import { LanguageContext } from "../contexts/languageContext";
 
 export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
   const content = require("../data/content.json");

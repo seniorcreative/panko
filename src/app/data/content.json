@@ -4,11 +4,11 @@
       "sections": {
         "intro": {
           "one": "Melbourne | Sydney | Geelong",
-          "two": "Efficient, Affordable, Freelance Web Services For Creative Humans",
+          "two": "Freelance Web Services For Creative Humans",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "Industry standard coding services for web, stores, apps & business systems.",
+          "three": "Industry standard service agency for web, stores, apps & business systems.",
           "four": "Melbourne, Sydney, Geelong freelance e-commerce, web and mobile software application developer.",
-          "contactBtn": "Hit me up",
+          "contactBtn": "Contact us",
           "contactLink": "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry"
         },
         "about": {
@@ -20,12 +20,22 @@
           "body": {
             "creative": [
               "Building a store",
-              "Fix a bug",
-              "Change your theme",
-              "Consult with an expert",
-              "Launch an app"
+              "Fixing a bug",
+              "Changing your theme or styles",
+              "Consultation and advice",
+              "Launching an app",
+              "Domain setup / DNS stuff",
+              "Setting up Email"
             ],
-            "techie": ["TBC"]
+            "techie": [
+              "Wiring up DNS records",
+              "Rapid build a custom front-end",
+              "Fix react or typescript bugs",
+              "Upgrade a legacy app",
+              "Fix security vulnerabilities",
+              "Extend functionality of an existing app",
+              "Code reviews"
+            ]
           }
         }
       }
