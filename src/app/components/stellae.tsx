@@ -6,9 +6,9 @@ import "./stellae.css";
 
 export default function Stellae() {
   useEffect(() => {
-    const max = 30;
-    const min = 10;
-    const count = 120;
+    const max = 10;
+    const min = 5;
+    const count = 70;
 
     const canvas = document.querySelector("#campus-stellae");
 
@@ -24,11 +24,17 @@ export default function Stellae() {
         const estrella = document.createElement("div");
         const rdm = Math.random() * (max - min) + min;
         estrella.classList.add("estrella");
-        estrella.style.animationDuration = `${rdm}s`;
-        estrella.style.animationDelay = Math.random() * 10 + "s";
-        estrella.style.animationRangeStart =
-          Math.round(Math.random() * 100) + "%";
-        // console.log("style", estrella.style);
+
+        const styleDec: any = estrella.style;
+
+        styleDec["animationRangeStart"] = Math.round(Math.random() * 100) + "%";
+        styleDec["animationDuration"] = `${rdm}s`;
+        styleDec["animationDelay"] = Math.random() * 10 + "s";
+
+        Array(styleDec).map((styleKey: any) => {
+          estrella.style[styleKey] = styleDec[styleKey];
+        });
+
         direction.appendChild(estrella);
 
         campusEstrellae.appendChild(direction);
