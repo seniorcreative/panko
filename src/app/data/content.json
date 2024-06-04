@@ -238,6 +238,22 @@
       "Mobile": {
         "techie": "React native (CN)",
         "creative": "Build an app (CN)"
+      },
+      "Games": {
+        "techie": "Build apps, focusing on interactivity",
+        "creative": "Interactive games"
+      },
+      "Cloud": {
+        "techie": "AWS Lambda, Cognito, S3, Cloudfront",
+        "creative": "Amazon or Google cloud based"
+      },
+      "E-Commerce": {
+        "techie": "Custom shopify themes",
+        "creative": "Shopify, Squarespace or Wix stores management"
+      },
+      "Signage": {
+        "techie": "From broadcast design background I was able to build large screen display software",
+        "creative": "Large screen display systems with content management"
       }
     },
     "work": [
