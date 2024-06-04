@@ -21,23 +21,19 @@ export default function FolioCategories({
           {Array.from(categories).map((cat: string) => (
             <li
               key={cat}
+              onClick={() => {
+                setSelectedSection(cat);
+              }}
               className="cat-link p-2 rounded-md me-2 mb-2 border-2 border-light py-1 cursor-pointer text-white text-sm"
             >
-              <a
-                className=""
-                onClick={() => {
-                  setSelectedSection(cat);
-                }}
-              >
-                {cat}
-              </a>
+              <a>{cat}</a>
             </li>
           ))}
         </ul>
         {selectedSection && (
-          <div className="container relative my-6 rounded-md border-2 border-dotted border-t-black border-b-black border-l-gray-50 border-r-gray-50 p-6 md:p-16 text-white">
+          <div className="container relative my-6 rounded-md border-2 border-dotted border-t-black border-b-black border-l-gray-50 border-r-gray-50 p-4 md:p-12 text-white">
             <button
-              className="absolute text-white top-4 right-4"
+              className="absolute text-white top-2 right-2"
               type="button"
               role="button"
               onClick={() => {
@@ -46,7 +42,7 @@ export default function FolioCategories({
             >
               <span className="material-symbols-outlined">close</span>
             </button>
-            <VisitorSelector />
+            <VisitorSelector mono />
             <p className="text-white pb-4">
               {categoryInfo[selectedSection][visitorType]}
             </p>

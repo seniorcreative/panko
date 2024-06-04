@@ -55,13 +55,13 @@ export default function Gallery({
       </div>
 
       <div className="md:absolute md:flex md:overflow-x-auto md:me-4 imagesWrapper">
-        <div className="md:inline-flex flex-nowrap text-sm first:ms-0 bg-white text-slate-900 py-4 md:px-4 descWrapper">
+        <div className="md:inline-flex flex-nowrap text-sm first:ms-0 bg-white text-slate-900 py-4 px-4 descWrapper">
           {description}
         </div>
         {images.map((image: string) => (
           <div
             key={image}
-            className="md:inline-flex md:flex-nowrap md:ms-1 first:ms-0 imgContainer"
+            className="md:inline-flex md:flex-nowrap md:ms-1 mb-1 first:ms-0 imgContainer"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={image} className="object-cover imgClass" alt="..." />

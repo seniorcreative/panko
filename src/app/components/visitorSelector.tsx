@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { VisitorContext } from "../contexts/visitorContext";
 import { LanguageContext } from "../contexts/languageContext";
 
-export default function VisitorSelector() {
+export default function VisitorSelector({ mono }: { mono?: boolean }) {
   const { visitorType, setVisitorType } = useContext(VisitorContext);
   const { language } = useContext(LanguageContext);
   const buttonStyle = "p-2 rounded-md me-2 border-2 border-dark";
+
+  const color = mono ? "slate" : "green";
 
   return (
     <>
@@ -17,8 +19,8 @@ export default function VisitorSelector() {
           onClick={() => setVisitorType("creative")}
           className={`${buttonStyle}  ${
             visitorType === "creative"
-              ? "border-green-800 bg-green-700 text-white"
-              : " text-green-700 border-green-500"
+              ? `border-${color}-800 bg-${color}-700 text-white underline`
+              : `text-${color}-700 border-${color}-500`
           }`}
         >
           Creative
@@ -27,8 +29,8 @@ export default function VisitorSelector() {
           onClick={() => setVisitorType("techie")}
           className={`${buttonStyle}  ${
             visitorType === "techie"
-              ? "border-green-800 bg-green-700 text-white"
-              : " text-green-700 border-green-500"
+              ? `border-${color}-800 bg-${color}-700 text-white`
+              : `text-${color}-700 border-${color}-500`
           }`}
         >
           Techie

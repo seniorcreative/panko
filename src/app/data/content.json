@@ -29,11 +29,11 @@
             ],
             "techie": [
               "Wiring up DNS records",
-              "Rapid build a custom front-end",
-              "Fix react or typescript bugs",
+              "Rapid build custom front-end",
+              "Fix JS framework bugs",
               "Upgrade a legacy app",
               "Fix security vulnerabilities",
-              "Extend functionality of an existing app",
+              "Extend an existing app",
               "Code reviews"
             ]
           }
@@ -41,7 +41,23 @@
       }
     },
     "categoryInfo": {
-      "Mobile": { "techie": "React native", "creative": "Build an app" }
+      "Mobile": { "techie": "React native", "creative": "Build an app" },
+      "Games": {
+        "techie": "Build apps, focusing on interactivity",
+        "creative": "Interactive games"
+      },
+      "Cloud": {
+        "techie": "AWS Lambda, Cognito, S3, Cloudfront",
+        "creative": "Amazon or Google cloud based"
+      },
+      "E-Commerce": {
+        "techie": "Custom shopify themes",
+        "creative": "Shopify, Squarespace or Wix stores management"
+      },
+      "Signage": {
+        "techie": "From broadcast design background I was able to build large screen display software",
+        "creative": "Large screen display systems with content management"
+      }
     },
     "work": [
       {
@@ -54,11 +70,9 @@
         "meta": {
           "client": "Panko Digital",
           "imageUrl": [
-            "/work/bridge-alert~1~5.png",
             "/work/bridge-alert~2~5.png",
-            "/work/bridge-alert~3~5.png",
-            "/work/bridge-alert~4~5.png",
-            "/work/bridge-alert~5~5.png"
+            "/work/bridge-alert~1~5.png",
+            "/work/bridge-alert~3~5.png"
           ]
         }
       },
@@ -237,11 +251,9 @@
         "meta": {
           "client": "Panko Digital",
           "imageUrl": [
-            "/work/bridge-alert~1~5.png",
             "/work/bridge-alert~2~5.png",
-            "/work/bridge-alert~3~5.png",
-            "/work/bridge-alert~4~5.png",
-            "/work/bridge-alert~5~5.png"
+            "/work/bridge-alert~1~5.png",
+            "/work/bridge-alert~3~5.png"
           ]
         }
       },
