@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { VisitorContext } from "../contexts/visitorContext";
 import { LanguageContext } from "../contexts/languageContext";
 
@@ -9,6 +9,14 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
 
   const color = mono ? "slate" : "green";
 
+  const [offStyle, setOffStyle] = useState("");
+  const [onStyle, setOnStyle] = useState("");
+
+  useEffect(() => {
+    setOffStyle(`border-${color}-800 bg-${color}-400 text-white underline`);
+    setOnStyle(`text-${color}-700 border-${color}-500`);
+  }, [color]);
+
   return (
     <>
       <h3 className="font-bold">
@@ -18,9 +26,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
         <button
           onClick={() => setVisitorType("creative")}
           className={`${buttonStyle}  ${
-            visitorType === "creative"
-              ? `border-${color}-800 bg-${color}-700 text-white underline`
-              : `text-${color}-700 border-${color}-500`
+            visitorType === "creative" ? offStyle : onStyle
           }`}
         >
           Creative
@@ -28,9 +34,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
         <button
           onClick={() => setVisitorType("techie")}
           className={`${buttonStyle}  ${
-            visitorType === "techie"
-              ? `border-${color}-800 bg-${color}-700 text-white`
-              : `text-${color}-700 border-${color}-500`
+            visitorType === "techie" ? offStyle : onStyle
           }`}
         >
           Techie

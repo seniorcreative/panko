@@ -6,9 +6,9 @@ import "./stellae.css";
 
 export default function Stellae() {
   useEffect(() => {
-    const max = 10;
-    const min = 5;
-    const count = 70;
+    const max = 5;
+    const min = 1;
+    const count = 75;
 
     const canvas = document.querySelector("#campus-stellae");
 
