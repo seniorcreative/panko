@@ -1,4 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import anime from "animejs";
+
 import VisitorSelector from "./visitorSelector";
 import { VisitorContext } from "../contexts/visitorContext";
 
@@ -14,6 +16,45 @@ export default function FolioCategories({
   const [selectedSection, setSelectedSection] = useState("");
   const { visitorType, setVisitorType } = useContext(VisitorContext);
 
+  useEffect(() => {
+    const filteredTargets = Array.from(categories).filter(
+      (cat: string) => cat !== selectedSection
+    );
+    const addedFilteredIds = filteredTargets.map((t) => "#" + t);
+
+    const defaultAnimeProps = {
+      rotateX: [180, 130],
+      scaleY: [1, 0.25],
+      perspective: [125, 125],
+      easing: "easeInOutQuad",
+      duration: 300,
+    };
+
+    const resetAnimeProps = {
+      rotateX: [130, 0],
+      scaleY: [0.25, 1],
+      perspective: [125, 125],
+      easing: "easeInOutQuad",
+      duration: 300,
+    };
+
+    console.log("Animating Targets", addedFilteredIds);
+    // Animation using Anime.js
+    if (selectedSection !== "") {
+      anime({
+        targets: addedFilteredIds,
+        delay: 100,
+        ...defaultAnimeProps,
+      });
+    } else {
+      anime({
+        targets: addedFilteredIds,
+        delay: 100,
+        ...resetAnimeProps,
+      });
+    }
+  }, [selectedSection, categories]);
+
   return (
     <section className="bg-black px-8 md:p-12 min-h-12 -mt-2">
       <div className="container w-3/4 mx-auto">
@@ -21,9 +62,11 @@ export default function FolioCategories({
           {Array.from(categories).map((cat: string) => (
             <li
               key={cat}
+              id={cat}
               onClick={() => {
                 setSelectedSection(cat);
               }}
+              style={{ transform: "perspective(70px)" }}
               className="cat-link p-2 rounded-md me-2 mb-2 border-2 border-light py-1 cursor-pointer text-white text-sm"
             >
               <a>{cat}</a>

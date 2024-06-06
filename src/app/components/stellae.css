@@ -3,7 +3,7 @@
 @keyframes estrellae {
   0% {
     top: 50%;
-    scale: 5%;
+    scale: 25%;
     opacity: 0;
   }
   2% {
@@ -17,7 +17,7 @@
 
 .estrella-angle {
   position: absolute;
-  height: 80vw;
+  height: 75vw;
   width: 1px;
   display: flex;
   justify-content: center;

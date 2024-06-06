@@ -50,12 +50,12 @@
         "techie": "AWS Lambda, Cognito, S3, Cloudfront",
         "creative": "Amazon or Google cloud based"
       },
-      "E-Commerce": {
+      "E-commerce": {
         "techie": "Custom shopify themes",
         "creative": "Shopify, Squarespace or Wix stores management"
       },
       "Signage": {
-        "techie": "From broadcast design background I was able to build large screen display software",
+        "techie": "From broadcast design background panko was able to build large screen display software",
         "creative": "Large screen display systems with content management"
       }
     },
@@ -80,7 +80,7 @@
         "id": 3,
         "title": "Game of life",
         "href": "https://organisms.vercel.app/",
-        "description": "Take home coding exercise which I got a bit carried away with.",
+        "description": "Take home coding exercise which panko got a bit carried away with.",
         "date": "2021",
         "category": ["Games"],
         "meta": {
@@ -92,7 +92,7 @@
         "id": 10,
         "title": "WorkSafe Projects",
         "href": "",
-        "description": "Innovation centre was a very educational experience, to go into as a software engineer. Teamed up with service designers and researchers. Interviewed injured workers. Learned the power of the double-diamond, and design workshop synthesis as part of systems thinking. Developed various tools and web apps. This one had a passwordless sign-in using AWS lambda and cognito, and was piloted by the Victorian government, helping the incapacitated in many ways. Had fun learning Tailwind CSS on this one.",
+        "description": "Innovation centre was a very educational experience, to go into as a software engineer. Teamed up with service designers and researchers. Interviewed injured workers. Learned the power of the double-diamond, and design workshop synthesis as part of systems thinking. Developed various tools and web apps. This one had a passwordless sign-in using AWS lambda and cognito, and was piloted by the Victorian government, helping the incapacitated in many ways.",
         "date": "2021",
         "category": ["Cloud"],
         "meta": {
@@ -124,7 +124,7 @@
         "id": 2,
         "title": "SLSA Surf Lifesaving Squad",
         "href": "",
-        "description": "Teamed up with this cool Sydney agency, and went to what is arguably the best office in Australia, the HQ of SLSA at Bondi Beach. When I made these games I decided to focus on some more hardcore software engineering principles. So I read a lot about MVC design patterns and that was fully utilised throughout the codebase. I think as the project code scaled it paid dividends even though it felt slower at first.",
+        "description": "Teamed up with this cool Sydney agency, and went to what is arguably the best office in Australia, the HQ of SLSA at Bondi Beach. When panko made these games panko decided to focus on some more hardcore software engineering principles. So panko read a lot about MVC design patterns and that was fully utilised throughout the codebase. As the project code scaled it paid dividends even though it felt slower at first.",
         "date": "2012",
         "category": ["Games"],
         "meta": {
@@ -136,7 +136,7 @@
         "id": 1,
         "title": "Carlton Natural Blonde",
         "href": "",
-        "description": "Retro Galaga. I can remember having a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. I was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and I later hosted it separately with it's own scoreboard API.",
+        "description": "Retro Galaga. Panko had a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. Panko was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and panko later hosted it separately with it's own scoreboard API.",
         "date": "2010",
         "category": ["Games"],
         "meta": {
@@ -151,7 +151,7 @@
         "id": 4,
         "title": "FLUX Clothing",
         "href": "",
-        "description": "My first e-commerce site - which took paypal and eWay credit card payments. Can remember that hallelujah moment when the gateway was all wired up correctly. Shopify didn't exist when I was doing this. Had some rad fun animating components for the FLUX crew.",
+        "description": "Panko' first e-commerce site - which took paypal and eWay credit card payments. Can remember that hallelujah moment when the gateway was all wired up correctly. Shopify didn't exist when panko was doing this. Had some rad fun animating components for the FLUX crew.",
         "date": "2010",
         "category": ["E-commerce"],
         "meta": {
@@ -191,7 +191,7 @@
         "id": 7,
         "title": "Milk Skincare",
         "href": "",
-        "description": "For the swimming legend Michael's Milk Skincare start up I was there at the outset, hand-rolled my own e-commerce system made with my Popcorn CMS. Pre-shopify. As my second e-commerce site, it helped to launch this start up. Lessons learned from doing this project are still with me to this day. Test Coverage anyone?",
+        "description": "For the swimming legend Michael's Milk Skincare start up panko was there at the outset, hand-rolled panko's own e-commerce system made with panko's Popcorn CMS. Pre-shopify. As panko's second e-commerce site, it helped to launch this start up. Lessons learned from doing this project are still with panko to this day. Test Coverage anyone?",
         "date": "2011",
         "category": ["E-commerce"],
         "meta": {
@@ -213,7 +213,7 @@
           "three": "适用于网络、商店、应用程序和业务系统的行业标准编码服务.",
           "four": "墨尔本、悉尼、吉朗自由电子商务、网络和移动软件应用程序开发人员.",
           "contactBtn": "联系我们",
-          "contactLink": "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry"
+          "contactLink": "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry%20zh-CN"
         },
         "about": {
           "title": "关于",
@@ -236,27 +236,39 @@
     },
     "categoryInfo": {
       "Mobile": {
-        "techie": "React native (CN)",
-        "creative": "Build an app (CN)"
+        "techie": "React native",
+        "creative": "构建应用程序"
       },
       "Games": {
-        "techie": "Build apps, focusing on interactivity",
-        "creative": "Interactive games"
+        "techie": "注重互动性",
+        "creative": "互动游戏"
       },
       "Cloud": {
         "techie": "AWS Lambda, Cognito, S3, Cloudfront",
-        "creative": "Amazon or Google cloud based"
+        "creative": "Amazon 或者 Google cloud"
       },
-      "E-Commerce": {
-        "techie": "Custom shopify themes",
-        "creative": "Shopify, Squarespace or Wix stores management"
+      "E-commerce": {
+        "techie": "自定义 Shopify 主题",
+        "creative": "Shopify、Squarespace 或 Wix 商店管理"
       },
       "Signage": {
-        "techie": "Broadcast design and signage systems contractor for stadium and hospitality venues.",
-        "creative": "Large screen display systems with content management"
+        "techie": "体育场和酒店场所的广播设计和标牌系统承包商。",
+        "creative": "具有内容管理功能的大屏幕显示系统"
       }
     },
     "work": [
+      {
+        "id": 3,
+        "title": "生命的游戏",
+        "href": "https://organisms.vercel.app/",
+        "description": "进行家庭编码练习，我从中获得了很多乐趣。",
+        "date": "2021",
+        "category": ["游戏"],
+        "meta": {
+          "client": "Panko Digital",
+          "imageUrl": ["/work/organisms-2~2.png", "/work/organisms-1~2.png"]
+        }
+      },
       {
         "id": 9,
         "title": "桥梁警报",
@@ -271,18 +283,6 @@
             "/work/bridge-alert~1~5.png",
             "/work/bridge-alert~3~5.png"
           ]
-        }
-      },
-      {
-        "id": 3,
-        "title": "生命的游戏",
-        "href": "https://organisms.vercel.app/",
-        "description": "进行家庭编码练习，我从中获得了很多乐趣。",
-        "date": "2021",
-        "category": ["游戏"],
-        "meta": {
-          "client": "Panko Digital",
-          "imageUrl": ["/work/organisms-2~2.png", "/work/organisms-1~2.png"]
         }
       }
     ]
