@@ -86,7 +86,7 @@ export default function Shuffler() {
   if (!letters) return null;
 
   return (
-    <div className="md:flex container mx-auto px-4 justify-between">
+    <div className="md:flex mx-auto px-4">
       {letters?.map((word, i) => {
         return (
           <div

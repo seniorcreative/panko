@@ -127,10 +127,10 @@ export default function Home() {
       </section>
       <Waves lighten />
       <section
-        className="px-8 md:px-24 text-slate-800 pt-8 pb-4"
-        style={{ background: `rgba(0,0,0,0.1)` }}
+        className="px-8 md:px-24 text-slate-800 bg-slate-200 pt-8 pb-4"
+        style={{ marginTop: "-1px" }}
       >
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 md:pb-32 mb-24">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 pb-16 mb:pb-32 mb-24">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}

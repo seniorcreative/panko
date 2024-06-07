@@ -63,7 +63,7 @@ export default function FolioCategories({
   return (
     <section className="bg-black px-8 md:p-12 min-h-12 -mt-2">
       <div className="container w-3/4 mx-auto">
-        <ul className="list-none lg:flex lg:justify-around py-2 mb-4">
+        <ul className="list-none lg:flex lg:justify-around pt-8 pb-2 mb-4">
           {Array.from(categories).map((cat: string) => (
             <li
               key={cat}
