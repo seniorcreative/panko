@@ -32,7 +32,7 @@ export default function Services({ locale }: servicesType) {
 
   return (
     // Todo: Animate these across using AnimeJS
-    <section className="relative h-screen flex items-center justify-center text-green-500 leading-8">
+    <section className="relative min-h-screen py-8 flex items-center justify-center text-green-500 leading-8">
       <a id="services" className="absolute top-0"></a>
       <div className="w-3/4 md:w-1/3">
         <h2 className="text-lg">

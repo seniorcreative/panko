@@ -86,7 +86,8 @@ export default function Home() {
 
   const catInfo = content[language].categoryInfo;
 
-  const buttonStyle = "p-2 rounded-md me-2 border-2 border-dark";
+  const buttonStyle =
+    "px-4 py-2 rounded-md me-2 border-2 border-dark bg-white bg-opacity-75 backdrop-blur";
 
   return (
     <>
@@ -104,13 +105,13 @@ export default function Home() {
           height={317 * 0.75}
         />
         <div className="mt-12 p-8 md:p-24 text-slate-900 text-center">
-          <h3 className="text-lg">
+          <h3 className="text-lg mb-4">
             {content[language].home.sections.intro.one}
           </h3>
           <h4 className="text-xl">
             {content[language].home.sections.intro.two}
           </h4>
-          <p className="lg:w-1/3 lg:mx-auto my-3">
+          <p className="lg:w-1/3 lg:mx-auto my-3 mb-8">
             {content[language].home.sections.intro.three}
           </p>
           <a

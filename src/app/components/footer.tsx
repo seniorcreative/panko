@@ -32,7 +32,7 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
             <li
               className={`${ral.className} text-sm flex align-middle justify-end`}
             >
-              Social Media Free
+              Socially Safe
               <span className="ms-2 material-symbols-outlined">wb_sunny</span>
             </li>
             <li

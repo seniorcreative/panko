@@ -6,8 +6,8 @@ import "./stellae.css";
 
 export default function Stellae() {
   useEffect(() => {
-    const max = 5;
-    const min = 1;
+    const max = 12;
+    const min = 4;
     const count = 75;
 
     const canvas = document.querySelector("#campus-stellae");
@@ -27,9 +27,9 @@ export default function Stellae() {
 
         const styleDec: any = estrella.style;
 
-        styleDec["animationRangeStart"] = Math.round(Math.random() * 100) + "%";
+        // styleDec["animationRangeStart"] = Math.round(Math.random() * 100) + "%";
         styleDec["animationDuration"] = `${rdm}s`;
-        styleDec["animationDelay"] = Math.random() * 10 + "s";
+        styleDec["animationDelay"] = Math.random() * 5 + "s";
 
         Array(styleDec).map((styleKey: any) => {
           estrella.style[styleKey] = styleDec[styleKey];

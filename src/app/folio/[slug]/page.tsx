@@ -29,11 +29,14 @@ export default function Page() {
   return (
     <div className="mt-8 mx-auto py-6 sm:py-6 w-full">
       {folioSection && (
-        <h3 className="text-lg px-4 my-4">
-          Viewing {folioSection.toLowerCase()} work
+        <h3 className="text-lg px-4 my-4 text-neutral-900">
+          {language !== "zh-CN"
+            ? `Viewing ${folioSection.toLowerCase()} work`
+            : `观看
+          ${folioSection.toLowerCase()} 作品`}
         </h3>
       )}
-      {filteredWork.length &&
+      {filteredWork.length ? (
         filteredWork.map((post: any) => (
           <article key={post.id} className="w-full">
             <Gallery
@@ -45,7 +48,14 @@ export default function Page() {
               href={post.href}
             />
           </article>
-        ))}
+        ))
+      ) : (
+        <p className="px-4 text-neutral-900">
+          {language !== "zh-CN"
+            ? "Sorry, no work to show"
+            : "抱歉，没有作品可展示"}
+        </p>
+      )}
     </div>
   );
 }
