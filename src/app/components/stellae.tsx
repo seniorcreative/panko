@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 
 import "./stellae.css";
 
-export default function Stellae({ invert }: { invert: boolean }) {
+export default function Stellae({ invert }: { invert?: boolean }) {
   useEffect(() => {
     const max = 4;
     const min = 0.5;
@@ -48,7 +48,7 @@ export default function Stellae({ invert }: { invert: boolean }) {
     };
 
     canvas?.appendChild(estrellae());
-  }, []);
+  }, [invert]);
 
   return (
     <div

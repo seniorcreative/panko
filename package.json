@@ -13,8 +13,8 @@
     "animejs": "^3.2.2",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.8",
-    "next": "14.1.0",
-    "react": "^18",
+    "next": "14.2.3",
+    "react": "^18.3.1",
     "react-dom": "^18",
     "windups": "^1.2.2"
   },
@@ -24,13 +24,13 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "cypress": "^13.9.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "autoprefixer": "^10.4.19",
+    "cypress": "^13.11.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.3",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5"
   },
   "packageManager": "yarn@4.0.2"
 }
