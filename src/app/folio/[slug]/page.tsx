@@ -16,7 +16,7 @@ export default function Page() {
   useEffect(() => {
     const currentPath: string = pathName.split("/folio/")[1];
     if (pathName) setFolioSection(currentPath);
-    console.log("Current Path", currentPath);
+    // console.log("Current Path", currentPath);
     setFilteredWork(
       currentPath === "all"
         ? content[language].work
@@ -29,12 +29,19 @@ export default function Page() {
   return (
     <div className="mt-8 mx-auto py-6 sm:py-6 w-full">
       {folioSection && (
-        <h3 className="text-lg px-4 my-4 text-neutral-900">
-          {language !== "zh-CN"
-            ? `Viewing ${folioSection.toLowerCase()} work`
-            : `观看
+        <div className="p-5 mb-4">
+          <h3 className="text-center text-xl my-4 text-neutral-900">
+            {language !== "zh-CN"
+              ? `Viewing ${folioSection.toLowerCase()} work`
+              : `观看
           ${folioSection.toLowerCase()} 作品`}
-        </h3>
+          </h3>
+          <p className="text-center text-slate-400">
+            {language !== "zh-CN"
+              ? `More recent works coming soon when launched`
+              : `更多最新作品即将推出`}
+          </p>
+        </div>
       )}
       {filteredWork.length ? (
         filteredWork.map((post: any) => (
