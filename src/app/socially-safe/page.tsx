@@ -21,7 +21,7 @@ export default function Page() {
           wb_sunny
         </span>
         <h1 className="text-xl text-white">Socially safe</h1>
-        <p className="text-white my-4 leading-3">
+        <p className="text-white my-4 leading-4">
           Info coming here about our social media safety policy.
         </p>
       </div>

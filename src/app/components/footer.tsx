@@ -33,7 +33,7 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
             <li
               className={`${ral.className} text-sm flex align-middle justify-end`}
             >
-              <Link href="socially-safe">
+              <Link href="/socially-safe">
                 Socially safe
                 <span className="ms-2 material-symbols-outlined">wb_sunny</span>
               </Link>
@@ -41,7 +41,7 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
             <li
               className={`${pac.className} mt-2 text-sm flex align-middle justify-end`}
             >
-              <Link href="rewild-the-www">
+              <Link href="/rewild-the-www">
                 Rewild the WWW
                 <span className="ms-2 material-symbols-outlined">raven</span>
               </Link>

@@ -22,7 +22,7 @@ export default function Page() {
           raven
         </span>{" "}
         <h1 className="text-xl text-white">Rewild the WWW</h1>
-        <p className="text-white my-4 leading-3">
+        <p className="text-white my-4 leading-4">
           Info coming here about rewilding the www - and all the benefits that
           could bring.
         </p>

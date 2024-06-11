@@ -13,7 +13,8 @@ export default function Stellae({ invert }: { invert?: boolean }) {
     const canvas = document.querySelector("#campus-stellae");
 
     const estrellae = () => {
-      const campusEstrellae = document.createElement("div");
+      const campusEstrellae =
+        document.getElementById("estrella") || document.createElement("div");
       campusEstrellae.id = "estrella";
 
       for (let i = 0; i < count; i++) {
@@ -53,7 +54,7 @@ export default function Stellae({ invert }: { invert?: boolean }) {
   return (
     <div
       id="campus-stellae"
-      className="flex isolation-auto absolute xs:top-1/2 md:top-1/3 left-1/2 justify-center items-center -z-10"
+      className="flex isolation-auto h-screen absolute xs:top-1/2 md:top-1/3 left-1/2 justify-center w-full items-center -z-10 "
     ></div>
   );
 }
