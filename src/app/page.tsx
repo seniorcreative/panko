@@ -2,6 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useState, useEffect, useContext } from "react";
+import anime from "animejs";
 
 import { LanguageContext } from "./contexts/languageContext";
 import { getCurrentLocale } from "./actions";
@@ -40,6 +41,7 @@ export default function Home() {
       const locale = await getCurrentLocale();
       setCurrentLocale(locale);
     };
+
     getLocale();
   }, []);
 
@@ -130,7 +132,7 @@ export default function Home() {
         className="px-8 md:px-24 text-slate-800 bg-slate-200 pt-8 pb-4"
         style={{ marginTop: "-1px" }}
       >
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 pb-16 mb:pb-32 mb-24">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 pb-12">
           {Logos.map((logo: LogoObj) => (
             <div
               key={logo.t}
@@ -149,9 +151,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <div className="-mt-48">
-        <Waves flipped />
-      </div>
+      <Waves flipped />
       <FolioCategories
         categories={folioCategories}
         locale={language}

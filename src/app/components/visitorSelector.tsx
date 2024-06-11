@@ -18,28 +18,26 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
   }, [color]);
 
   return (
-    <>
-      <h3 className="font-bold">
+    <div className="flex my-4 items-center">
+      <h3 className="font-bold me-4">
         {language === "zh-CN" ? "你是谁" : "Who are you"}?
       </h3>
-      <div className="flex my-4">
-        <button
-          onClick={() => setVisitorType("creative")}
-          className={`${buttonStyle}  ${
-            visitorType === "creative" ? offStyle : onStyle
-          }`}
-        >
-          Creative
-        </button>
-        <button
-          onClick={() => setVisitorType("techie")}
-          className={`${buttonStyle}  ${
-            visitorType === "techie" ? offStyle : onStyle
-          }`}
-        >
-          Techie
-        </button>
-      </div>
-    </>
+      <button
+        onClick={() => setVisitorType("creative")}
+        className={`${buttonStyle}  ${
+          visitorType === "creative" ? offStyle : onStyle
+        }`}
+      >
+        Creative
+      </button>
+      <button
+        onClick={() => setVisitorType("techie")}
+        className={`${buttonStyle}  ${
+          visitorType === "techie" ? offStyle : onStyle
+        }`}
+      >
+        Techie
+      </button>
+    </div>
   );
 }

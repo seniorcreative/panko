@@ -20,8 +20,8 @@
 
 .estrella-angle {
   position: absolute;
-  height: 75vw;
-  width: 1px;
+  height: 70vw;
+  width: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,8 +40,8 @@
   position: absolute;
   overflow: hidden;
   top: 0%;
-  width: 4px;
-  height: 4px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   opacity: 0;
   /* filter: blur(0.5px); */

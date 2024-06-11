@@ -4,10 +4,10 @@ import React, { useEffect } from "react";
 
 import "./stellae.css";
 
-export default function Stellae() {
+export default function Stellae({ invert }: { invert: boolean }) {
   useEffect(() => {
-    const max = 12;
-    const min = 4;
+    const max = 4;
+    const min = 0.5;
     const count = 75;
 
     const canvas = document.querySelector("#campus-stellae");
@@ -26,6 +26,10 @@ export default function Stellae() {
         estrella.classList.add("estrella");
 
         const styleDec: any = estrella.style;
+
+        if (invert) {
+          styleDec["backgroundColor"] = "rgba(255, 255, 255, 0.25)";
+        }
 
         // styleDec["animationRangeStart"] = Math.round(Math.random() * 100) + "%";
         styleDec["animationDuration"] = `${rdm}s`;

@@ -2,6 +2,7 @@
 
 import React, { useContext } from "react";
 import { LanguageContext } from "../contexts/languageContext";
+import Link from "next/link";
 
 export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
   const content = require("../data/content.json");
@@ -32,14 +33,18 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
             <li
               className={`${ral.className} text-sm flex align-middle justify-end`}
             >
-              Socially Safe
-              <span className="ms-2 material-symbols-outlined">wb_sunny</span>
+              <Link href="socially-safe">
+                Socially safe
+                <span className="ms-2 material-symbols-outlined">wb_sunny</span>
+              </Link>
             </li>
             <li
               className={`${pac.className} mt-2 text-sm flex align-middle justify-end`}
             >
-              Rewild The Web
-              <span className="ms-2 material-symbols-outlined">raven</span>
+              <Link href="rewild-the-www">
+                Rewild the WWW
+                <span className="ms-2 material-symbols-outlined">raven</span>
+              </Link>
             </li>
             <li className="text-sm mt-4 flex align-middle justify-end">
               &copy;&nbsp;<strong>panko</strong>&nbsp;

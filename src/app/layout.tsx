@@ -21,7 +21,7 @@ const raleway = Raleway({ weight: "400", style: "normal", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Panko Digital",
   description:
-    "Melbourne, Sydney, Geelong freelance e-commerce, web and mobile software application developer.",
+    "Melbourne, Sydney, Geelong freelance e-commerce, business systems, web and mobile software application developer.",
 };
 
 export default function RootLayout({
