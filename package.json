@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.4",
     "@types/next": "^9.0.0",
     "animejs": "^3.2.2",
     "flowbite": "^2.3.0",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Varela, Pacifico, Raleway } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 import "./globalIcons.css";
@@ -33,6 +34,7 @@ export default function RootLayout({
     <LanguageContextProvider>
       <VisitorContextProvider>
         <html lang="en">
+          <GoogleTagManager gtmId="G-XLHERYSSZ1" />
           <body className={varela.className}>
             <nav
               style={{ zIndex: 9999 }}
