@@ -39,7 +39,9 @@ export default function Services({ locale }: servicesType) {
           <strong>{content[locale].home.sections.services.title}</strong>
         </h2>
         <VisitorSelector />
-        <h3 className="text-md font-bold mb-3">panko can help you with</h3>
+        <h3 className="text-md font-bold mb-3">
+          {locale !== "zh-CN" ? "panko can help you with" : "panko可以帮助你"}
+        </h3>
         <ul>
           {servicesList.map((service: string) => (
             <li key={service}>&bull;&nbsp;{service}</li>

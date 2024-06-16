@@ -28,7 +28,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
           visitorType === "creative" ? offStyle : onStyle
         }`}
       >
-        Creative
+        {language !== "zh-CN" ? "Creative" : "创意"}
       </button>
       <button
         onClick={() => setVisitorType("techie")}
@@ -36,7 +36,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
           visitorType === "techie" ? offStyle : onStyle
         }`}
       >
-        Techie
+        {language !== "zh-CN" ? "Techie" : "技术人员"}
       </button>
     </div>
   );
