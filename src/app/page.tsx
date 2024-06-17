@@ -2,7 +2,6 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useState, useEffect, useContext } from "react";
-import anime from "animejs";
 
 import { LanguageContext } from "./contexts/languageContext";
 import { getCurrentLocale } from "./actions";
