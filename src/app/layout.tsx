@@ -34,7 +34,6 @@ export default function RootLayout({
     <LanguageContextProvider>
       <VisitorContextProvider>
         <html lang="en">
-          <GoogleTagManager gtmId="G-XLHERYSSZ1" />
           <body className={varela.className}>
             <nav
               style={{ zIndex: 9999 }}
@@ -56,6 +55,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer fonts={[pacifico, raleway]}></Footer>
+            <GoogleTagManager gtmId="G-XLHERYSSZ1" />
           </body>
         </html>
       </VisitorContextProvider>

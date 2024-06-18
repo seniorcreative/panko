@@ -8,6 +8,7 @@ import LanguageSwitcherIdiom from "./languageSwitcherIdiom";
 import Link from "next/link";
 import { LanguageContext } from "../contexts/languageContext";
 
+
 const getHash = () =>
   typeof window !== "undefined" ? window.location.hash : undefined;
 

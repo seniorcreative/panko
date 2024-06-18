@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from "react";
 
 import { LanguageContext } from "./contexts/languageContext";
 import { getCurrentLocale } from "./actions";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 // Components
 import About from "./components/about";
@@ -28,17 +29,20 @@ import {
   RevitCourse,
   BBC,
 } from "../../public/logoIndex";
+import { usePathname } from "next/navigation";
 
 export type LogoObj = { t: string; i: StaticImageData; c: string | undefined };
 
 export default function Home() {
   const [currentLocale, setCurrentLocale] = useState("en-US");
+  const pathName = usePathname();
 
   // Get the locale for translation.
   useEffect(() => {
     const getLocale = async () => {
       const locale = await getCurrentLocale();
       setCurrentLocale(locale);
+      sendGTMEvent({ event: "pageView", value: pathName });
     };
 
     getLocale();
