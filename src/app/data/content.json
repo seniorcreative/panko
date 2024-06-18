@@ -57,6 +57,10 @@
       "Signage": {
         "techie": "From broadcast design background panko was able to build large screen display software",
         "creative": "Large screen display systems with content management"
+      },
+      "UX": {
+        "techie": "Undertook design thinking training and systems thinking training, developing rapid prototypes and incorporating fundamentals of behavioural science as part of qualitative as well as quantitative research.",
+        "creative": "Involving end users directly in the design process, and testing rapid prototypes in a feedback loop can yield some amazing results."
       }
     },
     "work": [
@@ -201,6 +205,23 @@
             "/work/milkskincare~3~3.jpg"
           ]
         }
+      },
+      {
+        "id": 12,
+        "title": "Lucky EOS Wires",
+        "href": "",
+        "description": "Panko was commissioned to make some wireframes for a crypto baccarat game. Later worked on some React FE component layouts for the real game.",
+        "date": "2018",
+        "category": ["Games", "UX"],
+        "meta": {
+          "client": "Lucky EOS",
+          "imageUrl": [
+            "/work/lucky-eos-1~4.png",
+            "/work/lucky-eos-2~4.png",
+            "/work/lucky-eos-3~4.png",
+            "/work/lucky-eos-4~4.png"
+          ]
+        }
       }
     ]
   },
@@ -254,6 +275,10 @@
       "Signage": {
         "techie": "体育场和酒店场所的广播设计和标牌系统承包商。",
         "creative": "具有内容管理功能的大屏幕显示系统"
+      },
+      "UX": {
+        "techie": "线框",
+        "creative": "线框"
       }
     },
     "work": [
@@ -282,6 +307,23 @@
             "/work/bridge-alert~2~5.png",
             "/work/bridge-alert~1~5.png",
             "/work/bridge-alert~3~5.png"
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "title": "Lucky EOS 线框",
+        "href": "",
+        "description": "Panko 受委托为加密百家乐游戏制作一些线框。后来为真实游戏开发了一些 React FE 组件布局",
+        "date": "2018",
+        "category": ["Games", "UX"],
+        "meta": {
+          "client": "Lucky EOS",
+          "imageUrl": [
+            "/work/lucky-eos-1~4.png",
+            "/work/lucky-eos-2~4.png",
+            "/work/lucky-eos-3~4.png",
+            "/work/lucky-eos-4~4.png"
           ]
         }
       }
