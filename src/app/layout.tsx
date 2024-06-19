@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Varela, Pacifico, Raleway } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 import "./globalIcons.css";
@@ -56,6 +56,7 @@ export default function RootLayout({
             </main>
             <Footer fonts={[pacifico, raleway]}></Footer>
             <GoogleTagManager gtmId="G-XLHERYSSZ1" />
+            <GoogleAnalytics gaId="G-XLHERYSSZ1" />
           </body>
         </html>
       </VisitorContextProvider>
