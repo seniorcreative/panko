@@ -35,6 +35,10 @@ export default function Page() {
           and care about who is watching and listening.
           <br />
           <br />
+          我们不会与不重视未成年人和弱势数字内容消费者的隐私和心理健康安全的公司合​​作。最低年龄限制只是这一过程的第一步。我们将倡导人们对屏幕时间的认识和健康习惯，了解什么是适合分享的，什么是不适合分享的。技术和连通性
+          可能会令人惊奇，但不要总是以自尊和各行各业其他人的尊重占据同一个空间。因此，要人性化，关心谁在观看和聆听。
+          <br />
+          <br />
           stay socially safe.
         </p>
       </div>
