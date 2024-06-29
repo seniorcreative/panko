@@ -22,7 +22,20 @@ export default function Page() {
         </span>
         <h1 className="text-xl text-white">Socially safe</h1>
         <p className="text-white my-4 leading-4">
-          Info coming here about our social media safety policy.
+          panko has a social media safety policy in place.
+          <br />
+          <br />
+          We will not work with companies that do not value the privacy and
+          mental health safety of minors and vulnerable digital content
+          consumers. A minimum age limit is only one step of the journey. We
+          will advocate for screen time awareness and healthy habits about what
+          is and is not appropriate to be shared. Technology and connectedness
+          can be amazing but dont always occupy the same space with self respect
+          and the respect of other humans from all walks of life. So be human
+          and care about who is watching and listening.
+          <br />
+          <br />
+          stay socially safe.
         </p>
       </div>
     </section>

@@ -20,7 +20,7 @@ const pacifico = Pacifico({
 const raleway = Raleway({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "panko digital",
+  title: "panko digital software engineering",
   description:
     "Melbourne, Sydney, Geelong freelance e-commerce, business systems, web and mobile software application developer.",
 };
