@@ -80,7 +80,7 @@ export default function FolioCategories({
         </ul>
       </div>
       {selectedSection && (
-        <div className="container relative my-6 rounded-md border-2 border-dotted border-t-black border-b-black border-l-gray-50 border-r-gray-50 p-4 md:p-12 text-white">
+        <div className="container relative my-6 rounded-md border-2 border-dotted border-t-black border-b-black border-l-gray-50 border-r-gray-50 py-4 px-3 md:p-12 text-white">
           <button
             className="absolute text-white top-2 right-2"
             type="button"
