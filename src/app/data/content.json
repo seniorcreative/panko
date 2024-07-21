@@ -28,6 +28,7 @@
               "Setting up Email"
             ],
             "techie": [
+              "React native apps",
               "Wiring up DNS records",
               "Rapid build custom front-end",
               "Fix JS framework bugs",
@@ -41,13 +42,16 @@
       }
     },
     "categoryInfo": {
-      "Mobile": { "techie": "React native", "creative": "Build an app" },
+      "Mobile": {
+        "techie": "React native dev experience back to 2018, deploying to stores, push notifications, crashlytics integration",
+        "creative": "We can launch a web or store based mobile app for you, get in touch to see what's possible."
+      },
       "Games": {
         "techie": "Build apps, focusing on interactivity",
         "creative": "Interactive games"
       },
       "Cloud": {
-        "techie": "AWS Lambda, Cognito, S3, Cloudfront",
+        "techie": "AWS Lambda, Cognito, S3, Route 53, Terraform, Cloudfront and more...",
         "creative": "Amazon or Google cloud based"
       },
       "E-commerce": {

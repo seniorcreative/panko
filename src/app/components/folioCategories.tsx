@@ -101,7 +101,7 @@ export default function FolioCategories({
               className="text-white text-sm"
               href={`/folio/${selectedSection}`}
             >
-              {locale !== "zh-CN" ? "view work" : "查看工作"}
+              {locale !== "zh-CN" ? "View work" : "查看工作"}
             </a>
           </p>
         </div>
