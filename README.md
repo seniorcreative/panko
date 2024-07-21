@@ -2,9 +2,9 @@
 
 This is my personal folio / pseudo consultancy side gig project. I make this with NextJS14 and tailwind. It has given me the opportunity to flex my FE coding muscles while I'm in transit.
 It's packed with a few little goodies like particles (css transitions), transitions (animeJS), SVG animations, a CMS with raw JSON, no-reload localization using context providers. It gets deployed with netlify.
-----
 
 
+---
 ## Getting Started
 
 First, run the development server:
