@@ -69,6 +69,18 @@
     },
     "work": [
       {
+        "id": 14,
+        "title": "Reconnaitre",
+        "href": "https://reconnaitre.com.au",
+        "description": "Rapid front-end development. Bootstrap 5. Responsive site for Australian Drone start-up..",
+        "date": "2024",
+        "category": ["E-commerce"],
+        "meta": {
+          "client": "Reconnaitre / Aspect Marketing",
+          "imageUrl": ["/work/reconnaitre~1~2.png", "/work/reconnaitre~2~2.png"]
+        }
+      },
+      {
         "id": 9,
         "title": "Bridge Alert",
         "href": "",
@@ -299,6 +311,18 @@
         }
       },
       {
+        "id": 14,
+        "title": "Reconnaitre",
+        "href": "https://reconnaitre.com.au",
+        "description": "快速的前端开发。 Bootstrap 5. 澳大利亚无人机初创公司的响应式网站.",
+        "date": "2024",
+        "category": ["E-commerce"],
+        "meta": {
+          "client": "Reconnaitre / Aspect Marketing",
+          "imageUrl": ["/work/reconnaitre~1~2.png", "/work/reconnaitre~2~2.png"]
+        }
+      },
+      {
         "id": 9,
         "title": "桥梁警报",
         "href": "",
@@ -320,7 +344,7 @@
         "href": "",
         "description": "Panko 受委托为加密百家乐游戏制作一些线框。后来为真实游戏开发了一些 React FE 组件布局",
         "date": "2018",
-        "category": ["Games", "UX"],
+        "category": ["游戏", "UX"],
         "meta": {
           "client": "Lucky EOS",
           "imageUrl": [
