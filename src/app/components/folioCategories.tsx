@@ -20,13 +20,16 @@ export default function FolioCategories({
     const filteredTargets = Array.from(categories).filter(
       (cat: string) => cat !== selectedSection
     );
+    const selectedTargets = Array.from(categories).filter(
+      (cat: string) => cat == selectedSection
+    );
     const addedFilteredIds = filteredTargets.map((t) => "#" + t);
+    const selectFilteredIds = selectedTargets.map((t) => "#" + t);
 
     const defaultAnimeProps = {
       rotateX: [180, 130],
       scaleY: [1, 0.25],
       paddingTop: ["0.5em", 0],
-      marginBottom: ["0.5em", 0],
       paddingBottom: ["0.5em", 0],
       perspective: [125, 125],
       easing: "easeInOutQuad",
@@ -37,7 +40,6 @@ export default function FolioCategories({
       rotateX: [130, 0],
       scaleY: [0.25, 1],
       paddingTop: [0, "0.5em"],
-      marginBottom: [0, "0.5em"],
       paddingBottom: [0, "0.5em"],
       perspective: [125, 125],
       easing: "easeInOutQuad",
@@ -50,6 +52,11 @@ export default function FolioCategories({
         targets: addedFilteredIds,
         delay: 50,
         ...defaultAnimeProps,
+      });
+      anime({
+        targets: selectFilteredIds,
+        delay: 50,
+        ...resetAnimeProps,
       });
     } else {
       anime({
@@ -72,7 +79,7 @@ export default function FolioCategories({
                 setSelectedSection(cat);
               }}
               style={{ transform: "perspective(70px)" }}
-              className="cat-link p-2 rounded-md me-2 mb-2 border-2 border-light py-1 cursor-pointer text-white text-sm"
+              className="cat-link p-2 rounded-md me-2 content-center border-2 border-light py-1 cursor-pointer text-white text-sm"
             >
               <a>{cat}</a>
             </li>

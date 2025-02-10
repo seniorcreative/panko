@@ -44,9 +44,14 @@ body {
   padding-bottom: 0.25em;
 }
 
+.cat-link:hover {
+  transform: perspective(125px) rotateX(0deg) scaleY(1) !important;
+}
+
 .cat-link:hover a {
   padding-left: 2em;
 }
+
 .cat-link:hover:before {
   content: ">";
 }
