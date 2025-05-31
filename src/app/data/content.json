@@ -3,17 +3,17 @@
     "home": {
       "sections": {
         "intro": {
-          "one": "Melbourne | Sydney | Geelong",
-          "two": "Freelance Web Services For Creative Humans",
+          "one": "Panko is a 10x Engineer Co-pilot Service",
+          "two": "Your complete technical guide for web, stores, apps & business systems.",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "Industry standard service agency for web, stores, apps & business systems.",
-          "four": "Melbourne, Sydney, Geelong freelance e-commerce, web and mobile software application developer.",
-          "contactBtn": "Contact us",
+          "three": "Digital Software 10x Engineer Co-pilot. Let's build together.",
+          "four": "Problem-solving with pattern recognition and taste",
+          "contactBtn": "Contact",
           "contactLink": "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry"
         },
         "about": {
           "title": "about",
-          "body": "<h3 class='text-lg'><strong>panko</strong> is a service agency for the parts that computers can't do.</h3><br/><p>Our focus is at the intersection of real world products and cutting edge tech. We apply human craft and analysis, combined with AI tools and software engineering best practise, to achieve the optimum system for your business.</p><p>Make tech work for you. We have decades of experience in creating digital systems. With that comes the ability to engineer something that works, efficiently and cost effectively.</p><p><br/><strong>panko</strong> is run by humans, for humans&hellip;</p>"
+          "body": "<h3 class='text-lg'><strong>panko</strong> is my software engineering co-pilot service.</h3><br/><p> I'm a multi-disciplinary software craftsperson who brings a unique blend of creative vision, UX sensitivity and deep engineering experience. Ill work with you and turn complex ideas into fast, user-centered prototypes and production-ready solutions.</p>"
         },
         "services": {
           "title": "services",

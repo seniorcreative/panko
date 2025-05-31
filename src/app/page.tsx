@@ -121,16 +121,16 @@ export default function Home() {
           </p>
           <a
             className={buttonStyle}
-            href={content[language].home.sections.intro.contactLink}
+            href={'/copilot'}
           >
-            {content[language].home.sections.intro.contactBtn}
+            Find out more
           </a>
           <h1 className="hidden">
             {content[language].home.sections.intro.four}
           </h1>
         </div>
       </section>
-      <Waves lighten />
+      {/* <Waves lighten />
       <section
         className="px-8 md:px-24 text-slate-800 bg-slate-200 pt-8 pb-4"
         style={{ marginTop: "-1px" }}
@@ -154,15 +154,15 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <Waves flipped />
+      <Waves flipped /> */}
       <FolioCategories
         categories={folioCategories}
         locale={language}
         categoryInfo={catInfo}
       />
       <About locale={language} />
-      <Shuffler></Shuffler>
-      <Services locale={language} />
+      {/* <Shuffler></Shuffler> */}
+      {/* <Services locale={language} /> */}
     </>
   );
 }

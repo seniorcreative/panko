@@ -19,8 +19,8 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
     <footer className="py-12 px-8 bg-black text-white">
       <div className="grid grid-cols-12">
         <div className="col-span-6">
-          <h3>
-            <strong>{language === "zh-CN" ? "接触" : "Contact"}</strong>
+          <h3>&nbsp;
+            {/* <strong>{language === "zh-CN" ? "接触" : "Contact"}</strong> */}
           </h3>
           <ul className="list-none">
             <li>
@@ -30,7 +30,7 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
         </div>
         <div className="col-span-6 mt-4 text-right">
           <ul className="xs:mt-4 list-none">
-            <li
+            {/* <li
               className={`${ral.className} text-sm flex align-middle justify-end`}
             >
               <Link href="/socially-safe" className="flex items-center">
@@ -45,10 +45,9 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
                 Rewild the WWW
                 <span className="ms-2 material-symbols-outlined">raven</span>
               </Link>
-            </li>
+            </li> */}
             <li className="text-sm mt-4 flex align-middle justify-end">
-              &copy;&nbsp;<strong>panko</strong>&nbsp;
-              {new Date().getFullYear()}
+              <strong>panko</strong>&nbsp; is your technical co-pilot
             </li>
           </ul>
         </div>

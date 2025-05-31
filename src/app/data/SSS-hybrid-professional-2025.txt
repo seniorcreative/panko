@@ -1,0 +1,96 @@
+﻿Steven Smith
+stesmi@gmail.com 0415 877 900
+A multi-disciplinary software professional with leadership qualities who brings a unique blend of creative vision, UX sensitivity and deep engineering experience, ideal for turning complex ideas into fast, user-centric prototypes and production-ready solutions.
+
+KMART Australia - Innovation, Current position
+Software engineer / Product designer
+* Technical consultation & software engineering
+* Data design & stakeholder management and execution of an in-store prototype to raise revenue by +$10M.
+* App prototyping with React + Typescript, Flutter, Wear OS, Snowflake data
+* Bridging conversations between I.T. and innovation on authentication decouplement, root certificate issues, threat modelling
+
+React+Vite, Figma, Flutter, AWS (Lambda, Amplify, RDS), Docker, Python, Snowflake, SQL, Claude, Android Studio.
+[a][b]
+________________
+
+IRESS - Financial Services, Sep 2022 to Dec 2024
+Senior software engineer
+* Engineering production deployments, launching a 1M+ user superannuation financial advice site with multiple state management methods and APIs. 
+* Led a team of engineers, architecting & delivering a pipeline to migrate 50+ legacy finance apps from Cordova to React Native, [c][d][e]delivered on-time. White-label system themed with SASS.
+* Front-end council consultant on Iress’ internal design system (IDS) component upgrades used by 200+ engineers company wide achieving 40% quicker pipeline builds working specifically on finance related input elements.
+
+React, NodeJS, AWS - Lambda/S3/SNS/Cloudfront/DynamoDB etc, Typescript, React native, Terraform, Shell script, Xcode, Android Studio, Firebase, Jest, Playwright, Ruby(Podfiles), Python, Docker, Github actions, Bitbucket, iTerm, Unleash[f][g]
+________________
+
+SANITEX GLOBAL, EPAM - Oct 2021 to Sep 2022
+Lead front-end engineering consultant
+   * Led a team of 6 front-end engineers at Deakin’s A2i2 artificial intelligence agency to integrate a machine-learning service for predictive analysis of floorplans, multiple daily code reviews.
+   * Implementing micro-interactions, UX improvements for a NYC startup to maximize sales conversions.
+   * Interviewing & mentoring offshore developers emerging into the Australian market
+React, Typescript, SASS, React-bootstrap CSS, Docker, PostgresQL, GraphQL, Python, BigCommerce, Stripe
+________________
+
+WORKSAFE VICTORIA - Innovation Centre, Dec 2019 to Oct 2021
+Senior innovation specialist
+   * Designed and engineered a VueJS app with AWS cognito passwordless login for injured workers, piloted by the Victorian Government.
+   * Qualitative and quantitative analysis and synthesis of findings according to double-diamond research pattern, interviewing injured workers and testing with real prototypes.
+   * Salesforce lightning components for large transformation initiatives and advising offshore devs as to best practise to ship code more quickly and reliably.
+
+AWS (Cognito, API Gateway, Lambda, Cloudfront), NodeJS, VueJs, Dialogflow, Salesforce Lightning Web Components, APEX, Github actions, Ionic, Angular, Svelte
+________________
+BUILDXACT - SaaS, Apr 2018 to Dec 2019
+Front-end engineer
+      * Interviewing and resourcing UX design and testing engineers.
+      * Migration of the front-end code / build system refactoring from AngularJS to Angular, introducing webpack, ES2020 JS and rebranding with BEM CSS structures.
+      * Prototyping/engineering in VueJS a new business module named "Request for Quote" , reaching 20K+ users within the first 3 months, becoming integral to the SaaS, using Bulma.io responsive CSS framework.
+
+VueJS, .NET, npm, webpack, DynamoDB, LaunchDarkly, Pendo, 
+________________
+LOUD & CLEAR / AVANADE - Digital Agency, May 2017 to Apr 2018
+Lead front-end developer
+
+      * Management of front-end resources via interviewing, performance reviews, code reviews (onshore in Australia and offshore in Ukraine / Siberia).
+      * Engineering of resume generation progressive web apps for Telstra for an offboarding process, using laravel, VueJs and CSS animations.
+      * Led team and engineered mortgage application loan serviceability software for a new Melbourne bank launch called BankFirst.
+
+VueJS, React, PHP (Laravel), PostCss/Sass/Scss, Jade/Pug, VueX, Redux, Bootstrap
+________________
+[h][i]
+MONKII / CALICO - Digital Agency, Apr 2016 to Apr 2017
+Lead front-end developer
+      * Lead front-end engineer, facilitating performance reviews, mentoring, setting goals and KPIs of internal developers.
+      * Engineering & migration of front-end sites to VueJS.
+      * Production deployments & React bug fixes to BMW Asia pacific websites.
+________________
+[j][k]
+PANKO DIGITAL - Freelance software consultancy - (ongoing)
+Freelance digital consultant
+
+      * Scaling of prototypes using Claude Code and advising on AI strategies
+      * Square woo commerce integration for subscription payments
+      * Custom built middleware app that syncs bike store and Trek inventory with Shopify inventory for Hendrys.
+
+
+
+
+Education
+
+University of Plymouth [UK] & Universitat de Barcelona [Spain]
+Bsc Hons. Medialab Arts (1st Class Honours and National UK Award Winner)
+Computer science, Coding, VR, AI, Photography & Post-production, 3D modelling, Art history, Systems analysis, Binary & Hexadecimal arithmetic                        
+
+
+Git                                https://github.com/seniorcreative
+Folio                         https://panko.digital
+LinkedIn                         https://linkedin.com/in/seniorcreative/
+[a]1 More bullet point about leading / crossfunctional work  -
+[b]Love this
+[c]Spearheaded is a very chatgpt heavy word. Make this point less long and more concise
+[d]Ha OK good call
+[e]I can confirm that I did not look that up or any of it on GPT it's all hand written!
+[f]1 More bullet point about leading / crossfunctional work  -
+[g]Love this
+[h]1 More bullet point about leading / crossfunctional work  -
+[i]Love this
+[j]1 More bullet point about leading / crossfunctional work  -
+[k]Love this

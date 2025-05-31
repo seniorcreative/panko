@@ -44,6 +44,16 @@ export default function LanguageSwitcher({ font }: { font: any }) {
   return (
     <ul className="list-none flex py-2">
       <li className="flex me-3 items-center h-100">
+      <Link
+          className={`${font.className} text-gray-800 text-sm ${
+            decodeURI(pathname).includes("/folio") ? "underline" : ""
+          }`}
+          href="/copilot"
+        >
+          {language !== "zh-CN" ? "copilot" : "副驾驶"}
+        </Link>
+        </li>
+      <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
             decodeURI(pathname).includes("/folio") ? "underline" : ""
