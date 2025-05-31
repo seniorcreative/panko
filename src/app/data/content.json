@@ -13,7 +13,7 @@
         },
         "about": {
           "title": "about",
-          "body": "<h3 class='text-lg'><strong>panko</strong> is my software engineering co-pilot service.</h3><br/><p> I'm a multi-disciplinary software craftsperson who brings a unique blend of creative vision, UX sensitivity and deep engineering experience. Ill work with you and turn complex ideas into fast, user-centered prototypes and production-ready solutions.</p>"
+          "body": "<h3 class='text-lg'><strong>panko</strong> is your software engineering co-pilot.</h3><br/><p> I'm a multi-disciplinary software craftsperson who brings a unique blend of creative vision, UX sensitivity and deep engineering experience. I'll work with you and turn complex ideas into fast, user-centered prototypes and production-ready solutions.</p>"
         },
         "services": {
           "title": "services",
