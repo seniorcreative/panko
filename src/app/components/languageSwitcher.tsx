@@ -45,7 +45,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
       <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
-            decodeURI(pathname).includes("/folio") ? "underline" : ""
+            decodeURI(pathname) == "/" ? "underline" : ""
           }`}
           href="/"
         >
@@ -55,14 +55,14 @@ export default function LanguageSwitcher({ font }: { font: any }) {
       <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
-            decodeURI(pathname).includes("/retro") ? "underline" : ""
+            decodeURI(pathname).includes("/folio/all") ? "underline" : ""
           }`}
-          href="/retro"
+          href="/folio/all"
         >
-          {language !== "zh-CN" ? "work" : "工作"}
+          {language !== "zh-CN" ? "retro" : "工作"}
         </Link>
       </li>
-      <li className="flex me-3 items-center h-100">
+      {/* <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
             hash?.includes("about") ? "underline" : ""
@@ -71,7 +71,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
         >
           {language !== "zh-CN" ? "about" : "关于"}
         </Link>
-      </li>
+      </li> */}
       {/* <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
@@ -82,7 +82,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           {language !== "zh-CN" ? "services" : "服务"}
         </Link>
       </li> */}
-      <li className="flex items-center h-100">
+      {/* <li className="flex items-center h-100">
         {languageMap.map(({ lang, icon }) => (
           <LanguageSwitcherIdiom
             key={lang}
@@ -97,7 +97,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
             }}
           />
         ))}
-      </li>
+      </li> */}
     </ul>
   );
 }

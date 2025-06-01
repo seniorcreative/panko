@@ -3,17 +3,17 @@
     "home": {
       "sections": {
         "intro": {
-          "one": "Panko is a 10x Engineer Co-pilot Service",
-          "two": "Your complete technical guide for web, stores, apps & business systems.",
+          "one": "Hybrid Professional × AI-Enhanced Development",
+          "two": "Human empathy meets algorithmic precision for tomorrow's digital solutions.",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "Digital Software 10x Engineer Co-pilot. Let's build together.",
-          "four": "Problem-solving with pattern recognition and taste",
+          "three": "Multi-disciplinary problem solver with pattern recognition, taste, and AI superpowers.",
+          "four": "Building human-centered technology that actually works",
           "contactBtn": "Contact",
           "contactLink": "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry"
         },
         "about": {
           "title": "about",
-          "body": "<h3 class='text-lg'><strong>panko</strong> is your software engineering co-pilot.</h3><br/><p> I'm a multi-disciplinary software craftsperson who brings a unique blend of creative vision, UX sensitivity and deep engineering experience. I'll work with you and turn complex ideas into fast, user-centered prototypes and production-ready solutions.</p>"
+          "body": "<h3 class='text-lg'><strong>panko</strong> is your hybrid professional co-pilot.</h3><br/><p>I bridge the gap between human intuition and AI acceleration. While AI handles the heavy lifting of code generation, I bring the irreplaceable human elements: empathy for your users, pattern recognition across industries, and the taste to know what actually works. I understand your business context, anticipate edge cases, and craft solutions that feel right—not just function correctly.</p>"
         },
         "services": {
           "title": "services",
@@ -43,28 +43,28 @@
     },
     "categoryInfo": {
       "Mobile": {
-        "techie": "React native dev experience back to 2018, deploying to stores, push notifications, crashlytics integration",
-        "creative": "We can launch a web or store based mobile app for you, get in touch to see what's possible."
+        "techie": "AI-accelerated React Native development with human oversight for user experience optimization, store deployment strategy, and behavioral analytics integration",
+        "creative": "Mobile experiences that users actually want to engage with—combining data insights with human empathy to create apps that solve real problems."
       },
       "Games": {
-        "techie": "Build apps, focusing on interactivity",
-        "creative": "Interactive games"
+        "techie": "Rapid prototyping with AI-assisted development, focusing on engagement psychology and interaction design patterns",
+        "creative": "Games and interactive experiences that understand human behavior and create genuine emotional connections"
       },
       "Cloud": {
-        "techie": "AWS Lambda, Cognito, S3, Route 53, Terraform, Cloudfront and more...",
-        "creative": "Amazon or Google cloud based"
+        "techie": "AI-optimized cloud architecture with human-designed resilience patterns, automated scaling strategies informed by user behavior analysis",
+        "creative": "Cloud solutions that anticipate your business growth and adapt to real-world usage patterns, not just technical specifications"
       },
       "E-commerce": {
-        "techie": "Custom shopify themes",
-        "creative": "Shopify, Squarespace or Wix stores management"
+        "techie": "AI-enhanced custom development with conversion psychology integration and empathetic user journey optimization",
+        "creative": "E-commerce experiences that understand your customers' emotional purchase journey and remove friction at exactly the right moments"
       },
       "Signage": {
-        "techie": "From broadcast design background panko was able to build large screen display software",
-        "creative": "Large screen display systems with content management"
+        "techie": "AI-powered content optimization combined with human understanding of attention patterns and spatial design psychology",
+        "creative": "Digital signage that captures attention and communicates effectively by understanding how humans actually process visual information in physical spaces"
       },
       "UX": {
-        "techie": "Undertook design thinking training and systems thinking training, developing rapid prototypes and incorporating fundamentals of behavioural science as part of qualitative as well as quantitative research.",
-        "creative": "Involving end users directly in the design process, and testing rapid prototypes in a feedback loop can yield some amazing results."
+        "techie": "AI-accelerated prototype development guided by design thinking methodology, behavioral science research, and systems thinking—turning user insights into functional experiences faster than ever",
+        "creative": "Human-centered design that uses AI as a tool, not a replacement. Real user research, empathetic problem-solving, and rapid iteration cycles that honor both data and intuition"
       }
     },
     "work": [

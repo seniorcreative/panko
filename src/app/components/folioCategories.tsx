@@ -102,7 +102,7 @@ export default function FolioCategories({
           <p className="text-white pb-4">
             {categoryInfo[selectedSection][visitorType]}
           </p>
-          <p className="cat-link p-2 rounded-md me-2 border-2 border-light py-1 cursor-pointer inline-block">
+          {/* <p className="cat-link p-2 rounded-md me-2 border-2 border-light py-1 cursor-pointer inline-block">
             <a
               type="button"
               className="text-white text-sm"
@@ -110,7 +110,7 @@ export default function FolioCategories({
             >
               {locale !== "zh-CN" ? "View work" : "查看工作"}
             </a>
-          </p>
+          </p> */}
         </div>
       )}
     </section>

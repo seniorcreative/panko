@@ -20,7 +20,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
   return (
     <div className="flex my-4 items-center">
       <h3 className="font-bold me-3">
-        {language === "zh-CN" ? "你是谁" : "Who are you"}?
+        {language === "zh-CN" ? "你是谁" : "What could we make?"}
       </h3>
       <button
         onClick={() => setVisitorType("creative")}
@@ -28,7 +28,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
           visitorType === "creative" ? offStyle : onStyle
         }`}
       >
-        {language !== "zh-CN" ? "Creative" : "创意"}
+        {language !== "zh-CN" ? "Creatively" : "创意"}
       </button>
       <button
         onClick={() => setVisitorType("techie")}
@@ -36,7 +36,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
           visitorType === "techie" ? offStyle : onStyle
         }`}
       >
-        {language !== "zh-CN" ? "Techie" : "技术人员"}
+        {language !== "zh-CN" ? "Technically" : "技术人员"}
       </button>
     </div>
   );

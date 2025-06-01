@@ -13,43 +13,27 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
   const pac = fonts[0];
   const ral = fonts[1];
 
-  const { contactLink, contactBtn } = content[language].home.sections.intro;
+  const { contactBtn } = content[language].home.sections.intro;
 
   return (
     <footer className="py-12 px-8 bg-black text-white">
-      <div className="grid grid-cols-12">
-        <div className="col-span-6">
-          <h3>&nbsp;
-            {/* <strong>{language === "zh-CN" ? "接触" : "Contact"}</strong> */}
-          </h3>
-          <ul className="list-none">
-            <li>
-              <a href={contactLink}>{contactBtn}</a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-6 mt-4 text-right">
-          <ul className="xs:mt-4 list-none">
-            {/* <li
-              className={`${ral.className} text-sm flex align-middle justify-end`}
-            >
-              <Link href="/socially-safe" className="flex items-center">
-                Socially safe
-                <span className="ms-2 material-symbols-outlined">wb_sunny</span>
-              </Link>
-            </li>
-            <li
-              className={`${pac.className} mt-2 text-sm flex align-middle justify-end`}
-            >
-              <Link href="/rewild-the-www" className="flex items-center">
-                Rewild the WWW
-                <span className="ms-2 material-symbols-outlined">raven</span>
-              </Link>
-            </li> */}
-            <li className="text-sm mt-4 flex align-middle justify-end">
-              <strong>panko</strong>&nbsp; is your technical dev partner
-            </li>
-          </ul>
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex md:flex-row justify-between items-center gap-8">
+          <div className="flex-1">
+            <div>
+              <a 
+                href="/#contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all transform hover:scale-105 shadow-lg"
+              >
+                {contactBtn}
+              </a>
+            </div>
+          </div>
+          <div className="flex-1 text-center md:text-right">
+            <p className="text-sm text-slate-300">
+              <strong className="text-white">panko</strong> is your technical dev partner
+            </p>
+          </div>
         </div>
       </div>
     </footer>
