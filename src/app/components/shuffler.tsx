@@ -1,6 +1,6 @@
 "use client";
 
-import anime from "animejs";
+import { animate } from "animejs";
 import React, { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../contexts/languageContext";
 
@@ -49,28 +49,23 @@ export default function Shuffler() {
     };
 
     // Animation using Anime.js
-    anime({
-      targets: "#p",
+    animate("#p", {
       delay: 200,
       ...defaultAnimeProps,
     });
-    anime({
-      targets: "#a",
+    animate("#a", {
       delay: 300,
       ...defaultAnimeProps,
     });
-    anime({
-      targets: "#n",
+    animate("#n", {
       delay: 400,
       ...defaultAnimeProps,
     });
-    anime({
-      targets: "#k",
+    animate("#k", {
       delay: 500,
       ...defaultAnimeProps,
     });
-    anime({
-      targets: "#o",
+    animate("#o", {
       delay: 600,
       ...defaultAnimeProps,
     });

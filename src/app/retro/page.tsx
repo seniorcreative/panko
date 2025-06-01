@@ -46,7 +46,7 @@ export default function Home() {
     };
 
     getLocale();
-  }, []);
+  }, [pathName]);
 
   const content = require("../data/content.json");
 

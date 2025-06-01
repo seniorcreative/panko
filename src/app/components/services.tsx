@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState, useContext } from "react";
-import anime from "animejs";
+import { animate } from "animejs";
 import VisitorSelector from "../components/visitorSelector";
 import { VisitorContext } from "../contexts/visitorContext";
 
@@ -17,8 +17,7 @@ export default function Services({ locale }: servicesType) {
   // const pageContent = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
-    anime({
-      targets: "#content",
+    animate("#content", {
       translateX: [-100, 0],
       rotateX: [-10, 10],
       opacity: [0, 1],

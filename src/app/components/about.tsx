@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import anime from "animejs";
+import { animate } from "animejs";
 import React, { useRef } from "react";
 
 const content = require("../data/content.json");
@@ -14,8 +14,7 @@ export default function About({ locale }: aboutType) {
   const pageContent = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
-    anime({
-      targets: "#content",
+    animate("#content", {
       translateX: [-100, 0],
       rotateX: [-10, 10],
       opacity: [0, 1],

@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, type JSX } from "react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 import VisitorSelector from "./visitorSelector";
 import { VisitorContext } from "../contexts/visitorContext";
@@ -48,19 +48,16 @@ export default function FolioCategories({
 
     // Animation using Anime.js
     if (selectedSection !== "") {
-      anime({
-        targets: addedFilteredIds,
+      animate(addedFilteredIds, {
         delay: 50,
         ...defaultAnimeProps,
       });
-      anime({
-        targets: selectFilteredIds,
+      animate(selectFilteredIds, {
         delay: 50,
         ...resetAnimeProps,
       });
     } else {
-      anime({
-        targets: addedFilteredIds,
+      animate(addedFilteredIds, {
         delay: 50,
         ...resetAnimeProps,
       });

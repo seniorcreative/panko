@@ -21,12 +21,12 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
         <div className="flex md:flex-row justify-between items-center gap-8">
           <div className="flex-1">
             <div>
-              <a 
+              <Link
                 href="/#contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all transform hover:scale-105 shadow-lg"
               >
                 {contactBtn}
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex-1 text-center md:text-right">
