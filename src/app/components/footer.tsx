@@ -47,7 +47,7 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
               </Link>
             </li> */}
             <li className="text-sm mt-4 flex align-middle justify-end">
-              <strong>panko</strong>&nbsp; is your technical co-pilot
+              <strong>panko</strong>&nbsp; is your technical dev partner
             </li>
           </ul>
         </div>
