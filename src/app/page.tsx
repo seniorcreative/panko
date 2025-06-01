@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Stellae from "./components/stellae";
 import { Pacifico, Raleway } from "next/font/google";
 import {
@@ -113,6 +113,25 @@ const ral = Raleway({
 });
 
 export default function Page() {
+
+  interface FormSubmitEvent extends React.FormEvent<HTMLFormElement> {
+    target: HTMLFormElement;
+  }
+
+  const [formSuccess, setFormSuccess] = useState(false);
+
+  const handleFormSubmit = async (event: FormSubmitEvent): Promise<void> => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    await fetch("/__forms.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    });
+    // Success and error handling ...
+    setFormSuccess(true);
+  };
+
   return (
     <section
       className={`${ral.className} min-h-screen flex items-center bg-black`}
@@ -409,10 +428,18 @@ export default function Page() {
               launch your product with confidence.
             </p>
             
+            {formSuccess && (
+              <div className="bg-green-500/20 text-green-500 p-4 rounded-lg mb-6">
+                <CheckCircle className="inline mr-2" size={20} />
+                Thank you! Your message has been sent successfully.
+              </div>
+            )}
+            {!formSuccess && (
             <form 
               name="contact" 
-              method="POST" 
-              data-netlify="true" 
+              // method="POST" 
+              // data-netlify="true" 
+              onSubmit={handleFormSubmit}
               className="max-w-2xl mx-auto text-left"
               netlify-honeypot="bot-field"
             >
@@ -489,7 +516,7 @@ export default function Page() {
                   Send Message <ArrowRight size={20} />
                 </button>
               </div>
-            </form>
+            </form>)}
           </div>
         </section>
 
