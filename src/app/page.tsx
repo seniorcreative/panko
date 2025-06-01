@@ -78,7 +78,7 @@ const timeline = [
     year: "2015",
     title: "Innovation & Patents",
     description:
-      "Lead Software Engineer at HealthTech - architected HealthTech systems, secured patents, and pitched to government and investors.",
+      "Lead Software Engineer in HealthTech - architected HealthTech systems, secured patents, and pitched to government and investors.",
   },
   {
     year: "2016-21",
@@ -175,7 +175,7 @@ export default function Page() {
                   )}
                 </div>
                 <div className="flex-1 pb-8">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
                   <p className="text-slate-300">{item.description}</p>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function Page() {
             {/* Four equal columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Data Layer */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all group min-h-[220px] flex flex-col justify-center">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all group min-h-[220px] flex flex-col justify-center relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
                   <Database className="text-white" size={24} />
                 </div>
@@ -203,7 +203,18 @@ export default function Page() {
                   Database design, optimization, and data architecture that
                   scales with your business needs.
                 </p>
-              </div>
+                <style jsx>{`
+                  div::after {
+                  content: '›';
+                  position: absolute;
+                  right: -20px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  font-size: 24px;
+                  color: #94a3b8; /* Slate-400 */
+                  }
+                `}</style>
+                </div>
 
               {/* APIs */}
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all group min-h-[220px] flex flex-col justify-center">
