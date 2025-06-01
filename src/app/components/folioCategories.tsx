@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, type JSX } from "react";
 import anime from "animejs";
 
 import VisitorSelector from "./visitorSelector";

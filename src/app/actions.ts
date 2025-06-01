@@ -9,7 +9,7 @@ const cookieConfig = {
 };
 
 export async function setDefaultLocaleCookie() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const hasLocaleCookie = cookieStore.has("NEXT_LOCALE");
 
   if (!hasLocaleCookie) {
@@ -22,11 +22,11 @@ export async function setDefaultLocaleCookie() {
 }
 
 export async function getCurrentLocale() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   return cookieStore?.get("NEXT_LOCALE")?.value ?? "en-US";
 }
 
 export async function changeLanguageCookieValue(locale: string) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   cookieStore.set("NEXT_LOCALE", locale); // , cookieConfig);
 }

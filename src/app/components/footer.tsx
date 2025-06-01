@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useContext, type JSX } from "react";
 import { LanguageContext } from "../contexts/languageContext";
 import Link from "next/link";
 
