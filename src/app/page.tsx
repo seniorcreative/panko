@@ -174,7 +174,7 @@ export default function Page() {
             href="#contact"
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2"
           >
-            Let&rsquo;s Build Together <ArrowRight size={20} />
+            Let&rsquo;s Build Something <ArrowRight size={20} />
           </a>
         </section>
 
