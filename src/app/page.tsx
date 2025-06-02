@@ -113,7 +113,6 @@ const ral = Raleway({
 });
 
 export default function Page() {
-
   interface FormSubmitEvent extends React.FormEvent<HTMLFormElement> {
     target: HTMLFormElement;
   }
@@ -163,22 +162,21 @@ export default function Page() {
               A 10x engineer brings more than just coding speed. I offer
               architectural insight, best practice advice, debugging expertise,
               and the ability to anticipate problems before they become costly.
-              If you&rsquo;re trying to launch something quickly, I&rsquo;ll vibe with you, be your
-              co-pilot and navigate technical decisions.
+              If you&rsquo;re trying to launch something quickly, I&rsquo;ll
+              vibe with you, be your co-pilot and navigate technical decisions.
               <span className="text-blue-300 font-medium">
                 <br />
                 We&rsquo;ll code together so you learn while we build.
               </span>
             </p>
           </div>
-          <a 
+          <a
             href="#contact"
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2"
           >
             Let&rsquo;s Build Together <ArrowRight size={20} />
           </a>
         </section>
-
 
         {/* Career Timeline */}
         <section className="container mx-auto px-6 py-20">
@@ -197,7 +195,9 @@ export default function Page() {
                   )}
                 </div>
                 <div className="flex-1 pb-8">
-                  <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    {item.title}
+                  </h3>
                   <p className="text-slate-300">{item.description}</p>
                 </div>
               </div>
@@ -205,8 +205,8 @@ export default function Page() {
           </div>
         </section>
 
-         {/* Development Pillars - Full Width Row */}
-         <section className="w-full px-6 py-20">
+        {/* Development Pillars - Full Width Row */}
+        <section className="w-full px-6 py-20">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             The Four Pillars of Development
           </h2>
@@ -214,36 +214,27 @@ export default function Page() {
             {/* Four equal columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Data Layer */}
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all group min-h-[220px] flex flex-col justify-center relative">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all group min-h-[220px] flex flex-col justify-center relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
                   <Database className="text-white" size={24} />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-center text-white">
                   Data Layer
                 </h3>
-                <p className="text-slate-300 text-center min-h-[80px]"> 
+                <p className="text-slate-300 text-center min-h-[80px]">
                   Database design, optimization, and data architecture that
                   scales with your business needs.
                 </p>
-                <style jsx>{`
-                  div::after {
-                  content: '›';
-                  position: absolute;
-                  right: -20px;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  font-size: 24px;
-                  color: #94a3b8; /* Slate-400 */
-                  }
-                `}</style>
-                </div>
+              </div>
 
               {/* APIs */}
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all group min-h-[220px] flex flex-col justify-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
                   <Code className="text-white" size={24} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-center text-white">APIs</h3>
+                <h3 className="text-xl font-bold mb-3 text-center text-white">
+                  APIs
+                </h3>
                 <p className="text-slate-300 text-center  min-h-[80px]">
                   RESTful and GraphQL APIs built for performance, security, and
                   developer experience.
@@ -273,8 +264,8 @@ export default function Page() {
                   Front-end
                 </h3>
                 <p className="text-slate-300 text-center  min-h-[80px]">
-                  UIs with modern frameworks, responsive
-                  design, and performance-first principles.
+                  UIs with modern frameworks, responsive design, and
+                  performance-first principles.
                 </p>
               </div>
             </div>
@@ -308,7 +299,9 @@ export default function Page() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle className="text-green-400" size={24} />
-                  <h3 className="text-xl font-semibold text-slate-100">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold text-slate-100">
+                    {benefit.title}
+                  </h3>
                 </div>
                 <p className="text-slate-300">{benefit.description}</p>
               </div>
@@ -322,15 +315,16 @@ export default function Page() {
             Fun Projects in Progress
           </h2>
           <p className="text-xl text-center mb-12 text-slate-300">
-            Experimental side projects where I explore new tech and creative ideas
+            Experimental side projects where I explore new tech and creative
+            ideas
           </p>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* JWST Spectral Analyzer */}
-              <a 
-                href="https://github.com/seniorcreative/spectral-analysis" 
-                target="_blank" 
+              <a
+                href="https://github.com/seniorcreative/spectral-analysis"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all transform hover:scale-105"
               >
@@ -343,18 +337,23 @@ export default function Page() {
                   </h3>
                 </div>
                 <p className="text-slate-300 mb-4">
-                  Analyzing spectral data from the James Webb Space Telescope to identify exoplanet atmospheres and stellar compositions. Built with Python, NumPy, and data visualization libraries.
+                  Analyzing spectral data from the James Webb Space Telescope to
+                  identify exoplanet atmospheres and stellar compositions. Built
+                  with Python, NumPy, and data visualization libraries.
                 </p>
                 <div className="flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors">
                   <span className="text-sm font-medium">View on GitHub</span>
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </div>
               </a>
 
               {/* Cor-D */}
-              <a 
-                href="https://github.com/seniorcreative/cor-D" 
-                target="_blank" 
+              <a
+                href="https://github.com/seniorcreative/cor-D"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all transform hover:scale-105"
               >
@@ -367,11 +366,16 @@ export default function Page() {
                   </h3>
                 </div>
                 <p className="text-slate-300 mb-4">
-                  An experimental tool that extracts chord progressions from YouTube clips using audio analysis. Perfect for musicians who want to play along to their favorite songs.
+                  An experimental tool that extracts chord progressions from
+                  YouTube clips using audio analysis. Perfect for musicians who
+                  want to play along to their favorite songs.
                 </p>
                 <div className="flex items-center gap-2 text-purple-400 group-hover:text-purple-300 transition-colors">
                   <span className="text-sm font-medium">View on GitHub</span>
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </div>
               </a>
             </div>
@@ -379,7 +383,8 @@ export default function Page() {
             {/* Bottom note */}
             <div className="text-center mt-8">
               <p className="text-slate-400 text-sm">
-                These projects showcase my passion for exploring new technologies and creative problem-solving
+                These projects showcase my passion for exploring new
+                technologies and creative problem-solving
               </p>
             </div>
           </div>
@@ -424,10 +429,10 @@ export default function Page() {
               Ready to Ship Faster?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let&rsquo;s discuss how I can help you navigate technical decisions and
-              launch your product with confidence.
+              Let&rsquo;s discuss how I can help you navigate technical
+              decisions and launch your product with confidence.
             </p>
-            
+
             {formSuccess && (
               <div className="bg-green-500/20 text-green-500 p-4 rounded-lg mb-6">
                 <CheckCircle className="inline mr-2" size={20} />
@@ -435,88 +440,105 @@ export default function Page() {
               </div>
             )}
             {!formSuccess && (
-            <form 
-              name="contact" 
-              // method="POST" 
-              // data-netlify="true" 
-              onSubmit={handleFormSubmit}
-              className="max-w-2xl mx-auto text-left"
-              netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-slate-300 font-medium mb-2">
-                    Name *
+              <form
+                name="contact"
+                // method="POST"
+                // data-netlify="true"
+                onSubmit={handleFormSubmit}
+                className="max-w-2xl mx-auto text-left"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <label
+                    htmlFor="project"
+                    className="block text-slate-300 font-medium mb-2"
+                  >
+                    Project Type
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
+                  <select
+                    id="project"
+                    name="project"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  >
+                    <option value="">Select project type</option>
+                    <option value="new-app">New App Development</option>
+                    <option value="migration">Legacy System Migration</option>
+                    <option value="optimization">
+                      Performance Optimization
+                    </option>
+                    <option value="architecture">
+                      Technical Architecture Review
+                    </option>
+                    <option value="consulting">Technical Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div className="mb-8">
+                  <label
+                    htmlFor="message"
+                    className="block text-slate-300 font-medium mb-2"
+                  >
+                    Project Details *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                    placeholder="Your name"
+                    rows={5}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-vertical"
+                    placeholder="Tell me about your project, timeline, and how I can help..."
                   />
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-slate-300 font-medium mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                    placeholder="your@email.com"
-                  />
+
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2"
+                  >
+                    Send Message <ArrowRight size={20} />
+                  </button>
                 </div>
-              </div>
-              
-              <div className="mb-6">
-                <label htmlFor="project" className="block text-slate-300 font-medium mb-2">
-                  Project Type
-                </label>
-                <select
-                  id="project"
-                  name="project"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="">Select project type</option>
-                  <option value="new-app">New App Development</option>
-                  <option value="migration">Legacy System Migration</option>
-                  <option value="optimization">Performance Optimization</option>
-                  <option value="architecture">Technical Architecture Review</option>
-                  <option value="consulting">Technical Consulting</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              
-              <div className="mb-8">
-                <label htmlFor="message" className="block text-slate-300 font-medium mb-2">
-                  Project Details *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-vertical"
-                  placeholder="Tell me about your project, timeline, and how I can help..."
-                />
-              </div>
-              
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2"
-                >
-                  Send Message <ArrowRight size={20} />
-                </button>
-              </div>
-            </form>)}
+              </form>
+            )}
           </div>
         </section>
 
