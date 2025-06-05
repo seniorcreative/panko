@@ -29,7 +29,7 @@ export default function Stellae({ invert }: { invert?: boolean }) {
         const styleDec: any = estrella.style;
 
         if (invert) {
-          styleDec["backgroundColor"] = "rgba(255, 255, 255, 0.25)";
+          styleDec["backgroundColor"] = "rgba(255, 255, 255, 0.5)";
         }
 
         // styleDec["animationRangeStart"] = Math.round(Math.random() * 100) + "%";

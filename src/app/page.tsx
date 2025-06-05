@@ -152,6 +152,49 @@ export default function Page() {
         </nav>
       </header> */}
 
+        {/*User who might want panko*/}
+        <section className="container mx-auto px-6 py-20 text-left">
+          <h2 className="w-full md:w-3/4 text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent">
+            Welcome
+          </h2>
+          <p className="w-full md:w-3/4 text-md text-slate-300 mx-auto mb-2 px-2">
+            Are you an engineer who&rsquo;s been vibing with code, building prototypes
+            that work&hellip; until they don&rsquo;t? That scrappy MVP that got you this
+            far is now becoming a maintenance nightmare. The quick fixes are
+            piling up, the architecture is getting messy, and you&rsquo;re starting to
+            hit walls you didn&rsquo;t see coming.
+          </p>
+          <p className="w-full md:w-3/4 text-md text-slate-300 mx-auto mb-2 px-2">
+            Maybe you&rsquo;re spending more time debugging than building new
+            features. Or worse, you&rsquo;re realizing that &ldquo;quick and dirty&rdquo; approach
+            is going to cost serious money to untangle later. You know you need
+            to level up, but learning production-grade patterns while trying to
+            ship feels impossible.
+          </p>
+          <p className="w-full md:w-3/4 text-md text-slate-300 mx-auto mb-2 px-2">
+            I&rsquo;ve been there. I&rsquo;ve seen brilliant ideas from designers and
+            developers get stuck in the prototype phase, watching their
+            beautiful ideas turn into spaghetti code. The good news? You don&rsquo;t
+            have to have to struggle alone!
+          </p>
+          <p className="w-full md:w-3/4 text-md text-slate-300 mx-auto mb-6 px-2">
+            I&rsquo;m here to be your technical co-pilot. Let&rsquo;s build
+            something great together.
+          </p>
+          <p className="w-full md:w-3/4 text-md text-slate-300 mx-auto mb-2 px-2">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 mb-4 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2"
+            >
+              Get in touch <ArrowRight size={20} />
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <p className="text-white text-xl text-center">Take that leap...</p>
+        </section>
+
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-20 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mt-8 mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -159,7 +202,7 @@ export default function Page() {
           </h1>
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
-              A 10x engineer brings more than just coding speed. I offer
+              An experienced software developer, using AI is a 10x engineer, bringing more than just coding speed. I offer
               architectural insight, best practice advice, debugging expertise,
               and the ability to anticipate problems before they become costly.
               If you&rsquo;re trying to launch something quickly, I&rsquo;ll
