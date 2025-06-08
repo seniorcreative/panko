@@ -155,20 +155,20 @@ export default function Page() {
         {/*User who might want panko*/}
         <section className="container mx-auto px-6 py-20 text-left">
           <h2 className="w-full md:w-3/4 text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent">
-            Hi, I'm Panko.
+            Hi, I&rsquo;m Panko.
           </h2>
             <div className="min-h-screen flex items-center justify-center">
             <div className="text-center max-w-4xl mx-auto">
               <p className="text-xl text-slate-300 mb-6">
-              Got a prototype that works... until it doesn't? 
+              Got a prototype that works... until it doesn&rsquo;t? 
               <br />
               Spending more time debugging than building?
               </p>
               <p className="text-xl text-slate-300 mb-8">
-              You don't have to struggle alone.
+              You don&rsquo;t have to struggle alone.
               <br />
               <span className="text-blue-300 font-medium">
-                I'm a human. Let's build something great together.
+                I&rsquo;m a human. Let&rsquo;s build something great together.
               </span>
               </p>
             </div>

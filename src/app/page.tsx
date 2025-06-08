@@ -120,7 +120,7 @@ export default function Home() {
             <p 
             className="lg:w-1/2 lg:mx-auto my-3 mb-8"
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(content[language].home.sections.intro.three)
+              __html: content[language].home.sections.intro.three
             }}
           ></p>
           <a className={buttonStyle} href={"/10x"}>
