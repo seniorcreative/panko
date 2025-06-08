@@ -3,13 +3,13 @@
     "home": {
       "sections": {
         "intro": {
-          "one": "Hybrid Professional × AI-Enhanced Development",
+          "one": "Technical and Creative Professional + AI-Enhanced Development",
           "two": "Human empathy meets algorithmic precision for tomorrow's digital solutions.",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "Multi-disciplinary problem solver with pattern recognition, taste, and AI superpowers.",
-          "four": "Building human-centered technology that actually works",
-          "contactBtn": "Contact",
-          "contactLink": "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry"
+          "three": "If you're getting into a spaghetti mess with your AI projects you're not alone.<br/>Hire panko as your 10x engineer. I'm a multi-disciplinary problem solver with pattern recognition, taste, and AI superpowers.",
+          "four": "Build human-centered technology that actually works.",
+          "contactBtn": "Let's Build Something",
+          "contactLink": "/#contact"
         },
         "about": {
           "title": "about",
@@ -72,7 +72,7 @@
         "id": 14,
         "title": "Reconnaitre",
         "href": "https://reconnaitre.com.au",
-        "description": "Rapid front-end development. Bootstrap 5. Responsive site for Australian Drone start-up..",
+        "description": "Rapid front-end development. Bootstrap 5. Responsive site for Australian Drone start-up..,",
         "date": "2024",
         "category": ["E-commerce"],
         "meta": {

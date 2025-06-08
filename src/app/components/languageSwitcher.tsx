@@ -45,11 +45,11 @@ export default function LanguageSwitcher({ font }: { font: any }) {
       <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
-            decodeURI(pathname) == "/" ? "underline" : ""
+            decodeURI(pathname) == "/10x" ? "underline" : ""
           }`}
-          href="/"
+          href="/10x"
         >
-          {language !== "zh-CN" ? "copilot" : "副驾驶"}
+          {language !== "zh-CN" ? "How?" : "副驾驶"}
         </Link>
       </li>
       <li className="flex me-3 items-center h-100">
@@ -59,7 +59,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           }`}
           href="/folio/all"
         >
-          {language !== "zh-CN" ? "retro" : "工作"}
+          {language !== "zh-CN" ? "Retro" : "工作"}
         </Link>
       </li>
       {/* <li className="flex me-3 items-center h-100">
