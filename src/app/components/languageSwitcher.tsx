@@ -62,6 +62,16 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           {language !== "zh-CN" ? "Retro" : "工作"}
         </Link>
       </li>
+      <li className="flex me-3 items-center h-100">
+        <Link
+          className={`${font.className} text-gray-800 text-sm ${
+            decodeURI(pathname).includes("/folio/all") ? "underline" : ""
+          }`}
+          href="/10x/#contact"
+        >
+          {language !== "zh-CN" ? "Contact" : "工作"}
+        </Link>
+      </li>
       {/* <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${

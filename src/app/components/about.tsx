@@ -29,13 +29,12 @@ export default function About({ locale }: aboutType) {
   }, [locale]);
 
   return (
-    <section className="relative min-h-screen py-8 flex items-center justify-center text-red-500 leading-8">
-      <a id="about" className="absolute top-0"></a>
+    <section className="relative min-h-screen py-8 flex items-center justify-center leading-8">
       <div className="w-3/4 md:w-1/3">
-        <h2 className="text-xl mb-2 -ms-4">
+        <h2 className="text-2xl bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent mb-2 -ms-4">
           <strong>{content[locale].home.sections.about.title}</strong>
         </h2>
-        <div id="content" ref={pageContent}></div>
+        <div id="content" className="text-indigo-800" ref={pageContent}></div>
       </div>
     </section>
   );
