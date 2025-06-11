@@ -6,14 +6,14 @@
           "one": "Technical and Creative Professional + AI-Enhanced Development",
           "two": "Human empathy meets algorithmic precision for tomorrow's digital solutions.",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "If you're getting into a spaghetti mess with your AI projects you're not alone.<br/>Hire panko as your 10x engineer. I'm a multi-disciplinary problem solver with pattern recognition, taste, and AI superpowers.",
+          "three": "If you're getting into a spaghetti mess with your AI projects you're not alone.<br/>Hire panko as your human software development co-pilot. I'm a multi-disciplinary problem solver with pattern recognition, taste, and AI superpowers.",
           "four": "Build human-centered technology that actually works.",
           "contactBtn": "Let's Build Something",
           "contactLink": "/#contact"
         },
         "about": {
           "title": "about",
-          "body": "<h3 class='text-lg'><strong>panko</strong> is your hybrid professional co-pilot.</h3><br/><p>I bridge the gap between human intuition and AI acceleration. While AI handles the heavy lifting of code generation, I bring the irreplaceable human elements: empathy for your users, pattern recognition across industries, and the taste to know what actually works. I understand your business context, anticipate edge cases, and craft solutions that feel right—not just function correctly.</p>"
+          "body": "<h3 class='text-lg'><strong>panko</strong> is your hybrid professional assistant.</h3><br/><p>I bridge the gap between human intuition and AI acceleration. While AI handles the heavy lifting of code generation, I bring the irreplaceable human elements: empathy for your users, pattern recognition across industries, and the taste to know what actually works. I understand your business context, anticipate edge cases, and craft solutions that feel right—not just function correctly.</p>"
         },
         "services": {
           "title": "services",

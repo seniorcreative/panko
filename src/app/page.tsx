@@ -109,7 +109,7 @@ export default function Home() {
           width={281 * 0.75}
           height={317 * 0.75}
         />
-        <div className="mt-12 p-8 md:p-24 text-slate-900 text-center">
+        <div className="mt-4 p-8 md:p-24 text-slate-900 text-center">
           <h3 className="text-lg mb-4">
             {content[language].home.sections.intro.one}
           </h3>

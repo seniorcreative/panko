@@ -20,9 +20,9 @@ const pacifico = Pacifico({
 const raleway = Raleway({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "10x software engineering assistant | panko",
+  title: "Technical co-pilot, software engineering assistant >> panko",
   description:
-    "Freelance 10x software engineer co-pilot for your digital projects. Specialising in web, mobile, and desktop applications.",
+    "Freelance human software engineer co-pilot for your digital projects. Specialising in web, mobile, and desktop applications.",
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
           <body className={varela.className}>
             <nav
               style={{ zIndex: 9999 }}
-              className="fixed top-0 left-0 w-full px-8 py-2 shadow-opacity-50 shadow-sm bg-white bg-opacity-50 backdrop-blur"
+              className="fixed top-0 left-0 w-full px-4 md:px-8 py-2 shadow-opacity-50 shadow-sm bg-white bg-opacity-50 backdrop-blur"
             >
               <div className="flex justify-between items-center">
                 <Link
@@ -47,7 +47,6 @@ export default function RootLayout({
                 >
                   <strong>panko</strong>
                 </Link>
-
                 <LanguageSwitcher font={varela}></LanguageSwitcher>
               </div>
             </nav>

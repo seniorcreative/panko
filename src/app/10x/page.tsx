@@ -194,11 +194,11 @@ export default function Page() {
           </h1>
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
-              An experienced software developer, using AI is a 10x engineer, bringing more than just coding speed. I offer
+              An experienced software developer, using AI greatly enhances my abilities, bringing more than just coding speed. I offer
               architectural insight, best practice advice, debugging expertise,
               and the ability to anticipate problems before they become costly.
-              If you&rsquo;re trying to launch something quickly, I&rsquo;ll
-              vibe with you, be your co-pilot and navigate technical decisions.
+              If you&rsquo;re trying to launch something quickly, I can work
+               with you, be your co-author and navigate technical decisions.
               <span className="text-blue-300 font-medium">
                 <br />
                 We&rsquo;ll code together so you learn while we build.
