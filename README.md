@@ -1,7 +1,7 @@
 ### Greetings
 
-This is my personal folio / pseudo consultancy side gig project. I made this with NextJS14 and tailwind. It has given me the opportunity to flex my FE coding muscles while I'm in transit.
-It's packed with a few little goodies like particles (css transitions), transitions (animeJS), SVG animations, a CMS with raw JSON, no-reload localization using context providers, font icons from google. It gets deployed with netlify.
+This is my personal folio / pseudo consultancy side gig project. I made this with NextJS14=5 and tailwind.
+It features with a few little goodies like particles, transitions (animeJS), SVG animations, a CMS with raw JSON, no-reload localization using context providers, font icons from google. It gets deployed with netlify.
 
 
 ---
