@@ -118,16 +118,75 @@ export default function Page() {
   }
 
   const [formSuccess, setFormSuccess] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
+  const validateField = (name: string, value: string) => {
+    switch (name) {
+      case 'name':
+        return value.trim().length < 2 ? 'Name must be at least 2 characters' : '';
+      case 'email':
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return !emailRegex.test(value) ? 'Please enter a valid email address' : '';
+      case 'budget':
+        return !value ? 'Please select a budget range' : '';
+      case 'timeline':
+        return !value ? 'Please select a timeline' : '';
+      case 'company':
+        return value.trim().length < 2 ? 'Company and role information is required' : '';
+      case 'message':
+        return value.trim().length < 100 ? 'Message must be at least 100 characters' : '';
+      default:
+        return '';
+    }
+  };
+
+  const validateForm = (formData: FormData) => {
+    const newErrors: Record<string, string> = {};
+    const requiredFields = ['name', 'email', 'budget', 'timeline', 'company', 'message'];
+    
+    requiredFields.forEach(field => {
+      const value = formData.get(field) as string || '';
+      const error = validateField(field, value);
+      if (error) {
+        newErrors[field] = error;
+      }
+    });
+    
+    return newErrors;
+  };
+
+  const handleFieldChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    const error = validateField(name, value);
+    
+    setErrors(prev => ({
+      ...prev,
+      [name]: error
+    }));
+    
+    setTouched(prev => ({
+      ...prev,
+      [name]: true
+    }));
+  };
 
   const handleFormSubmit = async (event: FormSubmitEvent): Promise<void> => {
     event.preventDefault();
     const formData = new FormData(event.target);
+    
+    const formErrors = validateForm(formData);
+    setErrors(formErrors);
+    
+    if (Object.keys(formErrors).length > 0) {
+      return;
+    }
+    
     await fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData as any).toString(),
     });
-    // Success and error handling ...
     setFormSuccess(true);
   };
 
@@ -168,7 +227,7 @@ export default function Page() {
               You don&rsquo;t have to struggle alone.
               <br />
               <span className="text-blue-300 font-medium">
-                I&rsquo;m a human. Let&rsquo;s build something great together.
+                I&rsquo;m a human with 20+ years of experience. Let&rsquo;s build something great together.
               </span>
               </p>
             </div>
@@ -355,7 +414,7 @@ export default function Page() {
           </p>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grifd md:grid-cols-2 gap-8">
               {/* JWST Spectral Analyzer */}
               <a
                 href="https://github.com/seniorcreative/spectral-analysis"
@@ -499,9 +558,17 @@ export default function Page() {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      onChange={handleFieldChange}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                        errors.name && touched.name
+                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      }`}
                       placeholder="Your name"
                     />
+                    {errors.name && touched.name && (
+                      <p className="mt-1 text-sm text-red-400">{errors.name}</p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -515,36 +582,131 @@ export default function Page() {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      onChange={handleFieldChange}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                        errors.email && touched.email
+                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      }`}
                       placeholder="your@email.com"
                     />
+                    {errors.email && touched.email && (
+                      <p className="mt-1 text-sm text-red-400">{errors.email}</p>
+                    )}
                   </div>
                 </div>
 
-                <div className="mb-6">
-                  <label
-                    htmlFor="project"
-                    className="block text-slate-300 font-medium mb-2"
-                  >
-                    Project Type
-                  </label>
-                  <select
-                    id="project"
-                    name="project"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  >
-                    <option value="">Select project type</option>
-                    <option value="new-app">New App Development</option>
-                    <option value="migration">Legacy System Migration</option>
-                    <option value="optimization">
-                      Performance Optimization
-                    </option>
-                    <option value="architecture">
-                      Technical Architecture Review
-                    </option>
-                    <option value="consulting">Technical Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label
+                      htmlFor="project"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Project Type
+                    </label>
+                    <select
+                      id="project"
+                      name="project"
+                      onChange={handleFieldChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    >
+                      <option value="">Select project type</option>
+                      <option value="new-app">New App Development</option>
+                      <option value="migration">Legacy System Migration</option>
+                      <option value="optimization">
+                        Performance Optimization
+                      </option>
+                      <option value="architecture">
+                        Technical Architecture Review
+                      </option>
+                      <option value="consulting">Technical Consulting</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="budget"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Budget Range *
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      required
+                      onChange={handleFieldChange}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all ${
+                        errors.budget && touched.budget
+                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      }`}
+                    >
+                      <option value="">Select budget range</option>
+                      <option value="1k-5k">$1K - $5K</option>
+                      <option value="5k-20k">$5K - $20K</option>
+                      <option value="20k+">$20K+</option>
+                      <option value="discuss">Prefer to discuss</option>
+                    </select>
+                    {errors.budget && touched.budget && (
+                      <p className="mt-1 text-sm text-red-400">{errors.budget}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label
+                      htmlFor="timeline"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Timeline *
+                    </label>
+                    <select
+                      id="timeline"
+                      name="timeline"
+                      required
+                      onChange={handleFieldChange}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all ${
+                        errors.timeline && touched.timeline
+                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      }`}
+                    >
+                      <option value="">Select timeline</option>
+                      <option value="asap">ASAP (Rush project)</option>
+                      <option value="1-2months">1-2 months</option>
+                      <option value="3-6months">3-6 months</option>
+                      <option value="6plus-months">6+ months</option>
+                      <option value="planning">Just planning</option>
+                    </select>
+                    {errors.timeline && touched.timeline && (
+                      <p className="mt-1 text-sm text-red-400">{errors.timeline}</p>
+                    )}
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="company"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Company & Role *
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      required
+                      onChange={handleFieldChange}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                        errors.company && touched.company
+                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      }`}
+                      placeholder="Company Name, Your Role"
+                    />
+                    {errors.company && touched.company && (
+                      <p className="mt-1 text-sm text-red-400">{errors.company}</p>
+                    )}
+                  </div>
                 </div>
 
                 <div className="mb-8">
@@ -552,16 +714,30 @@ export default function Page() {
                     htmlFor="message"
                     className="block text-slate-300 font-medium mb-2"
                   >
-                    Project Details *
+                    Technical Challenge & Goals *
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-vertical"
-                    placeholder="Tell me about your project, timeline, and how I can help..."
+                    rows={6}
+                    minLength={100}
+                    onChange={handleFieldChange}
+                    className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${
+                      errors.message && touched.message
+                        ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                        : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                    }`}
+                    placeholder="Please describe:
+• What specific technical problem are you trying to solve?
+• What is the current state of your project?
+• What technologies are you using/considering?
+• What's your biggest challenge or blocker right now?
+• What does success look like for this project?"
                   />
+                  {errors.message && touched.message && (
+                    <p className="mt-1 text-sm text-red-400">{errors.message}</p>
+                  )}
                 </div>
 
                 <div className="text-center">
