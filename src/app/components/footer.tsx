@@ -20,10 +20,28 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
       <div className="container mx-auto max-w-6xl">
         <div className="flex md:flex-row justify-between items-center gap-4">
           <div className="flex-1">
-            <div>
+            <div className="flex gap-4 items-center">
+              <Link
+                href="/10x"
+                className="text-xs text-slate-100 hover:text-white transition-colors"
+              >
+                Services
+              </Link>
+              <Link
+                href="/folio/all"
+                className="text-xs text-slate-100 hover:text-white transition-colors"
+              >
+                Portfolio
+              </Link>
+              <Link
+                href="/#about"
+                className="text-xs text-slate-100 hover:text-white transition-colors"
+              >
+                About
+              </Link>
               <Link
                 href="/10x/#contact"
-                className="inline-flex items-center px-4 py-2 bg-gradient-to-r text-xs from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center px-3 py-1 bg-gradient-to-r text-xs from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded text-white font-semibold transition-all"
               >
                 Contact
               </Link>

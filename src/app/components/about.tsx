@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { animate } from "animejs";
 import React, { useRef } from "react";
+import LavaLampBlobs from "./LavaLampBlobs";
 
 const content = require("../data/content.json");
 
@@ -29,8 +30,9 @@ export default function About({ locale }: aboutType) {
   }, [locale]);
 
   return (
-    <section className="relative min-h-screen py-8 flex items-center justify-center leading-8">
-      <div className="w-3/4 md:w-1/3">
+    <section className="relative min-h-screen py-8 flex items-center justify-center leading-8 overflow-hidden">
+      <LavaLampBlobs className="opacity-40" />
+      <div className="w-3/4 md:w-1/3 relative z-10">
         <h2 className="text-2xl bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent mb-2 -ms-4">
           <strong>{content[locale].home.sections.about.title}</strong>
         </h2>

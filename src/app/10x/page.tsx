@@ -13,24 +13,24 @@ import {
   Quote,
 } from "lucide-react";
 
-const testimonials = [{ name: "TBC", quote: "TBC" }];
-//   {
-//     name: "Sarah Chen",
-//     quote: "Working with them was like having a technical co-founder. They saw problems I didn't even know existed and saved us months of technical debt."
-//   },
-//   {
-//     name: "Marcus Rivera",
-//     quote: "Not just fast coding - they completely transformed our architecture. Our deployment time went from hours to minutes."
-//   },
-//   {
-//     name: "Emily Watson",
-//     quote: "The perfect balance of speed and quality. They helped us launch on time without cutting corners on best practices."
-//   },
-//   {
-//     name: "David Park",
-//     quote: "Their debugging skills are unreal. What would have taken our team days, they solved in hours."
-//   }
-// ];
+const testimonials = [
+  {
+    name: "Sarah Chen",
+    quote: "Working with panko was like having a technical co-founder. They saw problems I didn't even know existed and saved us months of headaches."
+  },
+  {
+    name: "Marcus Rivera", 
+    quote: "Not just fast coding - they completely transformed our website. What used to take forever now loads instantly."
+  },
+  {
+    name: "Emily Watson",
+    quote: "Perfect balance of speed and quality. They helped us launch on time without any technical issues."
+  },
+  {
+    name: "David Park",
+    quote: "Their problem-solving skills are incredible. What would have taken our team days, they solved in hours."
+  }
+];
 
 const benefits = [
   {
@@ -129,11 +129,11 @@ export default function Page() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return !emailRegex.test(value) ? 'Please enter a valid email address' : '';
       case 'budget':
-        return !value ? 'Please select a budget range' : '';
+        return ''; // Optional field
       case 'timeline':
-        return !value ? 'Please select a timeline' : '';
+        return ''; // Optional field
       case 'company':
-        return value.trim().length < 2 ? 'Company and role information is required' : '';
+        return ''; // Optional field
       case 'message':
         return value.trim().length < 100 ? 'Message must be at least 100 characters' : '';
       default:
@@ -143,7 +143,7 @@ export default function Page() {
 
   const validateForm = (formData: FormData) => {
     const newErrors: Record<string, string> = {};
-    const requiredFields = ['name', 'email', 'budget', 'timeline', 'company', 'message'];
+    const requiredFields = ['name', 'email', 'message'];
     
     requiredFields.forEach(field => {
       const value = formData.get(field) as string || '';
@@ -506,12 +506,77 @@ export default function Page() {
                       .map((n) => n[0])
                       .join("")}
                   </div>
-                  <span className="font-semibold">{testimonial.name}</span>
+                  <span className="font-semibold text-white">{testimonial.name}</span>
                 </div>
               </div>
             ))}
           </div>
         </section> */}
+
+        {/* Service Packages */}
+        <section className="container mx-auto px-6 py-20">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            How I Can Help
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Quick Fix */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all">
+              <h3 className="text-2xl font-bold mb-4 text-white">Quick Fix</h3>
+              <p className="text-3xl font-bold mb-4 text-blue-400">$500-$1K</p>
+              <ul className="text-slate-300 space-y-2 mb-6">
+                <li>• Bug fixes and small features</li>
+                <li>• Performance optimization</li>
+                <li>• Quick consultation calls</li>
+                <li>• Same-day turnaround</li>
+              </ul>
+              <a
+                href="#contact"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 px-6 py-3 rounded-lg font-semibold transition-all inline-block text-center"
+              >
+                Get Quote
+              </a>
+            </div>
+
+            {/* Project Development */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/50 transform scale-105 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Most Popular
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Full Project</h3>
+              <p className="text-3xl font-bold mb-4 text-purple-400">$2K-$10K</p>
+              <ul className="text-slate-300 space-y-2 mb-6">
+                <li>• Complete website or app build</li>
+                <li>• Custom features and integrations</li>
+                <li>• Mobile-responsive design</li>
+                <li>• 2-8 week delivery</li>
+              </ul>
+              <a
+                href="#contact"
+                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 px-6 py-3 rounded-lg font-semibold transition-all inline-block text-center"
+              >
+                Get Quote
+              </a>
+            </div>
+
+            {/* Technical Partner */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-green-500/50 transition-all">
+              <h3 className="text-2xl font-bold mb-4 text-white">Technical Partner</h3>
+              <p className="text-3xl font-bold mb-4 text-green-400">$10K+</p>
+              <ul className="text-slate-300 space-y-2 mb-6">
+                <li>• Long-term development partnership</li>
+                <li>• Architecture planning and reviews</li>
+                <li>• Team training and mentoring</li>
+                <li>• Ongoing support and maintenance</li>
+              </ul>
+              <a
+                href="#contact"
+                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-6 py-3 rounded-lg font-semibold transition-all inline-block text-center"
+              >
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Contact Form Section */}
         <section
@@ -628,12 +693,11 @@ export default function Page() {
                       htmlFor="budget"
                       className="block text-slate-300 font-medium mb-2"
                     >
-                      Budget Range *
+                      Budget Range
                     </label>
                     <select
                       id="budget"
                       name="budget"
-                      required
                       onChange={handleFieldChange}
                       className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all ${
                         errors.budget && touched.budget
@@ -642,9 +706,11 @@ export default function Page() {
                       }`}
                     >
                       <option value="">Select budget range</option>
-                      <option value="1k-5k">$1K - $5K</option>
-                      <option value="5k-20k">$5K - $20K</option>
-                      <option value="20k+">$20K+</option>
+                      <option value="$500 - $1k">$500 - $1K</option>
+                      <option value="1k-2k">$1K - $2K</option>
+                      <option value="2k+">$2K+</option>
+                      <option value="5k+">$5K+</option>
+                      <option value="10k+">$10K+</option>
                       <option value="discuss">Prefer to discuss</option>
                     </select>
                     {errors.budget && touched.budget && (
@@ -659,12 +725,11 @@ export default function Page() {
                       htmlFor="timeline"
                       className="block text-slate-300 font-medium mb-2"
                     >
-                      Timeline *
+                      Timeline
                     </label>
                     <select
                       id="timeline"
                       name="timeline"
-                      required
                       onChange={handleFieldChange}
                       className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all ${
                         errors.timeline && touched.timeline
@@ -688,13 +753,12 @@ export default function Page() {
                       htmlFor="company"
                       className="block text-slate-300 font-medium mb-2"
                     >
-                      Company & Role *
+                      Company & Role
                     </label>
                     <input
                       type="text"
                       id="company"
                       name="company"
-                      required
                       onChange={handleFieldChange}
                       className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                         errors.company && touched.company
@@ -752,13 +816,6 @@ export default function Page() {
             )}
           </div>
         </section>
-
-        {/* Footer */}
-        {/* <footer className="container mx-auto px-6 py-8 border-t border-slate-700/50">
-          <div className="text-center text-slate-400">
-            <p>&copy; 2024 panko.digital - Your Technical Co-pilot</p>
-          </div>
-        </footer> */}
       </div>
     </section>
   );

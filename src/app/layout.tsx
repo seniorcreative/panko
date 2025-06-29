@@ -20,9 +20,9 @@ const pacifico = Pacifico({
 const raleway = Raleway({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Technical co-pilot, software engineering assistant >> panko",
+  title: "Web Developer Who Makes Technology Simple - Panko",
   description:
-    "Freelance human software engineer co-pilot for your digital projects. Specialising in web, mobile, and desktop applications.",
+    "Turn your ideas into websites and apps that actually work for your business. No confusing tech jargon - just clear communication, fair pricing, and results that help you succeed.",
 };
 
 export default function RootLayout({

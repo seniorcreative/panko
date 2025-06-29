@@ -94,6 +94,8 @@ export default function Home() {
   const buttonStyle =
     "px-4 py-2 rounded-md me-2 border-2 border-dark bg-white bg-opacity-75 backdrop-blur";
 
+  const colorButtonStyle = `px-4 py-2 rounded-md ms-2 border-2 border-blue-500 bg-blue-500 text-white hover:bg-blue-600 transition-colors`;
+
   return (
     <>
       <section
@@ -122,9 +124,12 @@ export default function Home() {
               __html: content[language].home.sections.intro.three
             }}
           ></p>
-          <a className={buttonStyle} href={"/10x"}>
-            How I can help
+          <a className={colorButtonStyle} href={"/10x"}>
+Get Started
           </a>
+          {/* <a className="px-4 py-2 rounded-md ms-2 border-2 border-blue-500 bg-blue-500 text-white hover:bg-blue-600 transition-colors" href={"/10x/#contact"}>
+            Get Quote
+          </a> */}
           <h1 className="hidden">
             {content[language].home.sections.intro.four}
           </h1>
@@ -163,7 +168,9 @@ export default function Home() {
         locale={language}
         categoryInfo={catInfo}
       />
-      <About locale={language} />
+      <div id="about">
+        <About locale={language} />
+      </div>
       {/* <Shuffler></Shuffler> */}
       {/* <Services locale={language} /> */}
     </>

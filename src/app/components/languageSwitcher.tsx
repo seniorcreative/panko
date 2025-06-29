@@ -49,7 +49,7 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           }`}
           href="/10x"
         >
-          {language !== "zh-CN" ? "How?" : "副驾驶"}
+{language !== "zh-CN" ? "Services" : "副驾驶"}
         </Link>
       </li>
       <li className="flex me-3 items-center h-100">
@@ -59,7 +59,17 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           }`}
           href="/folio/all"
         >
-          {language !== "zh-CN" ? "Retro" : "工作"}
+{language !== "zh-CN" ? "Portfolio" : "工作"}
+        </Link>
+      </li>
+      <li className="flex me-3 items-center h-100">
+        <Link
+          className={`${font.className} text-gray-800 text-sm ${
+            hash?.includes("about") ? "underline" : ""
+          }`}
+          href="/#about"
+        >
+          {language !== "zh-CN" ? "About" : "关于"}
         </Link>
       </li>
       <li className="flex me-3 items-center h-100">
