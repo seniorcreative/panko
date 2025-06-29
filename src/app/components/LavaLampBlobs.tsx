@@ -8,7 +8,7 @@ interface LavaLampBlobsProps {
 
 export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -128,7 +128,7 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
     function resizeCanvas() {
-      if (!canvas) return;
+      if (!canvas || !gl) return;
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * window.devicePixelRatio;
       canvas.height = rect.height * window.devicePixelRatio;
@@ -136,7 +136,7 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
     }
 
     function render(time: number) {
-      if (!canvas) return;
+      if (!canvas || !gl) return;
       
       resizeCanvas();
       
