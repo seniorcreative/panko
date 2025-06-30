@@ -41,31 +41,31 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
         vec2 uv = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y;
         vec3 finalColor = vec3(0.0);
 
-        // Pink blob
-        vec2 center1 = vec2(sin(u_time * 0.3) * 0.4, cos(u_time * 0.2) * 0.3);
-        float circle1 = smoothCircle(uv, center1, 0.3 + sin(u_time * 0.4) * 0.1);
-        vec3 pink = vec3(1.0, 0.4, 0.7);
-        finalColor += pink * circle1;
+        // Deep orange blob
+        vec2 center1 = vec2(sin(u_time * 0.33) * 0.4, cos(u_time * 0.22) * 0.3);
+        float circle1 = smoothCircle(uv, center1, 0.4 + sin(u_time * 0.44) * 0.1);
+        vec3 deepOrange = vec3(0.8, 0.3, 0.0);
+        finalColor += deepOrange * circle1;
 
-        // Blue blob
-        vec2 center2 = vec2(cos(u_time * 0.25) * 0.5, sin(u_time * 0.35) * 0.4);
-        float circle2 = smoothCircle(uv, center2, 0.25 + cos(u_time * 0.3) * 0.08);
-        vec3 blue = vec3(0.3, 0.6, 1.0);
-        finalColor += blue * circle2;
+        // Dark lime blob
+        vec2 center2 = vec2(cos(u_time * 0.275) * 0.5, sin(u_time * 0.385) * 0.4);
+        float circle2 = smoothCircle(uv, center2, 0.35 + cos(u_time * 0.33) * 0.08);
+        vec3 darkLime = vec3(0.4, 0.6, 0.0);
+        finalColor += darkLime * circle2;
 
-        // Light pink blob
-        vec2 center3 = vec2(sin(u_time * 0.15) * 0.6, cos(u_time * 0.45) * 0.2);
-        float circle3 = smoothCircle(uv, center3, 0.2 + sin(u_time * 0.5) * 0.05);
-        vec3 lightPink = vec3(1.0, 0.7, 0.9);
-        finalColor += lightPink * circle3;
+        // Burnt yellow blob
+        vec2 center3 = vec2(sin(u_time * 0.165) * 0.6, cos(u_time * 0.495) * 0.2);
+        float circle3 = smoothCircle(uv, center3, 0.3 + sin(u_time * 0.55) * 0.05);
+        vec3 burntYellow = vec3(0.7, 0.5, 0.0);
+        finalColor += burntYellow * circle3;
 
-        // Periwinkle blob
-        vec2 center4 = vec2(cos(u_time * 0.4) * 0.3, sin(u_time * 0.2) * 0.5);
-        float circle4 = smoothCircle(uv, center4, 0.15 + cos(u_time * 0.6) * 0.03);
-        vec3 periwinkle = vec3(0.6, 0.7, 1.0);
-        finalColor += periwinkle * circle4;
+        // Dark tangerine blob
+        vec2 center4 = vec2(cos(u_time * 0.44) * 0.3, sin(u_time * 0.22) * 0.5);
+        float circle4 = smoothCircle(uv, center4, 0.25 + cos(u_time * 0.66) * 0.03);
+        vec3 darkTangerine = vec3(0.9, 0.4, 0.1);
+        finalColor += darkTangerine * circle4;
 
-        gl_FragColor = vec4(finalColor, 0.4);
+        gl_FragColor = vec4(finalColor, 0.8);
       }
     `;
 
