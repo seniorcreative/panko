@@ -47,12 +47,12 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
               </Link>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-0">
             <a
               href="https://github.com/seniorcreative/panko"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-right text-slate-300"
+              className=" inline text-sm text-right text-slate-300"
             >
               site by <strong className="font-bold text-white">panko</strong>
             </a>
