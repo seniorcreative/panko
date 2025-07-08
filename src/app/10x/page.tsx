@@ -129,13 +129,13 @@ export default function Page() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return !emailRegex.test(value) ? 'Please enter a valid email address' : '';
       case 'budget':
-        return ''; // Optional field
-      case 'timeline':
-        return ''; // Optional field
-      case 'company':
-        return ''; // Optional field
+        return value.trim().length < 2 ? 'Budget must be at least 2 digits' : '';
+      // case 'timeline':
+      //   return ''; // Optional field
+      // case 'company':
+      //   return ''; // Optional field
       case 'message':
-        return value.trim().length < 100 ? 'Message must be at least 100 characters' : '';
+        return value.trim().length < 50 ? 'Message must be at least 50 characters' : '';
       default:
         return '';
     }
@@ -663,63 +663,66 @@ export default function Page() {
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label
-                      htmlFor="project"
-                      className="block text-slate-300 font-medium mb-2"
-                    >
-                      Project Type
-                    </label>
-                    <select
-                      id="project"
-                      name="project"
-                      onChange={handleFieldChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                    >
-                      <option value="">Select project type</option>
-                      <option value="new-app">New App Development</option>
-                      <option value="migration">Legacy System Migration</option>
-                      <option value="optimization">
-                        Performance Optimization
-                      </option>
-                      <option value="architecture">
-                        Technical Architecture Review
-                      </option>
-                      <option value="consulting">Technical Consulting</option>
-                      <option value="other">Other</option>
-                    </select>
+                  <label
+                    htmlFor="project"
+                    className="block text-slate-300 font-medium mb-2"
+                  >
+                    Project Type
+                  </label>
+                  <select
+                    id="project"
+                    name="project"
+                    onChange={handleFieldChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  >
+                    <option value="">Select project type</option>
+                    <option value="new-app">New App Development</option>
+                    <option value="migration">Legacy System Migration</option>
+                    <option value="optimization">
+                    Performance Optimization
+                    </option>
+                    <option value="architecture">
+                    Technical Architecture Review
+                    </option>
+                    <option value="consulting">Technical Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
                   </div>
                   <div>
-                    <label
-                      htmlFor="budget"
-                      className="block text-slate-300 font-medium mb-2"
-                    >
-                      Budget Range
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      onChange={handleFieldChange}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 transition-all ${
-                        errors.budget && touched.budget
-                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
-                      }`}
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="$500 - $1k">$500 - $1K</option>
-                      <option value="1k-2k">$1K - $2K</option>
-                      <option value="2k+">$2K+</option>
-                      <option value="5k+">$5K+</option>
-                      <option value="10k+">$10K+</option>
-                      <option value="discuss">Prefer to discuss</option>
-                    </select>
-                    {errors.budget && touched.budget && (
-                      <p className="mt-1 text-sm text-red-400">{errors.budget}</p>
-                    )}
+                  <label
+                    htmlFor="budget"
+                    className="block text-slate-300 font-medium mb-2"
+                  >
+                    Budget (USD) *
+                  </label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+                    <input
+                    type="number"
+                    id="budget"
+                    name="budget"
+                    required
+                    onBlur={handleFieldChange}
+                    min="0"
+                    step="any"
+                    inputMode="decimal"
+                    pattern="^\d+(\.\d{1,2})?$"
+                    onChange={handleFieldChange}
+                    className={`w-full pl-8 pr-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                      errors.budget && touched.budget
+                      ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                      : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                    }`}
+                    placeholder="Enter your approx budget"
+                    />
+                  </div>
+                  {errors.budget && touched.budget && (
+                    <p className="mt-1 text-sm text-red-400">{errors.budget}</p>
+                  )}
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                {/* <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label
                       htmlFor="timeline"
@@ -771,34 +774,29 @@ export default function Page() {
                       <p className="mt-1 text-sm text-red-400">{errors.company}</p>
                     )}
                   </div>
-                </div>
+                </div> */}
 
                 <div className="mb-8">
                   <label
                     htmlFor="message"
                     className="block text-slate-300 font-medium mb-2"
                   >
-                    Technical Challenge & Goals *
+                   Description *
                   </label>
-                  <textarea
+                    <textarea
                     id="message"
                     name="message"
                     required
                     rows={6}
-                    minLength={100}
+                    minLength={50}
                     onChange={handleFieldChange}
                     className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${
                       errors.message && touched.message
-                        ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                        : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                      : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
                     }`}
-                    placeholder="Please describe:
-• What specific technical problem are you trying to solve?
-• What is the current state of your project?
-• What technologies are you using/considering?
-• What's your biggest challenge or blocker right now?
-• What does success look like for this project?"
-                  />
+                    placeholder={`Please describe:\n• What specific technical problem are you trying to solve?\n• What is the current state of your project?`}
+                    />
                   {errors.message && touched.message && (
                     <p className="mt-1 text-sm text-red-400">{errors.message}</p>
                   )}

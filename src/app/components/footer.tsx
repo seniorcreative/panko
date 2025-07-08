@@ -48,9 +48,14 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
             </div>
           </div>
           <div className="flex-1">
-            <p className="text-sm text-right text-slate-300">
-              build with <strong className="text-white">panko</strong> 
-            </p>
+            <a
+              href="https://github.com/seniorcreative/panko"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-right text-slate-300"
+            >
+              site by <strong className="font-bold text-white">panko</strong>
+            </a>
           </div>
         </div>
       </div>
