@@ -143,23 +143,43 @@ Get Started
         <h3 className="text-xl text-center block mt-1 mb-4">
           Clients I&rsquo;ve built for
         </h3>
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-4 pb-12">
-          {Logos.map((logo: LogoObj) => (
-            <div
-              key={logo.t}
-              title={logo.t}
-              className={`${logo.c}rounded-full grayscale opacity-60 scale-75 hover:scale-125 transition-all`}
-              style={{
-                backgroundImage: `url(${logo.i.src})`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center center",
-                width: "100%",
-                height: "100%",
-                minHeight: "32px",
-              }}
-            />
-          ))}
+        <div className="container mx-auto pb-12 overflow-hidden">
+          <div className="carousel-container">
+            <style jsx>{`
+              @keyframes scroll {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+              
+              .carousel-track {
+                animation: scroll 20s linear infinite;
+                width: 200%;
+              }
+              
+              .carousel-track:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+            <div className="carousel-track flex">
+              {[...Logos, ...Logos].map((logo: LogoObj, index: number) => (
+                <div
+                  key={`${logo.t}-${index}`}
+                  title={logo.t}
+                  className="flex-shrink-0 w-48 h-32 mx-6 rounded-lg hover:scale-110 transition-all duration-300 cursor-pointer"
+                  style={{
+                    backgroundImage: `url(${logo.i.src})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center center",
+                  }}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
       <Waves flipped />

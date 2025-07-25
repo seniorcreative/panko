@@ -197,71 +197,16 @@ export default function Page() {
       <div className="mx-auto overflow-hidden">
         <Stellae invert />
 
-        {/* Header */}
-        {/* <header className="container mx-auto px-6 py-8">
-        <nav className="flex justify-between items-center">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            panko.digital
-          </div>
-          <div className="space-x-6">
-            <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
-            <a href="#testimonials" className="hover:text-blue-400 transition-colors">Testimonials</a>
-            <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
-          </div>
-        </nav>
-      </header> */}
-
-        {/*User who might want panko*/}
-        <section className="container mx-auto px-6 py-20 text-left">
-          <h2 className="w-full md:w-3/4 text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent">
-            Hi, I&rsquo;m Panko.
-          </h2>
-            <div className="min-h-screen flex items-center justify-center">
-            <div className="text-center max-w-4xl mx-auto">
-              <p className="text-xl text-slate-300 mb-6">
-              Got a prototype that works... until it doesn&rsquo;t? 
-              <br />
-              Spending more time debugging than building?
-              </p>
-              <p className="text-xl text-slate-300 mb-8">
-              You don&rsquo;t have to struggle alone.
-              <br />
-              <span className="text-blue-300 font-medium">
-                I&rsquo;m a human with 20+ years of experience. Let&rsquo;s build something great together.
-              </span>
-              </p>
-            </div>
-            </div>
-          <p className="w-full md:w-3/4 text-md text-slate-300 mx-auto mb-2 px-2">
-            <a
-              href="#contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 mb-4 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2"
-            >
-              Get in touch <ArrowRight size={20} />
-            </a>
-          </p>
-        </section>
-
-        <section>
-          <p className="text-white text-xl text-center">Take that leap...</p>
-        </section>
-
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-20 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mt-8 mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Develop with a technical co-pilot
+            Launch quickly with an AI Developer
           </h1>
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
               An experienced software developer, using AI greatly enhances my abilities, bringing more than just coding speed. I offer
-              architectural insight, best practice advice, debugging expertise,
-              and the ability to anticipate problems before they become costly.
-              If you&rsquo;re trying to launch something quickly, I can work
-               with you, be your co-author and navigate technical decisions.
-              <span className="text-blue-300 font-medium">
-                <br />
-                We&rsquo;ll code together so you learn while we build.
-              </span>
+              architectural insight, best practice advice, debugging expertise and the experience to anticipate problems before they become costly.
+              If you&rsquo;re trying to launch something quickly, I'll be your technical co-pilot. I can help you get it off the ground.
             </p>
           </div>
           <a
@@ -275,7 +220,7 @@ export default function Page() {
         {/* Career Timeline */}
         <section className="container mx-auto px-6 py-20">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            The Journey to 10x
+            My evolution as a website and app pro
           </h2>
           <div className="max-w-4xl mx-auto">
             {timeline.map((item, index) => (
@@ -299,293 +244,14 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Development Pillars - Full Width Row */}
-        <section className="w-full px-6 py-20">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            The Four Pillars of Development
-          </h2>
-          <div className="w-full">
-            {/* Four equal columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Data Layer */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all group min-h-[220px] flex flex-col justify-center relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
-                  <Database className="text-white" size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-center text-white">
-                  Data Layer
-                </h3>
-                <p className="text-slate-300 text-center min-h-[80px]">
-                  Database design, optimization, and data architecture that
-                  scales with your business needs.
-                </p>
-              </div>
-
-              {/* APIs */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all group min-h-[220px] flex flex-col justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
-                  <Code className="text-white" size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-center text-white">
-                  APIs
-                </h3>
-                <p className="text-slate-300 text-center  min-h-[80px]">
-                  RESTful and GraphQL APIs built for performance, security, and
-                  developer experience.
-                </p>
-              </div>
-
-              {/* Server Side */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all group min-h-[220px] flex flex-col justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
-                  <Server className="text-white" size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-center text-white">
-                  Server Side
-                </h3>
-                <p className="text-slate-300 text-center min-h-[80px]">
-                  Robust backend systems with proper error handling, monitoring,
-                  and scalability patterns.
-                </p>
-              </div>
-
-              {/* Front-end */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-pink-500/50 transition-all group min-h-[220px] flex flex-col justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
-                  <Globe className="text-white" size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-center text-white">
-                  Front-end
-                </h3>
-                <p className="text-slate-300 text-center  min-h-[80px]">
-                  UIs with modern frameworks, responsive design, and
-                  performance-first principles.
-                </p>
-              </div>
-            </div>
-
-            {/* Bottom connecting line showing interconnectedness */}
-            <div className="flex justify-center mt-12">
-              <div className="flex items-center text-slate-400 text-sm">
-                <div className="w-32 h-0.5 bg-gradient-to-r from-blue-500/30 to-pink-500/30"></div>
-                <span className="mx-6 text-blue-300 font-medium">
-                  Interconnected, Secure Architecture
-                </span>
-                <div className="w-32 h-0.5 bg-gradient-to-r from-pink-500/30 to-blue-500/30"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="container mx-auto px-6 py-20">
-          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Real Impact for Real Clients
-          </h2>
-          <h4 className="text-xl font-bold text-center mb-8 text-transparent text-white">
-            Examples of track record benefits delivered
-          </h4>
-          <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle className="text-green-400" size={24} />
-                  <h3 className="text-xl font-semibold text-slate-100">
-                    {benefit.title}
-                  </h3>
-                </div>
-                <p className="text-slate-300">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Fun Projects Section */}
-        <section className="container mx-auto px-6 py-20">
-          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Fun Projects in Progress
-          </h2>
-          <p className="text-xl text-center mb-12 text-slate-300">
-            Experimental side projects where I explore new tech and creative
-            ideas
-          </p>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grifd md:grid-cols-2 gap-8">
-              {/* JWST Spectral Analyzer */}
-              <a
-                href="https://github.com/seniorcreative/spectral-analysis"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all transform hover:scale-105"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">🔭</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-100 group-hover:text-blue-300 transition-colors">
-                    JWST Spectral Analyzer
-                  </h3>
-                </div>
-                <p className="text-slate-300 mb-4">
-                  Analyzing spectral data from the James Webb Space Telescope to
-                  identify exoplanet atmospheres and stellar compositions. Built
-                  with Python, NumPy, and data visualization libraries.
-                </p>
-                <div className="flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors">
-                  <span className="text-sm font-medium">View on GitHub</span>
-                  <ArrowRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </div>
-              </a>
-
-              {/* Cor-D */}
-              <a
-                href="https://github.com/seniorcreative/cor-D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all transform hover:scale-105"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">🎵</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-100 group-hover:text-purple-300 transition-colors">
-                    Cor-D
-                  </h3>
-                </div>
-                <p className="text-slate-300 mb-4">
-                  An experimental tool that extracts chord progressions from
-                  YouTube clips using audio analysis. Perfect for musicians who
-                  want to play along to their favorite songs.
-                </p>
-                <div className="flex items-center gap-2 text-purple-400 group-hover:text-purple-300 transition-colors">
-                  <span className="text-sm font-medium">View on GitHub</span>
-                  <ArrowRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </div>
-              </a>
-            </div>
-
-            {/* Bottom note */}
-            <div className="text-center mt-8">
-              <p className="text-slate-400 text-sm">
-                These projects showcase my passion for exploring new
-                technologies and creative problem-solving
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        {/* <section id="testimonials" className="container mx-auto px-6 py-20">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            What Clients Say
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all"
-              >
-                <Quote className="text-blue-400 mb-4" size={24} />
-                <p className="text-slate-300 mb-6 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
-                    {testimonial.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </div>
-                  <span className="font-semibold text-white">{testimonial.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section> */}
-
-        {/* Service Packages */}
-        <section className="container mx-auto px-6 py-20">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            How I Can Help
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Quick Fix */}
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all">
-              <h3 className="text-2xl font-bold mb-4 text-white">Quick Fix</h3>
-              <p className="text-3xl font-bold mb-4 text-blue-400">$500-$1K</p>
-              <ul className="text-slate-300 space-y-2 mb-6">
-                <li>• Bug fixes and small features</li>
-                <li>• Performance optimization</li>
-                <li>• Quick consultation calls</li>
-                <li>• Same-day turnaround</li>
-              </ul>
-              <a
-                href="#contact"
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 px-6 py-3 rounded-lg font-semibold transition-all inline-block text-center"
-              >
-                Get Quote
-              </a>
-            </div>
-
-            {/* Project Development */}
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/50 transform scale-105 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                Most Popular
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Full Project</h3>
-              <p className="text-3xl font-bold mb-4 text-purple-400">$2K-$10K</p>
-              <ul className="text-slate-300 space-y-2 mb-6">
-                <li>• Complete website or app build</li>
-                <li>• Custom features and integrations</li>
-                <li>• Mobile-responsive design</li>
-                <li>• 2-8 week delivery</li>
-              </ul>
-              <a
-                href="#contact"
-                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 px-6 py-3 rounded-lg font-semibold transition-all inline-block text-center"
-              >
-                Get Quote
-              </a>
-            </div>
-
-            {/* Technical Partner */}
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-green-500/50 transition-all">
-              <h3 className="text-2xl font-bold mb-4 text-white">Technical Partner</h3>
-              <p className="text-3xl font-bold mb-4 text-green-400">$10K+</p>
-              <ul className="text-slate-300 space-y-2 mb-6">
-                <li>• Long-term development partnership</li>
-                <li>• Architecture planning and reviews</li>
-                <li>• Team training and mentoring</li>
-                <li>• Ongoing support and maintenance</li>
-              </ul>
-              <a
-                href="#contact"
-                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-6 py-3 rounded-lg font-semibold transition-all inline-block text-center"
-              >
-                Get Quote
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Contact Form Section */}
         <section
           id="contact"
-          className="container mx-auto px-6 py-20 text-center"
+          className="container mx-auto px-6 py-20 text-left"
         >
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-12 border border-slate-700/50 max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Ready to Ship Faster?
+              Are you ready? 
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Let&rsquo;s discuss how I can help you navigate technical
@@ -661,7 +327,7 @@ export default function Page() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-1 gap-6 mb-6">
                   <div>
                   <label
                     htmlFor="project"
@@ -677,18 +343,18 @@ export default function Page() {
                   >
                     <option value="">Select project type</option>
                     <option value="new-app">New App Development</option>
-                    <option value="migration">Legacy System Migration</option>
+                    <option value="migration">Customer Capture Website</option>
                     <option value="optimization">
-                    Performance Optimization
+                    My Website Is Broken Please Help
                     </option>
                     <option value="architecture">
-                    Technical Architecture Review
+                    E-Commerce Assitance
                     </option>
                     <option value="consulting">Technical Consulting</option>
                     <option value="other">Other</option>
                   </select>
                   </div>
-                  <div>
+                  {/* <div>
                   <label
                     htmlFor="budget"
                     className="block text-slate-300 font-medium mb-2"
@@ -719,7 +385,7 @@ export default function Page() {
                   {errors.budget && touched.budget && (
                     <p className="mt-1 text-sm text-red-400">{errors.budget}</p>
                   )}
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* <div className="grid md:grid-cols-2 gap-6 mb-6">

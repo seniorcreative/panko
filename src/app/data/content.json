@@ -12,8 +12,20 @@
           "contactLink": "/#contact"
         },
         "about": {
-          "title": "about",
-          "body": "<h3 class='text-lg'><strong>panko</strong> is your go-to web developer.</h3><br/><p>I make websites and apps that work perfectly for your business. No confusing tech jargon, no endless revisions. Just clear communication, fair pricing, and results that help you succeed. I've helped everyone from small startups to major brands get their digital presence right the first time.</p>"
+          "title": "About Panko Digital",
+          "body": "<h3 class='text-lg'><strong>Panko Digital</strong> is your go-to web and application developer expert.</h3><br/><p>I make, or fix websites and apps that work perfectly for your business. I will eliminate and simplify confusing tech jargon. I will be conscious and clear about budgets and costs and keep you in the loop, delivering results that help you succeed. I've helped everyone from small startups to major brands get their digital presence right the first time. I'm based in Geelong, Australia</p>",
+          "recentProjects": [
+            {
+              "title": "Floorplan Customer Activity Heatmap",
+              "client": "Kmart Australia",
+              "href": null
+            },
+            {
+              "title": "Loanscenarios Financial Advice Website",
+              "client": "Richard Bradshaw",
+              "href": "https://loanscenarios.com.au"
+            }
+          ]
         },
         "services": {
           "title": "services",
@@ -44,7 +56,7 @@
     "categoryInfo": {
       "Mobile": {
         "techie": "Custom mobile app development for iOS and Android with app store setup and user tracking",
-        "creative": "Mobile apps that your customers will love using—simple, fast, and designed to help your business grow."
+        "creative": "Mobile apps that your customers will love — simple, fast, and designed to help your business grow."
       },
       "Games": {
         "techie": "Quick game prototypes and interactive experiences with engaging user interfaces",
@@ -56,7 +68,7 @@
       },
       "E-commerce": {
         "techie": "Custom e-commerce development with payment processing and inventory management",
-        "creative": "Online stores that make it easy for customers to buy from you—more sales, fewer abandoned carts"
+        "creative": "Online stores that make it easy for customers to buy from you — more sales, fewer abandoned carts"
       },
       "Signage": {
         "techie": "Digital signage systems with content management and scheduling capabilities",
@@ -64,7 +76,7 @@
       },
       "UX": {
         "techie": "User experience design and prototyping with usability testing and iterative improvements",
-        "creative": "User-friendly design that puts your customers first—websites and apps that are easy to use and achieve your business goals"
+        "creative": "User-friendly design that puts your customers first -websites and apps that are easy to use and achieve your business goals"
       }
     },
     "work": [
@@ -72,7 +84,7 @@
         "id": 14,
         "title": "Reconnaitre",
         "href": "https://reconnaitre.com.au",
-        "description": "Rapid front-end development. Bootstrap 5. Responsive site for Australian Drone start-up..,",
+        "description": "Rapid front-end development. Bootstrap 5. Responsive site for Australian Drone start up.",
         "date": "2024",
         "category": ["E-commerce"],
         "meta": {
@@ -100,7 +112,7 @@
         "id": 3,
         "title": "Game of life",
         "href": "https://organisms.vercel.app/",
-        "description": "Take home coding exercise which panko got a bit carried away with.",
+        "description": "Take home coding exercise which I got a bit carried away with.",
         "date": "2021",
         "category": ["Games"],
         "meta": {
@@ -112,7 +124,7 @@
         "id": 10,
         "title": "WorkSafe Projects",
         "href": "",
-        "description": "Innovation centre was a very educational experience, to go into as a software engineer. Teamed up with service designers and researchers. Interviewed injured workers. Learned the power of the double-diamond, and design workshop synthesis as part of systems thinking. Developed various tools and web apps. This one had a passwordless sign-in using AWS lambda and cognito, and was piloted by the Victorian government, helping the incapacitated in many ways.",
+        "description": "WorkSafe Innovation centre was a very educational experience, to go into as a software engineer. Teamed up with service designers and researchers. Interviewed injured workers. Learned the power of the double-diamond, and design workshop synthesis as part of systems thinking. Developed various tools and web apps. This one had a passwordless sign-in using AWS lambda and cognito, and was piloted by the Victorian government, helping the incapacitated in many ways.",
         "date": "2021",
         "category": ["Cloud"],
         "meta": {
@@ -144,7 +156,7 @@
         "id": 2,
         "title": "SLSA Surf Lifesaving Squad",
         "href": "",
-        "description": "Teamed up with this cool Sydney agency, and went to what is arguably the best office in Australia, the HQ of SLSA at Bondi Beach. When panko made these games panko decided to focus on some more hardcore software engineering principles. So panko read a lot about MVC design patterns and that was fully utilised throughout the codebase. As the project code scaled it paid dividends even though it felt slower at first.",
+        "description": "Teamed up with this cool Sydney agency, and went to what is arguably the best office in Australia, the HQ of SLSA at Bondi Beach. When I made these games I decided to focus on some more hardcore software engineering principles. So I read a lot about MVC design patterns and that was fully utilised throughout the codebase. As the project code scaled it paid dividends even though it felt slower at first.",
         "date": "2012",
         "category": ["Games"],
         "meta": {
@@ -156,7 +168,7 @@
         "id": 1,
         "title": "Carlton Natural Blonde",
         "href": "",
-        "description": "Retro Galaga. Panko had a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. Panko was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and panko later hosted it separately with it's own scoreboard API.",
+        "description": "Retro Galaga. I had a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. I was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and I later hosted it separately with it's own scoreboard API.",
         "date": "2010",
         "category": ["Games"],
         "meta": {
@@ -171,7 +183,7 @@
         "id": 4,
         "title": "FLUX Clothing",
         "href": "",
-        "description": "Panko' first e-commerce site - which took paypal and eWay credit card payments. Can remember that hallelujah moment when the gateway was all wired up correctly. Shopify didn't exist when panko was doing this. Had some rad fun animating components for the FLUX crew.",
+        "description": "My first e-commerce site - which took paypal and eWay credit card payments. Can remember that hallelujah moment when the gateway was all wired up correctly. Shopify didn't exist when I was doing this. Had some rad fun animating components for the FLUX crew.",
         "date": "2010",
         "category": ["E-commerce"],
         "meta": {
@@ -211,7 +223,7 @@
         "id": 7,
         "title": "Milk Skincare",
         "href": "",
-        "description": "For the swimming legend Michael's Milk Skincare start up panko was there at the outset, hand-rolled panko's own e-commerce system made with panko's Popcorn CMS. Pre-shopify. As panko's second e-commerce site, it helped to launch this start up. Lessons learned from doing this project are still with panko to this day. Test Coverage anyone?",
+        "description": "For the swimming legend Michael's Milk Skincare start up I was there at the outset, hand-rolled my own e-commerce system made with my Popcorn CMS. Pre-shopify. As my second e-commerce site, it helped to launch this start up. Lessons learned from doing this project are still with me to this day. Test Coverage anyone?",
         "date": "2011",
         "category": ["E-commerce"],
         "meta": {
@@ -226,7 +238,7 @@
         "id": 12,
         "title": "Lucky EOS Wires",
         "href": "",
-        "description": "Panko was commissioned to make some wireframes for a crypto baccarat game. Later worked on some React FE component layouts for the real game.",
+        "description": "It's not every day you're hired to build a timed interactive scoring system which generates video signals to show large sports stadium crowds. Huge application.",
         "date": "2018",
         "category": ["Games", "UX"],
         "meta": {

@@ -45,7 +45,7 @@ export default function RootLayout({
                   className={`${varela.className} text-black text-lg`}
                   locale="zh-CN"
                 >
-                  <strong>panko</strong>
+                  <strong>panko digital</strong>
                 </Link>
                 <LanguageSwitcher font={varela}></LanguageSwitcher>
               </div>

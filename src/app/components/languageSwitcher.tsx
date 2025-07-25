@@ -82,42 +82,6 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           {language !== "zh-CN" ? "Contact" : "工作"}
         </Link>
       </li>
-      {/* <li className="flex me-3 items-center h-100">
-        <Link
-          className={`${font.className} text-gray-800 text-sm ${
-            hash?.includes("about") ? "underline" : ""
-          }`}
-          href="/#about"
-        >
-          {language !== "zh-CN" ? "about" : "关于"}
-        </Link>
-      </li> */}
-      {/* <li className="flex me-3 items-center h-100">
-        <Link
-          className={`${font.className} text-gray-800 text-sm ${
-            hash?.includes("services") ? "underline" : ""
-          }`}
-          href="/#services"
-        >
-          {language !== "zh-CN" ? "services" : "服务"}
-        </Link>
-      </li> */}
-      {/* <li className="flex items-center h-100">
-        {languageMap.map(({ lang, icon }) => (
-          <LanguageSwitcherIdiom
-            key={lang}
-            language={lang}
-            active={language === lang}
-            icon={icon}
-            changeMethod={(lang) => {
-              changeLanguageCookieValue(lang);
-              // setCurrentLocaleFromCookie(lang);
-              setLanguage(lang);
-              // window.location.reload();
-            }}
-          />
-        ))}
-      </li> */}
     </ul>
   );
 }
