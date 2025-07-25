@@ -30,7 +30,7 @@
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  z-index: auto;
+  z-index: -999;
 }
 #estrella {
   contain: paint;

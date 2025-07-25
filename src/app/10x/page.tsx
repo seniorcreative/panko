@@ -348,7 +348,7 @@ export default function Page() {
                     My Website Is Broken Please Help
                     </option>
                     <option value="architecture">
-                    E-Commerce Assitance
+                    E-Commerce Assistance
                     </option>
                     <option value="consulting">Technical Consulting</option>
                     <option value="other">Other</option>

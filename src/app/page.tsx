@@ -18,6 +18,7 @@ import Shuffler from "./components/shuffler";
 import {
   PankoLogoSVG,
   NineLogo,
+  KmartLogo,
   BankFirst,
   Telstra,
   Buildxact,
@@ -52,6 +53,7 @@ export default function Home() {
 
   const Logos: LogoObj[] = [
     { t: "Nine Network: Video Graphics Software", i: NineLogo, c: undefined },
+    { t: "Kmart Australia: Floorplan Heatmap", i: KmartLogo, c: undefined },
     { t: "BankFirst: Finance Application", i: BankFirst, c: undefined },
     {
       t: "Buildxact: Building Quote Estimation Software",
