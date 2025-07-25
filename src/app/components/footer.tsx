@@ -22,28 +22,22 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
           <div className="flex-1">
             <div className="flex gap-4 items-center">
               <Link
-                href="/10x"
-                className="text-xs text-slate-100 hover:text-white transition-colors"
+                href="/services"
+                className="text-xs text-slate-800 hover:text-slate-900 transition-colors"
               >
-                Services
+                {language !== "zh-CN" ? "Services" : "副驾驶"}
               </Link>
               <Link
-                href="/folio/all"
-                className="text-xs text-slate-100 hover:text-white transition-colors"
+                href="/#work"
+                className="text-xs text-slate-800 hover:text-slate-900 transition-colors"
               >
-                Portfolio
+                {language !== "zh-CN" ? "Work" : "工作"}
               </Link>
               <Link
-                href="/#about"
-                className="text-xs text-slate-100 hover:text-white transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/10x/#contact"
+                href="/services/#contact"
                 className="inline-flex items-center px-3 py-1 bg-gradient-to-r text-xs from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded text-white font-semibold transition-all"
               >
-                Contact
+                {language !== "zh-CN" ? "Contact" : "工作"}
               </Link>
             </div>
           </div>

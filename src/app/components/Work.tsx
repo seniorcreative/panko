@@ -3,16 +3,16 @@
 import { useEffect } from "react";
 import { animate } from "animejs";
 import React, { useRef } from "react";
-import LavaLampBlobs from "./LavaLampBlobs";
+// import LavaLampBlobs from "./LavaLampBlobs";
 import ProjectTicker from "./ProjectTicker";
 
 const content = require("../data/content.json");
 
-export type aboutType = {
+export type workType = {
   locale: string;
 };
 
-export default function About({ locale }: aboutType) {
+export default function Work({ locale }: workType) {
   const pageContent = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
@@ -40,9 +40,6 @@ export default function About({ locale }: aboutType) {
         <div id="content" className="text-indigo-800 mb-8" ref={pageContent}></div>
         
         <div className="border-t border-gray-300 pt-8">
-          <h3 className="text-2xl font-bold text-indigo-800 mb-4 text-center">
-            Latest businesses helped
-          </h3>
           <ProjectTicker projects={content[locale].home.sections.about.recentProjects} />
         </div>
       </div>

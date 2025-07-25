@@ -8,12 +8,12 @@ import { getCurrentLocale } from "./actions";
 import { sendGTMEvent } from "@next/third-parties/google";
 
 // Components
-import About from "./components/about";
-import Services from "./components/services";
-import FolioCategories from "./components/folioCategories";
+import Work from "./components/Work";
+// import Services from "./components/services";
+import BusinessHelp from "./components/BusinessHelp";
 import Waves from "./components/waves";
 import Stellae from "./components/stellae";
-import Shuffler from "./components/shuffler";
+// import Shuffler from "./components/shuffler";
 
 import {
   PankoLogoSVG,
@@ -82,19 +82,7 @@ export default function Home() {
     },
   ];
 
-  const folioCategories = new Set<string>();
-  const { language, setLanguage } = useContext(LanguageContext);
-
-  content[language].work.forEach((workItem: any) => {
-    workItem.category.forEach((cat: string) => {
-      folioCategories.add(cat);
-    });
-  });
-
-  const catInfo = content[language].categoryInfo;
-
-  const buttonStyle =
-    "px-4 py-2 rounded-md me-2 border-2 border-dark bg-white bg-opacity-75 backdrop-blur";
+  const { language } = useContext(LanguageContext);
 
   const colorButtonStyle = `px-4 py-2 rounded-md ms-2 border-2 border-blue-500 bg-blue-500 text-white hover:bg-blue-600 transition-colors`;
 
@@ -185,13 +173,10 @@ Get Started
         </div>
       </section>
       <Waves flipped />
-      <FolioCategories
-        categories={folioCategories}
-        locale={language}
-        categoryInfo={catInfo}
-      />
-      <div id="about">
-        <About locale={language} />
+      <BusinessHelp />
+      <Waves flipped verticalFlip whiteBg />
+      <div id="work">
+        <Work locale={language} />
       </div>
       {/* <Shuffler></Shuffler> */}
       {/* <Services locale={language} /> */}

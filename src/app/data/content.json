@@ -18,12 +18,32 @@
             {
               "title": "Floorplan Customer Activity Heatmap",
               "client": "Kmart Australia",
-              "href": null
+              "href": null,
+              "year": "2025"
             },
             {
-              "title": "Loanscenarios Financial Advice Website",
-              "client": "Richard Bradshaw",
-              "href": "https://loanscenarios.com.au"
+              "title": "Financial Advice Website",
+              "client": "Loan Scenarios",
+              "href": "https://loanscenarios.com.au",
+              "year": "2025"
+            },
+            {
+              "title": "Square Subscription Payments",
+              "client": "AFISC",
+              "href": "https://afisc.com.au",
+              "year": "2025"
+            },
+            {
+              "title": "Ecommerce Inventory Syncing",
+              "client": "Hendry Cycles Geelong",
+              "href": "https://hendrys.com.au",
+              "year": "2025"
+            },
+            {
+              "title": "Drone Store",
+              "client": "Reconnaître",
+              "href": "https://reconnaitre.com.au",
+              "year": "2024"
             }
           ]
         },

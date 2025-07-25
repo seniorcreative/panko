@@ -198,15 +198,15 @@ export default function Page() {
         <Stellae invert />
 
         {/* Hero Section */}
-        <section className="container mx-auto px-6 py-20 text-center">
+        <section className="container mx-auto px-6 py-20 text-left">
           <h1 className="text-5xl md:text-7xl font-bold mt-8 mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Launch quickly with an AI Developer
           </h1>
-          <div className="max-w-4xl mx-auto mb-12">
+          <div className="max-w-4xl mb-12">
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
-              An experienced software developer, using AI greatly enhances my abilities, bringing more than just coding speed. I offer
+              As an experienced software developer, using AI greatly enhances my abilities, bringing more than just coding speed. I offer
               architectural insight, best practice advice, debugging expertise and the experience to anticipate problems before they become costly.
-              If you&rsquo;re trying to launch something quickly, I'll be your technical co-pilot. I can help you get it off the ground.
+              If you&rsquo;re trying to launch something quickly, I&rsquo;ll be your technical co-pilot. I can help you get it off the ground.
             </p>
           </div>
           <a
@@ -249,13 +249,13 @@ export default function Page() {
           id="contact"
           className="container mx-auto px-6 py-20 text-left"
         >
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-12 border border-slate-700/50 max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Are you ready? 
             </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-md text-slate-300 mb-8 max-w-2xl mx-auto">
               Let&rsquo;s discuss how I can help you navigate technical
-              decisions and launch your product with confidence.
+              decisions, fix your site or launch your product with confidence.
             </p>
 
             {formSuccess && (
@@ -453,7 +453,7 @@ export default function Page() {
                     id="message"
                     name="message"
                     required
-                    rows={6}
+                    rows={4}
                     minLength={50}
                     onChange={handleFieldChange}
                     className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${
