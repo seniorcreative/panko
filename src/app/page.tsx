@@ -269,7 +269,7 @@ export default function Home() {
         <Stellae />
         <div className="relative z-50 text-center px-8 max-w-4xl mx-auto">
           <Image
-            className="mx-auto mb-8 animate-pulse"
+            className="mx-auto mb-8 mt-20 animate-pulse"
             id="logo-img"
             src={PankoLogoSVG.src}
             alt="Panko Logo"
