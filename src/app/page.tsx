@@ -355,7 +355,7 @@ export default function Home() {
           </h3>
           <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
             From startups to major corporations, I&apos;ve helped businesses of
-            all sizes succeed online.
+            all sizes succeed in the digital space.
           </p>
           <div className="overflow-hidden">
             <div className="carousel-container">
@@ -497,11 +497,10 @@ export default function Home() {
                       name="name"
                       required
                       onChange={handleFieldChange}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
-                        errors.name && touched.name
-                          ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                          : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
-                      }`}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${errors.name && touched.name
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                        : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
+                        }`}
                       placeholder="Your name"
                     />
                     {errors.name && touched.name && (
@@ -521,11 +520,10 @@ export default function Home() {
                       name="email"
                       required
                       onChange={handleFieldChange}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
-                        errors.email && touched.email
-                          ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                          : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
-                      }`}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${errors.email && touched.email
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                        : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
+                        }`}
                       placeholder="your@email.com"
                     />
                     {errors.email && touched.email && (
@@ -536,7 +534,33 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-1 gap-6 mb-6">
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label
+                      htmlFor="industry"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Your Industry
+                    </label>
+                    <select
+                      id="industry"
+                      name="industry"
+                      onChange={handleFieldChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    >
+                      <option value="">Select your industry</option>
+                      <option value="creative">Creative - artists, photographers</option>
+                      <option value="finance">Finance - advisors, investors, bankers</option>
+                      <option value="health">Health - GPs, counsellors, support workers</option>
+                      <option value="media">Media - advertising, signage, entertainment</option>
+                      <option value="leisure">Leisure - sports, fitness</option>
+                      <option value="trades">Trades - builders, business owners</option>
+                      <option value="science">Science - astronomers, technologists</option>
+                      <option value="entrepreneurs">Entrepreneurs</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
                   <div>
                     <label
                       htmlFor="project"
@@ -551,17 +575,12 @@ export default function Home() {
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                     >
                       <option value="">Select project type</option>
-                      <option value="new-app">New App Development</option>
-                      <option value="migration">
-                        Customer Capture Website
+                      <option value="website">Website</option>
+                      <option value="app">App </option>
+                      <option value="e-commerce">
+                        E-Commerce
                       </option>
-                      <option value="optimization">
-                        My Website Is Broken Please Help
-                      </option>
-                      <option value="architecture">
-                        E-Commerce Assistance
-                      </option>
-                      <option value="consulting">Technical Consulting</option>
+                      <option value="technical-issues">Technical Issues</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -581,12 +600,11 @@ export default function Home() {
                     rows={4}
                     minLength={50}
                     onChange={handleFieldChange}
-                    className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${
-                      errors.message && touched.message
-                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                        : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
-                    }`}
-                    placeholder={`Please describe:\n• What specific technical problem are you trying to solve?\n• What is the current state of your project?`}
+                    className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${errors.message && touched.message
+                      ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                      : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
+                      }`}
+                  // placeholder={`Please describe:\n• What specific technical problem are you trying to solve?\n• What is the current state of your project?`}
                   />
                   {errors.message && touched.message && (
                     <p className="mt-1 text-sm text-red-400">
