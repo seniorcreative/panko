@@ -126,7 +126,7 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
 
       <div className="mt-6 text-center">
         <Link
-          href="/folio/all"
+          href="/folio"
           className="text-blue-900 text-sm uppercase tracking-wide hover:underline transition-all hover:text-blue-700"
         >
           View older work
