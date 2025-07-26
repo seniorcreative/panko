@@ -13,7 +13,7 @@
         },
         "about": {
           "title": "About Panko Digital",
-          "body": "<h3 class='text-lg'><strong>Panko Digital</strong> is your go-to web and application developer expert.</h3><br/><p>I make, or fix websites and apps that work perfectly for your business. I will eliminate and simplify confusing tech jargon. I will be conscious and clear about budgets and costs and keep you in the loop, delivering results that help you succeed. I've helped everyone from small startups to major brands get their digital presence right the first time. I'm based in Geelong, Australia</p>",
+          "body": "<h3 class='text-lg'><strong>Panko Digital</strong> is your go-to web and application developer expert.</h3><br/><p>I make, or fix websites and apps that work perfectly for your business.</p><p>I eliminate confusing tech jargon and keep communication clear and simple.</p><p>I'm conscious about budgets and costs, keeping you informed every step of the way.</p><p>I've helped everyone from small startups to major brands get their digital presence right the first time.</p><p>I'm based in Geelong, Australia.</p>",
           "recentProjects": [
             {
               "title": "Floorplan Customer Activity Heatmap",
