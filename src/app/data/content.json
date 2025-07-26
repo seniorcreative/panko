@@ -104,7 +104,7 @@
         "id": 14,
         "title": "Reconnaitre",
         "href": "https://reconnaitre.com.au",
-        "description": "Rapid front-end development. Bootstrap 5. Responsive site for Australian Drone start up.",
+        "description": "Rapid Bootstrap 5 front-end for Australian drone startup.",
         "date": "2024",
         "category": ["E-commerce"],
         "meta": {
@@ -116,7 +116,7 @@
         "id": 9,
         "title": "Bridge Alert",
         "href": "",
-        "description": "Firebase storage, Geofencing, Map based routing, Push notifications. Had a lot of fun prototyping, building and testing this React Native app. Launched in 2017 and gained some popularity around Australia.",
+        "description": "React Native app with Firebase, geofencing, maps, and push notifications. Popular in Australia.",
         "date": "2016-2019",
         "category": ["Mobile"],
         "meta": {
@@ -132,7 +132,7 @@
         "id": 3,
         "title": "Game of life",
         "href": "https://organisms.vercel.app/",
-        "description": "Take home coding exercise which I got a bit carried away with.",
+        "description": "Conway's Game of Life coding exercise.",
         "date": "2021",
         "category": ["Games"],
         "meta": {
@@ -144,7 +144,7 @@
         "id": 10,
         "title": "WorkSafe Projects",
         "href": "",
-        "description": "WorkSafe Innovation centre was a very educational experience, to go into as a software engineer. Teamed up with service designers and researchers. Interviewed injured workers. Learned the power of the double-diamond, and design workshop synthesis as part of systems thinking. Developed various tools and web apps. This one had a passwordless sign-in using AWS lambda and cognito, and was piloted by the Victorian government, helping the incapacitated in many ways.",
+        "description": "AWS Lambda and Cognito passwordless sign-in app piloted by Victorian government.",
         "date": "2021",
         "category": ["Cloud"],
         "meta": {
@@ -160,7 +160,7 @@
         "id": 11,
         "title": "RevitCourse",
         "href": "https://revitcourse.com.au",
-        "description": "Custom-built multi-location course booking system featuring payment gateway integration and PDF certificate generation. With some customisation of the google map styling.",
+        "description": "Multi-location course booking with payments, PDF certificates, and custom Google Maps.",
         "date": "2021",
         "category": ["E-commerce"],
         "meta": {
@@ -176,7 +176,7 @@
         "id": 2,
         "title": "SLSA Surf Lifesaving Squad",
         "href": "",
-        "description": "Teamed up with this cool Sydney agency, and went to what is arguably the best office in Australia, the HQ of SLSA at Bondi Beach. When I made these games I decided to focus on some more hardcore software engineering principles. So I read a lot about MVC design patterns and that was fully utilised throughout the codebase. As the project code scaled it paid dividends even though it felt slower at first.",
+        "description": "Surf lifesaving games built with MVC design patterns at Bondi Beach HQ.",
         "date": "2012",
         "category": ["Games"],
         "meta": {
@@ -188,7 +188,7 @@
         "id": 1,
         "title": "Carlton Natural Blonde",
         "href": "",
-        "description": "Retro Galaga. I had a wicked time smashing out the code for this in 6 days. It needed to be embedded into a larger marketing site. I was able to find all the original SFX online. It was not the full game and was not meant to be but it was a lot of fun and I later hosted it separately with it's own scoreboard API.",
+        "description": "Retro Galaga clone with original SFX, built in 6 days for marketing.",
         "date": "2010",
         "category": ["Games"],
         "meta": {
@@ -203,7 +203,7 @@
         "id": 4,
         "title": "FLUX Clothing",
         "href": "",
-        "description": "My first e-commerce site - which took paypal and eWay credit card payments. Can remember that hallelujah moment when the gateway was all wired up correctly. Shopify didn't exist when I was doing this. Had some rad fun animating components for the FLUX crew.",
+        "description": "First e-commerce site with PayPal and eWay payments, animated components.",
         "date": "2010",
         "category": ["E-commerce"],
         "meta": {
@@ -215,7 +215,7 @@
         "id": 5,
         "title": "MCG Club Songs",
         "href": "",
-        "description": "Started to work more on kiosk and touch screen systems. Was commissioned to add a new club song to this installation at the Australian Sports Museum. Early IOT / Electronic messaging gateway work.",
+        "description": "Kiosk system for Australian Sports Museum with club songs and IoT messaging.",
         "date": "2011",
         "category": ["Signage"],
         "meta": {
@@ -227,7 +227,7 @@
         "id": 6,
         "title": "MCG AFL Scoreboard System",
         "href": "",
-        "description": "It's not every day you're hired to build a timed interactive scoring system which generates video signals to show large sports stadium crowds. Huge application.",
+        "description": "Interactive scoring system generating video signals for large sports stadium crowds.",
         "date": "2007",
         "category": ["Signage"],
         "meta": {
@@ -243,7 +243,7 @@
         "id": 7,
         "title": "Milk Skincare",
         "href": "",
-        "description": "For the swimming legend Michael's Milk Skincare start up I was there at the outset, hand-rolled my own e-commerce system made with my Popcorn CMS. Pre-shopify. As my second e-commerce site, it helped to launch this start up. Lessons learned from doing this project are still with me to this day. Test Coverage anyone?",
+        "description": "Custom e-commerce system with Popcorn CMS for Michael Klim's skincare startup.",
         "date": "2011",
         "category": ["E-commerce"],
         "meta": {
@@ -258,7 +258,7 @@
         "id": 12,
         "title": "Lucky EOS Wires",
         "href": "",
-        "description": "It's not every day you're hired to build a timed interactive scoring system which generates video signals to show large sports stadium crowds. Huge application.",
+        "description": "Wireframes and React components for crypto baccarat game.",
         "date": "2018",
         "category": ["Games", "UX"],
         "meta": {
@@ -334,7 +334,7 @@
         "id": 3,
         "title": "生命的游戏",
         "href": "https://organisms.vercel.app/",
-        "description": "进行家庭编码练习，我从中获得了很多乐趣。",
+        "description": "Conway's Game of Life 编码练习。",
         "date": "2021",
         "category": ["游戏"],
         "meta": {
@@ -346,7 +346,7 @@
         "id": 14,
         "title": "Reconnaitre",
         "href": "https://reconnaitre.com.au",
-        "description": "快速的前端开发。 Bootstrap 5. 澳大利亚无人机初创公司的响应式网站.",
+        "description": "澳大利亚无人机创业公司的 Bootstrap 5 快速前端。",
         "date": "2024",
         "category": ["E-commerce"],
         "meta": {
@@ -358,7 +358,7 @@
         "id": 9,
         "title": "桥梁警报",
         "href": "",
-        "description": "Firebase 存储、地理围栏、基于地图的路由、推送通知。有很多有趣的原型设计、构建和测试这个 React Native 应用程序。于 2017 年推出，并在澳大利亚各地获得了一定的知名度。",
+        "description": "具有 Firebase、地理围栏和推送通知的 React Native 应用。在澳大利亚很受欢迎。",
         "date": "2016-2019",
         "category": ["移动的"],
         "meta": {
@@ -374,7 +374,7 @@
         "id": 12,
         "title": "Lucky EOS 线框",
         "href": "",
-        "description": "Panko 受委托为加密百家乐游戏制作一些线框。后来为真实游戏开发了一些 React FE 组件布局",
+        "description": "加密百家乐游戏的线框和 React 组件。",
         "date": "2018",
         "category": ["游戏", "UX"],
         "meta": {
