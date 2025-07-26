@@ -47,77 +47,41 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           className={`${font.className} text-gray-800 text-sm ${
             decodeURI(pathname) == "/10x" ? "underline" : ""
           }`}
-          href="/10x"
+          href="/services"
         >
-{language !== "zh-CN" ? "Services" : "副驾驶"}
+          {language !== "zh-CN" ? "Services" : "副驾驶"}
         </Link>
       </li>
-      <li className="flex me-3 items-center h-100">
+      {/* <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
-            decodeURI(pathname).includes("/folio/all") ? "underline" : ""
+            decodeURI(pathname).includes("/folio") ? "underline" : ""
           }`}
-          href="/folio/all"
+          href="/folio"
         >
 {language !== "zh-CN" ? "Portfolio" : "工作"}
         </Link>
-      </li>
+      </li> */}
       <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} text-gray-800 text-sm ${
-            hash?.includes("about") ? "underline" : ""
+            hash?.includes("work") ? "underline" : ""
           }`}
-          href="/#about"
+          href="/#work"
         >
-          {language !== "zh-CN" ? "About" : "关于"}
+          {language !== "zh-CN" ? "Work" : "工作"}
         </Link>
       </li>
       <li className="flex me-3 items-center h-100">
         <Link
           className={`${font.className} inline-flex items-center px-4 py-2 bg-gradient-to-r text-xs from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all transform hover:scale-105 shadow-lg ${
-            decodeURI(pathname).includes("/folio/all") ? "underline" : ""
+            decodeURI(pathname).includes("/folio") ? "underline" : ""
           }`}
-          href="/10x/#contact"
+          href="/services/#contact"
         >
           {language !== "zh-CN" ? "Contact" : "工作"}
         </Link>
       </li>
-      {/* <li className="flex me-3 items-center h-100">
-        <Link
-          className={`${font.className} text-gray-800 text-sm ${
-            hash?.includes("about") ? "underline" : ""
-          }`}
-          href="/#about"
-        >
-          {language !== "zh-CN" ? "about" : "关于"}
-        </Link>
-      </li> */}
-      {/* <li className="flex me-3 items-center h-100">
-        <Link
-          className={`${font.className} text-gray-800 text-sm ${
-            hash?.includes("services") ? "underline" : ""
-          }`}
-          href="/#services"
-        >
-          {language !== "zh-CN" ? "services" : "服务"}
-        </Link>
-      </li> */}
-      {/* <li className="flex items-center h-100">
-        {languageMap.map(({ lang, icon }) => (
-          <LanguageSwitcherIdiom
-            key={lang}
-            language={lang}
-            active={language === lang}
-            icon={icon}
-            changeMethod={(lang) => {
-              changeLanguageCookieValue(lang);
-              // setCurrentLocaleFromCookie(lang);
-              setLanguage(lang);
-              // window.location.reload();
-            }}
-          />
-        ))}
-      </li> */}
     </ul>
   );
 }

@@ -10,6 +10,7 @@ import Sportsyear from "./Sportsyear-logo-lod@2x.png";
 import Mini from "./mini-logo-06.jpg";
 import RevitCourse from "./autodesk-revit-course-logo@2x.png";
 import BBC from "./BBC_Logo_2021.svg";
+import KmartLogo from "./kmart-australia-logo.png";
 
 export {
   PankoLogoSVG,
@@ -24,4 +25,5 @@ export {
   Mini,
   RevitCourse,
   BBC,
+  KmartLogo,
 };

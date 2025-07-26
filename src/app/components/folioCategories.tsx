@@ -18,10 +18,10 @@ export default function FolioCategories({
 
   useEffect(() => {
     const filteredTargets = Array.from(categories).filter(
-      (cat: string) => cat !== selectedSection
+      (cat: string) => cat !== selectedSection,
     );
     const selectedTargets = Array.from(categories).filter(
-      (cat: string) => cat == selectedSection
+      (cat: string) => cat == selectedSection,
     );
     const addedFilteredIds = filteredTargets.map((t) => "#" + t);
     const selectFilteredIds = selectedTargets.map((t) => "#" + t);
@@ -93,21 +93,26 @@ export default function FolioCategories({
               setSelectedSection("");
             }}
           >
-            <span className="material-symbols-outlined">close</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-x"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
           </button>
           <VisitorSelector mono />
           <p className="text-white pb-4">
             {categoryInfo[selectedSection][visitorType]}
           </p>
-          {/* <p className="cat-link p-2 rounded-md me-2 border-2 border-light py-1 cursor-pointer inline-block">
-            <a
-              type="button"
-              className="text-white text-sm"
-              href={`/folio/${selectedSection}`}
-            >
-              {locale !== "zh-CN" ? "View work" : "查看工作"}
-            </a>
-          </p> */}
         </div>
       )}
     </section>

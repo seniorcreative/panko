@@ -3,15 +3,17 @@
 import { useEffect } from "react";
 import { animate } from "animejs";
 import React, { useRef } from "react";
-import LavaLampBlobs from "./LavaLampBlobs";
+// import LavaLampBlobs from "./LavaLampBlobs";
+import ProjectTicker from "./ProjectTicker";
+import { aldrich } from "../fonts";
 
 const content = require("../data/content.json");
 
-export type aboutType = {
+export type workType = {
   locale: string;
 };
 
-export default function About({ locale }: aboutType) {
+export default function Work({ locale }: workType) {
   const pageContent = useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Animation using Anime.js
@@ -31,12 +33,24 @@ export default function About({ locale }: aboutType) {
 
   return (
     <section className="relative min-h-screen py-8 flex items-center justify-center leading-8 overflow-hidden">
-      <LavaLampBlobs className="opacity-40" />
-      <div className="w-3/4 md:w-1/3 relative z-10">
-        <h2 className="text-2xl bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent mb-2 -ms-4">
+      {/* <LavaLampBlobs className="opacity-40" /> */}
+      <div className="container relative z-10">
+        <h2
+          className={`${aldrich.className} text-4xl bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent mb-4`}
+        >
           <strong>{content[locale].home.sections.about.title}</strong>
         </h2>
-        <div id="content" className="text-indigo-800" ref={pageContent}></div>
+        <div
+          id="content"
+          className="text-indigo-800 mb-8"
+          ref={pageContent}
+        ></div>
+
+        <div className="border-t border-gray-300 pt-2">
+          <ProjectTicker
+            projects={content[locale].home.sections.about.recentProjects}
+          />
+        </div>
       </div>
     </section>
   );

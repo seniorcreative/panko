@@ -3,8 +3,8 @@
 This is my personal folio / pseudo consultancy side gig project. I made this with NextJS14=5 and tailwind.
 It features with a few little goodies like particles, transitions (animeJS), SVG animations, a CMS with raw JSON, no-reload localization using context providers, font icons from google. It gets deployed with netlify.
 
-
 ---
+
 ## Getting Started
 
 First, run the development server:

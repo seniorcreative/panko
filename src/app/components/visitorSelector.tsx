@@ -20,7 +20,7 @@ export default function VisitorSelector({ mono }: { mono?: boolean }) {
   return (
     <div className="flex my-4 items-center">
       <h3 className="font-bold me-3">
-        {language === "zh-CN" ? "你是谁" : "What could we make?"}
+        {language === "zh-CN" ? "你是谁" : "I have experience building"}
       </h3>
       <button
         onClick={() => setVisitorType("creative")}
