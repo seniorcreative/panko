@@ -124,12 +124,20 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
         ))}
       </div>
 
-      <div className="mt-6 text-center">
+      <div className="mt-6 flex justify-around items-center mx-auto max-w-md">
         <Link
           href="/folio"
-          className="text-blue-900 text-sm uppercase tracking-wide hover:underline transition-all hover:text-blue-700"
+          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
         >
           View older work
+        </Link>
+        <Link
+          href="https://github.com/seniorcreative"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
+        >
+          View code experiments
         </Link>
       </div>
     </div>
