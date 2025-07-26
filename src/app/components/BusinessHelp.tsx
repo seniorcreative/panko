@@ -20,6 +20,12 @@ export default function BusinessHelp(): JSX.Element {
         : "建立在线商店，让客户轻松购买，安全支付，简单结账。"
     },
     {
+      title: language !== "zh-CN" ? "Set up your web platform" : "建立您的网络平台",
+      description: language !== "zh-CN"
+        ? "Let me register and sort out your wix or squarespace or other no-code / lo-code site so you can just do the easy bits"
+        : "让我注册并整理您的 Wix 或 Squarespace 或其他无代码/低代码网站，这样您就可以只做简单的部分"
+    },
+    {
       title: language !== "zh-CN" ? "Save Time with Apps" : "用应用程序节省时间",
       description: language !== "zh-CN"
         ? "Custom apps and tools that handle the technical stuff automatically, so you can focus on growing your business."
@@ -57,12 +63,22 @@ export default function BusinessHelp(): JSX.Element {
           ))}
         </div>
 
-        <div className="bg-gray-900 rounded-lg p-6 mt-12 text-center border border-gray-800">
-          <p className="text-gray-300 mb-4">
-            {language !== "zh-CN" 
-              ? "I'll make sure your digital services work on all devices and are secure, and your customers can find them easily. Free up your time to focus on everything else."
-              : "我会确保您的数字服务在所有设备上都能运行且安全，客户能够轻松找到。让您腾出时间专注于其他一切。"}
-          </p>
+        <div className="mt-12 text-center">
+          <ol className="text-gray-300 text-left max-w-2xl mx-auto space-y-3">
+            {language !== "zh-CN" ? (
+              <>
+                <li>1. Make sure your digital services work on all devices and are secure</li>
+                <li>2. Ensure your customers can find them easily</li>
+                <li>3. Free up your time to focus on everything else</li>
+              </>
+            ) : (
+              <>
+                <li>1. 确保您的数字服务在所有设备上都能运行且安全</li>
+                <li>2. 确保客户能够轻松找到</li>
+                <li>3. 让您腾出时间专注于其他一切</li>
+              </>
+            )}
+          </ol>
         </div>
 
         <div className="text-center mt-12 pb-16">
