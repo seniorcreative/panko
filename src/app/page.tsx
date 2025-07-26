@@ -273,8 +273,54 @@ export default function Home() {
     setFormSuccess(true);
   };
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Panko Digital",
+    alternateName: "Panko",
+    description: "Business web developer and app development services in Geelong and Melbourne, helping business owners launch websites and fix technical issues.",
+    url: "https://panko.digital",
+    telephone: "+61-1234-567890", // You may want to add actual phone number
+    email: "stesmi+panko@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Geelong",
+      addressRegion: "Victoria",
+      addressCountry: "Australia"
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Geelong"
+      },
+      {
+        "@type": "City", 
+        name: "Melbourne"
+      }
+    ],
+    serviceType: [
+      "Web Development",
+      "App Development", 
+      "E-commerce Development",
+      "Technical Consulting",
+      "Website Fixes"
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Steven Smith",
+      jobTitle: "Web Developer & Technical Consultant"
+    },
+    sameAs: [
+      "https://github.com/seniorcreative" // Add your actual social profiles
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section with Starfield */}
       <section
         ref={heroRef}

@@ -19,12 +19,13 @@ export default function Navigation() {
           href="/"
           className={`${aldrich.className} text-black text-lg flex items-center hover:opacity-80 transition-opacity`}
         >
-          <div className="w-14 h-14 mr-3 flex items-center justify-center shadow-lg rounded-full bg-black">
+          <div className="w-12 h-12 xs:w-14 xs:h-14 mr-2 xs:mr-3 flex items-center justify-center shadow-lg rounded-full bg-black flex-shrink-0">
             <Image
               src="/animated-loop-circle.svg"
               alt="Panko Logo"
-              width={32}
-              height={32}
+              width={28}
+              height={28}
+              className="xs:w-8 xs:h-8"
             />
           </div>
           <strong>

@@ -12,9 +12,33 @@ import Navigation from "./components/Navigation";
 const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Web Developer Who Makes Technology Simple - Panko",
+  title: "Business Web Developer Geelong | App Development Melbourne | Panko Digital",
   description:
-    "Turn your ideas into websites and apps that actually work for your business. No confusing tech jargon - just clear communication, fair pricing, and results that help you succeed.",
+    "Helping business owners in Geelong & Melbourne launch websites, fix technical issues & build apps that drive results. 24+ years experience with major brands. Technical co-pilot for your business.",
+  openGraph: {
+    title: "Business Web Developer Geelong | App Development Melbourne | Panko Digital",
+    description: "Helping business owners in Geelong & Melbourne launch websites, fix technical issues & build apps that drive results. 24+ years experience with major brands.",
+    url: "https://panko.digital",
+    siteName: "Panko Digital",
+    type: "website",
+    locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Business Web Developer Geelong | App Development Melbourne | Panko Digital",
+    description: "Helping business owners in Geelong & Melbourne launch websites, fix technical issues & build apps that drive results.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "https://panko.digital",
+  },
 };
 
 export default function RootLayout({
