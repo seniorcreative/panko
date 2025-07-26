@@ -37,12 +37,12 @@ export default function Navigation() {
             )}
           </strong>
         </Link>
-        <a
+        <Link
           href="/#contact"
           className="px-4 py-2 border-2 border-gray-800 text-gray-800 rounded-lg font-semibold hover:bg-gray-800 hover:text-white transition-all"
         >
           Contact
-        </a>
+        </Link>
       </div>
     </nav>
   );
