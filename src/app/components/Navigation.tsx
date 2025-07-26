@@ -32,13 +32,13 @@ export default function Navigation() {
             {isOnFolioPage && (
               <span className="hidden md:inline text-gray-500 font-light">
                 {" "}
-                | Older work
+                | Older Work
               </span>
             )}
           </strong>
         </Link>
         <a
-          href="#contact"
+          href="/#contact"
           className="px-4 py-2 border-2 border-gray-800 text-gray-800 rounded-lg font-semibold hover:bg-gray-800 hover:text-white transition-all"
         >
           Contact

@@ -322,24 +322,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <button
-            onClick={() => scrollToSection(aboutRef)}
-            className="text-slate-400 hover:text-slate-600 transition-colors"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-            >
-              <path d="M7 13l3 3 7-7"></path>
-              <path d="M12 17V7"></path>
-            </svg>
-          </button>
-        </div>
       </section>
 
       {/* Client Logos Section */}
