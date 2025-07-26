@@ -55,20 +55,24 @@ const ral = Raleway({
 const testimonials = [
   {
     name: "Sarah Chen",
-    quote: "Working with panko was like having a technical co-founder. They saw problems I didn't even know existed and saved us months of headaches."
+    quote:
+      "Working with panko was like having a technical co-founder. They saw problems I didn't even know existed and saved us months of headaches.",
   },
   {
-    name: "Marcus Rivera", 
-    quote: "Not just fast coding - they completely transformed our website. What used to take forever now loads instantly."
+    name: "Marcus Rivera",
+    quote:
+      "Not just fast coding - they completely transformed our website. What used to take forever now loads instantly.",
   },
   {
     name: "Emily Watson",
-    quote: "Perfect balance of speed and quality. They helped us launch on time without any technical issues."
+    quote:
+      "Perfect balance of speed and quality. They helped us launch on time without any technical issues.",
   },
   {
     name: "David Park",
-    quote: "Their problem-solving skills are incredible. What would have taken our team days, they solved in hours."
-  }
+    quote:
+      "Their problem-solving skills are incredible. What would have taken our team days, they solved in hours.",
+  },
 ];
 
 const timeline = [
@@ -126,7 +130,7 @@ export default function Home() {
   const [formSuccess, setFormSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
-  
+
   const pathName = usePathname();
   const heroRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
@@ -142,21 +146,21 @@ export default function Home() {
 
   // Smooth scroll to section
   const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   // Parallax effect
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
-      const stellae = document.getElementById('campus-stellae');
+      const stellae = document.getElementById("campus-stellae");
       if (stellae) {
         stellae.style.transform = `translateY(${scrolled * 0.5}px)`;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const content = require("./data/content.json");
@@ -198,59 +202,69 @@ export default function Home() {
 
   const validateField = (name: string, value: string) => {
     switch (name) {
-      case 'name':
-        return value.trim().length < 2 ? 'Name must be at least 2 characters' : '';
-      case 'email':
+      case "name":
+        return value.trim().length < 2
+          ? "Name must be at least 2 characters"
+          : "";
+      case "email":
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return !emailRegex.test(value) ? 'Please enter a valid email address' : '';
-      case 'message':
-        return value.trim().length < 50 ? 'Message must be at least 50 characters' : '';
+        return !emailRegex.test(value)
+          ? "Please enter a valid email address"
+          : "";
+      case "message":
+        return value.trim().length < 50
+          ? "Message must be at least 50 characters"
+          : "";
       default:
-        return '';
+        return "";
     }
   };
 
   const validateForm = (formData: FormData) => {
     const newErrors: Record<string, string> = {};
-    const requiredFields = ['name', 'email', 'message'];
-    
-    requiredFields.forEach(field => {
-      const value = formData.get(field) as string || '';
+    const requiredFields = ["name", "email", "message"];
+
+    requiredFields.forEach((field) => {
+      const value = (formData.get(field) as string) || "";
       const error = validateField(field, value);
       if (error) {
         newErrors[field] = error;
       }
     });
-    
+
     return newErrors;
   };
 
-  const handleFieldChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleFieldChange = (
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
     const { name, value } = event.target;
     const error = validateField(name, value);
-    
-    setErrors(prev => ({
+
+    setErrors((prev) => ({
       ...prev,
-      [name]: error
+      [name]: error,
     }));
-    
-    setTouched(prev => ({
+
+    setTouched((prev) => ({
       ...prev,
-      [name]: true
+      [name]: true,
     }));
   };
 
   const handleFormSubmit = async (event: FormSubmitEvent): Promise<void> => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    
+
     const formErrors = validateForm(formData);
     setErrors(formErrors);
-    
+
     if (Object.keys(formErrors).length > 0) {
       return;
     }
-    
+
     await fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -276,26 +290,30 @@ export default function Home() {
             width={281 * 0.75}
             height={317 * 0.75}
           />
-          <h1 className={`${aldrich.className} text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}>
+          <h1
+            className={`${aldrich.className} text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
+          >
             {content[language].home.sections.intro.one}
           </h1>
-          <h2 className={`${aldrich.className} text-xl md:text-2xl text-slate-700 mb-8`}>
+          <h2
+            className={`${aldrich.className} text-xl md:text-2xl text-slate-700 mb-8`}
+          >
             {content[language].home.sections.intro.two}
           </h2>
-          <p 
+          <p
             className="text-lg text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto"
             dangerouslySetInnerHTML={{
-              __html: content[language].home.sections.intro.three
+              __html: content[language].home.sections.intro.three,
             }}
           ></p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button 
+            <button
               onClick={() => scrollToSection(contactRef)}
               className={colorButtonStyle}
             >
               Get Started
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection(timelineRef)}
               className="px-6 py-3 rounded-lg border-2 border-slate-300 text-slate-700 hover:bg-slate-50 transition-all font-semibold"
             >
@@ -303,14 +321,20 @@ export default function Home() {
             </button>
           </div>
         </div>
-        
+
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <button 
+          <button
             onClick={() => scrollToSection(aboutRef)}
             className="text-slate-400 hover:text-slate-600 transition-colors"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
               <path d="M7 13l3 3 7-7"></path>
               <path d="M12 17V7"></path>
             </svg>
@@ -319,13 +343,19 @@ export default function Home() {
       </section>
 
       {/* Client Logos Section */}
-      <section ref={aboutRef} className="py-16 bg-gradient-to-b from-white to-slate-50">
+      <section
+        ref={aboutRef}
+        className="py-16 bg-gradient-to-b from-white to-slate-50"
+      >
         <div className="container mx-auto px-8">
-          <h3 className={`${aldrich.className} text-2xl md:text-3xl font-bold text-center mb-4 text-slate-800`}>
+          <h3
+            className={`${aldrich.className} text-2xl md:text-3xl font-bold text-center mb-4 text-slate-800`}
+          >
             Trusted by Leading Brands
           </h3>
           <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            From startups to major corporations, I&apos;ve helped businesses of all sizes succeed online.
+            From startups to major corporations, I&apos;ve helped businesses of
+            all sizes succeed online.
           </p>
           <div className="overflow-hidden">
             <div className="carousel-container">
@@ -338,12 +368,12 @@ export default function Home() {
                     transform: translateX(-50%);
                   }
                 }
-                
+
                 .carousel-track {
                   animation: scroll 25s linear infinite;
                   width: 200%;
                 }
-                
+
                 .carousel-track:hover {
                   animation-play-state: paused;
                 }
@@ -367,23 +397,31 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Services Section */}
       <section ref={servicesRef} className="py-0">
         <BusinessHelp />
       </section>
-      
+
       {/* Work Section */}
-      <section ref={workRef} className="py-16 bg-gradient-to-b from-slate-50 to-white">
+      <section
+        ref={workRef}
+        className="py-16 bg-gradient-to-b from-slate-50 to-white"
+      >
         <div className="container mx-auto px-8">
           <Work locale={language} />
         </div>
       </section>
-      
+
       {/* Timeline Section */}
-      <section ref={timelineRef} className={`${ral.className} py-20 bg-black text-white`}>
+      <section
+        ref={timelineRef}
+        className={`${ral.className} py-20 bg-black text-white`}
+      >
         <div className="container mx-auto px-6">
-          <h2 className={`${aldrich.className} text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}>
+          <h2
+            className={`${aldrich.className} text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
+          >
             My evolution as a website and app pro
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -398,7 +436,9 @@ export default function Home() {
                   )}
                 </div>
                 <div className="flex-1 pb-8">
-                  <h3 className={`${aldrich.className} text-xl font-semibold mb-2 text-white`}>
+                  <h3
+                    className={`${aldrich.className} text-xl font-semibold mb-2 text-white`}
+                  >
                     {item.title}
                   </h3>
                   <p className="text-slate-300">{item.description}</p>
@@ -417,8 +457,10 @@ export default function Home() {
       >
         <div className="container mx-auto px-6">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 max-w-4xl mx-auto">
-            <h2 className={`${aldrich.className} text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}>
-              Are you ready? 
+            <h2
+              className={`${aldrich.className} text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
+            >
+              Are you ready?
             </h2>
             <p className="text-md text-slate-300 mb-8 max-w-2xl mx-auto">
               Let&rsquo;s discuss how I can help you navigate technical
@@ -457,8 +499,8 @@ export default function Home() {
                       onChange={handleFieldChange}
                       className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                         errors.name && touched.name
-                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                          ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                          : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
                       }`}
                       placeholder="Your name"
                     />
@@ -481,43 +523,47 @@ export default function Home() {
                       onChange={handleFieldChange}
                       className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                         errors.email && touched.email
-                          ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                          : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                          ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                          : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
                       }`}
                       placeholder="your@email.com"
                     />
                     {errors.email && touched.email && (
-                      <p className="mt-1 text-sm text-red-400">{errors.email}</p>
+                      <p className="mt-1 text-sm text-red-400">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-1 gap-6 mb-6">
                   <div>
-                  <label
-                    htmlFor="project"
-                    className="block text-slate-300 font-medium mb-2"
-                  >
-                    Project Type
-                  </label>
-                  <select
-                    id="project"
-                    name="project"
-                    onChange={handleFieldChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  >
-                    <option value="">Select project type</option>
-                    <option value="new-app">New App Development</option>
-                    <option value="migration">Customer Capture Website</option>
-                    <option value="optimization">
-                    My Website Is Broken Please Help
-                    </option>
-                    <option value="architecture">
-                    E-Commerce Assistance
-                    </option>
-                    <option value="consulting">Technical Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
+                    <label
+                      htmlFor="project"
+                      className="block text-slate-300 font-medium mb-2"
+                    >
+                      Project Type
+                    </label>
+                    <select
+                      id="project"
+                      name="project"
+                      onChange={handleFieldChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    >
+                      <option value="">Select project type</option>
+                      <option value="new-app">New App Development</option>
+                      <option value="migration">
+                        Customer Capture Website
+                      </option>
+                      <option value="optimization">
+                        My Website Is Broken Please Help
+                      </option>
+                      <option value="architecture">
+                        E-Commerce Assistance
+                      </option>
+                      <option value="consulting">Technical Consulting</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
                 </div>
 
@@ -526,9 +572,9 @@ export default function Home() {
                     htmlFor="message"
                     className="block text-slate-300 font-medium mb-2"
                   >
-                   Description *
+                    Description *
                   </label>
-                    <textarea
+                  <textarea
                     id="message"
                     name="message"
                     required
@@ -537,13 +583,15 @@ export default function Home() {
                     onChange={handleFieldChange}
                     className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${
                       errors.message && touched.message
-                      ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                      : 'border-slate-600 focus:border-blue-500 focus:ring-blue-500/20'
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                        : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
                     }`}
                     placeholder={`Please describe:\n• What specific technical problem are you trying to solve?\n• What is the current state of your project?`}
-                    />
+                  />
                   {errors.message && touched.message && (
-                    <p className="mt-1 text-sm text-red-400">{errors.message}</p>
+                    <p className="mt-1 text-sm text-red-400">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
 

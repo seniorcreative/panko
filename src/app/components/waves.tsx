@@ -7,7 +7,12 @@ export type wavesProps = {
   whiteBg?: boolean;
 };
 
-export default function Waves({ lighten, flipped, verticalFlip, whiteBg }: wavesProps) {
+export default function Waves({
+  lighten,
+  flipped,
+  verticalFlip,
+  whiteBg,
+}: wavesProps) {
   const getBgClass = () => {
     if (whiteBg) return "bg-white";
     if (lighten) return "";

@@ -18,10 +18,10 @@ export default function FolioCategories({
 
   useEffect(() => {
     const filteredTargets = Array.from(categories).filter(
-      (cat: string) => cat !== selectedSection
+      (cat: string) => cat !== selectedSection,
     );
     const selectedTargets = Array.from(categories).filter(
-      (cat: string) => cat == selectedSection
+      (cat: string) => cat == selectedSection,
     );
     const addedFilteredIds = filteredTargets.map((t) => "#" + t);
     const selectFilteredIds = selectedTargets.map((t) => "#" + t);

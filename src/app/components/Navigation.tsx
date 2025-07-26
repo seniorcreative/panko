@@ -30,7 +30,10 @@ export default function Navigation() {
           <strong>
             Panko Digital | AI Engineer
             {isOnFolioPage && (
-              <span className="hidden md:inline text-gray-500 font-light"> | Older work</span>
+              <span className="hidden md:inline text-gray-500 font-light">
+                {" "}
+                | Older work
+              </span>
             )}
           </strong>
         </Link>

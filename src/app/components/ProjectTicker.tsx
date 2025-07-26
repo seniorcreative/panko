@@ -22,7 +22,7 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
 
   const handleClick = (project: Project) => {
     if (project.href) {
-      window.open(project.href, '_blank');
+      window.open(project.href, "_blank");
     }
   };
 
@@ -45,17 +45,18 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
       },
       {
         threshold: 0.3, // Trigger when 30% of the component is visible
-        rootMargin: '0px 0px -50px 0px' // Trigger slightly before fully in view
-      }
+        rootMargin: "0px 0px -50px 0px", // Trigger slightly before fully in view
+      },
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const currentContainer = containerRef.current;
+    if (currentContainer) {
+      observer.observe(currentContainer);
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
       }
     };
   }, [isVisible]);
@@ -63,17 +64,21 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
   return (
     <div ref={containerRef} className="w-full py-3 my-6">
       <div className="mb-6">
-        <h2 className={`${aldrich.className} text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4`}>
+        <h2
+          className={`${aldrich.className} text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4`}
+        >
           <strong>Recent Projects</strong>
         </h2>
       </div>
 
       <div className="space-y-2">
-        <div className={`flex items-center justify-between p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded transition-all duration-700 ease-out transform ${
-          showFirstItem 
-            ? 'translate-y-0 opacity-100' 
-            : 'translate-y-8 opacity-0'
-        }`}>
+        <div
+          className={`flex items-center justify-between p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded transition-all duration-700 ease-out transform ${
+            showFirstItem
+              ? "translate-y-0 opacity-100"
+              : "translate-y-8 opacity-0"
+          }`}
+        >
           <div className="flex items-center">
             <span className="text-gray-500 font-mono text-sm uppercase tracking-wide mr-3">
               You
@@ -82,7 +87,10 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
               Your Project
             </span>
           </div>
-          <Link href="#contact" className="bg-blue-900 font-sans rounded-full text-white px-4 py-2 hover:bg-blue-800 transition-colors text-sm uppercase tracking-wide">
+          <Link
+            href="#contact"
+            className="bg-blue-900 font-sans rounded-full text-white px-4 py-2 hover:bg-blue-800 transition-colors text-sm uppercase tracking-wide"
+          >
             Be next, contact me
           </Link>
         </div>
@@ -90,8 +98,9 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
         {sortedProjects.map((project, index) => (
           <div
             key={index}
-            className={`flex items-center justify-between p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow ${project.href ? 'cursor-pointer' : ''
-              }`}
+            className={`flex items-center justify-between p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow ${
+              project.href ? "cursor-pointer" : ""
+            }`}
             onClick={() => handleClick(project)}
           >
             <div className="flex items-center">

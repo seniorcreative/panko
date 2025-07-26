@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 interface LavaLampBlobsProps {
   className?: string;
 }
 
-export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
+export default function LavaLampBlobs({ className = "" }: LavaLampBlobsProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number | null>(null);
 
@@ -14,9 +14,9 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
+    const gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
     if (!gl) {
-      console.warn('WebGL not supported, falling back to 2D canvas');
+      console.warn("WebGL not supported, falling back to 2D canvas");
       return;
     }
 
@@ -69,62 +69,73 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
       }
     `;
 
-    function createShader(gl: WebGLRenderingContext, type: number, source: string) {
+    function createShader(
+      gl: WebGLRenderingContext,
+      type: number,
+      source: string,
+    ) {
       const shader = gl.createShader(type);
       if (!shader) return null;
-      
+
       gl.shaderSource(shader, source);
       gl.compileShader(shader);
-      
+
       if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-        console.error('Shader compile error:', gl.getShaderInfoLog(shader));
+        console.error("Shader compile error:", gl.getShaderInfoLog(shader));
         gl.deleteShader(shader);
         return null;
       }
-      
+
       return shader;
     }
 
-    function createProgram(gl: WebGLRenderingContext, vertexShader: WebGLShader, fragmentShader: WebGLShader) {
+    function createProgram(
+      gl: WebGLRenderingContext,
+      vertexShader: WebGLShader,
+      fragmentShader: WebGLShader,
+    ) {
       const program = gl.createProgram();
       if (!program) return null;
-      
+
       gl.attachShader(program, vertexShader);
       gl.attachShader(program, fragmentShader);
       gl.linkProgram(program);
-      
+
       if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-        console.error('Program link error:', gl.getProgramInfoLog(program));
+        console.error("Program link error:", gl.getProgramInfoLog(program));
         gl.deleteProgram(program);
         return null;
       }
-      
+
       return program;
     }
 
     const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
-    const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
-    
+    const fragmentShader = createShader(
+      gl,
+      gl.FRAGMENT_SHADER,
+      fragmentShaderSource,
+    );
+
     if (!vertexShader || !fragmentShader) return;
-    
+
     const program = createProgram(gl, vertexShader, fragmentShader);
     if (!program) return;
 
-    const positionAttributeLocation = gl.getAttribLocation(program, 'a_position');
-    const timeUniformLocation = gl.getUniformLocation(program, 'u_time');
-    const resolutionUniformLocation = gl.getUniformLocation(program, 'u_resolution');
+    const positionAttributeLocation = gl.getAttribLocation(
+      program,
+      "a_position",
+    );
+    const timeUniformLocation = gl.getUniformLocation(program, "u_time");
+    const resolutionUniformLocation = gl.getUniformLocation(
+      program,
+      "u_resolution",
+    );
 
     const positionBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-    
-    const positions = [
-      -1, -1,
-       1, -1,
-      -1,  1,
-      -1,  1,
-       1, -1,
-       1,  1,
-    ];
+
+    const positions = [-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1];
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
     function resizeCanvas() {
@@ -137,9 +148,9 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
 
     function render(time: number) {
       if (!canvas || !gl) return;
-      
+
       resizeCanvas();
-      
+
       gl.clearColor(0, 0, 0, 0);
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.enable(gl.BLEND);
@@ -149,7 +160,14 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
 
       gl.enableVertexAttribArray(positionAttributeLocation);
       gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-      gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+      gl.vertexAttribPointer(
+        positionAttributeLocation,
+        2,
+        gl.FLOAT,
+        false,
+        0,
+        0,
+      );
 
       gl.uniform1f(timeUniformLocation, time * 0.001);
       gl.uniform2f(resolutionUniformLocation, canvas.width, canvas.height);
@@ -160,11 +178,11 @@ export default function LavaLampBlobs({ className = '' }: LavaLampBlobsProps) {
     }
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
     animationFrameRef.current = requestAnimationFrame(render);
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }

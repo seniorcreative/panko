@@ -25,5 +25,5 @@ export {
   Mini,
   RevitCourse,
   BBC,
-  KmartLogo
+  KmartLogo,
 };
