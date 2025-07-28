@@ -3,7 +3,7 @@
     "home": {
       "sections": {
         "intro": {
-          "one": "AI-Powered Solutions to Launch & Fix What's Not Working",
+          "one": "Helping business owners to launch or fix sites and apps",
           "two": "Using cutting-edge AI engineering methods, I turbo-charge development to turn your ideas into websites and apps that actually work for your business - faster and more efficiently.",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
           "three": "Feeling overwhelmed by website technology? You're not alone.<br/>I leverage the latest AI-driven development tools to handle the technical stuff so you can focus on your business. Think of me as your friendly tech partner who uses cutting-edge AI engineering to deliver solutions faster, speaks plain English and gets things done.",
@@ -44,6 +44,12 @@
               "client": "Reconnaître",
               "href": "https://reconnaitre.com.au",
               "year": "2024"
+            },
+            {
+              "title": "Amy Wright Squarespace Site",
+              "client": "Amy Wright",
+              "href": "https://www.amywright.com.au",
+              "year": "2025"
             }
           ]
         },
