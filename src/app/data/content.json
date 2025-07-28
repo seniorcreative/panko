@@ -3,17 +3,17 @@
     "home": {
       "sections": {
         "intro": {
-          "one": "Helping Business Owners Launch & Fix What's Not Working",
-          "two": "I help turn your ideas into websites and apps that actually work for your business.",
+          "one": "AI-Powered Solutions to Launch & Fix What's Not Working",
+          "two": "Using cutting-edge AI engineering methods, I turbo-charge development to turn your ideas into websites and apps that actually work for your business - faster and more efficiently.",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "Feeling overwhelmed by website technology? You're not alone.<br/>I'm here to handle the technical stuff so you can focus on your business. Think of me as your friendly tech partner who speaks plain English and gets things done.",
-          "four": "Build human-centered technology that actually works.",
+          "three": "Feeling overwhelmed by website technology? You're not alone.<br/>I leverage the latest AI-driven development tools to handle the technical stuff so you can focus on your business. Think of me as your friendly tech partner who uses cutting-edge AI engineering to deliver solutions faster, speaks plain English and gets things done.",
+          "four": "Build AI-enhanced, human-centered technology that actually works - delivered at lightning speed.",
           "contactBtn": "Let's Build Something",
           "contactLink": "/#contact"
         },
         "about": {
           "title": "About Panko Digital",
-          "body": "<h3 class='text-lg'><strong>Panko Digital</strong> is your go-to web and application developer expert.</h3><br/><p>I make, or fix websites and apps that work perfectly for your business.</p><p>I eliminate confusing tech jargon and keep communication clear and simple.</p><p>I'm conscious about budgets and costs, keeping you informed every step of the way.</p><p>I've helped everyone from small startups to major brands get their digital presence right the first time.</p><p>I'm based in Geelong, Australia.</p>",
+          "body": "<h3 class='text-lg'><strong>Panko Digital</strong> is your go-to web and application developer expert.</h3><br/><p>I'll make or fix you a site or app that drives real results for your business - more customers, more sales, less headaches.</p><p>I eliminate confusing tech jargon and keep communication clear and simple, so you always know what's happening.</p><p>I'll save you time and money by getting it right the first time, keeping you informed every step of the way.</p><p>I've helped everyone from small startups to major brands increase their revenue and streamline their operations through better technology.</p><p>I'm based in Geelong, Australia.</p>",
           "recentProjects": [
             {
               "title": "Floorplan Customer Activity Heatmap",
@@ -51,23 +51,23 @@
           "title": "services",
           "body": {
             "creative": [
-              "Building a store",
-              "Fixing a bug",
-              "Changing your theme or styles",
-              "Consultation and advice",
-              "Launching an app",
-              "Domain setup / DNS stuff",
-              "Setting up Email"
+              "Get your products selling online fast",
+              "Stop losing customers to website problems",
+              "Refresh your brand to attract more customers",
+              "Get expert advice to avoid costly mistakes",
+              "Reach customers on their phones",
+              "Get found online with proper web setup",
+              "Look professional with business email"
             ],
             "techie": [
               "React native apps",
               "Wiring up DNS records",
-              "Rapid build custom front-end",
-              "Fix JS framework bugs",
-              "Upgrade a legacy app",
+              "AI-accelerated rapid build custom front-end",
+              "AI-assisted debugging for JS framework bugs",
+              "AI-powered legacy app modernization",
               "Fix security vulnerabilities",
-              "Extend an existing app",
-              "Code reviews"
+              "AI-enhanced app feature extensions",
+              "AI-assisted code reviews and optimization"
             ]
           }
         }
@@ -75,28 +75,28 @@
     },
     "categoryInfo": {
       "Mobile": {
-        "techie": "Custom mobile app development for iOS and Android with app store setup and user tracking",
-        "creative": "Mobile apps that your customers will love — simple, fast, and designed to help your business grow."
+        "techie": "AI-enhanced custom mobile app development for iOS and Android with intelligent app store setup and user tracking",
+        "creative": "Mobile apps that turn your customers into repeat buyers — built with AI assistance for faster time-to-market, keeping customers engaged and boosting your revenue."
       },
       "Games": {
-        "techie": "Quick game prototypes and interactive experiences with engaging user interfaces",
-        "creative": "Fun, engaging games and interactive experiences that keep users coming back for more"
+        "techie": "AI-assisted quick game prototypes and interactive experiences with engaging user interfaces",
+        "creative": "Fun, engaging games and interactive experiences that increase customer engagement and time spent with your brand"
       },
       "Cloud": {
-        "techie": "Scalable cloud hosting solutions with automatic backups and performance monitoring",
-        "creative": "Reliable online systems that grow with your business and keep your data safe and accessible"
+        "techie": "AI-optimized scalable cloud hosting solutions with automatic backups and intelligent performance monitoring",
+        "creative": "Reliable online systems that scale automatically as you grow, protecting your business data while reducing IT costs"
       },
       "E-commerce": {
-        "techie": "Custom e-commerce development with payment processing and inventory management",
-        "creative": "Online stores that make it easy for customers to buy from you — more sales, fewer abandoned carts"
+        "techie": "AI-powered custom e-commerce development with intelligent payment processing and inventory management",
+        "creative": "Online stores that convert browsers into buyers — reducing cart abandonment by up to 40% and increasing your average order value"
       },
       "Signage": {
-        "techie": "Digital signage systems with content management and scheduling capabilities",
-        "creative": "Eye-catching digital displays that get your message across clearly and grab attention"
+        "techie": "AI-enhanced digital signage systems with intelligent content management and scheduling capabilities",
+        "creative": "Eye-catching digital displays that increase foot traffic and sales by delivering the right message at the right time"
       },
       "UX": {
-        "techie": "User experience design and prototyping with usability testing and iterative improvements",
-        "creative": "User-friendly design that puts your customers first -websites and apps that are easy to use and achieve your business goals"
+        "techie": "AI-assisted user experience design and prototyping with intelligent usability testing and iterative improvements",
+        "creative": "User-friendly design that converts visitors into customers faster - websites and apps that reduce bounce rates and increase time on site"
       }
     },
     "work": [
