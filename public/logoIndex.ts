@@ -11,6 +11,7 @@ import Mini from "./mini-logo-06.jpg";
 import RevitCourse from "./autodesk-revit-course-logo@2x.png";
 import BBC from "./BBC_Logo_2021.svg";
 import KmartLogo from "./kmart-australia-logo.png";
+import HendrysLogo from "./hendrys-logo.svg";
 
 export {
   PankoLogoSVG,
@@ -26,4 +27,5 @@ export {
   RevitCourse,
   BBC,
   KmartLogo,
+  HendrysLogo
 };

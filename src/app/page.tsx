@@ -2,7 +2,6 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useContext, useRef, useState } from "react";
-import Link from "next/link";
 
 import { LanguageContext } from "./contexts/languageContext";
 import { sendGTMEvent } from "@next/third-parties/google";
@@ -10,12 +9,7 @@ import { aldrich } from "./fonts";
 import { Pacifico, Raleway } from "next/font/google";
 import {
   CheckCircle,
-  Code,
-  Database,
-  Server,
-  Globe,
   ArrowRight,
-  Quote,
 } from "lucide-react";
 
 // Components
@@ -27,16 +21,17 @@ import {
   PankoLogoSVG,
   NineLogo,
   KmartLogo,
-  BankFirst,
-  Telstra,
+  // BankFirst,
+  // Telstra,
   Buildxact,
-  Worksafe,
-  BMW,
+  // Worksafe,
+  // BMW,
   ASM,
   Sportsyear,
-  Mini,
+  // Mini,
   RevitCourse,
   BBC,
+  HendrysLogo
 } from "../../public/logoIndex";
 import { usePathname } from "next/navigation";
 
@@ -51,29 +46,6 @@ const ral = Raleway({
   style: "normal",
   subsets: ["latin"],
 });
-
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    quote:
-      "Working with panko was like having a technical co-founder. They saw problems I didn't even know existed and saved us months of headaches.",
-  },
-  {
-    name: "Marcus Rivera",
-    quote:
-      "Not just fast coding - they completely transformed our website. What used to take forever now loads instantly.",
-  },
-  {
-    name: "Emily Watson",
-    quote:
-      "Perfect balance of speed and quality. They helped us launch on time without any technical issues.",
-  },
-  {
-    name: "David Park",
-    quote:
-      "Their problem-solving skills are incredible. What would have taken our team days, they solved in hours.",
-  },
-];
 
 const timeline = [
   {
@@ -166,33 +138,34 @@ export default function Home() {
   const content = require("./data/content.json");
 
   const Logos: LogoObj[] = [
-    { t: "Nine Network: Video Graphics Software", i: NineLogo, c: undefined },
     { t: "Kmart Australia: Floorplan Heatmap", i: KmartLogo, c: undefined },
-    { t: "BankFirst: Finance Application", i: BankFirst, c: undefined },
+    // { t: "BankFirst: Finance Application", i: BankFirst, c: undefined },
     {
-      t: "Buildxact: Building Quote Estimation Software",
+      t: "Buildxact: Quote Estimation Software",
       i: Buildxact,
-      c: "grayscale scale-125 opacity-75",
+      c: "_grayscale scale-125 opacity-75",
     },
-    { t: "Telstra: Resume Generator", i: Telstra, c: undefined },
+    // { t: "Telstra: Resume Generator", i: Telstra, c: undefined },
     { t: "Australian Sports Museum: Touchscreen", i: ASM, c: undefined },
-    { t: "Worksafe: Pilot App", i: Worksafe, c: undefined },
-    { t: "BMW: Finance Application", i: BMW, c: "invert grayscale" },
+    // { t: "Worksafe: Pilot App", i: Worksafe, c: undefined },
+    // { t: "BMW: Finance Application", i: BMW, c: "invert _grayscale" },
+    { t: "Nine Network: Video Graphics Software", i: NineLogo, c: "scale-30 opacity-50" },
     {
       t: "Sportsyear: E-Commerce",
       i: Sportsyear,
-      c: "invert scale-50 grayscale opacity-60",
+      c: "invert _grayscale opacity-60",
     },
-    { t: "Mini: Asia Pac Site Dev for Monkii", i: Mini, c: undefined },
+    { t: "Hendrys: Custom Ecommerce Inventory Syncing Software", i: HendrysLogo, c: undefined },
+    // { t: "Mini: Asia Pac Site Dev for Monkii", i: Mini, c: undefined },
     {
       t: "RevitCourse: Booking System",
       i: RevitCourse,
-      c: "invert grayscale opacity-60 scale-75",
+      c: "invert _grayscale opacity-60 scale-75",
     },
     {
       t: "BBC: E-Learning Games",
       i: BBC,
-      c: "grayscale opacity-60 scale-75",
+      c: "_grayscale opacity-60 scale-75",
     },
   ];
 
@@ -294,13 +267,13 @@ export default function Home() {
         name: "Geelong"
       },
       {
-        "@type": "City", 
+        "@type": "City",
         name: "Melbourne"
       }
     ],
     serviceType: [
       "Web Development",
-      "App Development", 
+      "App Development",
       "E-commerce Development",
       "Technical Consulting",
       "Website Fixes"
@@ -379,10 +352,10 @@ export default function Home() {
           <h3
             className={`${aldrich.className} text-2xl md:text-3xl font-bold text-center mb-4 text-slate-800`}
           >
-            Trusted by Leading Brands
+            Some of the companies I have worked with
           </h3>
           <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            From startups to major corporations, I&apos;ve helped businesses of
+            From small businesses and boutique agencies to large corporations, I&apos;ve been proud to help businesses of
             all sizes succeed in the digital space.
           </p>
           <div className="overflow-hidden">
@@ -411,7 +384,7 @@ export default function Home() {
                   <div
                     key={`${logo.t}-${index}`}
                     title={logo.t}
-                    className="flex-shrink-0 w-48 h-24 mx-8 opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer"
+                    className={`flex-shrink-0 w-48 h-24 mx-8 opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer ${logo.c}`}
                     style={{
                       backgroundImage: `url(${logo.i.src})`,
                       backgroundSize: "contain",
