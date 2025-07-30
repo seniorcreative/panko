@@ -73,11 +73,10 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
 
       <div className="space-y-2">
         <div
-          className={`flex items-center justify-between p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded transition-all duration-700 ease-out transform ${
-            showFirstItem
+          className={`flex items-center justify-between p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded transition-all duration-700 ease-out transform ${showFirstItem
               ? "translate-y-0 opacity-100"
               : "translate-y-8 opacity-0"
-          }`}
+            }`}
         >
           <div className="flex items-center">
             <span className="text-gray-500 font-mono text-sm uppercase tracking-wide mr-3">
@@ -98,9 +97,8 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
         {sortedProjects.map((project, index) => (
           <div
             key={index}
-            className={`flex items-center justify-between p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow ${
-              project.href ? "cursor-pointer" : ""
-            }`}
+            className={`flex items-center justify-between p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow ${project.href ? "cursor-pointer" : ""
+              }`}
             onClick={() => handleClick(project)}
           >
             <div className="flex items-center">

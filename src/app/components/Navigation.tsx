@@ -29,7 +29,7 @@ export default function Navigation() {
             />
           </div>
           <strong>
-            Panko Digital | AI Engineer
+            Panko Digital
             {isOnFolioPage && (
               <span className="hidden md:inline text-gray-500 font-light">
                 {" "}
