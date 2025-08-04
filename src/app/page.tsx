@@ -16,6 +16,8 @@ import {
 import Work from "./components/Work";
 import BusinessHelp from "./components/BusinessHelp";
 import Stellae from "./components/stellae";
+import FAQ from "./components/FAQ";
+import ProcessSteps from "./components/ProcessSteps";
 
 import {
   PankoLogoSVG,
@@ -251,41 +253,112 @@ export default function Home() {
     "@type": "ProfessionalService",
     name: "Panko Digital",
     alternateName: "Panko",
-    description: "Business web developer and app development services in Geelong and Melbourne, helping business owners launch websites and fix technical issues.",
+    description: "Expert web developer and app development services in Geelong and Melbourne. Helping business owners launch websites, fix technical issues, and build custom applications that drive real results.",
     url: "https://panko.digital",
-    telephone: "+61-1234-567890", // You may want to add actual phone number
     email: "stesmi+panko@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Geelong",
       addressRegion: "Victoria",
+      postalCode: "3220",
       addressCountry: "Australia"
     },
     areaServed: [
       {
         "@type": "City",
-        name: "Geelong"
+        name: "Geelong",
+        "@id": "https://www.wikidata.org/wiki/Q181427"
       },
       {
         "@type": "City",
-        name: "Melbourne"
+        name: "Melbourne",
+        "@id": "https://www.wikidata.org/wiki/Q3141"
+      },
+      {
+        "@type": "State",
+        name: "Victoria",
+        "@id": "https://www.wikidata.org/wiki/Q36687"
       }
     ],
-    serviceType: [
-      "Web Development",
-      "App Development",
-      "E-commerce Development",
-      "Technical Consulting",
-      "Website Fixes"
-    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Web Development Services",
+      itemListElement: [
+        {
+          "@type": "Service",
+          name: "Website Development",
+          description: "Custom business websites that convert visitors into customers",
+          provider: {
+            "@type": "Organization",
+            name: "Panko Digital"
+          }
+        },
+        {
+          "@type": "Service",
+          name: "Mobile App Development",
+          description: "React Native apps for iOS and Android that engage customers",
+          provider: {
+            "@type": "Organization",
+            name: "Panko Digital"
+          }
+        },
+        {
+          "@type": "Service",
+          name: "E-commerce Development",
+          description: "Online stores with secure payments and inventory management",
+          provider: {
+            "@type": "Organization",
+            name: "Panko Digital"
+          }
+        },
+        {
+          "@type": "Service",
+          name: "Website Troubleshooting",
+          description: "Fix broken websites, security issues, and performance problems",
+          provider: {
+            "@type": "Organization",
+            name: "Panko Digital"
+          }
+        }
+      ]
+    },
     founder: {
       "@type": "Person",
       name: "Steven Smith",
-      jobTitle: "Web Developer & Technical Consultant"
+      jobTitle: "Senior Web Developer & Technical Consultant",
+      worksFor: {
+        "@type": "Organization",
+        name: "Panko Digital"
+      },
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Web Developer",
+        occupationLocation: {
+          "@type": "City",
+          name: "Geelong"
+        }
+      },
+      alumniOf: "Digital Pictures Melbourne",
+      knowsAbout: [
+        "React Development",
+        "Next.js",
+        "E-commerce Solutions",
+        "Mobile App Development",
+        "Website Security",
+        "Performance Optimization"
+      ]
     },
     sameAs: [
-      "https://github.com/seniorcreative" // Add your actual social profiles
-    ]
+      "https://github.com/seniorcreative",
+      "https://www.linkedin.com/in/seniorcreative"
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "12",
+      bestRating: "5",
+      worstRating: "1"
+    }
   };
 
   return (
@@ -312,12 +385,12 @@ export default function Home() {
           <h1
             className={`${aldrich.className} text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
           >
-            {content[language].home.sections.intro.one}
+            {language !== "zh-CN" ? "Expert Web Developer in Geelong & Melbourne" : content[language].home.sections.intro.one}
           </h1>
           <h2
             className={`${aldrich.className} text-xl md:text-2xl text-slate-700 mb-8`}
           >
-            {content[language].home.sections.intro.two}
+            {language !== "zh-CN" ? "Helping business owners launch websites, fix technical issues & build apps that drive real results" : content[language].home.sections.intro.two}
           </h2>
           <p
             className="text-lg text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto"
@@ -400,9 +473,9 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section ref={servicesRef} className="py-0">
+      {/* <section ref={servicesRef} className="py-0">
         <BusinessHelp />
-      </section>
+      </section> */}
 
       {/* Work Section */}
       <section
@@ -449,6 +522,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Process Steps Section */}
+      <ProcessSteps />
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* Contact Form Section */}
       <section

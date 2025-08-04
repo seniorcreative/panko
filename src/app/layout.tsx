@@ -8,16 +8,19 @@ import "./globalIcons.css";
 import LanguageContextProvider from "./contexts/languageContext";
 import VisitorContextProvider from "./contexts/visitorContext";
 import Navigation from "./components/Navigation";
+import Footer from "./components/footer";
 
 const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
+const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
+const raleway = Raleway({ weight: ["400", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Business Web Developer Geelong | App Development Melbourne | Panko Digital",
+  title: "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
   description:
-    "Helping business owners in Geelong & Melbourne launch websites, fix technical issues & build apps that drive results. 24+ years experience with major brands. Technical co-pilot for your business.",
+    "Need help with your website or app? Geelong web developer with 20+ years experience helping businesses launch websites, fix technical issues & build custom applications that drive real results.",
   openGraph: {
-    title: "Business Web Developer Geelong | App Development Melbourne | Panko Digital",
-    description: "Helping business owners in Geelong & Melbourne launch websites, fix technical issues & build apps that drive results. 24+ years experience with major brands.",
+    title: "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital", 
+    description: "Need help with your website or app? Geelong web developer with 20+ years experience helping businesses launch websites, fix technical issues & build custom applications.",
     url: "https://panko.digital",
     siteName: "Panko Digital",
     type: "website",
@@ -25,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Business Web Developer Geelong | App Development Melbourne | Panko Digital",
-    description: "Helping business owners in Geelong & Melbourne launch websites, fix technical issues & build apps that drive results.",
+    title: "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
+    description: "Need help with your website or app? Geelong web developer helping businesses launch websites, fix technical issues & build custom applications.",
   },
   robots: {
     index: true,
@@ -55,6 +58,7 @@ export default function RootLayout({
             <main className="flex min-h-screen flex-col w-full">
               {children}
             </main>
+            <Footer fonts={[pacifico, raleway]} />
             <GoogleTagManager gtmId="G-XLHERYSSZ1" />
             <GoogleAnalytics gaId="G-XLHERYSSZ1" />
           </body>
