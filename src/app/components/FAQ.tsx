@@ -17,7 +17,7 @@ export default function FAQ() {
   const faqData: FAQItem[] = language !== "zh-CN" ? [
     {
       question: "How much does web development cost in Geelong?",
-      answer: "Website costs vary based on complexity. A simple single page business website can starts from $1000 if you provide design, while custom e-commerce solutions range upward from $5,000. I provide detailed quotes after understanding your specific needs and always discuss budget upfront to avoid surprises."
+      answer: "Website costs vary based on complexity. A simple single page business website package can start from $1000 if you provide design, while custom e-commerce solutions range upward from $5,000. I provide detailed quotes after understanding your specific needs and always discuss budget upfront to avoid surprises."
     },
     {
       question: "How long does it take to build a business website?",
@@ -137,7 +137,7 @@ export default function FAQ() {
             href="#contact"
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all transform hover:scale-105"
           >
-            {language !== "zh-CN" ? "Get Your Questions Answered" : "获得问题答案"}
+            {language !== "zh-CN" ? "Book a Free Consultation" : "预约免费咨询"}
           </a>
         </div>
       </div>

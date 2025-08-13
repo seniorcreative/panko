@@ -11,7 +11,7 @@ export default function ProcessSteps() {
   const steps = language !== "zh-CN" ? [
     {
       icon: <MessageSquare className="w-8 h-8" />,
-      title: "Discovery Call",
+      title: "Discovery Call (FREE)",
       description: "We discuss your business goals, target audience, and technical requirements. I'll explain options in plain English and provide an honest assessment of what's possible within your timeline and budget.",
       duration: "30-60 minutes",
       deliverable: "Project proposal & timeline"
@@ -47,7 +47,7 @@ export default function ProcessSteps() {
   ] : [
     {
       icon: <MessageSquare className="w-8 h-8" />,
-      title: "发现通话",
+      title: "发现通话（免费)",
       description: "我们讨论您的业务目标、目标受众和技术要求。我会用简单的英语解释选项并诚实评估在您的时间线和预算内可能实现的目标。",
       duration: "30-60 分钟",
       deliverable: "项目提案和时间线"
@@ -87,7 +87,7 @@ export default function ProcessSteps() {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-16">
           <h2 className={`${aldrich.className} text-3xl md:text-4xl font-bold text-slate-800 mb-4`}>
-            {language !== "zh-CN" ? "How I Work With You" : "我如何与您合作"}
+            {language !== "zh-CN" ? "How I Will Work With You" : "我如何与您合作"}
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             {language !== "zh-CN"
@@ -109,7 +109,7 @@ export default function ProcessSteps() {
                   <div className="lg:hidden absolute top-20 left-8 w-0.5 h-16 bg-gradient-to-b from-blue-200 to-purple-200"></div>
                 )}
 
-                <div className="bg-white rounded-xl p-3 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 relative z-10 min-h-[500px] flex flex-col items-center">
+                <div className="bg-white rounded-xl p-3 shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 relative z-10 lg:min-h-[500px] flex flex-col items-center">
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white mb-4 shadow-lg">
                       {step.icon}

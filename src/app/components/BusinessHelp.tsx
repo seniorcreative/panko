@@ -52,7 +52,7 @@ export default function BusinessHelp(): JSX.Element {
             className={`${aldrich.className} text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent mb-4`}
           >
             {language !== "zh-CN"
-              ? "How I Help Your Business"
+              ? "How I Will Help Your Business"
               : "我如何帮助您的企业"}
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">

@@ -9,7 +9,6 @@ import { aldrich } from "./fonts";
 import { Pacifico, Raleway } from "next/font/google";
 import {
   CheckCircle,
-  ArrowRight,
 } from "lucide-react";
 
 // Components
@@ -104,6 +103,7 @@ export default function Home() {
   const [formSuccess, setFormSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [visibleTimelineItems, setVisibleTimelineItems] = useState<Set<number>>(new Set());
 
   const pathName = usePathname();
   const heroRef = useRef<HTMLElement>(null);
@@ -112,6 +112,7 @@ export default function Home() {
   const timelineRef = useRef<HTMLElement>(null);
   const workRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
+  const timelineItemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Send analytics event
   useEffect(() => {
@@ -135,6 +136,30 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Timeline items animation with intersection observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.getAttribute('data-timeline-index') || '0');
+            setVisibleTimelineItems(prev => new Set([...prev, index]));
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    timelineItemRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const content = require("./data/content.json");
@@ -492,6 +517,26 @@ export default function Home() {
         ref={timelineRef}
         className={`${ral.className} py-20 bg-black text-white`}
       >
+        <style jsx>{`
+          .timeline-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+          }
+          
+          .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          
+          .timeline-item:nth-child(1) { transition-delay: 0ms; }
+          .timeline-item:nth-child(2) { transition-delay: 150ms; }
+          .timeline-item:nth-child(3) { transition-delay: 300ms; }
+          .timeline-item:nth-child(4) { transition-delay: 450ms; }
+          .timeline-item:nth-child(5) { transition-delay: 600ms; }
+          .timeline-item:nth-child(6) { transition-delay: 750ms; }
+          .timeline-item:nth-child(7) { transition-delay: 900ms; }
+        `}</style>
         <div className="container mx-auto px-6">
           <h2
             className={`${aldrich.className} text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
@@ -500,7 +545,14 @@ export default function Home() {
           </h2>
           <div className="max-w-4xl mx-auto">
             {timeline.map((item, index) => (
-              <div key={index} className="flex gap-6 mb-8 last:mb-0">
+              <div 
+                key={index} 
+                ref={(el) => { timelineItemRefs.current[index] = el; }}
+                data-timeline-index={index}
+                className={`timeline-item flex gap-6 mb-8 last:mb-0 ${
+                  visibleTimelineItems.has(index) ? 'visible' : ''
+                }`}
+              >
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs text-center px-2">
                     {item.year}
@@ -540,11 +592,11 @@ export default function Home() {
             <h2
               className={`${aldrich.className} text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
             >
-              Are you ready?
+              Book a Free Consultation
             </h2>
             <p className="text-md text-slate-300 mb-8 max-w-2xl mx-auto">
               Let&rsquo;s discuss how I can help you navigate technical
-              decisions, fix your site or launch your product with confidence.
+              decisions, fix your site or launch your product with confidence. Let's get something up and running!
             </p>
 
             {formSuccess && (
@@ -698,7 +750,7 @@ export default function Home() {
                     type="submit"
                     className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-2"
                   >
-                    Send Message <ArrowRight size={20} />
+                    Send Your Enquiry
                   </button>
                 </div>
               </form>
