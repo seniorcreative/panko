@@ -545,13 +545,12 @@ export default function Home() {
           </h2>
           <div className="max-w-4xl mx-auto">
             {timeline.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 ref={(el) => { timelineItemRefs.current[index] = el; }}
                 data-timeline-index={index}
-                className={`timeline-item flex gap-6 mb-8 last:mb-0 ${
-                  visibleTimelineItems.has(index) ? 'visible' : ''
-                }`}
+                className={`timeline-item flex gap-6 mb-8 last:mb-0 ${visibleTimelineItems.has(index) ? 'visible' : ''
+                  }`}
               >
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs text-center px-2">
@@ -596,7 +595,7 @@ export default function Home() {
             </h2>
             <p className="text-md text-slate-300 mb-8 max-w-2xl mx-auto">
               Let&rsquo;s discuss how I can help you navigate technical
-              decisions, fix your site or launch your product with confidence. Let's get something up and running!
+              decisions, fix your site or launch your product with confidence. Let&rsquo;s get something up and running!
             </p>
 
             {formSuccess && (
