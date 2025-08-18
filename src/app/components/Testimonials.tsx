@@ -48,15 +48,15 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2
             className={`${aldrich.className} text-3xl md:text-4xl font-bold text-slate-800 mb-4`}
           >
-            {language !== "zh-CN" ? "What Our Clients Say" : "客户评价"}
+            {language !== "zh-CN" ? "What My Clients Say" : "客户评价"}
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             {language !== "zh-CN"
-              ? "Real feedback from businesses we've helped succeed online"
+              ? "Real feedback from businesses I've helped succeed online"
               : "来自我们帮助成功上线的企业的真实反馈"}
           </p>
         </div>
