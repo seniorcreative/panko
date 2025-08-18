@@ -23,7 +23,7 @@ export default function Stellae({ invert }: { invert?: boolean }) {
         direction.style.rotate = `${i * (360 / count)}deg`;
 
         const estrella = document.createElement("div");
-        const rdm = Math.random() * (max - min) + min;
+        const rdm = Math.random() * (max - min) + min * 2;
         estrella.classList.add("estrella");
 
         const styleDec: any = estrella.style;

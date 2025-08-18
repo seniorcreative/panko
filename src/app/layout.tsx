@@ -15,12 +15,15 @@ const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
 const raleway = Raleway({ weight: ["400", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
+  title:
+    "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
   description:
-    "Need help with your website or app? Geelong web developer with 20+ years experience helping businesses launch websites, fix technical issues & build custom applications that drive real results.",
+    "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
   openGraph: {
-    title: "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital", 
-    description: "Need help with your website or app? Geelong web developer with 20+ years experience helping businesses launch websites, fix technical issues & build custom applications.",
+    title:
+      "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
+    description:
+      "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
     url: "https://panko.digital",
     siteName: "Panko Digital",
     type: "website",
@@ -28,8 +31,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
-    description: "Need help with your website or app? Geelong web developer helping businesses launch websites, fix technical issues & build custom applications.",
+    title:
+      "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
+    description:
+      "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
   },
   robots: {
     index: true,
