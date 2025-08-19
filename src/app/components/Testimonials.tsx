@@ -2,6 +2,7 @@
 
 import React, { useContext } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { LanguageContext } from "../contexts/languageContext";
 import { aldrich } from "../fonts";
 
@@ -139,24 +140,24 @@ export default function Testimonials() {
             <p className="text-slate-500 text-sm">
               {language !== "zh-CN" ? (
                 <>
-                  Ready to join our satisfied clients? Let's{" "}
-                  <a
+                  Ready to join our satisfied clients? Let&apos;s{" "}
+                  <Link
                     href="/#contact"
                     className="text-blue-600 underline hover:text-blue-800"
                   >
                     discuss
-                  </a>{" "}
+                  </Link>{" "}
                   your project.
                 </>
               ) : (
                 <>
                   准备加入我们满意的客户吗？让我们
-                  <a
+                  <Link
                     href="/#contact"
                     className="text-blue-600 underline hover:text-blue-800"
                   >
                     讨论
-                  </a>
+                  </Link>
                   您的项目。
                 </>
               )}
