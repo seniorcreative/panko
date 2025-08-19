@@ -7,32 +7,24 @@ import { LanguageContext } from "./contexts/languageContext";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { aldrich } from "./fonts";
 import { Pacifico, Raleway } from "next/font/google";
-import {
-  CheckCircle,
-} from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 // Components
 import Work from "./components/Work";
 import BusinessHelp from "./components/BusinessHelp";
 import Stellae from "./components/stellae";
 import FAQ from "./components/FAQ";
-import ProcessSteps from "./components/ProcessSteps";
+import Testimonials from "./components/Testimonials";
 
 import {
   PankoLogoSVG,
   NineLogo,
   KmartLogo,
-  // BankFirst,
-  // Telstra,
   Buildxact,
-  // Worksafe,
-  // BMW,
   ASM,
   Sportsyear,
-  // Mini,
-  RevitCourse,
   BBC,
-  HendrysLogo
+  HendrysLogo,
 } from "../../public/logoIndex";
 import { usePathname } from "next/navigation";
 
@@ -103,15 +95,17 @@ export default function Home() {
   const [formSuccess, setFormSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
-  const [visibleTimelineItems, setVisibleTimelineItems] = useState<Set<number>>(new Set());
+  const [visibleTimelineItems, setVisibleTimelineItems] = useState<Set<number>>(
+    new Set()
+  );
 
   const pathName = usePathname();
   const heroRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
-  const servicesRef = useRef<HTMLElement>(null);
   const timelineRef = useRef<HTMLElement>(null);
   const workRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
+  const testimonialsRef = useRef<HTMLElement>(null);
   const timelineItemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Send analytics event
@@ -144,14 +138,16 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute('data-timeline-index') || '0');
-            setVisibleTimelineItems(prev => new Set([...prev, index]));
+            const index = parseInt(
+              entry.target.getAttribute("data-timeline-index") || "0"
+            );
+            setVisibleTimelineItems((prev) => new Set([...prev, index]));
           }
         });
       },
       {
         threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: "0px 0px -50px 0px",
       }
     );
 
@@ -176,18 +172,20 @@ export default function Home() {
     { t: "Australian Sports Museum: Touchscreen", i: ASM, c: undefined },
     // { t: "Worksafe: Pilot App", i: Worksafe, c: undefined },
     // { t: "BMW: Finance Application", i: BMW, c: "invert _grayscale" },
-    { t: "Nine Network: Video Graphics Software", i: NineLogo, c: "scale-30 opacity-50" },
+    {
+      t: "Nine Network: Video Graphics Software",
+      i: NineLogo,
+      c: "scale-30 opacity-50",
+    },
     {
       t: "Sportsyear: E-Commerce",
       i: Sportsyear,
       c: "invert _grayscale opacity-60",
     },
-    { t: "Hendrys: Custom Ecommerce Inventory Syncing Software", i: HendrysLogo, c: undefined },
-    // { t: "Mini: Asia Pac Site Dev for Monkii", i: Mini, c: undefined },
     {
-      t: "RevitCourse: Booking System",
-      i: RevitCourse,
-      c: "invert _grayscale opacity-60 scale-75",
+      t: "Hendrys: Custom Ecommerce Inventory Syncing Software",
+      i: HendrysLogo,
+      c: undefined,
     },
     {
       t: "BBC: E-Learning Games",
@@ -238,7 +236,7 @@ export default function Home() {
   const handleFieldChange = (
     event: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >,
+    >
   ) => {
     const { name, value } = event.target;
     const error = validateField(name, value);
@@ -278,7 +276,8 @@ export default function Home() {
     "@type": "ProfessionalService",
     name: "Panko Digital",
     alternateName: "Panko",
-    description: "Expert web developer and app development services in Geelong and Melbourne. Helping business owners launch websites, fix technical issues, and build custom applications that drive real results.",
+    description:
+      "Expert web developer and app development services in Geelong and Melbourne. Helping business owners launch websites, fix technical issues, and build custom applications that drive real results.",
     url: "https://panko.digital",
     email: "stesmi+panko@gmail.com",
     address: {
@@ -286,24 +285,24 @@ export default function Home() {
       addressLocality: "Geelong",
       addressRegion: "Victoria",
       postalCode: "3220",
-      addressCountry: "Australia"
+      addressCountry: "Australia",
     },
     areaServed: [
       {
         "@type": "City",
         name: "Geelong",
-        "@id": "https://www.wikidata.org/wiki/Q181427"
+        "@id": "https://www.wikidata.org/wiki/Q181427",
       },
       {
         "@type": "City",
         name: "Melbourne",
-        "@id": "https://www.wikidata.org/wiki/Q3141"
+        "@id": "https://www.wikidata.org/wiki/Q3141",
       },
       {
         "@type": "State",
         name: "Victoria",
-        "@id": "https://www.wikidata.org/wiki/Q36687"
-      }
+        "@id": "https://www.wikidata.org/wiki/Q36687",
+      },
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -312,40 +311,44 @@ export default function Home() {
         {
           "@type": "Service",
           name: "Website Development",
-          description: "Custom business websites that convert visitors into customers",
+          description:
+            "Custom business websites that convert visitors into customers",
           provider: {
             "@type": "Organization",
-            name: "Panko Digital"
-          }
+            name: "Panko Digital",
+          },
         },
         {
           "@type": "Service",
           name: "Mobile App Development",
-          description: "React Native apps for iOS and Android that engage customers",
+          description:
+            "React Native apps for iOS and Android that engage customers",
           provider: {
             "@type": "Organization",
-            name: "Panko Digital"
-          }
+            name: "Panko Digital",
+          },
         },
         {
           "@type": "Service",
           name: "E-commerce Development",
-          description: "Online stores with secure payments and inventory management",
+          description:
+            "Online stores with secure payments and inventory management",
           provider: {
             "@type": "Organization",
-            name: "Panko Digital"
-          }
+            name: "Panko Digital",
+          },
         },
         {
           "@type": "Service",
           name: "Website Troubleshooting",
-          description: "Fix broken websites, security issues, and performance problems",
+          description:
+            "Fix broken websites, security issues, and performance problems",
           provider: {
             "@type": "Organization",
-            name: "Panko Digital"
-          }
-        }
-      ]
+            name: "Panko Digital",
+          },
+        },
+      ],
     },
     founder: {
       "@type": "Person",
@@ -353,15 +356,15 @@ export default function Home() {
       jobTitle: "Senior Web Developer & Technical Consultant",
       worksFor: {
         "@type": "Organization",
-        name: "Panko Digital"
+        name: "Panko Digital",
       },
       hasOccupation: {
         "@type": "Occupation",
         name: "Web Developer",
         occupationLocation: {
           "@type": "City",
-          name: "Geelong"
-        }
+          name: "Geelong",
+        },
       },
       alumniOf: "Digital Pictures Melbourne",
       knowsAbout: [
@@ -370,20 +373,20 @@ export default function Home() {
         "E-commerce Solutions",
         "Mobile App Development",
         "Website Security",
-        "Performance Optimization"
-      ]
+        "Performance Optimization",
+      ],
     },
     sameAs: [
       "https://github.com/seniorcreative",
-      "https://www.linkedin.com/in/seniorcreative"
+      "https://www.linkedin.com/in/seniorcreative",
     ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
       reviewCount: "12",
       bestRating: "5",
-      worstRating: "1"
-    }
+      worstRating: "1",
+    },
   };
 
   return (
@@ -410,12 +413,16 @@ export default function Home() {
           <h1
             className={`${aldrich.className} text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
           >
-            {language !== "zh-CN" ? "Expert Web Developer in Geelong & Melbourne" : content[language].home.sections.intro.one}
+            {language !== "zh-CN"
+              ? "Expert Web Developer in Geelong & Melbourne"
+              : content[language].home.sections.intro.one}
           </h1>
           <h2
             className={`${aldrich.className} text-xl md:text-2xl text-slate-700 mb-8`}
           >
-            {language !== "zh-CN" ? "Helping business owners launch websites, fix technical issues & build apps that drive real results" : content[language].home.sections.intro.two}
+            {language !== "zh-CN"
+              ? "Helping business owners launch websites, fix technical issues & build apps that drive real results"
+              : content[language].home.sections.intro.two}
           </h2>
           <p
             className="text-lg text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto"
@@ -438,7 +445,6 @@ export default function Home() {
             </button>
           </div>
         </div>
-
       </section>
 
       {/* Client Logos Section */}
@@ -453,8 +459,9 @@ export default function Home() {
             Some of the companies I have worked with
           </h3>
           <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            From small businesses and boutique agencies to large corporations, I&apos;ve been proud to help businesses of
-            all sizes succeed in the digital space.
+            From small businesses and boutique agencies to large corporations,
+            I&apos;ve been proud to help businesses of all sizes succeed in the
+            digital space.
           </p>
           <div className="overflow-hidden">
             <div className="carousel-container">
@@ -497,15 +504,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      {/* <section ref={servicesRef} className="py-0">
-        <BusinessHelp />
-      </section> */}
-
       {/* Work Section */}
       <section
         ref={workRef}
-        className="py-16 bg-gradient-to-b from-slate-50 to-white"
+        className="py-16 bg-gradient-to-b from-slate-200 to-white"
       >
         <div className="container mx-auto px-8">
           <Work locale={language} />
@@ -523,19 +525,33 @@ export default function Home() {
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
           }
-          
+
           .timeline-item.visible {
             opacity: 1;
             transform: translateY(0);
           }
-          
-          .timeline-item:nth-child(1) { transition-delay: 0ms; }
-          .timeline-item:nth-child(2) { transition-delay: 150ms; }
-          .timeline-item:nth-child(3) { transition-delay: 300ms; }
-          .timeline-item:nth-child(4) { transition-delay: 450ms; }
-          .timeline-item:nth-child(5) { transition-delay: 600ms; }
-          .timeline-item:nth-child(6) { transition-delay: 750ms; }
-          .timeline-item:nth-child(7) { transition-delay: 900ms; }
+
+          .timeline-item:nth-child(1) {
+            transition-delay: 0ms;
+          }
+          .timeline-item:nth-child(2) {
+            transition-delay: 150ms;
+          }
+          .timeline-item:nth-child(3) {
+            transition-delay: 300ms;
+          }
+          .timeline-item:nth-child(4) {
+            transition-delay: 450ms;
+          }
+          .timeline-item:nth-child(5) {
+            transition-delay: 600ms;
+          }
+          .timeline-item:nth-child(6) {
+            transition-delay: 750ms;
+          }
+          .timeline-item:nth-child(7) {
+            transition-delay: 900ms;
+          }
         `}</style>
         <div className="container mx-auto px-6">
           <h2
@@ -547,10 +563,13 @@ export default function Home() {
             {timeline.map((item, index) => (
               <div
                 key={index}
-                ref={(el) => { timelineItemRefs.current[index] = el; }}
+                ref={(el) => {
+                  timelineItemRefs.current[index] = el;
+                }}
                 data-timeline-index={index}
-                className={`timeline-item flex gap-6 mb-8 last:mb-0 ${visibleTimelineItems.has(index) ? 'visible' : ''
-                  }`}
+                className={`timeline-item flex gap-6 mb-8 last:mb-0 ${
+                  visibleTimelineItems.has(index) ? "visible" : ""
+                }`}
               >
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs text-center px-2">
@@ -574,8 +593,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Steps Section */}
-      <ProcessSteps />
+      {/* Testimonials Section */}
+      <section ref={testimonialsRef} id="testimonials">
+        <Testimonials />
+      </section>
 
       {/* FAQ Section */}
       <FAQ />
@@ -595,7 +616,8 @@ export default function Home() {
             </h2>
             <p className="text-md text-slate-300 mb-8 max-w-2xl mx-auto">
               Let&rsquo;s discuss how I can help you navigate technical
-              decisions, fix your site or launch your product with confidence. Let&rsquo;s get something up and running!
+              decisions, fix your site or launch your product with confidence.
+              Let&rsquo;s get something up and running!
             </p>
 
             {formSuccess && (
@@ -628,10 +650,11 @@ export default function Home() {
                       name="name"
                       required
                       onChange={handleFieldChange}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${errors.name && touched.name
-                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                        : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
-                        }`}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                        errors.name && touched.name
+                          ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                          : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
+                      }`}
                       placeholder="Your name"
                     />
                     {errors.name && touched.name && (
@@ -651,10 +674,11 @@ export default function Home() {
                       name="email"
                       required
                       onChange={handleFieldChange}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${errors.email && touched.email
-                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                        : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
-                        }`}
+                      className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
+                        errors.email && touched.email
+                          ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                          : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
+                      }`}
                       placeholder="your@email.com"
                     />
                     {errors.email && touched.email && (
@@ -664,7 +688,6 @@ export default function Home() {
                     )}
                   </div>
                 </div>
-
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
@@ -681,13 +704,25 @@ export default function Home() {
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                     >
                       <option value="">Select your industry</option>
-                      <option value="creative">Creative - artists, photographers</option>
-                      <option value="finance">Finance - advisors, investors, bankers</option>
-                      <option value="health">Health - GPs, counsellors, support workers</option>
-                      <option value="media">Media - advertising, signage, entertainment</option>
+                      <option value="creative">
+                        Creative - artists, photographers
+                      </option>
+                      <option value="finance">
+                        Finance - advisors, investors, bankers
+                      </option>
+                      <option value="health">
+                        Health - GPs, counsellors, support workers
+                      </option>
+                      <option value="media">
+                        Media - advertising, signage, entertainment
+                      </option>
                       <option value="leisure">Leisure - sports, fitness</option>
-                      <option value="trades">Trades - builders, business owners</option>
-                      <option value="science">Science - astronomers, technologists</option>
+                      <option value="trades">
+                        Trades - builders, business owners
+                      </option>
+                      <option value="science">
+                        Science - astronomers, technologists
+                      </option>
                       <option value="entrepreneurs">Entrepreneurs</option>
                       <option value="other">Other</option>
                     </select>
@@ -708,9 +743,7 @@ export default function Home() {
                       <option value="">Select project type</option>
                       <option value="website">Website</option>
                       <option value="app">App </option>
-                      <option value="e-commerce">
-                        E-Commerce
-                      </option>
+                      <option value="e-commerce">E-Commerce</option>
                       <option value="technical-issues">Technical Issues</option>
                       <option value="other">Other</option>
                     </select>
@@ -731,11 +764,12 @@ export default function Home() {
                     rows={4}
                     minLength={50}
                     onChange={handleFieldChange}
-                    className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${errors.message && touched.message
-                      ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                      : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
-                      }`}
-                  // placeholder={`Please describe:\n• What specific technical problem are you trying to solve?\n• What is the current state of your project?`}
+                    className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all resize-vertical ${
+                      errors.message && touched.message
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                        : "border-slate-600 focus:border-blue-500 focus:ring-blue-500/20"
+                    }`}
+                    // placeholder={`Please describe:\n• What specific technical problem are you trying to solve?\n• What is the current state of your project?`}
                   />
                   {errors.message && touched.message && (
                     <p className="mt-1 text-sm text-red-400">

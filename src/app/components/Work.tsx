@@ -33,7 +33,6 @@ export default function Work({ locale }: workType) {
 
   return (
     <section className="relative min-h-screen py-8 flex items-center justify-center leading-8 overflow-hidden">
-      {/* <LavaLampBlobs className="opacity-40" /> */}
       <div className="container relative z-10">
         <h2
           className={`${aldrich.className} text-4xl bg-gradient-to-r from-blue-400 to-purple-400 mx-auto bg-clip-text text-transparent mb-4`}

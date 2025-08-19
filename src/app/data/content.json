@@ -6,14 +6,14 @@
           "one": "Helping business owners to launch or fix sites and apps",
           "two": "Using Tried and tested best practise software engineering fused with cutting-edge AI engineering methods, I turbo-charge development to turn your ideas into websites and apps that actually work for your business - faster and more efficiently.",
           "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "Need help with your website or app? I'm a Geelong-based web developer with 20+ years of experience helping businesses succeed online.<br/>Whether you need to fix a broken website, build a new one from scratch, or create a mobile app - I combine cutting-edge AI development tools with proven software engineering to deliver faster results. I speak plain English, not tech jargon, and focus on solutions that actually drive business growth.",
+          "three": "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
           "four": "Build AI-enhanced, human-centered technology that actually works - delivered at lightning speed.",
           "contactBtn": "Let's Build Something",
           "contactLink": "/#contact"
         },
         "about": {
           "title": "About Panko Digital",
-          "body": "<h3 class='text-lg'><strong>Panko Digital</strong> is your go-to web and application developer expert.</h3><br/><p>I'll make or fix you a site or app that drives real results for your business - more customers, more sales, less headaches.</p><p>I eliminate confusing tech jargon and keep communication clear and simple, so you always know what's happening.</p><p>I'll save you time and money by getting it right the first time, keeping you informed every step of the way.</p><p>I've helped everyone from small startups to major brands increase their revenue and streamline their operations through better technology.</p><p>I'm based in Geelong, Australia.</p>",
+          "body": "<h3 class='text-lg'><strong>Panko Digital</strong>, based in Geelong Australia, is your go-to web and application developer expert.</h3><br/><p>I'll make or fix you a site or app that drives real results for your business - more customers, more sales, less headaches.</p><p>I eliminate confusing tech jargon and keep communication clear and simple, so you always know what's happening.</p><p>I'll save you time and money by getting it right the first time, keeping you informed every step of the way.</p><p>I've helped everyone from small startups to major brands increase their revenue and streamline their operations through better technology.</p><p>I'm based in Geelong, Australia.</p>",
           "recentProjects": [
             {
               "title": "Floorplan Customer Activity Heatmap",
@@ -29,13 +29,13 @@
             },
             {
               "title": "Square Subscription Payments",
-              "client": "AFISC",
+              "client": "Apsect Marketing",
               "href": "https://afisc.com.au",
               "year": "2025"
             },
             {
               "title": "Ecommerce Inventory Syncing",
-              "client": "Hendry Cycles Geelong",
+              "client": "Hendry's Cycles Geelong",
               "href": "https://hendrys.com.au",
               "year": "2025"
             },
@@ -105,6 +105,44 @@
         "creative": "User-friendly design that converts visitors into customers faster - websites and apps that reduce bounce rates and increase time on site"
       }
     },
+    "testimonials": [
+      {
+        "id": 1,
+        "quote": "Panko Digital was instrumental in getting our online store and sales inventory synced up at a crucial time for our Geelong business.",
+        "name": "Simon Gerrans",
+        "initials": "SG",
+        "business": "Hendry's",
+        "location": "Geelong, AU",
+        "avatar": "/avatars/simongerrans.jpg"
+      },
+      {
+        "id": 2,
+        "quote": "We've collaborated with Panko Digital for years, and Steve always delivers. Whether it's a large, technically challenging project beyond our in-house expertise or a minor development update, everything is handled promptly and with care. We highly value Panko Digital's services.",
+        "name": "Aaron Lee",
+        "initials": "AL",
+        "business": "Caramel Creative",
+        "location": "South Melbourne, AU",
+        "avatar": "/avatars/aaronlee.jpg"
+      },
+      {
+        "id": 3,
+        "quote": "I had so much fun working with Panko. They assisted us with a custom app for a client at an important point in our scale-up journey.",
+        "name": "Nic Hinwood",
+        "initials": "NH",
+        "business": "Keo Design ",
+        "location": "Tamworth, AU",
+        "avatar": "/avatars/nichinwood.jpg"
+      },
+      {
+        "id": 4,
+        "quote": "A HUGE shoutout of thanks to panko.digital who built my site during his holidays and I couldn't be happier with the result. Steve is a true professional and I highly recommend him to anyone looking for a web developer.",
+        "name": "Richard Bradshaw",
+        "initials": "RB",
+        "business": "Loan Scenarios",
+        "location": "Melbourne, AU",
+        "avatar": "/avatars/richardbradshaw.jpg"
+      }
+    ],
     "work": [
       {
         "id": 14,
@@ -159,22 +197,6 @@
             "/work/worksafe~1~3.png",
             "/work/worksafe~2~3.png",
             "/work/worksafe~3~3.png"
-          ]
-        }
-      },
-      {
-        "id": 11,
-        "title": "RevitCourse",
-        "href": "https://revitcourse.com.au",
-        "description": "Multi-location course booking with payments, PDF certificates, and custom Google Maps.",
-        "date": "2021",
-        "category": ["E-commerce"],
-        "meta": {
-          "client": "Dankor Architecture",
-          "imageUrl": [
-            "/work/revitcourse~1~3.jpg",
-            "/work/revitcourse~2~3.jpg",
-            "/work/revitcourse~3~3.jpg"
           ]
         }
       },
