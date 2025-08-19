@@ -20,7 +20,7 @@ export default function FAQ() {
           {
             question: "How much does web development cost in Geelong?",
             answer:
-              "Website costs vary based on complexity. A simple single page business website package can start from $1000 if you provide design, while custom e-commerce solutions range upward from $5,000. I provide detailed quotes after understanding your specific needs and always discuss budget upfront to avoid surprises.",
+              "Website costs vary based on complexity. A simple single landing page business website can be made really quickly, while e-commerce solutions range upward. I provide detailed quotes after understanding your specific needs and always discuss budget upfront to avoid surprises.",
           },
           {
             question: "How long does it take to build a business website?",
