@@ -63,20 +63,8 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
                   />
                 </svg>
               </a>
-              {/* <Link
-                href="/services"
-                className="text-xs text-gray-600 hover:text-gray-800 transition-colors ml-4"
-              >
-                {language !== "zh-CN" ? "Services" : "副驾驶"}
-              </Link>
               <Link
-                href="/#work"
-                className="text-xs text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                {language !== "zh-CN" ? "Work" : "工作"}
-              </Link> */}
-              <Link
-                href="/services/#contact"
+                href="/#contact"
                 className="inline-flex items-center px-3 py-1 bg-gradient-to-r text-xs from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded text-white font-semibold transition-all"
               >
                 {language !== "zh-CN" ? "Contact" : "工作"}

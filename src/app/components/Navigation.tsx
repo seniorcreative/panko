@@ -38,12 +38,20 @@ export default function Navigation() {
             )}
           </strong>
         </Link>
-        <Link
-          href="/#contact"
-          className="px-4 py-2 border-2 border-gray-800 text-gray-800 rounded-lg font-semibold hover:bg-gray-800 hover:text-white transition-all"
-        >
-          Contact
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/#testimonials"
+            className="px-4 py-2 border-2 border-gray-800 text-gray-800 rounded-lg font-semibold hover:bg-gray-800 hover:text-white transition-all"
+          >
+            Testimonials
+          </Link>
+          <Link
+            href="/#contact"
+            className="px-4 py-2 border-2 border-gray-800 text-gray-800 rounded-lg font-semibold hover:bg-gray-800 hover:text-white transition-all"
+          >
+            Contact
+          </Link>
+        </div>
       </div>
     </nav>
   );

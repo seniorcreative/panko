@@ -105,6 +105,7 @@ export default function Home() {
   const timelineRef = useRef<HTMLElement>(null);
   const workRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
+  const testimonialsRef = useRef<HTMLElement>(null);
   const timelineItemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Send analytics event
@@ -506,7 +507,7 @@ export default function Home() {
       {/* Work Section */}
       <section
         ref={workRef}
-        className="py-16 bg-gradient-to-b from-slate-50 to-white"
+        className="py-16 bg-gradient-to-b from-slate-200 to-white"
       >
         <div className="container mx-auto px-8">
           <Work locale={language} />
@@ -593,7 +594,9 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <Testimonials />
+      <section ref={testimonialsRef} id="testimonials">
+        <Testimonials />
+      </section>
 
       {/* FAQ Section */}
       <FAQ />

@@ -72,6 +72,16 @@ export default function LanguageSwitcher({ font }: { font: any }) {
           {language !== "zh-CN" ? "Contact" : "工作"}
         </Link>
       </li>
+      <li className="flex me-3 items-center h-100">
+        <Link
+          className={`${font.className} inline-flex items-center px-4 py-2 bg-gradient-to-r text-xs from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all transform hover:scale-105 shadow-lg ${
+            decodeURI(pathname).includes("/folio") ? "underline" : ""
+          }`}
+          href="/services/#contact"
+        >
+          {language !== "zh-CN" ? "Contact" : "工作"}
+        </Link>
+      </li>
     </ul>
   );
 }

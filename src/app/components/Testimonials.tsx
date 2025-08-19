@@ -50,7 +50,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-8">
           <h2
-            className={`${aldrich.className} text-3xl md:text-4xl font-bold text-slate-800 mb-4`}
+            className={`${aldrich.className} text-3xl md:text-4xl font-bold text-slate-800 mt-4 mb-4`}
           >
             {language !== "zh-CN" ? "What My Clients Say" : "客户评价"}
           </h2>
@@ -137,9 +137,29 @@ export default function Testimonials() {
 
           <div className="mt-8 text-center">
             <p className="text-slate-500 text-sm">
-              {language !== "zh-CN"
-                ? "Ready to join our satisfied clients? Let's discuss your project."
-                : "准备加入我们满意的客户吗？让我们讨论您的项目。"}
+              {language !== "zh-CN" ? (
+                <>
+                  Ready to join our satisfied clients? Let's{" "}
+                  <a
+                    href="/#contact"
+                    className="text-blue-600 underline hover:text-blue-800"
+                  >
+                    discuss
+                  </a>{" "}
+                  your project.
+                </>
+              ) : (
+                <>
+                  准备加入我们满意的客户吗？让我们
+                  <a
+                    href="/#contact"
+                    className="text-blue-600 underline hover:text-blue-800"
+                  >
+                    讨论
+                  </a>
+                  您的项目。
+                </>
+              )}
             </p>
           </div>
         </div>
