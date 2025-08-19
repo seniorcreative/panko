@@ -71,10 +71,10 @@ export default function Testimonials() {
                 }`}
               >
                 {testimonial.quote ? (
-                  <>
+                  <div className="flex flex-col flex-grow-1 h-full">
                     {/* Quote */}
-                    <div className="mb-6">
-                      <p className="text-slate-700 text-sm leading-relaxed italic">
+                    <div className="mb-6 flex flex-1">
+                      <p className="text-slate-700 text-md leading-relaxed italic">
                         &ldquo;{testimonial.quote}&rdquo;
                       </p>
                     </div>
@@ -111,7 +111,7 @@ export default function Testimonials() {
                         </p>
                       </div>
                     </div>
-                  </>
+                  </div>
                 ) : (
                   /* Skeleton Content */
                   <>

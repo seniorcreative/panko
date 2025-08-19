@@ -108,12 +108,12 @@
     "testimonials": [
       {
         "id": 1,
-        "quote": "Panko Digital was instrumental in getting our online store and sales inventory synced up at a crucial time for our business.",
-        "name": "Simon Gerrard",
+        "quote": "Panko Digital was instrumental in getting our online store and sales inventory synced up at a crucial time for our Geelong business.",
+        "name": "Simon Gerrans",
         "initials": "SG",
         "business": "Hendry's",
         "location": "Geelong, AU",
-        "avatar": null
+        "avatar": "/avatars/simongerrans.jpg"
       },
       {
         "id": 2,
@@ -122,7 +122,7 @@
         "initials": "AL",
         "business": "Caramel Creative",
         "location": "South Melbourne, AU",
-        "avatar": null
+        "avatar": "/avatars/aaronlee.jpg"
       },
       {
         "id": 3,
@@ -131,7 +131,7 @@
         "initials": "NH",
         "business": "Keo Design ",
         "location": "Tamworth, AU",
-        "avatar": null
+        "avatar": "/avatars/nichinwood.jpg"
       },
       {
         "id": 4,
@@ -140,7 +140,7 @@
         "initials": "RB",
         "business": "Loan Scenarios",
         "location": "Melbourne, AU",
-        "avatar": null
+        "avatar": "/avatars/richardbradshaw.jpg"
       }
     ],
     "work": [
