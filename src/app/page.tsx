@@ -106,6 +106,7 @@ export default function Home() {
   const workRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
   const testimonialsRef = useRef<HTMLElement>(null);
+  const faqRef = useRef<HTMLElement>(null);
   const timelineItemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Send analytics event
@@ -401,7 +402,7 @@ export default function Home() {
         className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden"
       >
         <Stellae />
-        <div className="relative z-50 text-center px-8 max-w-4xl mx-auto">
+        <div className="relative z-50 text-center px-4 md:px-8 max-w-4xl mx-auto">
           <Image
             className="mx-auto mb-8 mt-20 animate-pulse"
             id="logo-img"
@@ -599,7 +600,9 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <FAQ />
+      <section ref={faqRef} id="faq">
+        <FAQ />
+      </section>
 
       {/* Contact Form Section */}
       <section
