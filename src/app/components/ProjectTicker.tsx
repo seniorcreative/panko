@@ -46,7 +46,7 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
       {
         threshold: 0.3, // Trigger when 30% of the component is visible
         rootMargin: "0px 0px -50px 0px", // Trigger slightly before fully in view
-      },
+      }
     );
 
     const currentContainer = containerRef.current;
@@ -73,10 +73,11 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
 
       <div className="space-y-2">
         <div
-          className={`flex items-center justify-between p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded transition-all duration-700 ease-out transform ${showFirstItem
+          className={`flex items-center justify-between p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded transition-all duration-700 ease-out transform ${
+            showFirstItem
               ? "translate-y-0 opacity-100"
               : "translate-y-8 opacity-0"
-            }`}
+          }`}
         >
           <div className="flex items-center">
             <span className="text-gray-500 font-mono text-sm uppercase tracking-wide mr-3">
@@ -97,8 +98,9 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
         {sortedProjects.map((project, index) => (
           <div
             key={index}
-            className={`flex items-center justify-between p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow ${project.href ? "cursor-pointer" : ""
-              }`}
+            className={`flex items-center justify-between p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow ${
+              project.href ? "cursor-pointer" : ""
+            }`}
             onClick={() => handleClick(project)}
           >
             <div className="flex items-center">
@@ -134,7 +136,7 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
       <div className="mt-6 flex justify-around items-center mx-auto max-w-md">
         <Link
           href="/folio"
-          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
+          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-2 md:px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
         >
           View older work
         </Link>
@@ -142,7 +144,7 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
           href="https://github.com/seniorcreative"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
+          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-2 md:px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
         >
           View code experiments
         </Link>

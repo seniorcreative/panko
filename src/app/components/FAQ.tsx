@@ -61,8 +61,6 @@ export default function FAQ() {
             answer:
               "Absolutely. I have industry experience of integrating websites with things like Xero, MYOB, Quickbooks, HubSpot, Salesforce, and other business systems. This eliminates double data entry and streamlines your workflow. Integration projects vary based on requirements such as frequency, data structure complexity and security considerations.",
           },
-        ]
-      : [
           {
             question:
               "What is your typical process for web development projects?",
@@ -80,7 +78,8 @@ export default function FAQ() {
             answer:
               "I work with a diverse range of businesses, from startups to established enterprises, across various industries. My focus is on helping businesses (first and foremost here in Geelong) that are looking to enhance their online presence and drive results.",
           },
-        ];
+        ]
+      : [];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -91,7 +90,7 @@ export default function FAQ() {
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-12">
           <h2
-            className={`${aldrich.className} text-3xl md:text-4xl font-bold text-slate-800 mb-4`}
+            className={`${aldrich.className} text-3xl md:text-4xl font-bold text-slate-800 mt-4 mb-4`}
           >
             {language !== "zh-CN" ? "Frequently Asked Questions" : "常见问题"}
           </h2>
