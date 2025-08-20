@@ -278,7 +278,7 @@ export default function Home() {
     name: "Panko Digital",
     alternateName: "Panko",
     description:
-      "Digital business services software and app development services in Geelong and Melbourne. Helping business owners launch websites, fix technical issues, and build custom applications that drive real results.",
+      "Digital business services software, apps and e-commerce systems development in Geelong and Melbourne. Helping business owners launch websites, fix technical issues, and build custom applications that drive real results.",
     url: "https://panko.digital",
     email: "stesmi+panko@gmail.com",
     address: {
