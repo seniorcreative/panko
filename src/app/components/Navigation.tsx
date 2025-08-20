@@ -28,7 +28,7 @@ export default function Navigation() {
               className="xs:w-8 xs:h-8"
             />
           </div>
-          <strong style={{ marginTop: "6px" }}>
+          <strong style={{ marginTop: "6px", lineHeight: "1em" }}>
             Panko Digital
             {isOnFolioPage && (
               <span className="hidden md:inline text-gray-500 font-light">

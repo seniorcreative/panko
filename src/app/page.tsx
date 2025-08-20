@@ -197,7 +197,7 @@ export default function Home() {
 
   const { language } = useContext(LanguageContext);
 
-  const colorButtonStyle = `px-6 py-3 rounded-lg ms-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg font-semibold`;
+  const colorButtonStyle = `w-full md:w-48 px-6 py-3 rounded-lg ms-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg font-semibold`;
 
   const validateField = (name: string, value: string) => {
     switch (name) {
@@ -278,7 +278,7 @@ export default function Home() {
     name: "Panko Digital",
     alternateName: "Panko",
     description:
-      "Expert web developer and app development services in Geelong and Melbourne. Helping business owners launch websites, fix technical issues, and build custom applications that drive real results.",
+      "Digital business services software, apps and e-commerce systems development in Geelong and Melbourne. Helping business owners launch websites, fix technical issues, and build custom applications that drive real results.",
     url: "https://panko.digital",
     email: "stesmi+panko@gmail.com",
     address: {
@@ -415,14 +415,14 @@ export default function Home() {
             className={`${aldrich.className} text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent`}
           >
             {language !== "zh-CN"
-              ? "Expert Web Developer in Geelong & Melbourne"
+              ? "Digital Business Services Software & Web Development Solutions"
               : content[language].home.sections.intro.one}
           </h1>
           <h2
             className={`${aldrich.className} text-xl md:text-2xl text-slate-700 mb-8`}
           >
             {language !== "zh-CN"
-              ? "Helping business owners launch websites, fix technical issues & build apps that drive real results"
+              ? "Helping business owners and start-ups launch websites, fix technical issues & build apps that drive real results. Based in Geelong."
               : content[language].home.sections.intro.two}
           </h2>
           <p
@@ -440,7 +440,7 @@ export default function Home() {
             </button>
             <button
               onClick={() => scrollToSection(timelineRef)}
-              className="px-6 py-3 rounded-lg border-2 border-slate-300 text-slate-700 hover:bg-slate-50 transition-all font-semibold"
+              className="w-full md:w-48 px-6 py-3 rounded-lg border-2 border-slate-300 text-slate-700 hover:bg-slate-50 transition-all font-semibold"
             >
               My Experience
             </button>
@@ -453,11 +453,11 @@ export default function Home() {
         ref={aboutRef}
         className="py-16 bg-gradient-to-b from-white to-slate-50"
       >
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <h3
             className={`${aldrich.className} text-2xl md:text-3xl font-bold text-center mb-4 text-slate-800`}
           >
-            Some of the companies I have worked with
+            Some of the businesses I have worked with
           </h3>
           <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
             From small businesses and boutique agencies to large corporations,
@@ -465,41 +465,21 @@ export default function Home() {
             digital space.
           </p>
           <div className="overflow-hidden">
-            <div className="carousel-container">
-              <style jsx>{`
-                @keyframes scroll {
-                  0% {
-                    transform: translateX(0);
-                  }
-                  100% {
-                    transform: translateX(-50%);
-                  }
-                }
-
-                .carousel-track {
-                  animation: scroll 25s linear infinite;
-                  width: 200%;
-                }
-
-                .carousel-track:hover {
-                  animation-play-state: paused;
-                }
-              `}</style>
-              <div className="carousel-track flex items-center">
-                {[...Logos, ...Logos].map((logo: LogoObj, index: number) => (
-                  <div
-                    key={`${logo.t}-${index}`}
-                    title={logo.t}
-                    className={`flex-shrink-0 w-48 h-24 mx-8 opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer ${logo.c}`}
-                    style={{
-                      backgroundImage: `url(${logo.i.src})`,
-                      backgroundSize: "contain",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center center",
-                    }}
-                  />
-                ))}
-              </div>
+            {/* Static responsive grid for logos (mobile-first) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
+              {Logos.map((logo: LogoObj, index: number) => (
+                <div
+                  key={`${logo.t}-${index}`}
+                  title={logo.t}
+                  className={`flex items-center justify-center w-full h-20 p-4 opacity-80 hover:opacity-100 transition-all duration-300 ${logo.c}`}
+                  style={{
+                    backgroundImage: `url(${logo.i.src})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center center",
+                  }}
+                />
+              ))}
             </div>
           </div>
         </div>
