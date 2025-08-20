@@ -89,9 +89,9 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
           </div>
           <Link
             href="#contact"
-            className="bg-blue-900 font-sans rounded-full text-white px-4 py-2 hover:bg-blue-800 transition-colors text-sm uppercase tracking-wide"
+            className="bg-blue-900 font-sans rounded-md text-white px-2 py-2 hover:bg-blue-800 transition-colors text-sm uppercase tracking-wide"
           >
-            Be next, contact me
+            Be next
           </Link>
         </div>
 
@@ -107,7 +107,7 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
               <span className="text-blue-900 font-mono text-sm mr-3 uppercase tracking-wide min-w-[80px]">
                 {project.client}
               </span>
-              <span className="text-blue-900 font-mono text-lg uppercase tracking-wider font-bold">
+              <span className="text-blue-900 font-mono text-lg uppercase tracking-wider font-bold leading-5">
                 {project.title}
               </span>
               {project.href && (
@@ -133,10 +133,10 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
         ))}
       </div>
 
-      <div className="mt-6 flex justify-around items-center mx-auto max-w-md">
+      <div className="mt-6 flex flex-col md:flex-row justify-around items-center mx-auto max-w-md gap-2">
         <Link
           href="/folio"
-          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-2 md:px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
+          className={`${aldrich.className} text-blue-900 text-center w-full md:w-auto text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-2 md:px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
         >
           View older work
         </Link>
@@ -144,7 +144,7 @@ export default function ProjectTicker({ projects }: ProjectTickerProps) {
           href="https://github.com/seniorcreative"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${aldrich.className} text-blue-900 text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-2 md:px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
+          className={`${aldrich.className} text-blue-900 w-full md:w-auto text-center text-sm uppercase tracking-wide underline border-2 border-blue-900 rounded-full px-2 md:px-4 py-2 hover:bg-blue-900 hover:text-white transition-all duration-300`}
         >
           View code experiments
         </Link>

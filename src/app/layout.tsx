@@ -16,12 +16,12 @@ const raleway = Raleway({ weight: ["400", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
+    "Digital Business Services Software Developer Geelong | Website & App Development Melbourne | Panko Digital",
   description:
     "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
   openGraph: {
     title:
-      "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
+      "Digital Business Services Software Developer Geelong | Website & App Development Melbourne | Panko Digital",
     description:
       "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
     url: "https://panko.digital",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Expert Web Developer Geelong | Website & App Development Melbourne | Panko Digital",
+      "Digital Business Services Software Developer Geelong | Website & App Development Melbourne | Panko Digital",
     description:
       "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
   },
