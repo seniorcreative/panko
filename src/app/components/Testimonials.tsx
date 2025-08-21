@@ -25,15 +25,6 @@ export default function Testimonials() {
   // Create skeleton testimonials for the last 2 slots
   const skeletonTestimonials = [
     {
-      id: 5,
-      quote: "",
-      name: "",
-      initials: "",
-      business: "",
-      location: "",
-      avatar: null,
-    },
-    {
       id: 6,
       quote: "",
       name: "",
@@ -75,7 +66,7 @@ export default function Testimonials() {
                   <div className="flex flex-col flex-grow-1 h-full">
                     {/* Quote */}
                     <div className="mb-6 flex flex-1">
-                      <p className="text-slate-700 text-md leading-relaxed italic">
+                      <p className="text-slate-700 text-sm leading-4 italic">
                         &ldquo;{testimonial.quote}&rdquo;
                       </p>
                     </div>
@@ -140,7 +131,7 @@ export default function Testimonials() {
             <p className="text-slate-500 text-sm">
               {language !== "zh-CN" ? (
                 <>
-                  Ready to join our satisfied clients? Let&apos;s{" "}
+                  Ready to join my list of satisfied clients? Let&apos;s{" "}
                   <Link
                     href="/#contact"
                     className="text-blue-600 underline hover:text-blue-800"
