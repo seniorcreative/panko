@@ -29,7 +29,7 @@ export default function Navigation() {
             />
           </div>
           <strong style={{ marginTop: "6px", lineHeight: "1em" }}>
-            Panko Digital
+            Panko
             {isOnFolioPage && (
               <span className="hidden md:inline text-gray-500 font-light">
                 {" "}

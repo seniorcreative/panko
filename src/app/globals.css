@@ -73,3 +73,14 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+ol.what {
+  padding-left: 2em;
+  list-style: auto !important;
+}
+
+ol.what li {
+  margin-bottom: 0.2em;
+  font-family: "Press Start 2P", system-ui;
+  font-family: "Aldrich", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
