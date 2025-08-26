@@ -132,23 +132,23 @@
         "business": "Keo Design ",
         "location": "Tamworth, NSW",
         "avatar": "/avatars/nichinwood.jpg"
-      },
-      {
-        "id": 4,
-        "quote": "A HUGE shoutout of thanks to panko who built my site during their holidays and I couldn't be happier with the result. Steve is a true professional and I highly recommend him to anyone looking for a web developer.",
-        "name": "Richard Bradshaw",
-        "initials": "RB",
-        "business": "Loan Scenarios",
-        "location": "Melbourne, VIC",
-        "avatar": "/avatars/richardbradshaw.jpg"
       },{
-        "id": 5,
+        "id": 4,
         "quote": "Panko helps us with web and cms tasks of all shapes and sizes and is a reliable and trusted partner",
         "name": "Nick Lowman",
         "initials": "NL",
         "business": "Aspect Marketing",
         "location": "Melbourne, VIC",
         "avatar": null
+      },
+      {
+        "id": 5,
+        "quote": "A HUGE shoutout of thanks to panko who built my site during their holidays and I couldn't be happier with the result.",
+        "name": "Richard Bradshaw",
+        "initials": "RB",
+        "business": "Loan Scenarios",
+        "location": "Melbourne, VIC",
+        "avatar": "/avatars/richardbradshaw.jpg"
       }
     ],
     "work": [
