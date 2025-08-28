@@ -73,15 +73,22 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
             </div>
           </div>
           <div className="flex-1">
-            <Image
-              src="/Geelong-Chamber-Commerce-Member-Badge-2025.png"
-              width={180}
-              height={40}
-              alt="Geelong Chamber of Commerce Member Badge 2025"
-              className=""
-            />
+            <Link
+              href="https://www.geelongchamber.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-center"
+            >
+              <Image
+                src="/Geelong-Chamber-Commerce-Member-Badge-2025.png"
+                width={180}
+                height={40}
+                alt="Geelong Chamber of Commerce Member Badge 2025"
+                className=""
+              />
+            </Link>
           </div>
-          <div className="flex-0">
+          <div className="flex-1 flex justify-end">
             <a
               href="/"
               target="_blank"
