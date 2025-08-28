@@ -2,6 +2,7 @@
 
 import React, { useContext, type JSX } from "react";
 import { LanguageContext } from "../contexts/languageContext";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
@@ -22,7 +23,7 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
           <div className="flex-1">
             <div className="flex gap-4 items-center">
               <a
-                href="https://www.linkedin.com/in/seniorcreative"
+                href="https://www.linkedin.com/company/panko-digital"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity"
@@ -71,9 +72,18 @@ export default function Footer({ fonts }: { fonts: any[] }): JSX.Element {
               </Link>
             </div>
           </div>
+          <div className="flex-1">
+            <Image
+              src="/Geelong-Chamber-Commerce-Member-Badge-2025.png"
+              width={180}
+              height={40}
+              alt="Geelong Chamber of Commerce Member Badge 2025"
+              className=""
+            />
+          </div>
           <div className="flex-0">
             <a
-              href="https://github.com/seniorcreative/panko"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline flex items-center gap-1 text-sm text-right text-gray-600 hover:opacity-70 transition-opacity"
