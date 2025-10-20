@@ -12,8 +12,8 @@
           "contactLink": "/#contact"
         },
         "about": {
-          "title": "What Panko Can Do For You",
-          "body": "<ol class='what'>\n<li>Launch websites for startups and small businesses</li>\n<li>Fix websites</li>\n<li>Work on your Shopify or Squarespace store</li>\n<li>Build custom mobile apps for iOS and Android</li>\n<li>Design and develop interactive games and experiences</li>\n<li>Consult on digital strategy</li>\n<li>Design and develop digital signage systems</li>\n<li>Team up with you to make turn a digital innovation concept into reality</li>\n<li>Provide best practise software engineering advice</li>\n<li>Provide IT training</li>\n</ul><blockquote class='mt-3 italic'>Co-piloting with you, using AI tools and my software experience, I'm happy handle the technical bits so you can concentrate on what you need to do!</blockquote>\n",
+          "title": "I'm Steve. I can help you...",
+          "body": "<ul class='what'>\n<li><b>Launch or fix websites</b> for startups, small businesses, or online stores (Shopify, Squarespace)</li>\n<li><b>Build custom mobile apps</b> for iOS and Android</li>\n<li><b>Design and develop interactive experiences</b> (web apps, tools, or learning platforms)</li>\n<li><b>Consult on digital strategy</b> and provide <b>best-practice software engineering advice</b></li>\n<li><b>Turn digital innovation ideas</b> into working products or prototypes</li>\n</ul><blockquote class='mt-3 italic'>Co-piloting with you, using AI tools and my software experience, I'm happy to handle the technical bits so you can focus on what you do best!</blockquote>\n",
           "recentProjects": [
             {
               "title": "Floorplan Customer Activity Heatmap",

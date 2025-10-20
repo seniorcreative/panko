@@ -39,11 +39,26 @@ export default function Work({ locale }: workType) {
         >
           <strong>{content[locale].home.sections.about.title}</strong>
         </h2>
-        <div
-          id="content"
-          className="text-indigo-800 mb-8"
-          ref={pageContent}
-        ></div>
+
+        <div className="flex flex-col lg:flex-row lg:gap-8 lg:items-start mb-8">
+          {/* Image Container - appears first on mobile, right on desktop */}
+          <div className="flex justify-center lg:justify-end flex-shrink-0 mb-8 lg:mb-0 order-first lg:order-last">
+            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden flex-shrink-0 shadow-lg">
+              <img
+                src="/profile/SAND_250820_0767_400x400.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div
+            id="content"
+            className="text-indigo-800 flex-1 lg:flex-initial"
+            ref={pageContent}
+          ></div>
+        </div>
 
         <div className="border-t border-gray-300 pt-2">
           <ProjectTicker
