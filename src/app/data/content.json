@@ -123,6 +123,80 @@
         "location": "Melbourne, VIC",
         "avatar": "/avatars/richardbradshaw.jpg"
       }
+    ],
+    "showcase": [
+      {
+        "id": "light-pollution",
+        "title": "Light Pollution App",
+        "subtitle": "React Native · AI · Camera",
+        "description": "A mobile app using AI-powered camera analysis to measure and map light pollution levels in real time. Location tracking, scoring algorithms, and community data sharing.",
+        "category": "Mobile App",
+        "industry": "Environment & Science",
+        "technologies": [
+          "React Native",
+          "TensorFlow Lite",
+          "Expo",
+          "Geolocation API",
+          "Firebase"
+        ],
+        "tags": [
+          "AI",
+          "Mobile",
+          "Camera",
+          "Geolocation"
+        ],
+        "color": "#1a1a2e",
+        "accent": "#e94560",
+        "image": "/showcase/light-pollution-1.jpg"
+      },
+      {
+        "id": "cabinet-demo",
+        "title": "Cabinet Design Demo",
+        "subtitle": "AI · 3D · Interactive",
+        "description": "AI-assisted cabinet design software prototype. Interactive 3D configuration with intelligent layout suggestions, material estimation, and real-time rendering.",
+        "category": "Web App Prototype",
+        "industry": "Manufacturing & Trades",
+        "technologies": [
+          "React",
+          "Three.js",
+          "OpenAI API",
+          "WebGL",
+          "TypeScript"
+        ],
+        "tags": [
+          "AI",
+          "3D",
+          "Prototype",
+          "VFX"
+        ],
+        "color": "#0f0f23",
+        "accent": "#64ffda",
+        "image": "/showcase/cabinet-demo-1.jpg"
+      },
+      {
+        "id": "stadium-graphics",
+        "title": "Stadium Scoring Systems",
+        "subtitle": "Signage · Real-time · Broadcast",
+        "description": "Interactive scoring and graphics systems generating live video signals for large sports stadium crowds. Built for the MCG and Australian Sports Museum.",
+        "category": "Digital Signage",
+        "industry": "Sports & Entertainment",
+        "technologies": [
+          "ActionScript 3",
+          "Socket.IO",
+          "Video Encoding",
+          "IoT",
+          "CMS"
+        ],
+        "tags": [
+          "Signage",
+          "Real-time",
+          "Broadcast",
+          "IoT"
+        ],
+        "color": "#1a0a2e",
+        "accent": "#bd93f9",
+        "image": "/showcase/stadium-1.jpg"
+      }
     ]
   }
 }

@@ -1,230 +1,325 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { aldrich } from "../fonts";
 import { Raleway } from "next/font/google";
 
 const ral = Raleway({ weight: ["400", "600"], subsets: ["latin"] });
 
+const content = require("../data/content.json");
+
 interface ShowcaseProject {
+  id: string;
   title: string;
+  subtitle: string;
   description: string;
+  category: string;
+  industry: string;
+  technologies: string[];
   tags: string[];
-  images: string[];
+  color: string;
+  accent: string;
+  image: string;
 }
 
-const projects: ShowcaseProject[] = [
-  {
-    title: "Light Pollution App",
-    description:
-      "React Native app using AI to analyse and map light pollution levels. Camera-based detection with real-time scoring and location tracking.",
-    tags: ["React Native", "AI", "Mobile", "Camera"],
-    images: [
-      "/showcase/light-pollution-1.jpg",
-      "/showcase/light-pollution-2.jpg",
-    ],
-  },
-  {
-    title: "Cabinet Design Demo",
-    description:
-      "AI-assisted cabinet design software demo. Interactive 3D configuration with intelligent layout suggestions and material estimation.",
-    tags: ["AI", "3D", "Web App", "Prototype"],
-    images: ["/showcase/cabinet-demo-1.jpg", "/showcase/cabinet-demo-2.jpg"],
-  },
-  // Add more projects here as needed:
-  // {
-  //   title: "Project Name",
-  //   description: "Description",
-  //   tags: ["Tag1", "Tag2"],
-  //   images: ["/showcase/image1.jpg", "/showcase/image2.jpg"],
-  // },
-];
+const projects: ShowcaseProject[] = content["en-US"].showcase;
 
 export default function ShowcasePage() {
-  const [lightbox, setLightbox] = useState<{
-    projectIndex: number;
-    imageIndex: number;
-  } | null>(null);
-
-  const openLightbox = (projectIndex: number, imageIndex: number) => {
-    setLightbox({ projectIndex, imageIndex });
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeLightbox = () => {
-    setLightbox(null);
-    document.body.style.overflow = "unset";
-  };
-
-  const currentProject =
-    lightbox !== null ? projects[lightbox.projectIndex] : null;
-
-  const nextImage = useCallback(() => {
-    if (!lightbox || !currentProject) return;
-    setLightbox({
-      ...lightbox,
-      imageIndex: (lightbox.imageIndex + 1) % currentProject.images.length,
-    });
-  }, [lightbox, currentProject]);
-
-  const prevImage = useCallback(() => {
-    if (!lightbox || !currentProject) return;
-    setLightbox({
-      ...lightbox,
-      imageIndex:
-        (lightbox.imageIndex - 1 + currentProject.images.length) %
-        currentProject.images.length,
-    });
-  }, [lightbox, currentProject]);
+  const [visibleSections, setVisibleSections] = useState<Set<number>>(
+    new Set(),
+  );
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (!lightbox) return;
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowRight") nextImage();
-      if (e.key === "ArrowLeft") prevImage();
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [lightbox, nextImage, prevImage]);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const idx = parseInt(entry.target.getAttribute("data-index") || "0");
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => new Set([...prev, idx]));
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gray-950 pt-24 pb-20">
-      <div className="px-6 md:px-12 lg:px-24 mb-12">
+    <div className="bg-black">
+      {/* Hero intro */}
+      <section className="min-h-screen flex flex-col justify-center items-center relative px-6">
         <Link
           href="/"
-          className={`${aldrich.className} text-sm text-gray-500 hover:text-white transition-colors mb-8 inline-block`}
+          className={`${aldrich.className} absolute top-28 left-6 md:left-12 text-sm text-gray-600 hover:text-white transition-colors`}
         >
-          &larr; Back to home
+          &larr; Home
         </Link>
         <h1
-          className={`${aldrich.className} text-3xl md:text-4xl text-white mb-3`}
+          className={`${aldrich.className} text-5xl md:text-7xl lg:text-8xl text-white text-center leading-tight mb-6`}
         >
           Showcase
         </h1>
-        <p className={`${ral.className} text-lg text-gray-400`}>
-          Experiments, prototypes, and creative technology projects.
+        <p
+          className={`${ral.className} text-lg md:text-xl text-gray-500 text-center max-w-lg mb-16`}
+        >
+          Experiments, prototypes, and creative technology.
         </p>
-      </div>
+        <div className="animate-bounce text-gray-600">
+          <ArrowDown size={24} />
+        </div>
+      </section>
 
-      {/* Grid */}
-      <div className="px-6 md:px-12 lg:px-24">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects.map((project, pi) => (
-            <button
-              key={pi}
-              onClick={() => openLightbox(pi, 0)}
-              className="group relative aspect-[4/3] bg-gray-900 rounded-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/30"
-            >
-              <Image
-                src={project.images[0]}
-                alt={`${project.title} screenshot`}
-                fill
-                className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+      {/* Project sections */}
+      {projects.map((project, i) => {
+        const isVisible = visibleSections.has(i);
+        const isEven = i % 2 === 0;
+
+        return (
+          <section
+            key={project.id}
+            ref={(el) => {
+              sectionRefs.current[i] = el;
+            }}
+            data-index={i}
+            className="min-h-screen relative flex items-center overflow-hidden"
+            style={{ backgroundColor: project.color }}
+          >
+            {/* Placeholder visual — animated geometric shapes */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {/* Large accent circle */}
+              <div
+                className="absolute rounded-full transition-all duration-[1.5s] ease-out"
+                style={{
+                  width: "60vw",
+                  height: "60vw",
+                  maxWidth: "700px",
+                  maxHeight: "700px",
+                  background: `radial-gradient(circle, ${project.accent}15, transparent 70%)`,
+                  right: isEven ? "-10vw" : "auto",
+                  left: isEven ? "auto" : "-10vw",
+                  top: "50%",
+                  transform: isVisible
+                    ? "translateY(-50%) scale(1)"
+                    : "translateY(-50%) scale(0.5)",
+                  opacity: isVisible ? 1 : 0,
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className={`${aldrich.className} text-white text-sm`}>
-                  {project.title}
+              {/* Floating accent line */}
+              <div
+                className="absolute transition-all duration-[1.2s] ease-out delay-300"
+                style={{
+                  width: isVisible ? "30vw" : "0",
+                  height: "2px",
+                  background: `linear-gradient(90deg, transparent, ${project.accent}60, transparent)`,
+                  top: "30%",
+                  left: isEven ? "10%" : "60%",
+                  opacity: isVisible ? 1 : 0,
+                }}
+              />
+              {/* Small floating dot */}
+              <div
+                className="absolute rounded-full transition-all duration-[2s] ease-out delay-500"
+                style={{
+                  width: "12px",
+                  height: "12px",
+                  backgroundColor: project.accent,
+                  opacity: isVisible ? 0.6 : 0,
+                  top: "25%",
+                  right: isEven ? "20%" : "auto",
+                  left: isEven ? "auto" : "20%",
+                  transform: isVisible ? "translateY(0)" : "translateY(40px)",
+                }}
+              />
+              {/* Accent ring */}
+              <div
+                className="absolute rounded-full border transition-all duration-[1.8s] ease-out delay-200"
+                style={{
+                  width: "20vw",
+                  height: "20vw",
+                  maxWidth: "250px",
+                  maxHeight: "250px",
+                  borderColor: `${project.accent}20`,
+                  bottom: "15%",
+                  right: isEven ? "15%" : "auto",
+                  left: isEven ? "auto" : "15%",
+                  transform: isVisible
+                    ? "scale(1) rotate(0deg)"
+                    : "scale(0) rotate(90deg)",
+                  opacity: isVisible ? 1 : 0,
+                }}
+              />
+            </div>
+
+            {/* Content */}
+            <div
+              className={`relative z-10 w-full px-6 md:px-12 lg:px-24 flex flex-col ${
+                isEven ? "md:flex-row" : "md:flex-row-reverse"
+              } items-center gap-12 md:gap-20`}
+            >
+              {/* Text side */}
+              <div
+                className="flex-1 max-w-xl transition-all duration-[1s] ease-out"
+                style={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? "translateY(0)" : "translateY(60px)",
+                }}
+              >
+                <p
+                  className={`${aldrich.className} text-sm uppercase tracking-widest mb-4`}
+                  style={{ color: project.accent }}
+                >
+                  {project.subtitle}
                 </p>
-                <div className="flex gap-2 mt-1 flex-wrap">
+                <h2
+                  className={`${aldrich.className} text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 flex flex-wrap`}
+                >
+                  {project.title.split(" ").map((word: string, wi: number) => (
+                    <span
+                      key={wi}
+                      className="inline-block overflow-hidden mr-[0.3em]"
+                    >
+                      <span
+                        className="inline-block transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                        style={{
+                          transform: isVisible
+                            ? "translateY(0)"
+                            : "translateY(110%)",
+                          transitionDelay: `${wi * 80 + 200}ms`,
+                        }}
+                      >
+                        {word}
+                      </span>
+                    </span>
+                  ))}
+                </h2>
+                <p
+                  className={`${ral.className} text-lg text-gray-400 leading-relaxed mb-8`}
+                >
+                  {project.description}
+                </p>
+                <div className="mb-6 space-y-2">
+                  <div className="flex items-baseline gap-3">
+                    <span
+                      className={`${aldrich.className} text-xs uppercase tracking-widest text-gray-600`}
+                    >
+                      Category
+                    </span>
+                    <span className={`${ral.className} text-sm text-gray-400`}>
+                      {project.category}
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-3">
+                    <span
+                      className={`${aldrich.className} text-xs uppercase tracking-widest text-gray-600`}
+                    >
+                      Industry
+                    </span>
+                    <span className={`${ral.className} text-sm text-gray-400`}>
+                      {project.industry}
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-3">
+                    <span
+                      className={`${aldrich.className} text-xs uppercase tracking-widest text-gray-600 flex-shrink-0`}
+                    >
+                      Tech
+                    </span>
+                    <span className={`${ral.className} text-sm text-gray-400`}>
+                      {project.technologies.join(" · ")}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className={`${ral.className} text-xs text-gray-400 bg-white/10 px-2 py-0.5 rounded`}
+                      className={`${ral.className} text-xs px-3 py-1 rounded-full border`}
+                      style={{
+                        borderColor: `${project.accent}30`,
+                        color: `${project.accent}cc`,
+                      }}
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-            </button>
-          ))}
-        </div>
-      </div>
 
-      {/* Lightbox */}
-      {lightbox !== null && currentProject && (
-        <div
-          className="fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center"
-          onClick={closeLightbox}
-        >
-          <button
-            onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-10"
-            aria-label="Close"
-          >
-            <X size={28} />
-          </button>
-
-          {currentProject.images.length > 1 && (
-            <>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevImage();
+              {/* Visual placeholder side */}
+              <div
+                className="flex-1 flex items-center justify-center transition-all duration-[1.2s] ease-out delay-200"
+                style={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                    ? "translateX(0)"
+                    : `translateX(${isEven ? "80px" : "-80px"})`,
                 }}
-                className="absolute left-4 md:left-8 text-white/40 hover:text-white transition-colors z-10"
-                aria-label="Previous image"
               >
-                <ChevronLeft size={36} />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextImage();
-                }}
-                className="absolute right-4 md:right-8 text-white/40 hover:text-white transition-colors z-10"
-                aria-label="Next image"
-              >
-                <ChevronRight size={36} />
-              </button>
-            </>
-          )}
-
-          <div
-            className="max-w-5xl w-full mx-4 md:mx-8"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden mb-4">
-              <Image
-                src={currentProject.images[lightbox.imageIndex]}
-                alt={`${currentProject.title} screenshot`}
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="text-center">
-              <h3 className={`${aldrich.className} text-xl text-white mb-2`}>
-                {currentProject.title}
-              </h3>
-              <p
-                className={`${ral.className} text-gray-400 text-sm max-w-xl mx-auto mb-3`}
-              >
-                {currentProject.description}
-              </p>
-              <div className="flex gap-2 justify-center flex-wrap">
-                {currentProject.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className={`${ral.className} text-xs text-gray-400 bg-white/10 px-2 py-0.5 rounded`}
-                  >
-                    {tag}
-                  </span>
-                ))}
+                <div
+                  className="relative w-full aspect-[4/3] max-w-lg rounded-2xl overflow-hidden"
+                  style={{
+                    background: `linear-gradient(135deg, ${project.color}, ${project.accent}10)`,
+                    border: `1px solid ${project.accent}15`,
+                  }}
+                >
+                  {/* Placeholder animated content — replace with real images later */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div
+                      className="text-center"
+                      style={{ color: `${project.accent}40` }}
+                    >
+                      <div
+                        className="w-16 h-16 mx-auto mb-4 rounded-xl border-2 flex items-center justify-center"
+                        style={{ borderColor: `${project.accent}30` }}
+                      >
+                        <span className={`${aldrich.className} text-2xl`}>
+                          {i + 1}
+                        </span>
+                      </div>
+                      <p
+                        className={`${aldrich.className} text-sm uppercase tracking-widest`}
+                      >
+                        Image coming soon
+                      </p>
+                    </div>
+                  </div>
+                  {/* Decorative grid overlay */}
+                  <div
+                    className="absolute inset-0 opacity-[0.03]"
+                    style={{
+                      backgroundImage: `linear-gradient(${project.accent} 1px, transparent 1px), linear-gradient(90deg, ${project.accent} 1px, transparent 1px)`,
+                      backgroundSize: "40px 40px",
+                    }}
+                  />
+                </div>
               </div>
-              {currentProject.images.length > 1 && (
-                <p className={`${ral.className} text-xs text-gray-600 mt-3`}>
-                  {lightbox.imageIndex + 1} / {currentProject.images.length}
-                </p>
-              )}
             </div>
-          </div>
-        </div>
-      )}
+          </section>
+        );
+      })}
+
+      {/* Footer CTA */}
+      <section className="min-h-[50vh] flex flex-col items-center justify-center px-6 bg-black">
+        <h2
+          className={`${aldrich.className} text-3xl md:text-4xl text-white text-center mb-6`}
+        >
+          Got a project in mind?
+        </h2>
+        <Link
+          href="/#contact"
+          className={`${aldrich.className} px-8 py-4 bg-white text-black rounded-lg text-lg hover:bg-gray-200 transition-colors`}
+        >
+          Get in touch
+        </Link>
+      </section>
     </div>
   );
 }

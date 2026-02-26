@@ -27,6 +27,12 @@ export default function Navigation() {
         </Link>
         <div className="flex items-center gap-6">
           <Link
+            href="/showcase"
+            className={`${aldrich.className} text-gray-500 text-sm hover:text-gray-900 transition-colors hidden md:block`}
+          >
+            Showcase
+          </Link>
+          <Link
             href="/#services"
             className={`${aldrich.className} text-gray-500 text-sm hover:text-gray-900 transition-colors hidden md:block`}
           >
