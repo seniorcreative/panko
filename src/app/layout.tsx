@@ -1,29 +1,24 @@
 import type { Metadata } from "next";
-import { Varela, Pacifico, Raleway } from "next/font/google";
+import { Varela } from "next/font/google";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 import "./globalIcons.css";
 
-import LanguageContextProvider from "./contexts/languageContext";
-import VisitorContextProvider from "./contexts/visitorContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/footer";
 
 const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
-const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
-const raleway = Raleway({ weight: ["400", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Digital Business Services Software Developer Geelong | Website & App Development Melbourne | Panko Digital",
+    "Panko Digital — Web Development, AI, LMS & CRM Services | Geelong & Melbourne",
   description:
-    "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
+    "I help businesses launch products, modernise systems, and make technology decisions with confidence. Web development, AI productionisation, LMS, CRM migrations. Based in Geelong.",
   openGraph: {
-    title:
-      "Digital Business Services Software Developer Geelong | Website & App Development Melbourne | Panko Digital",
+    title: "Panko Digital — Technology that works for your business",
     description:
-      "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
+      "Web development, AI productionisation, LMS course builds, CRM migrations, and technical consulting. Based in Geelong, serving Melbourne and Victoria.",
     url: "https://panko.digital",
     siteName: "Panko Digital",
     type: "website",
@@ -31,18 +26,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Digital Business Services Software Developer Geelong | Website & App Development Melbourne | Panko Digital",
+    title: "Panko Digital — Technology that works for your business",
     description:
-      "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
+      "Web development, AI productionisation, LMS course builds, CRM migrations, and technical consulting.",
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
+    googleBot: { index: true, follow: true },
   },
   alternates: {
     canonical: "https://panko.digital",
@@ -55,20 +46,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <LanguageContextProvider>
-      <VisitorContextProvider>
-        <html lang="en">
-          <body className={varela.className}>
-            <Navigation />
-            <main className="flex min-h-screen flex-col w-full">
-              {children}
-            </main>
-            <Footer fonts={[pacifico, raleway]} />
-            <GoogleTagManager gtmId="G-XLHERYSSZ1" />
-            <GoogleAnalytics gaId="G-XLHERYSSZ1" />
-          </body>
-        </html>
-      </VisitorContextProvider>
-    </LanguageContextProvider>
+    <html lang="en">
+      <body className={varela.className}>
+        <Navigation />
+        <main className="flex min-h-screen flex-col w-full">{children}</main>
+        <Footer />
+        <GoogleTagManager gtmId="G-XLHERYSSZ1" />
+        <GoogleAnalytics gaId="G-XLHERYSSZ1" />
+      </body>
+    </html>
   );
 }
