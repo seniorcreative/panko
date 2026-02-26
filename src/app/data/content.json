@@ -3,106 +3,78 @@
     "home": {
       "sections": {
         "intro": {
-          "one": "Helping business owners to launch or fix sites and apps",
-          "two": "Using Tried and tested best practise software engineering fused with cutting-edge AI engineering methods, I turbo-charge development to turn your ideas into websites and apps that actually work for your business - faster and more efficiently.",
-          "two-cn": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "Websites, apps, fixes—fast. Geelong developer with 20+ years’ experience. AI-powered, jargon-free, focused on one thing: growing your business.",
-          "four": "Build AI-enhanced, human-centered technology that actually works - delivered at lightning speed.",
-          "contactBtn": "Let's Build Something",
+          "headline": "Technology that works for your business",
+          "subheadline": "I help businesses launch products, modernise systems, and make technology decisions with confidence.",
+          "contactBtn": "Start a conversation",
           "contactLink": "/#contact"
         },
-        "about": {
-          "title": "I'm Steve. I can help you...",
-          "body": "<ul class='what'>\n<li><b>Launch or fix websites</b> for startups, small businesses, or online stores (Shopify, Squarespace)</li>\n<li><b>Build custom mobile apps</b> for iOS and Android</li>\n<li><b>Design and develop interactive experiences</b> (web apps, tools, or learning platforms)</li>\n<li><b>Consult on digital strategy</b> and provide <b>best-practice software engineering advice</b></li>\n<li><b>Turn digital innovation ideas</b> into working products or prototypes</li>\n</ul><blockquote class='mt-3 italic'>Co-piloting with you, using AI tools and my software experience, I'm happy to handle the technical bits so you can focus on what you do best!</blockquote>\n",
-          "recentProjects": [
-            {
-              "title": "Floorplan Customer Activity Heatmap",
-              "client": "Kmart Australia",
-              "href": null,
-              "year": "2025"
-            },
-            {
-              "title": "Financial Advice Website",
-              "client": "Loan Scenarios",
-              "href": "https://loanscenarios.com.au",
-              "year": "2025"
-            },
-            {
-              "title": "Square Subscription Payments",
-              "client": "Apsect Marketing",
-              "href": "https://afisc.com.au",
-              "year": "2025"
-            },
-            {
-              "title": "Ecommerce Inventory Syncing",
-              "client": "Hendry's Cycles Geelong",
-              "href": "https://hendrys.com.au",
-              "year": "2025"
-            },
-            {
-              "title": "Rapid Front-end Development",
-              "client": "Reconnaître",
-              "href": "https://reconnaitre.com.au",
-              "year": "2024"
-            },
-            {
-              "title": "Amy Wright Squarespace Site",
-              "client": "Amy Wright",
-              "href": "https://www.amywright.com.au",
-              "year": "2025"
-            }
-          ]
-        },
-        "services": {
-          "title": "services",
-          "body": {
-            "creative": [
-              "Get your products selling online fast",
-              "Stop losing customers to website problems",
-              "Refresh your brand to attract more customers",
-              "Get expert advice to avoid costly mistakes",
-              "Reach customers on their phones",
-              "Get found online with proper web setup",
-              "Look professional with business email"
-            ],
-            "techie": [
-              "React native apps",
-              "Wiring up DNS records",
-              "AI-accelerated rapid build custom front-end",
-              "AI-assisted debugging for JS framework bugs",
-              "AI-powered legacy app modernization",
-              "Fix security vulnerabilities",
-              "AI-enhanced app feature extensions",
-              "AI-assisted code reviews and optimization"
-            ]
+        "services": [
+          {
+            "title": "Web & App Development",
+            "description": "Custom websites, web apps, and mobile apps built with modern frameworks. From landing pages to full e-commerce platforms."
+          },
+          {
+            "title": "AI Prototyping & Productionisation",
+            "description": "Turn AI proofs-of-concept into production-ready products. I bridge the gap between experimentation and reliable, scalable systems."
+          },
+          {
+            "title": "LMS & Course Development",
+            "description": "Instructure Canvas course builds, LTI integrations, and learning platform configuration for education and corporate training."
+          },
+          {
+            "title": "CRM Migrations",
+            "description": "End-to-end CRM migrations to Zoho — data mapping, workflow automation, and integrations that keep your team moving."
+          },
+          {
+            "title": "Technical Consulting",
+            "description": "Architecture reviews, technology selection, and hands-on guidance for teams navigating complex technical decisions."
+          },
+          {
+            "title": "Fixes & Maintenance",
+            "description": "Broken sites, slow performance, security issues, SEO problems. I diagnose and fix what's not working."
+          },
+          {
+            "title": "Multimedia & Interactive",
+            "description": "Rich interactive experiences, data visualisations, 3D, VFX, animations, and creative technology — from kiosk systems and stadium graphics to camera-based mobile apps."
           }
-        }
-      }
-    },
-    "categoryInfo": {
-      "Mobile": {
-        "techie": "AI-enhanced custom mobile app development for iOS and Android with intelligent app store setup and user tracking",
-        "creative": "Mobile apps that turn your customers into repeat buyers — built with AI assistance for faster time-to-market, keeping customers engaged and boosting your revenue."
-      },
-      "Games": {
-        "techie": "AI-assisted quick game prototypes and interactive experiences with engaging user interfaces",
-        "creative": "Fun, engaging games and interactive experiences that increase customer engagement and time spent with your brand"
-      },
-      "Cloud": {
-        "techie": "AI-optimized scalable cloud hosting solutions with automatic backups and intelligent performance monitoring",
-        "creative": "Reliable online systems that scale automatically as you grow, protecting your business data while reducing IT costs"
-      },
-      "E-commerce": {
-        "techie": "AI-powered custom e-commerce development with intelligent payment processing and inventory management",
-        "creative": "Online stores that convert browsers into buyers — reducing cart abandonment by up to 40% and increasing your average order value"
-      },
-      "Signage": {
-        "techie": "AI-enhanced digital signage systems with intelligent content management and scheduling capabilities",
-        "creative": "Eye-catching digital displays that increase foot traffic and sales by delivering the right message at the right time"
-      },
-      "UX": {
-        "techie": "AI-assisted user experience design and prototyping with intelligent usability testing and iterative improvements",
-        "creative": "User-friendly design that converts visitors into customers faster - websites and apps that reduce bounce rates and increase time on site"
+        ],
+        "recentWork": [
+          {
+            "title": "Tour Booking System Migration",
+            "client": "Nevermind Adventure Tours",
+            "description": "Migrating a growing travel company from Trello and Excel to a full-featured CRM — capturing leads, managing contacts, and coordinating bookings for adventure tours.",
+            "year": "2026",
+            "href": null
+          },
+          {
+            "title": "Amy Wright — Folio",
+            "client": "Amy Wright",
+            "description": "Custom Squarespace website design and build for a creative professional.",
+            "year": "2026",
+            "href": "https://www.amywright.com.au"
+          },
+          {
+            "title": "E-commerce Inventory Syncing",
+            "client": "Hendry's Cycles Geelong",
+            "description": "Custom inventory synchronisation system connecting point-of-sale with online store for a busy retail bike shop.",
+            "year": "2025",
+            "href": "https://hendrys.com.au"
+          },
+          {
+            "title": "Floorplan Customer Activity Heatmap",
+            "client": "Kmart Australia",
+            "description": "Data visualisation tool mapping customer movement patterns across retail floor plans for the innovation team.",
+            "year": "2025",
+            "href": null
+          },
+          {
+            "title": "Rapid Front-end Development",
+            "client": "Reconnaître",
+            "description": "Fast-turnaround Bootstrap 5 front-end build for an Australian drone technology startup.",
+            "year": "2024",
+            "href": "https://reconnaitre.com.au"
+          }
+        ]
       }
     },
     "testimonials": [
@@ -117,7 +89,7 @@
       },
       {
         "id": 2,
-        "quote": "We've collaborated with Panko Digital for years, and Steve always delivers. Whether it's a large, technically challenging project beyond our in-house expertise or a minor development update, everything is handled promptly and with care. We highly value Panko Digital's services.",
+        "quote": "We've collaborated with Panko Digital for years, and Steve always delivers. Whether it's a large, technically challenging project beyond our in-house expertise or a minor development update, everything is handled promptly and with care.",
         "name": "Aaron Lee",
         "initials": "AL",
         "business": "Caramel Creative",
@@ -129,13 +101,13 @@
         "quote": "I had so much fun working with Panko. They assisted us with a custom app for a client at an important point in our scale-up journey.",
         "name": "Nic Hinwood",
         "initials": "NH",
-        "business": "Keo Design ",
+        "business": "Keo Design",
         "location": "Tamworth, NSW",
         "avatar": "/avatars/nichinwood.jpg"
       },
       {
         "id": 4,
-        "quote": "Panko helps us with web and cms tasks of all shapes and sizes and is a reliable and trusted partner",
+        "quote": "Panko helps us with web and CMS tasks of all shapes and sizes and is a reliable and trusted partner.",
         "name": "Nick Lowman",
         "initials": "NL",
         "business": "Aspect Marketing",
@@ -144,340 +116,12 @@
       },
       {
         "id": 5,
-        "quote": "A HUGE shoutout of thanks to panko who built my site during their holidays and I couldn't be happier with the result.",
+        "quote": "A HUGE shoutout of thanks to Panko who built my site during their holidays and I couldn't be happier with the result.",
         "name": "Richard Bradshaw",
         "initials": "RB",
         "business": "Loan Scenarios",
         "location": "Melbourne, VIC",
         "avatar": "/avatars/richardbradshaw.jpg"
-      }
-    ],
-    "work": [
-      {
-        "id": 14,
-        "title": "Reconnaitre",
-        "href": "https://reconnaitre.com.au",
-        "description": "Rapid Bootstrap 5 front-end for Australian drone startup.",
-        "date": "2024",
-        "category": [
-          "E-commerce"
-        ],
-        "meta": {
-          "client": "Reconnaitre / Aspect Marketing",
-          "imageUrl": [
-            "/work/reconnaitre~1~2.png",
-            "/work/reconnaitre~2~2.png"
-          ]
-        }
-      },
-      {
-        "id": 9,
-        "title": "Bridge Alert",
-        "href": "",
-        "description": "React Native app with Firebase, geofencing, maps, and push notifications. Popular in Australia.",
-        "date": "2016-2019",
-        "category": [
-          "Mobile"
-        ],
-        "meta": {
-          "client": "Panko Digital",
-          "imageUrl": [
-            "/work/bridge-alert~2~5.png",
-            "/work/bridge-alert~1~5.png",
-            "/work/bridge-alert~3~5.png"
-          ]
-        }
-      },
-      {
-        "id": 3,
-        "title": "Game of life",
-        "href": "https://organisms.vercel.app/",
-        "description": "Conway's Game of Life coding exercise.",
-        "date": "2021",
-        "category": [
-          "Games"
-        ],
-        "meta": {
-          "client": "Panko Digital",
-          "imageUrl": [
-            "/work/organisms-2~2.png",
-            "/work/organisms-1~2.png"
-          ]
-        }
-      },
-      {
-        "id": 10,
-        "title": "WorkSafe Projects",
-        "href": "",
-        "description": "AWS Lambda and Cognito passwordless sign-in app piloted by Victorian government.",
-        "date": "2021",
-        "category": [
-          "Cloud"
-        ],
-        "meta": {
-          "client": "WorkSafe Victoria",
-          "imageUrl": [
-            "/work/worksafe~1~3.png",
-            "/work/worksafe~2~3.png",
-            "/work/worksafe~3~3.png"
-          ]
-        }
-      },
-      {
-        "id": 2,
-        "title": "SLSA Surf Lifesaving Squad",
-        "href": "",
-        "description": "Surf lifesaving games built with MVC design patterns at Bondi Beach HQ.",
-        "date": "2012",
-        "category": [
-          "Games"
-        ],
-        "meta": {
-          "client": "Ink Project Sydney",
-          "imageUrl": [
-            "/work/slsa_games~10~1.jpg",
-            "/work/slsa_games~10~3.jpg"
-          ]
-        }
-      },
-      {
-        "id": 1,
-        "title": "Carlton Natural Blonde",
-        "href": "",
-        "description": "Retro Galaga clone with original SFX, built in 6 days for marketing.",
-        "date": "2010",
-        "category": [
-          "Games"
-        ],
-        "meta": {
-          "client": "Emote Digital Melbourne / Clemenger",
-          "imageUrl": [
-            "/work/carltonnaturalblonde~4~1.jpg",
-            "/work/carltonnaturalblonde~4~4.jpg"
-          ]
-        }
-      },
-      {
-        "id": 4,
-        "title": "FLUX Clothing",
-        "href": "",
-        "description": "First e-commerce site with PayPal and eWay payments, animated components.",
-        "date": "2010",
-        "category": [
-          "E-commerce"
-        ],
-        "meta": {
-          "client": "FLUX Clothing",
-          "imageUrl": [
-            "/work/flux~4~1.jpg",
-            "/work/flux~4~2.jpg"
-          ]
-        }
-      },
-      {
-        "id": 5,
-        "title": "MCG Club Songs",
-        "href": "",
-        "description": "Kiosk system for Australian Sports Museum with club songs and IoT messaging.",
-        "date": "2011",
-        "category": [
-          "Signage"
-        ],
-        "meta": {
-          "client": "Mental Media / Australian Sports Museum",
-          "imageUrl": [
-            "/work/clubSongs~2~1.jpg",
-            "/work/clubSongs~2~2.jpg"
-          ]
-        }
-      },
-      {
-        "id": 6,
-        "title": "MCG AFL Scoreboard System",
-        "href": "",
-        "description": "Interactive scoring system generating video signals for large sports stadium crowds.",
-        "date": "2007",
-        "category": [
-          "Signage"
-        ],
-        "meta": {
-          "client": "Visual Jazz Isobar",
-          "imageUrl": [
-            "/work/mcg_screen~5~1.jpg",
-            "/work/mcg_screen~5~3.jpg",
-            "/work/mcg_screen~5~5.jpg"
-          ]
-        }
-      },
-      {
-        "id": 7,
-        "title": "Milk Skincare",
-        "href": "",
-        "description": "Custom e-commerce system with Popcorn CMS for Michael Klim's skincare startup.",
-        "date": "2011",
-        "category": [
-          "E-commerce"
-        ],
-        "meta": {
-          "client": "Michael Klim",
-          "imageUrl": [
-            "/work/milkskincare~3~2.jpg",
-            "/work/milkskincare~3~3.jpg"
-          ]
-        }
-      },
-      {
-        "id": 12,
-        "title": "Lucky EOS Wires",
-        "href": "",
-        "description": "Wireframes and React components for crypto baccarat game.",
-        "date": "2018",
-        "category": [
-          "Games",
-          "UX"
-        ],
-        "meta": {
-          "client": "Lucky EOS",
-          "imageUrl": [
-            "/work/lucky-eos-1~4.png",
-            "/work/lucky-eos-2~4.png",
-            "/work/lucky-eos-3~4.png",
-            "/work/lucky-eos-4~4.png"
-          ]
-        }
-      }
-    ]
-  },
-  "zh-CN": {
-    "home": {
-      "sections": {
-        "intro": {
-          "one": "Melbourne | Sydney | Geelong",
-          "two": "为创意人士提供高效、经济、自由的 Web 服务",
-          "three": "适用于网络、商店、应用程序和业务系统的行业标准编码服务.",
-          "four": "墨尔本、悉尼、吉朗自由电子商务、网络和移动软件应用程序开发人员.",
-          "contactBtn": "联系我们",
-          "contactLink": "mailto:stesmi+panko@gmail.com?subject=Panko%20Enquiry%20zh-CN"
-        },
-        "about": {
-          "title": "关于",
-          "body": "<h3 class='text-lg'>是一家针对计算机无法完成的零件的服务机构。</h3><br/><p>我们的重点是现实世界产品和尖端技术的交叉点。我们运用人工技术和分析，结合人工智能工具和软件工程最佳实践，为您的业务实现最佳系统。</p><p>让技术为您服务。我们在创建数字系统方面拥有数十年的经验。随之而来的是设计出有效、高效且具有成本效益的东西的能力。</p><p><strong>panko</strong> 由人类运营，为人类服务&hellip;</p>"
-        },
-        "services": {
-          "title": "服务",
-          "body": {
-            "creative": [
-              "建立一个商店",
-              "修复一个错误",
-              "改变你的主题",
-              "咨询专家",
-              "启动应用程序"
-            ],
-            "techie": [
-              "TBC"
-            ]
-          }
-        }
-      }
-    },
-    "categoryInfo": {
-      "Mobile": {
-        "techie": "React native",
-        "creative": "构建应用程序"
-      },
-      "Games": {
-        "techie": "注重互动性",
-        "creative": "互动游戏"
-      },
-      "Cloud": {
-        "techie": "AWS Lambda, Cognito, S3, Cloudfront",
-        "creative": "Amazon 或者 Google cloud"
-      },
-      "E-commerce": {
-        "techie": "自定义 Shopify 主题",
-        "creative": "Shopify、Squarespace 或 Wix 商店管理"
-      },
-      "Signage": {
-        "techie": "体育场和酒店场所的广播设计和标牌系统承包商。",
-        "creative": "具有内容管理功能的大屏幕显示系统"
-      },
-      "UX": {
-        "techie": "线框",
-        "creative": "线框"
-      }
-    },
-    "work": [
-      {
-        "id": 3,
-        "title": "生命的游戏",
-        "href": "https://organisms.vercel.app/",
-        "description": "Conway's Game of Life 编码练习。",
-        "date": "2021",
-        "category": [
-          "游戏"
-        ],
-        "meta": {
-          "client": "Panko Digital",
-          "imageUrl": [
-            "/work/organisms-2~2.png",
-            "/work/organisms-1~2.png"
-          ]
-        }
-      },
-      {
-        "id": 14,
-        "title": "Reconnaitre",
-        "href": "https://reconnaitre.com.au",
-        "description": "澳大利亚无人机创业公司的 Bootstrap 5 快速前端。",
-        "date": "2024",
-        "category": [
-          "E-commerce"
-        ],
-        "meta": {
-          "client": "Reconnaitre / Aspect Marketing",
-          "imageUrl": [
-            "/work/reconnaitre~1~2.png",
-            "/work/reconnaitre~2~2.png"
-          ]
-        }
-      },
-      {
-        "id": 9,
-        "title": "桥梁警报",
-        "href": "",
-        "description": "具有 Firebase、地理围栏和推送通知的 React Native 应用。在澳大利亚很受欢迎。",
-        "date": "2016-2019",
-        "category": [
-          "移动的"
-        ],
-        "meta": {
-          "client": "Panko Digital",
-          "imageUrl": [
-            "/work/bridge-alert~2~5.png",
-            "/work/bridge-alert~1~5.png",
-            "/work/bridge-alert~3~5.png"
-          ]
-        }
-      },
-      {
-        "id": 12,
-        "title": "Lucky EOS 线框",
-        "href": "",
-        "description": "加密百家乐游戏的线框和 React 组件。",
-        "date": "2018",
-        "category": [
-          "游戏",
-          "UX"
-        ],
-        "meta": {
-          "client": "Lucky EOS",
-          "imageUrl": [
-            "/work/lucky-eos-1~4.png",
-            "/work/lucky-eos-2~4.png",
-            "/work/lucky-eos-3~4.png",
-            "/work/lucky-eos-4~4.png"
-          ]
-        }
       }
     ]
   }
