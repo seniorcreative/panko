@@ -128,14 +128,19 @@ export default function Home() {
         "Panko Digital offers custom web and app development, AI prototyping and productionisation, LMS course development, CRM migrations, and technical consulting — all based in Geelong, serving clients across Victoria.",
     },
     {
+      question: "Can I just do this myself using AI tools?",
+      answer:
+        "I have worked for businesses in launching, growing and maintaining software at scale for over two decades. There are tried and tested processes for healthy software development life cycles, and I help clients with the technical parts they don't know how to leverage AI for.",
+    },
+    {
       question: "Do you work with businesses outside Geelong?",
       answer:
-        "Yes. While based in Geelong, Panko Digital works with businesses across Melbourne and regional Victoria, delivering remote-friendly engagements for web development, AI, CMS and CRM projects.",
+        "Yes. While based in Geelong, Panko Digital works with businesses across all of Australia, delivering remote-friendly engagements for web development, AI, CMS and CRM projects.",
     },
     {
       question: "What industries do you specialise in?",
       answer:
-        "Panko Digital has delivered projects across tourism, e-commerce, education, stock inventory management, finance and professional services — including tour or online course booking systems, inventory syncing tools, interactive learning platforms and custom multimedia experiences.",
+        "Panko Digital has delivered projects across tourism, e-commerce, education, retail, finance and professional services — including booking systems, inventory syncing tools, interactive learning platforms and custom multimedia experiences.",
     },
   ];
 
