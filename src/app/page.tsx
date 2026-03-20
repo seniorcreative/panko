@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Script from "next/script";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { sendGTMEvent } from "@next/third-parties/google";
@@ -85,31 +86,75 @@ export default function Home() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "LocalBusiness",
     name: "Panko Digital",
-    description:
-      "Technology consulting, web development, AI productionisation, LMS and CRM services in Geelong and Melbourne.",
     url: "https://panko.digital",
+    logo: "https://panko.digital/panko-logo-static.png",
+    image: "https://panko.digital/panko-logo-static.png",
+    description:
+      "Web, app and software development, AI productionisation, LMS, CMS and CRM services based in Geelong, Victoria.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Geelong",
-      addressRegion: "Victoria",
-      addressCountry: "Australia",
+      addressRegion: "VIC",
+      addressCountry: "AU",
     },
-    areaServed: [
-      { "@type": "City", name: "Geelong" },
-      { "@type": "City", name: "Melbourne" },
-      { "@type": "State", name: "Victoria" },
+    areaServed: ["Geelong", "Melbourne", "Victoria"],
+    serviceType: [
+      "Web Development",
+      "App Development",
+      "Software Development",
+      "AI Productionisation",
+      "LMS Development",
+      "CMS Development",
+      "CRM Migration",
+      "Technical Consulting",
     ],
     founder: {
       "@type": "Person",
       name: "Steven Smith",
-      jobTitle: "Senior Software Engineer & Technical Consultant",
+      jobTitle: "Web, App & Software Developer & Technical Consultant",
     },
     sameAs: [
-      "https://github.com/seniorcreative",
-      "https://www.linkedin.com/in/seniorcreative",
+      "https://www.linkedin.com/company/panko-digital",
+      "https://www.facebook.com/panko.geelong/",
     ],
+  };
+
+  const faqItems = [
+    {
+      question: "What web development services do you offer in Geelong?",
+      answer:
+        "Panko Digital offers custom web and app development, AI prototyping and productionisation, LMS course development, CRM migrations, and technical consulting — all based in Geelong, serving clients across Victoria.",
+    },
+    {
+      question: "Can I just do this myself using AI tools?",
+      answer:
+        "I have worked for businesses in launching, growing and maintaining software at scale for over two decades. There are tried and tested processes for healthy software development life cycles, and I help clients with the technical parts they don't know how to leverage AI for.",
+    },
+    {
+      question: "Do you work with businesses outside Geelong?",
+      answer:
+        "Yes. While based in Geelong, Panko Digital works with businesses across all of Australia, delivering remote-friendly engagements for web development, AI, CMS and CRM projects.",
+    },
+    {
+      question: "What industries do you specialise in?",
+      answer:
+        "Panko Digital has delivered projects across tourism, e-commerce, education, retail, finance and professional services — including booking systems, inventory syncing tools, interactive learning platforms and custom multimedia experiences.",
+    },
+  ];
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 
   const inputClass = (field: string) =>
@@ -121,9 +166,17 @@ export default function Home() {
 
   return (
     <>
-      <script
+      <Script
+        id="local-business-json-ld"
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <Script
+        id="faq-json-ld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
 
       {/* Hero */}
@@ -293,6 +346,47 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section
+        id="faq"
+        className="py-20 px-6 md:px-12 lg:px-24 bg-white border-t border-gray-200"
+      >
+        <div className="max-w-4xl">
+          <h2
+            className={`${aldrich.className} text-sm uppercase tracking-widest text-gray-400 mb-4`}
+          >
+            FAQ
+          </h2>
+          <p
+            className={`${ral.className} text-xl md:text-2xl text-gray-600 mb-12`}
+          >
+            Answers to common questions about working with Panko Digital.
+          </p>
+          <div className="space-y-4">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="group bg-gray-50 border border-gray-200 rounded-lg p-6"
+              >
+                <summary
+                  className={`${aldrich.className} text-lg text-gray-900 cursor-pointer list-none flex items-start justify-between gap-4`}
+                >
+                  <span>{item.question}</span>
+                  <span className="text-gray-400 transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p
+                  className={`${ral.className} mt-4 text-gray-600 leading-relaxed`}
+                >
+                  {item.answer}
+                </p>
+              </details>
             ))}
           </div>
         </div>

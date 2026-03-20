@@ -45,6 +45,12 @@ export default function Navigation() {
             Testimonials
           </Link>
           <Link
+            href="/#faq"
+            className={`${aldrich.className} text-gray-500 text-sm hover:text-gray-900 transition-colors hidden md:block`}
+          >
+            FAQ
+          </Link>
+          <Link
             href="/#contact"
             className={`${aldrich.className} px-5 py-2 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-800 transition-colors`}
           >
