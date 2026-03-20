@@ -122,6 +122,15 @@
         "business": "Loan Scenarios",
         "location": "Melbourne, VIC",
         "avatar": "/avatars/richardbradshaw.jpg"
+      },
+      {
+        "id": 6,
+        "quote": "We needed a local Geelong software company to help take our Grain Harvest Management AI prototype to the next level and Panko digital did a great job of completing our tasks. Any issues have been dealt with promptly.",
+        "name": "Tyler May",
+        "initials": "TM",
+        "business": "AGPlus Grain Services",
+        "location": "Geelong, VIC",
+        "avatar": null
       }
     ]
   }
