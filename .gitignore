@@ -43,3 +43,4 @@ public/vercel.svg
 
 #backups
 *.archive
+.yarn/install-state.gz
