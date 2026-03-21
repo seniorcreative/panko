@@ -182,7 +182,10 @@ export default function Home() {
       {/* Hero */}
       <section className="min-h-[85vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-24 pb-16 bg-white">
         <div className="max-w-3xl">
-          <h1
+          <h1 className="visually-hidden">
+            Web Software Development & Technology Solutions — Geelong
+          </h1>
+          <h2
             className={`${aldrich.className} text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6 flex flex-wrap`}
           >
             {sections.intro.headline
@@ -200,7 +203,7 @@ export default function Home() {
                   </span>
                 </span>
               ))}
-          </h1>
+          </h2>
           <p
             className={`${ral.className} text-xl md:text-2xl text-gray-500 leading-relaxed mb-10 max-w-2xl`}
           >

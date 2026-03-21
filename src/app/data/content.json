@@ -4,7 +4,7 @@
       "sections": {
         "intro": {
           "headline": "Technology that works for your business",
-          "subheadline": "I help businesses launch products, modernise systems, and make technology decisions with confidence.",
+          "subheadline": "I help businesses in Geelong and around Australia launch products, modernise systems, and make technology decisions with confidence.",
           "contactBtn": "Start a conversation",
           "contactLink": "/#contact"
         },
@@ -23,7 +23,11 @@
           },
           {
             "title": "CRM Migrations",
-            "description": "End-to-end CRM migrations to Zoho — data mapping, workflow automation, and integrations that keep your team moving."
+            "description": "End-to-end CRM migrations — data mapping, workflow automation, and integrations that keep your team moving."
+          },
+          {
+            "title": "Content Management Systems",
+            "description": "CMS implementations — I have extensive experience with content management using both bespoke and off-the-shelf platforms. I have my own proprietary CMS for clients called PopcornCMS (20 years in the making)."
           },
           {
             "title": "Technical Consulting",

@@ -44,3 +44,18 @@ html {
   animation: word-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   transform: translateY(110%);
 }
+
+/* SEO visually hidden 
+-- This class is used to hide elements visually while keeping them accessible to screen readers and search engines. It is commonly used for SEO purposes, such as hiding headings or other content that is important for SEO but not necessary for visual display.
+*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

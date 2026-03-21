@@ -11,14 +11,13 @@ import Footer from "./components/footer";
 const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title:
-    "Panko Digital — Web Development, AI, LMS & CRM Services | Geelong & Melbourne",
+  title: "Panko Digital — Web Software Development Geelong",
   description:
-    "I help businesses launch products, modernise systems, and make technology decisions with confidence. Web development, AI productionisation, LMS, CRM migrations. Based in Geelong.",
+    "I help businesses in Geelong and around Australia launch products, modernise systems, and make technology decisions with confidence. Web development, AI productionisation, LMS, CRM migrations. Based in Geelong.",
   openGraph: {
     title: "Panko Digital — Technology that works for your business",
     description:
-      "Web development, AI productionisation, LMS course builds, CRM migrations, and technical consulting. Based in Geelong, serving Melbourne and Victoria.",
+      "Web software development, AI productionisation, LMS course builds, CRM migrations, and technical consulting. Based in Geelong, serving Melbourne and Victoria.",
     url: "https://panko.digital",
     siteName: "Panko Digital",
     type: "website",
