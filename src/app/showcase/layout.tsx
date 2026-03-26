@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Showcase | Panko Digital",
   description:
     "A visual showcase of multimedia projects, experiments, and creative technology work by Panko Digital.",
+  alternates: {
+    canonical: "https://panko.digital/showcase",
+  },
 };
 
 export default function ShowcaseLayout({
