@@ -24,10 +24,32 @@ export default function Home() {
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const pathName = usePathname();
   const contactRef = useRef<HTMLElement>(null);
+  const projectSelectRef = useRef<HTMLSelectElement>(null);
 
   useEffect(() => {
     sendGTMEvent({ event: "pageView", value: pathName });
   }, [pathName]);
+
+  // Auto-select the promo reason and scroll to the form when arriving via the promo banner/ad link
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("promo") !== "coworking") return;
+
+    if (projectSelectRef.current) {
+      projectSelectRef.current.value = "free-coworking";
+    }
+    sendGTMEvent({
+      event: "promoAutoSelected",
+      value: "free_coworking_session",
+    });
+    const timeout = setTimeout(() => {
+      contactRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -180,7 +202,7 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="min-h-[85vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-24 pb-16 bg-white">
+      <section className="min-h-[85vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-[var(--top-offset)] pb-16 bg-white">
         <div className="max-w-3xl">
           <h1 className="visually-hidden">
             Web Software Development & Technology Solutions — Geelong
@@ -515,6 +537,7 @@ export default function Home() {
                   <select
                     id="project"
                     name="project"
+                    ref={projectSelectRef}
                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all"
                   >
                     <option value="">Select</option>
@@ -527,6 +550,9 @@ export default function Home() {
                     <option value="crm">CRM Migration</option>
                     <option value="fix">Fix or Maintenance</option>
                     <option value="consulting">Technical Consulting</option>
+                    <option value="free-coworking">
+                      Free half-day co-working session (promo)
+                    </option>
                     <option value="other">Other</option>
                   </select>
                 </div>

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Height reserved for the fixed nav (and promo banner, when shown) — kept in sync by Navigation.tsx */
+  --top-offset: 6rem;
+}
+
 body {
   color: #111;
   background: #fff;
