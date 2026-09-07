@@ -92,7 +92,7 @@ export default function ShowcasePage() {
   }, [lightbox, nextImage, prevImage]);
 
   return (
-    <div className="min-h-screen bg-gray-950 pt-24 pb-20">
+    <div className="min-h-screen bg-gray-950 pt-[var(--top-offset)] pb-20">
       <div className="px-6 md:px-12 lg:px-24 mb-12">
         <Link
           href="/"

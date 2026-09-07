@@ -13,9 +13,9 @@ const varela = Varela({ weight: "400", style: "normal", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Panko Digital — Web Software Development Geelong",
   description:
-    "I help businesses in Geelong and around Australia launch products, modernise systems, and make technology decisions with confidence. Web development, AI productionisation, LMS, CRM migrations. Based in Geelong.",
+    "I help individuals, startups and businesses across Geelong and Australia launch products, fix what's broken, and make confident technology decisions — without big agency price tags. Web development, AI productionisation, LMS, CRM migrations. Based in Geelong.",
   openGraph: {
-    title: "Panko Digital — Technology that works for your business",
+    title: "Panko Digital — Technology that works for you",
     description:
       "Web software development, AI productionisation, LMS course builds, CRM migrations, and technical consulting. Based in Geelong, serving Melbourne and Victoria.",
     url: "https://panko.digital",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Panko Digital — Technology that works for your business",
+    title: "Panko Digital — Technology that works for you",
     description:
       "Web development, AI productionisation, LMS course builds, CRM migrations, and technical consulting.",
   },

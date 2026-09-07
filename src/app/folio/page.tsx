@@ -8,7 +8,7 @@ const ral = Raleway({ weight: ["400", "600"], subsets: ["latin"] });
 
 export default function Page() {
   return (
-    <div className="min-h-screen pt-24 px-6 md:px-12 lg:px-24 pb-20 bg-white">
+    <div className="min-h-screen pt-[var(--top-offset)] px-6 md:px-12 lg:px-24 pb-20 bg-white">
       <div className="max-w-3xl">
         <Link
           href="/"
