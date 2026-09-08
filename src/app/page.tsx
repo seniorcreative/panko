@@ -12,6 +12,15 @@ import { Raleway } from "next/font/google";
 
 const content = require("./data/content.json");
 
+// Google Ads conversion for the contact form submission.
+const GOOGLE_ADS_CONVERSION_SEND_TO = "AW-1043106658/FvV1CKndh_EcEOKWsvED";
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 const ral = Raleway({
   weight: ["400", "600"],
   style: "normal",
@@ -95,12 +104,46 @@ export default function Home() {
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
 
-    await fetch("/__forms.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
-    });
-    setFormSuccess(true);
+    try {
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `Form submission failed with status ${response.status}`,
+        );
+      }
+
+      // Fire the Google Ads conversion only on a confirmed successful
+      // submission, so failed submits are never counted as conversions.
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: GOOGLE_ADS_CONVERSION_SEND_TO,
+          value: 1.0,
+          currency: "AUD",
+        });
+      }
+
+      // Also push a dataLayer event so the same submission can be used as a
+      // trigger in GTM / GA4 (e.g. a "form_submit" custom event) if needed.
+      sendGTMEvent({
+        event: "form_submit",
+        form_name: "contact",
+        project_type: (formData.get("project") as string) || "unspecified",
+        industry: (formData.get("industry") as string) || "unspecified",
+      });
+
+      setFormSuccess(true);
+    } catch (error) {
+      console.error(error);
+      setErrors((prev) => ({
+        ...prev,
+        submit: "Something went wrong sending your enquiry. Please try again.",
+      }));
+    }
   };
 
   const { sections } = content["en-US"].home;
@@ -579,6 +622,10 @@ export default function Home() {
                   <p className="mt-1 text-sm text-red-500">{errors.message}</p>
                 )}
               </div>
+
+              {errors.submit && (
+                <p className="mb-4 text-sm text-red-500">{errors.submit}</p>
+              )}
 
               <button
                 type="submit"
