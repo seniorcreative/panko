@@ -13,7 +13,14 @@ import { Raleway } from "next/font/google";
 const content = require("./data/content.json");
 
 // Google Ads conversion for the contact form submission.
-const GOOGLE_ADS_CONVERSION_SEND_TO = "AW-1043106658/FvV1CKndh_EcEOKWsvED";
+// send_to is of the form "AW-XXXXXXXXX/ConversionLabel".
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const GOOGLE_ADS_CONVERSION_LABEL =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+const GOOGLE_ADS_CONVERSION_SEND_TO =
+  GOOGLE_ADS_ID && GOOGLE_ADS_CONVERSION_LABEL
+    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_CONVERSION_LABEL}`
+    : undefined;
 
 declare global {
   interface Window {
@@ -119,7 +126,11 @@ export default function Home() {
 
       // Fire the Google Ads conversion only on a confirmed successful
       // submission, so failed submits are never counted as conversions.
-      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      if (
+        GOOGLE_ADS_CONVERSION_SEND_TO &&
+        typeof window !== "undefined" &&
+        typeof window.gtag === "function"
+      ) {
         window.gtag("event", "conversion", {
           send_to: GOOGLE_ADS_CONVERSION_SEND_TO,
           value: 1.0,
